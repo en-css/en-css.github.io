@@ -1,0 +1,11 @@
+/*!
+ * Theme: High Contrast
+ * Overrides for en-css tokens (01-tokens.css)
+ *
+ * Dirancang untuk aksesibilitas maksimum — memenuhi WCAG 2.1 Level AAA.
+ * Semua pasangan warna teks/latar belakang memiliki rasio kontras ≥ 7:1.
+ *
+ * Mode terang : Latar putih / teks hitam.
+ * Mode gelap  : Latar hitam / teks putih.
+ */
+@layer en-tokens{[data-en-theme=highcontrast],.en-theme-highcontrast{--en-primary:var(--lightningcss-light,#005fcc)var(--lightningcss-dark,#ff0);--en-primary-contrast:var(--lightningcss-light,#fff)var(--lightningcss-dark,#000);--en-secondary:var(--lightningcss-light,#003f8a)var(--lightningcss-dark,#00e5ff);--en-success:var(--lightningcss-light,#006e00)var(--lightningcss-dark,#00ff6a);--en-warning:var(--lightningcss-light,#8a4500)var(--lightningcss-dark,#ffb700);--en-danger:var(--lightningcss-light,#b30000)var(--lightningcss-dark,#f44);--en-info:var(--lightningcss-light,#5200a8)var(--lightningcss-dark,#c87aff);--en-bg:var(--lightningcss-light,#fff)var(--lightningcss-dark,#000);--en-bg-subtle:var(--lightningcss-light,#f0f0f0)var(--lightningcss-dark,#1a1a1a);--en-surface:var(--lightningcss-light,#fafafa)var(--lightningcss-dark,#0d0d0d);--en-text:var(--lightningcss-light,#000)var(--lightningcss-dark,#fff);--en-text-muted:var(--lightningcss-light,#333)var(--lightningcss-dark,#ccc);--en-border:var(--lightningcss-light,#000)var(--lightningcss-dark,#fff);--en-border-width:2px;--en-border-width-thick:3px;--en-border-style:solid;--en-radius-sm:0;--en-radius-md:0;--en-radius-lg:0;--en-radius-xl:0;--en-radius-full:9999px;--en-shadow-sm:2px 2px 0 var(--en-border);--en-shadow-md:4px 4px 0 var(--en-border);--en-shadow-lg:6px 6px 0 var(--en-border);--en-font-sans:"Atkinson Hyperlegible", "Arial", "Helvetica Neue", system-ui, sans-serif;--en-leading-normal:1.7;--en-leading-relaxed:1.9;--en-font-normal:500;--en-font-medium:600;--en-font-semibold:700;--en-font-bold:900;--en-tracking-normal:.02em;--en-tracking-wide:.06em;--en-duration-fast:0s;--en-duration-base:.1s;--en-duration-slow:.2s;--en-ease-out:linear;--en-ease-in-out:linear;--en-ring-color:var(--lightningcss-light,#005fcc)var(--lightningcss-dark,#ff0);--en-ring-width:3px;--en-ring-offset:3px;--en-ring-offset-color:var(--en-bg)}}

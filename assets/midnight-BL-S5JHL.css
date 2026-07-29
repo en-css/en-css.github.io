@@ -1,0 +1,6 @@
+/*!
+ * EN-CSS Theme: Midnight/Cosmic
+ * Deep, mysterious theme inspired by night sky
+ * Supports automatic light/dark mode via light-dark()
+ */
+@layer en-tokens{:root{--en-primary:var(--lightningcss-light,#1e3a8a)var(--lightningcss-dark,#60a5fa);--en-primary-contrast:var(--lightningcss-light,#fff)var(--lightningcss-dark,#0a0e1a);--en-secondary:var(--lightningcss-light,#6366f1)var(--lightningcss-dark,#818cf8);--en-success:var(--lightningcss-light,#059669)var(--lightningcss-dark,#34d399);--en-warning:var(--lightningcss-light,#d97706)var(--lightningcss-dark,#fbbf24);--en-danger:var(--lightningcss-light,#dc2626)var(--lightningcss-dark,#f87171);--en-info:var(--lightningcss-light,#0284c7)var(--lightningcss-dark,#38bdf8);--en-bg:var(--lightningcss-light,#f0f4ff)var(--lightningcss-dark,#0a0e1a);--en-bg-subtle:var(--lightningcss-light,#e0e7ff)var(--lightningcss-dark,#1a1f3a);--en-surface:var(--lightningcss-light,#fff)var(--lightningcss-dark,#1e2a4a);--en-text:var(--lightningcss-light,#1e293b)var(--lightningcss-dark,#e0e7ff);--en-text-muted:var(--lightningcss-light,#475569)var(--lightningcss-dark,#94a3b8);--en-border:var(--lightningcss-light,#c7d2fe)var(--lightningcss-dark,#3730a3)}}

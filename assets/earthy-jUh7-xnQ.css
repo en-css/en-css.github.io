@@ -1,0 +1,6 @@
+/*!
+ * EN-CSS Theme: Earthy/Nature
+ * Organic, natural theme inspired by earth and nature
+ * Supports automatic light/dark mode via light-dark()
+ */
+@layer en-tokens{:root{--en-primary:var(--lightningcss-light,#8b7355)var(--lightningcss-dark,peru);--en-primary-contrast:var(--lightningcss-light,#fff)var(--lightningcss-dark,#2c2416);--en-secondary:var(--lightningcss-light,#6b8e23)var(--lightningcss-dark,#9acd32);--en-success:var(--lightningcss-light,#228b22)var(--lightningcss-dark,#32cd32);--en-warning:var(--lightningcss-light,#d2691e)var(--lightningcss-dark,#ff8c00);--en-danger:var(--lightningcss-light,sienna)var(--lightningcss-dark,#cd5c5c);--en-info:var(--lightningcss-light,#5f9ea0)var(--lightningcss-dark,#66cdaa);--en-bg:var(--lightningcss-light,beige)var(--lightningcss-dark,#1a1612);--en-bg-subtle:var(--lightningcss-light,#eee8aa)var(--lightningcss-dark,#2c2416);--en-surface:var(--lightningcss-light,#fffaf0)var(--lightningcss-dark,#3a3226);--en-text:var(--lightningcss-light,#2c2416)var(--lightningcss-dark,#e8dcc8);--en-text-muted:var(--lightningcss-light,#6b5d4f)var(--lightningcss-dark,#c4b5a0);--en-border:var(--lightningcss-light,tan)var(--lightningcss-dark,#5d4e3a)}}

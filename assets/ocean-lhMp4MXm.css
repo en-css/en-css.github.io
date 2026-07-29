@@ -1,0 +1,6 @@
+/*!
+ * EN-CSS Theme: Ocean/Marine
+ * Fresh, trustworthy theme inspired by the ocean
+ * Supports automatic light/dark mode via light-dark()
+ */
+@layer en-tokens{:root{--en-primary:var(--lightningcss-light,#4a90e2)var(--lightningcss-dark,#5dade2);--en-primary-contrast:var(--lightningcss-light,#fff)var(--lightningcss-dark,#0a1929);--en-secondary:var(--lightningcss-light,#00bcd4)var(--lightningcss-dark,#26c6da);--en-success:var(--lightningcss-light,#00897b)var(--lightningcss-dark,#26a69a);--en-warning:var(--lightningcss-light,#ffb300)var(--lightningcss-dark,#ffc107);--en-danger:var(--lightningcss-light,#d32f2f)var(--lightningcss-dark,#ef5350);--en-info:var(--lightningcss-light,#0288d1)var(--lightningcss-dark,#29b6f6);--en-bg:var(--lightningcss-light,#f0f9ff)var(--lightningcss-dark,#0a1929);--en-bg-subtle:var(--lightningcss-light,#e0f2fe)var(--lightningcss-dark,#132f4c);--en-surface:var(--lightningcss-light,#fff)var(--lightningcss-dark,#1e3a5f);--en-text:var(--lightningcss-light,#0c4a6e)var(--lightningcss-dark,#e0f2fe);--en-text-muted:var(--lightningcss-light,#0369a1)var(--lightningcss-dark,#7dd3fc);--en-border:var(--lightningcss-light,#bae6fd)var(--lightningcss-dark,#1e40af)}}

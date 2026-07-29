@@ -1,0 +1,6 @@
+/*!
+ * EN-CSS Theme: Ruby/Jewel
+ * Elegant, luxurious theme inspired by ruby gemstone
+ * Supports automatic light/dark mode via light-dark()
+ */
+@layer en-tokens{:root{--en-primary:var(--lightningcss-light,#dc2626)var(--lightningcss-dark,#f87171);--en-primary-contrast:var(--lightningcss-light,#fff)var(--lightningcss-dark,#1a0a0a);--en-secondary:var(--lightningcss-light,#9f1239)var(--lightningcss-dark,#fb7185);--en-success:var(--lightningcss-light,#059669)var(--lightningcss-dark,#34d399);--en-warning:var(--lightningcss-light,#d97706)var(--lightningcss-dark,#fbbf24);--en-danger:var(--lightningcss-light,#b91c1c)var(--lightningcss-dark,#ef4444);--en-info:var(--lightningcss-light,#7c3aed)var(--lightningcss-dark,#a78bfa);--en-bg:var(--lightningcss-light,#fff1f2)var(--lightningcss-dark,#1a0a0a);--en-bg-subtle:var(--lightningcss-light,#ffe4e6)var(--lightningcss-dark,#2a1414);--en-surface:var(--lightningcss-light,#fff)var(--lightningcss-dark,#3a1e1e);--en-text:var(--lightningcss-light,#450a0a)var(--lightningcss-dark,#fecaca);--en-text-muted:var(--lightningcss-light,#7f1d1d)var(--lightningcss-dark,#fca5a5);--en-border:var(--lightningcss-light,#fecaca)var(--lightningcss-dark,#7f1d1d)}}
