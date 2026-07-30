@@ -1,6 +1,0 @@
-/*!
- * EN-CSS Theme: Coffee/Mocha
- * Warm, inviting theme inspired by coffee culture
- * Supports automatic light/dark mode via light-dark()
- */
-@layer en-tokens{:root{--en-primary:var(--lightningcss-light,#8b4513)var(--lightningcss-dark,#d2691e);--en-primary-contrast:var(--lightningcss-light,#fff)var(--lightningcss-dark,#fff8dc);--en-secondary:var(--lightningcss-light,sienna)var(--lightningcss-dark,peru);--en-success:var(--lightningcss-light,#6b8e23)var(--lightningcss-dark,#9acd32);--en-warning:var(--lightningcss-light,#daa520)var(--lightningcss-dark,gold);--en-danger:var(--lightningcss-light,#b22222)var(--lightningcss-dark,tomato);--en-info:var(--lightningcss-light,#8b7355)var(--lightningcss-dark,tan);--en-bg:var(--lightningcss-light,#fff8dc)var(--lightningcss-dark,#1a0f0a);--en-bg-subtle:var(--lightningcss-light,#faebd7)var(--lightningcss-dark,#2c1810);--en-surface:var(--lightningcss-light,#fff)var(--lightningcss-dark,#3e2723);--en-text:var(--lightningcss-light,#3e2723)var(--lightningcss-dark,wheat);--en-text-muted:var(--lightningcss-light,#8b7355)var(--lightningcss-dark,tan);--en-border:var(--lightningcss-light,tan)var(--lightningcss-dark,#5d4037)}}

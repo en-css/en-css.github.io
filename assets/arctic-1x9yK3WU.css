@@ -1,6 +1,0 @@
-/*!
- * EN-CSS Theme: Arctic/Ice
- * Clean, modern theme inspired by arctic ice
- * Supports automatic light/dark mode via light-dark()
- */
-@layer en-tokens{:root{--en-primary:var(--lightningcss-light,#87ceeb)var(--lightningcss-dark,#4fc3f7);--en-primary-contrast:var(--lightningcss-light,#0f172a)var(--lightningcss-dark,#f8fafc);--en-secondary:var(--lightningcss-light,#00bcd4)var(--lightningcss-dark,#00e5ff);--en-success:var(--lightningcss-light,#00c853)var(--lightningcss-dark,#69f0ae);--en-warning:var(--lightningcss-light,#ffd600)var(--lightningcss-dark,#ffea00);--en-danger:var(--lightningcss-light,#d50000)var(--lightningcss-dark,#ff5252);--en-info:var(--lightningcss-light,#2979ff)var(--lightningcss-dark,#448aff);--en-bg:var(--lightningcss-light,#f8fafc)var(--lightningcss-dark,#0f1419);--en-bg-subtle:var(--lightningcss-light,#f1f5f9)var(--lightningcss-dark,#1a2332);--en-surface:var(--lightningcss-light,#fff)var(--lightningcss-dark,#1e293b);--en-text:var(--lightningcss-light,#0f172a)var(--lightningcss-dark,#f1f5f9);--en-text-muted:var(--lightningcss-light,#475569)var(--lightningcss-dark,#94a3b8);--en-border:var(--lightningcss-light,#cbd5e1)var(--lightningcss-dark,#334155)}}

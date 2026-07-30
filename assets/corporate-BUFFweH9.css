@@ -1,6 +1,0 @@
-/*!
- * EN-CSS Theme: Corporate/Professional
- * Professional, trustworthy theme for business applications
- * Supports automatic light/dark mode via light-dark()
- */
-@layer en-tokens{:root{--en-primary:var(--lightningcss-light,#2563eb)var(--lightningcss-dark,#3b82f6);--en-primary-contrast:var(--lightningcss-light,#fff)var(--lightningcss-dark,#0f172a);--en-secondary:var(--lightningcss-light,#64748b)var(--lightningcss-dark,#94a3b8);--en-success:var(--lightningcss-light,#16a34a)var(--lightningcss-dark,#4ade80);--en-warning:var(--lightningcss-light,#ca8a04)var(--lightningcss-dark,#fde047);--en-danger:var(--lightningcss-light,#dc2626)var(--lightningcss-dark,#f87171);--en-info:var(--lightningcss-light,#0284c7)var(--lightningcss-dark,#22d3ee);--en-bg:var(--lightningcss-light,#f8fafc)var(--lightningcss-dark,#0f172a);--en-bg-subtle:var(--lightningcss-light,#f1f5f9)var(--lightningcss-dark,#1e293b);--en-surface:var(--lightningcss-light,#fff)var(--lightningcss-dark,#1e293b);--en-text:var(--lightningcss-light,#0f172a)var(--lightningcss-dark,#f1f5f9);--en-text-muted:var(--lightningcss-light,#64748b)var(--lightningcss-dark,#94a3b8);--en-border:var(--lightningcss-light,#e2e8f0)var(--lightningcss-dark,#334155)}}

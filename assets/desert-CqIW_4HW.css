@@ -1,6 +1,0 @@
-/*!
- * EN-CSS Theme: Desert/Sand
- * Warm desert theme with sandy and terracotta tones
- * Supports automatic light/dark mode via light-dark()
- */
-@layer en-tokens{:root{--en-primary:var(--lightningcss-light,#c19a6b)var(--lightningcss-dark,#e97451);--en-primary-contrast:var(--lightningcss-light,#fff)var(--lightningcss-dark,#2a1810);--en-secondary:var(--lightningcss-light,#d2691e)var(--lightningcss-dark,#f4a460);--en-success:var(--lightningcss-light,#9acd32)var(--lightningcss-dark,#adff2f);--en-warning:var(--lightningcss-light,#ff8c00)var(--lightningcss-dark,gold);--en-danger:var(--lightningcss-light,#cd5c5c)var(--lightningcss-dark,tomato);--en-info:var(--lightningcss-light,#87ceeb)var(--lightningcss-dark,#00ced1);--en-bg:var(--lightningcss-light,#fff8dc)var(--lightningcss-dark,#1a1310);--en-bg-subtle:var(--lightningcss-light,bisque)var(--lightningcss-dark,#2a1f18);--en-surface:var(--lightningcss-light,#fffaf0)var(--lightningcss-dark,#3a2820);--en-text:var(--lightningcss-light,#3e2723)var(--lightningcss-dark,wheat);--en-text-muted:var(--lightningcss-light,#8b7355)var(--lightningcss-dark,tan);--en-border:var(--lightningcss-light,#deb887)var(--lightningcss-dark,#5d4037)}}

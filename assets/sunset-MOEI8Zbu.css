@@ -1,6 +1,0 @@
-/*!
- * EN-CSS Theme: Sunset/Dusk
- * Warm, vibrant theme inspired by sunset colors
- * Supports automatic light/dark mode via light-dark()
- */
-@layer en-tokens{:root{--en-primary:var(--lightningcss-light,#f87171)var(--lightningcss-dark,#fb923c);--en-primary-contrast:var(--lightningcss-light,#fff)var(--lightningcss-dark,#1a0a14);--en-secondary:var(--lightningcss-light,#fb923c)var(--lightningcss-dark,#fbbf24);--en-success:var(--lightningcss-light,#34d399)var(--lightningcss-dark,#6ee7b7);--en-warning:var(--lightningcss-light,#fbbf24)var(--lightningcss-dark,#fcd34d);--en-danger:var(--lightningcss-light,#ef4444)var(--lightningcss-dark,#f87171);--en-info:var(--lightningcss-light,#a78bfa)var(--lightningcss-dark,#c4b5fd);--en-bg:var(--lightningcss-light,#fff7ed)var(--lightningcss-dark,#1a0a14);--en-bg-subtle:var(--lightningcss-light,#ffedd5)var(--lightningcss-dark,#2d1b3d);--en-surface:var(--lightningcss-light,#fff)var(--lightningcss-dark,#3d2447);--en-text:var(--lightningcss-light,#7c2d12)var(--lightningcss-dark,#fed7aa);--en-text-muted:var(--lightningcss-light,#c2410c)var(--lightningcss-dark,#fdba74);--en-border:var(--lightningcss-light,#fed7aa)var(--lightningcss-dark,#6d28d9)}}
