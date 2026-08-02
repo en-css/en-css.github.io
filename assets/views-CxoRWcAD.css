@@ -1,0 +1,1 @@
+.en-calendar[data-v-6de67d0f] .weekday-row,.en-calendar[data-v-6de67d0f] .calendar-week{display:var(--grid-layout,grid);grid-template-columns:var(--grid-cols,repeat(7, 1fr));gap:0}.en-calendar[data-v-6de67d0f] .day-button{width:100%}

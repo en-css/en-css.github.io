@@ -1,0 +1,1 @@
+function e(e){return e.replace(/([A-Z])/g,` $1`).replace(/[._\-]+/g,` `).trim().replace(/\b\w/g,e=>e.toUpperCase())}function t(t){return typeof t==`string`?{key:t,label:e(t)}:{...t,label:t.label??e(t.key)}}function n(e,t){return t.split(`.`).reduce((e,t)=>e?.[t],e)}export{t as n,n as t};
