@@ -1,0 +1,174 @@
+/*!
+ * Theme: Nature / Ghibli
+ * Overrides for en-css tokens (01-tokens.css) with textured paper background.
+ */
+
+@layer en-tokens {
+  [data-en-theme="nature"],
+  .en-theme-nature {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#4F7942, #81c784);
+    --en-secondary: light-dark(#6fa8dc, #81d4fa);
+    --en-success: light-dark(#2e7d32, #69f0ae);
+    --en-warning: light-dark(#ffb300, #ffd54f);
+    --en-danger: light-dark(#d32f2f, #e57373);
+    --en-info: light-dark(#0f818c, #4dd0e1);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#3d6334, #93d495);
+    --en-primary-active: light-dark(#2e4f27, #a5e2a7);
+    --en-secondary-hover: light-dark(#81b6e7, #a1e1ff);
+    --en-success-hover: light-dark(#236a27, #83fdbf);
+    --en-warning-hover: light-dark(#ffc86e, #ffe7a1);
+    --en-danger-hover: light-dark(#b72525, #f08483);
+    --en-info-hover: light-dark(#046e78, #6adeed);
+
+    --en-secondary-active: light-dark(#93c4f2, #c5ecfe);
+    --en-success-active: light-dark(#18571d, #c7ffdf);
+    --en-warning-active: light-dark(#fedba5, #fff7df);
+    --en-danger-active: light-dark(#9b1a1c, #fb9694);
+    --en-info-active: light-dark(#065b63, #83ebfa);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#f0fdf4, #1e3821);
+    --en-secondary-subtle: light-dark(#dbeafe, #1e3d5a);
+    --en-success-subtle: light-dark(#dcfce7, #113a14);
+    --en-warning-subtle: light-dark(#fef9c3, #4a3900);
+    --en-danger-subtle: light-dark(#fee2e2, #4a0f0f);
+    --en-info-subtle: light-dark(#cffafe, #003238);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#f0fdf4, #0b1a13);
+    --en-fg-secondary: light-dark(#0a1f10, #0a1929);
+    --en-fg-success: light-dark(#dcfce7, #052e16);
+    --en-fg-warning: light-dark(#0a1f10, #422006);
+    --en-fg-danger: light-dark(#ffffff, #450a0a);
+    --en-fg-info: light-dark(#ffffff, #003238);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#3d6334, #81c784);
+    --en-text-brand-hover: light-dark(#2e4f27, #69f0ae);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#f4fcf6, #0a1f10);
+    --en-bg-subtle: light-dark(#eeeadd, #1c2d22);
+    --en-bg-surface: light-dark(#ffffff, #203328);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f5f3eb, #2a3e2f);
+    --en-bg-active: light-dark(#eeeadd, #344a3c);
+
+    --en-text: light-dark(#3e2723, #f1f8e9);
+    --en-text-muted: light-dark(#7f6156, #a5d6a7);
+
+    --en-border: light-dark(#d7ccc8, #2e4736);
+    --en-border-control: light-dark(#897e7a, #728172);
+    --en-border-subtle: light-dark(#e6ded8, #253a2d);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#4F7942, #81c784);
+    --en-disabled-bg: light-dark(#f5f1e8, #1a2620);
+    --en-disabled-text: light-dark(#a89984, #5a6b5a);
+    --en-overlay: light-dark(rgba(62, 39, 35, 0.4), rgba(0, 0, 0, 0.6));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#1c2d22, #eeeadd);
+    --en-bg-surface-inverse: light-dark(#203328, #ffffff);
+
+    --en-text-inverse: light-dark(#f1f8e9, #3e2723);
+    --en-text-muted-inverse: light-dark(#a5d6a7, #8d6e63);
+
+    --en-border-inverse: light-dark(#2e4736, #d7ccc8);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#81c784, #4F7942);
+    --en-secondary-inverse: light-dark(#81d4fa, #6fa8dc);
+    --en-success-inverse: light-dark(#69f0ae, #2e7d32);
+    --en-warning-inverse: light-dark(#ffd54f, #ffb300);
+    --en-danger-inverse: light-dark(#e57373, #d32f2f);
+    --en-info-inverse: light-dark(#4dd0e1, #0f818c);
+
+    --en-fg-primary-inverse: light-dark(#0b1a13, #f0fdf4);
+    --en-fg-secondary-inverse: light-dark(#0a1929, #0a1f10);
+    --en-fg-success-inverse: light-dark(#052e16, #dcfce7);
+    --en-fg-warning-inverse: light-dark(#422006, #0a1f10);
+    --en-fg-danger-inverse: light-dark(#450a0a, #ffffff);
+    --en-fg-info-inverse: light-dark(#003238, #ffffff);
+
+    /* ===== Border customization ===== */
+    --en-border-width: 1px;
+    --en-border-width-thick: 2px;
+
+    /* ===== Radius: Soft organic curves ===== */
+    --en-radius-sm: 0.5rem;
+    --en-radius-md: 0.75rem;
+    --en-radius-lg: 1rem;
+    --en-radius-xl: 1.5rem;
+
+    /* ===== Shadows: Warm diffused ===== */
+    --en-shadow-sm: 0 2px 4px light-dark(rgba(62, 39, 35, 0.05), rgba(0, 0, 0, 0.2));
+    --en-shadow-md: 0 4px 12px light-dark(rgba(62, 39, 35, 0.08), rgba(0, 0, 0, 0.3));
+    --en-shadow-lg: 0 12px 32px light-dark(rgba(62, 39, 35, 0.12), rgba(0, 0, 0, 0.4));
+
+    /* ===== Typography ===== */
+    --en-font-sans: "Quicksand", "Nunito", system-ui, -apple-system, sans-serif;
+    --en-leading-normal: 1.7;
+    --en-leading-relaxed: 1.85;
+
+    /* ===== Animation ===== */
+    --en-duration-fast: 200ms;
+    --en-duration-base: 300ms;
+    --en-duration-slow: 500ms;
+    --en-ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+    --en-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* ===== Focus ring ===== */
+    --en-ring-color: var(--en-primary);
+    --en-ring-width: 3px;
+    --en-ring-offset: 2px;
+    --en-ring-offset-color: var(--en-bg);
+
+    /* ===== Texture: Soft paper grain / leaf scatter ===== */
+    --en-bg-size: 80px 80px;
+    --en-bg-position: 0 0, 40px 40px;
+    --en-bg-texture: 
+      radial-gradient(circle at 100% 50%, transparent 20%, color-mix(in oklab, var(--en-primary) 3%, transparent) 21%, color-mix(in oklab, var(--en-primary) 3%, transparent) 34%, transparent 35%, transparent),
+      radial-gradient(circle at 0% 50%, transparent 20%, color-mix(in oklab, var(--en-secondary) 2%, transparent) 21%, color-mix(in oklab, var(--en-secondary) 2%, transparent) 34%, transparent 35%, transparent);
+  }
+}
+
+@layer en-base {
+  [data-en-theme="nature"] body, .en-theme-nature body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  [data-en-theme="nature"] body::before, .en-theme-nature body::before {
+    content: "🜃"; /* Alchemical symbol for Earth/Nature */
+    position: fixed;
+    top: 5vh;
+    inset-inline-end: 5vw;
+    font-size: 30vw;
+    color: color-mix(in oklab, var(--en-success) 4%, transparent);
+    z-index: -1;
+    pointer-events: none;
+    line-height: 1;
+    font-family: serif;
+    rotate: 10deg;
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="nature"] body,
+    .en-theme-nature body {
+      background-image: none;
+    }
+
+    [data-en-theme="nature"] body::before,
+    .en-theme-nature body::before {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,167 @@
+/*!
+ * Theme: Retro Punk
+ * Overrides for en-css tokens (01-tokens.css)
+ */
+
+@layer en-tokens {
+  [data-en-theme="retro"],
+  .en-theme-retro {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#d81159, #f91880);
+    --en-secondary: light-dark(#00a8cc, #00f0ff);
+    --en-success: light-dark(#05a838, #00ff41);
+    --en-warning: light-dark(#e69500, #ffc000);
+    --en-danger: light-dark(#e01a22, #ff3333);
+    --en-info: light-dark(#5900cc, #7000ff);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#c00e4d, #ff4ba0);
+    --en-primary-active: light-dark(#a80b41, #ff7ec0);
+    --en-secondary-hover: light-dark(#3bb5d7, #95f6fe);
+    --en-success-hover: light-dark(#38b54f, #99ff9b);
+    --en-warning-hover: light-dark(#f1a53a, #ffd377);
+    --en-danger-hover: light-dark(#c3101a, #ff6056);
+    --en-info-hover: light-dark(#4708a4, #5e06d7);
+
+    --en-secondary-active: light-dark(#59c3e3, #d2fbfe);
+    --en-success-active: light-dark(#55c263, #d5ffd4);
+    --en-warning-active: light-dark(#fdb558, #fee6b5);
+    --en-danger-active: light-dark(#a60512, #fd8074);
+    --en-info-active: light-dark(#370084, #4c05b1);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#ffe4e6, #4a0520);
+    --en-secondary-subtle: light-dark(#cffafe, #00424a);
+    --en-success-subtle: light-dark(#dcfce7, #02421a);
+    --en-warning-subtle: light-dark(#fef9c3, #4a3100);
+    --en-danger-subtle: light-dark(#fee2e2, #4a0a0c);
+    --en-info-subtle: light-dark(#f3e8ff, #1f0042);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#ffffff, #000000);
+    --en-fg-secondary: light-dark(#261c0b, #000000);
+    --en-fg-success: light-dark(#261c0b, #000000);
+    --en-fg-warning: light-dark(#000000, #000000);
+    --en-fg-danger: light-dark(#ffffff, #000000);
+    --en-fg-info: light-dark(#ffffff, #e0e0ff);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#d81159, #ff2384);
+    --en-text-brand-hover: light-dark(#c00e4d, #fd6799);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fff9e6, #261c0b);
+    --en-bg-subtle: light-dark(#eee8d5, #131316);
+    --en-bg-surface: light-dark(#ffffff, #1c1c21);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f5f0e0, #1d1d22);
+    --en-bg-active: light-dark(#eee8d5, #26262b);
+
+    --en-text: light-dark(#2d2d2d, #e0e0ff);
+    --en-text-muted: light-dark(#59696b, #a599ce);
+
+    --en-border: light-dark(#2d2d2d, #f91880);
+    --en-border-control: light-dark(#817f77, #726c6f);
+    --en-border-subtle: light-dark(#839496, #1d1d22);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#d81159, #00f0ff);
+    --en-disabled-bg: light-dark(#f5f0e0, #0d0d0e);
+    --en-disabled-text: light-dark(#a39d99, #5a5866);
+    --en-overlay: light-dark(rgba(45, 45, 45, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#131316, #eee8d5);
+    --en-bg-surface-inverse: light-dark(#1c1c21, #ffffff);
+
+    --en-text-inverse: light-dark(#e0e0ff, #2d2d2d);
+    --en-text-muted-inverse: light-dark(#a599ce, #839496);
+
+    --en-border-inverse: light-dark(#f91880, #2d2d2d);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#f91880, #d81159);
+    --en-secondary-inverse: light-dark(#00f0ff, #00a8cc);
+    --en-success-inverse: light-dark(#00ff41, #05a838);
+    --en-warning-inverse: light-dark(#ffc000, #e69500);
+    --en-danger-inverse: light-dark(#ff3333, #e01a22);
+    --en-info-inverse: light-dark(#7000ff, #5900cc);
+
+    --en-fg-primary-inverse: light-dark(#000000, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#000000, #261c0b);
+    --en-fg-success-inverse: light-dark(#000000, #261c0b);
+    --en-fg-warning-inverse: light-dark(#000000, #000000);
+    --en-fg-danger-inverse: light-dark(#000000, #ffffff);
+    --en-fg-info-inverse: light-dark(#e0e0ff, #ffffff);
+
+    /* Border width, style & sharp radius */
+    --en-border-width: 2px;
+    --en-border-width-thick: 4px;
+    --en-border-style: solid;
+    --en-radius-sm: 0;
+    --en-radius-md: 0;
+    --en-radius-lg: 0;
+    --en-radius-xl: 0;
+    --en-radius-full: 0;
+    --en-radius-circle: 0;
+
+    /* Shadow */
+    --en-shadow-sm: 2px 2px 0 var(--en-border);
+    --en-shadow-md: 4px 4px 0 var(--en-border);
+    --en-shadow-lg: 8px 8px 0 var(--en-border);
+
+    /* Typography */
+    --en-font-sans: "Courier New", Courier, ui-monospace, "Cascadia Code", Consolas, monospace;
+    --en-font-mono: "Courier New", Courier, ui-monospace, "Cascadia Code", Consolas, monospace;
+    --en-tracking-tight: -0.05em;
+    --en-tracking-normal: -0.025em;
+    --en-tracking-wide: 0;
+
+    /* Focus ring */
+    --en-ring-color: var(--en-secondary);
+    --en-ring-width: 2px;
+    --en-ring-offset: 4px;
+    --en-ring-offset-color: var(--en-bg);
+
+    /* Texture: Cyber grid (1:1 aspect ratio mapping) */
+    --en-bg-size: 40px 40px; /* Perfect square grid */
+    --en-bg-texture: 
+      linear-gradient(color-mix(in oklab, var(--en-secondary) 8%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in oklab, var(--en-secondary) 8%, transparent) 1px, transparent 1px);
+  }
+}
+
+@layer en-base {
+  [data-en-theme="retro"] body, .en-theme-retro body {
+    background-size: var(--en-bg-size); /* Perfect square grid */
+    background-image: var(--en-bg-texture);
+  }
+
+  [data-en-theme="retro"] body::before, .en-theme-retro body::before {
+    content: "🜏"; /* Leviathan / Sulfur */
+    position: fixed;
+    top: 10vh;
+    inset-inline-end: 5vw;
+    font-size: 45vw;
+    color: color-mix(in oklab, var(--en-primary) 5%, transparent);
+    z-index: 1;
+    pointer-events: none;
+    line-height: 1;
+    font-family: monospace;
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="retro"] body,
+    .en-theme-retro body {
+      background-image: none;
+    }
+
+    [data-en-theme="retro"] body::before,
+    .en-theme-retro body::before {
+      display: none;
+    }
+  }
+}

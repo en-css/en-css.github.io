@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "form",
+    "label": "form",
+    "path": "",
+    "size": "",
+    "isFolder": true,
+    "children": [
+      {
+        "id": "form-extended",
+        "label": "extended",
+        "path": "",
+        "size": "",
+        "isFolder": true,
+        "children": [
+          {
+            "id": "form-extended-components-adorned-css",
+            "label": "components-adorned.css",
+            "path": "form/extended/components-adorned.css",
+            "size": "9.0 KB"
+          },
+          {
+            "id": "form-extended-components-form-display-css",
+            "label": "components-form-display.css",
+            "path": "form/extended/components-form-display.css",
+            "size": "2.0 KB"
+          },
+          {
+            "id": "form-extended-components-strength-css",
+            "label": "components-strength.css",
+            "path": "form/extended/components-strength.css",
+            "size": "2.3 KB"
+          },
+          {
+            "id": "form-extended-components-otp-css",
+            "label": "components-otp.css",
+            "path": "form/extended/components-otp.css",
+            "size": "2.9 KB"
+          },
+          {
+            "id": "form-extended-components-range-css",
+            "label": "components-range.css",
+            "path": "form/extended/components-range.css",
+            "size": "7.0 KB"
+          },
+          {
+            "id": "form-extended-components-chip-input-css",
+            "label": "components-chip-input.css",
+            "path": "form/extended/components-chip-input.css",
+            "size": "6.6 KB"
+          },
+          {
+            "id": "form-extended-components-file-upload-draft-css",
+            "label": "components-file-upload.draft.css",
+            "path": "form/extended/components-file-upload.draft.css",
+            "size": "8.0 KB"
+          },
+          {
+            "id": "form-extended-components-file-upload-css",
+            "label": "components-file-upload.css",
+            "path": "form/extended/components-file-upload.css",
+            "size": "8.8 KB"
+          },
+          {
+            "id": "form-extended-form-extended-css",
+            "label": "_form-extended.css",
+            "path": "form/extended/_form-extended.css",
+            "size": "48.4 KB"
+          },
+          {
+            "id": "form-extended-components-rating-css",
+            "label": "components-rating.css",
+            "path": "form/extended/components-rating.css",
+            "size": "1.8 KB"
+          },
+          {
+            "id": "form-extended-components-form-spin-css",
+            "label": "components-form-spin.css",
+            "path": "form/extended/components-form-spin.css",
+            "size": "8.8 KB"
+          }
+        ]
+      },
+      {
+        "id": "form-form-css",
+        "label": "_form.css",
+        "path": "form/_form.css",
+        "size": "88.0 KB"
+      },
+      {
+        "id": "form-form-basic-css",
+        "label": "form-basic.css",
+        "path": "form/form-basic.css",
+        "size": "39.6 KB"
+      }
+    ]
+  },
+  {
+    "id": "layouts",
+    "label": "layouts",
+    "path": "",
+    "size": "",
+    "isFolder": true,
+    "children": [
+      {
+        "id": "layouts-layout-css",
+        "label": "_layout.css",
+        "path": "layouts/_layout.css",
+        "size": "11.5 KB"
+      },
+      {
+        "id": "layouts-layout-extra-16-css",
+        "label": "layout-extra-16.css",
+        "path": "layouts/layout-extra-16.css",
+        "size": "3.7 KB"
+      },
+      {
+        "id": "layouts-layout-primitives-css",
+        "label": "layout-primitives.css",
+        "path": "layouts/layout-primitives.css",
+        "size": "5.4 KB"
+      },
+      {
+        "id": "layouts-layout-columns-css",
+        "label": "layout-columns.css",
+        "path": "layouts/layout-columns.css",
+        "size": "2.4 KB"
+      },
+      {
+        "id": "layouts-layout-extra-24-css",
+        "label": "layout-extra-24.css",
+        "path": "layouts/layout-extra-24.css",
+        "size": "5.4 KB"
+      }
+    ]
+  },
+  {
+    "id": "utilities",
+    "label": "utilities",
+    "path": "",
+    "size": "",
+    "isFolder": true,
+    "children": [
+      {
+        "id": "utilities-utilities-spacing-responsive-css",
+        "label": "utilities-spacing-responsive.css",
+        "path": "utilities/utilities-spacing-responsive.css",
+        "size": "16.8 KB"
+      },
+      {
+        "id": "utilities-utilities-bleed-css",
+        "label": "utilities-bleed.css",
+        "path": "utilities/utilities-bleed.css",
+        "size": "626 B"
+      },
+      {
+        "id": "utilities-utilities-extra-css",
+        "label": "utilities-extra.css",
+        "path": "utilities/utilities-extra.css",
+        "size": "10.0 KB"
+      },
+      {
+        "id": "utilities-utilities-spacing-negative-css",
+        "label": "utilities-spacing-negative.css",
+        "path": "utilities/utilities-spacing-negative.css",
+        "size": "5.8 KB"
+      },
+      {
+        "id": "utilities-utilities-fullscreen-css",
+        "label": "utilities-fullscreen.css",
+        "path": "utilities/utilities-fullscreen.css",
+        "size": "444 B"
+      },
+      {
+        "id": "utilities-utilities-touch-css",
+        "label": "utilities-touch.css",
+        "path": "utilities/utilities-touch.css",
+        "size": "969 B"
+      },
+      {
+        "id": "utilities-utilities-css",
+        "label": "_utilities.css",
+        "path": "utilities/_utilities.css",
+        "size": "38.0 KB"
+      },
+      {
+        "id": "utilities-utilities-animation-extra-css",
+        "label": "utilities-animation-extra.css",
+        "path": "utilities/utilities-animation-extra.css",
+        "size": "3.7 KB"
+      },
+      {
+        "id": "utilities-utilities-spacing-between-css",
+        "label": "utilities-spacing-between.css",
+        "path": "utilities/utilities-spacing-between.css",
+        "size": "1.8 KB"
+      }
+    ]
+  },
+  {
+    "id": "presets",
+    "label": "presets",
+    "path": "",
+    "size": "",
+    "isFolder": true,
+    "children": [
+      {
+        "id": "presets-en-preset-data-css",
+        "label": "en-preset-data.css",
+        "path": "presets/en-preset-data.css",
+        "size": "366.4 KB"
+      },
+      {
+        "id": "presets-en-preset-docs-css",
+        "label": "en-preset-docs.css",
+        "path": "presets/en-preset-docs.css",
+        "size": "118.4 KB"
+      },
+      {
+        "id": "presets-en-preset-print-css",
+        "label": "en-preset-print.css",
+        "path": "presets/en-preset-print.css",
+        "size": "5.1 KB"
+      },
+      {
+        "id": "presets-en-preset-nano-css",
+        "label": "en-preset-nano.css",
+        "path": "presets/en-preset-nano.css",
+        "size": "46.1 KB"
+      },
+      {
+        "id": "presets-en-preset-app-css",
+        "label": "en-preset-app.css",
+        "path": "presets/en-preset-app.css",
+        "size": "373.2 KB"
+      },
+      {
+        "id": "presets-en-preset-extended-css",
+        "label": "en-preset-extended.css",
+        "path": "presets/en-preset-extended.css",
+        "size": "279.0 KB"
+      },
+      {
+        "id": "presets-en-preset-a11y-css",
+        "label": "en-preset-a11y.css",
+        "path": "presets/en-preset-a11y.css",
+        "size": "3.7 KB"
+      },
+      {
+        "id": "presets-en-preset-mobile-css",
+        "label": "en-preset-mobile.css",
+        "path": "presets/en-preset-mobile.css",
+        "size": "269.1 KB"
+      },
+      {
+        "id": "presets-en-preset-standard-css",
+        "label": "en-preset-standard.css",
+        "path": "presets/en-preset-standard.css",
+        "size": "277.4 KB"
+      },
+      {
+        "id": "presets-en-preset-bare-css",
+        "label": "en-preset-bare.css",
+        "path": "presets/en-preset-bare.css",
+        "size": "61.8 KB"
+      },
+      {
+        "id": "presets-en-preset-marketing-css",
+        "label": "en-preset-marketing.css",
+        "path": "presets/en-preset-marketing.css",
+        "size": "299.2 KB"
+      },
+      {
+        "id": "presets-en-preset-core-css",
+        "label": "en-preset-core.css",
+        "path": "presets/en-preset-core.css",
+        "size": "25.0 KB"
+      },
+      {
+        "id": "presets-en-preset-forms-css",
+        "label": "en-preset-forms.css",
+        "path": "presets/en-preset-forms.css",
+        "size": "126.8 KB"
+      },
+      {
+        "id": "presets-en-preset-lite-css",
+        "label": "en-preset-lite.css",
+        "path": "presets/en-preset-lite.css",
+        "size": "229.8 KB"
+      }
+    ]
+  },
+  {
+    "id": "components",
+    "label": "components",
+    "path": "",
+    "size": "",
+    "isFolder": true,
+    "children": [
+      {
+        "id": "components-extended",
+        "label": "extended",
+        "path": "",
+        "size": "",
+        "isFolder": true,
+        "children": [
+          {
+            "id": "components-extended-components-context-menu-css",
+            "label": "components-context-menu.css",
+            "path": "components/extended/components-context-menu.css",
+            "size": "10.8 KB"
+          },
+          {
+            "id": "components-extended-components-sheet-css",
+            "label": "components-sheet.css",
+            "path": "components/extended/components-sheet.css",
+            "size": "6.6 KB"
+          },
+          {
+            "id": "components-extended-components-error-page-css",
+            "label": "components-error-page.css",
+            "path": "components/extended/components-error-page.css",
+            "size": "2.1 KB"
+          },
+          {
+            "id": "components-extended-components-spinner-css",
+            "label": "components-spinner.css",
+            "path": "components/extended/components-spinner.css",
+            "size": "1.7 KB"
+          },
+          {
+            "id": "components-extended-components-carousel-css",
+            "label": "components-carousel.css",
+            "path": "components/extended/components-carousel.css",
+            "size": "2.8 KB"
+          },
+          {
+            "id": "components-extended-components-quote-css",
+            "label": "components-quote.css",
+            "path": "components/extended/components-quote.css",
+            "size": "5.9 KB"
+          },
+          {
+            "id": "components-extended-components-banner-css",
+            "label": "components-banner.css",
+            "path": "components/extended/components-banner.css",
+            "size": "2.7 KB"
+          },
+          {
+            "id": "components-extended-components-chart-css",
+            "label": "components-chart.css",
+            "path": "components/extended/components-chart.css",
+            "size": "8.3 KB"
+          },
+          {
+            "id": "components-extended-components-command-palette-css",
+            "label": "components-command-palette.css",
+            "path": "components/extended/components-command-palette.css",
+            "size": "9.0 KB"
+          },
+          {
+            "id": "components-extended-components-fab-css",
+            "label": "components-fab.css",
+            "path": "components/extended/components-fab.css",
+            "size": "4.1 KB"
+          },
+          {
+            "id": "components-extended-components-dot-loader-base-css",
+            "label": "components-dot-loader-base.css",
+            "path": "components/extended/components-dot-loader-base.css",
+            "size": "2.4 KB"
+          },
+          {
+            "id": "components-extended-components-chat-css",
+            "label": "components-chat.css",
+            "path": "components/extended/components-chat.css",
+            "size": "3.0 KB"
+          },
+          {
+            "id": "components-extended-components-combobox-css",
+            "label": "components-combobox.css",
+            "path": "components/extended/components-combobox.css",
+            "size": "8.6 KB"
+          },
+          {
+            "id": "components-extended-components-stepper-css",
+            "label": "components-stepper.css",
+            "path": "components/extended/components-stepper.css",
+            "size": "1.5 KB"
+          },
+          {
+            "id": "components-extended-components-skeleton-css",
+            "label": "components-skeleton.css",
+            "path": "components/extended/components-skeleton.css",
+            "size": "2.2 KB"
+          },
+          {
+            "id": "components-extended-components-dot-loader-css",
+            "label": "components-dot-loader.css",
+            "path": "components/extended/components-dot-loader.css",
+            "size": "15.1 KB"
+          },
+          {
+            "id": "components-extended-components-skip-link-css",
+            "label": "components-skip-link.css",
+            "path": "components/extended/components-skip-link.css",
+            "size": "990 B"
+          },
+          {
+            "id": "components-extended-components-hero-css",
+            "label": "components-hero.css",
+            "path": "components/extended/components-hero.css",
+            "size": "2.4 KB"
+          },
+          {
+            "id": "components-extended-components-chip-css",
+            "label": "components-chip.css",
+            "path": "components/extended/components-chip.css",
+            "size": "867 B"
+          },
+          {
+            "id": "components-extended-components-code-css",
+            "label": "components-code.css",
+            "path": "components/extended/components-code.css",
+            "size": "4.4 KB"
+          },
+          {
+            "id": "components-extended-components-footer-css",
+            "label": "components-footer.css",
+            "path": "components/extended/components-footer.css",
+            "size": "3.4 KB"
+          },
+          {
+            "id": "components-extended-components-dot-loader-travel-css",
+            "label": "components-dot-loader-travel.css",
+            "path": "components/extended/components-dot-loader-travel.css",
+            "size": "4.4 KB"
+          },
+          {
+            "id": "components-extended-components-timeline-css",
+            "label": "components-timeline.css",
+            "path": "components/extended/components-timeline.css",
+            "size": "1.4 KB"
+          },
+          {
+            "id": "components-extended-components-prose-css",
+            "label": "components-prose.css",
+            "path": "components/extended/components-prose.css",
+            "size": "6.3 KB"
+          },
+          {
+            "id": "components-extended-components-avatar-css",
+            "label": "components-avatar.css",
+            "path": "components/extended/components-avatar.css",
+            "size": "987 B"
+          },
+          {
+            "id": "components-extended-components-dot-loader-orbit-css",
+            "label": "components-dot-loader-orbit.css",
+            "path": "components/extended/components-dot-loader-orbit.css",
+            "size": "3.5 KB"
+          },
+          {
+            "id": "components-extended-components-auth-css",
+            "label": "components-auth.css",
+            "path": "components/extended/components-auth.css",
+            "size": "2.7 KB"
+          },
+          {
+            "id": "components-extended-components-device-css",
+            "label": "components-device.css",
+            "path": "components/extended/components-device.css",
+            "size": "10.2 KB"
+          },
+          {
+            "id": "components-extended-components-pricing-css",
+            "label": "components-pricing.css",
+            "path": "components/extended/components-pricing.css",
+            "size": "4.3 KB"
+          },
+          {
+            "id": "components-extended-components-popover-css",
+            "label": "components-popover.css",
+            "path": "components/extended/components-popover.css",
+            "size": "5.1 KB"
+          },
+          {
+            "id": "components-extended-components-dot-loader-line-css",
+            "label": "components-dot-loader-line.css",
+            "path": "components/extended/components-dot-loader-line.css",
+            "size": "4.3 KB"
+          },
+          {
+            "id": "components-extended-components-extended-css",
+            "label": "_components-extended.css",
+            "path": "components/extended/_components-extended.css",
+            "size": "273.0 KB"
+          },
+          {
+            "id": "components-extended-components-tree-css",
+            "label": "components-tree.css",
+            "path": "components/extended/components-tree.css",
+            "size": "8.3 KB"
+          },
+          {
+            "id": "components-extended-components-feed-css",
+            "label": "components-feed.css",
+            "path": "components/extended/components-feed.css",
+            "size": "3.1 KB"
+          },
+          {
+            "id": "components-extended-components-bottom-nav-css",
+            "label": "components-bottom-nav.css",
+            "path": "components/extended/components-bottom-nav.css",
+            "size": "3.3 KB"
+          },
+          {
+            "id": "components-extended-components-gallery-css",
+            "label": "components-gallery.css",
+            "path": "components/extended/components-gallery.css",
+            "size": "10.7 KB"
+          },
+          {
+            "id": "components-extended-components-meter-css",
+            "label": "components-meter.css",
+            "path": "components/extended/components-meter.css",
+            "size": "3.8 KB"
+          },
+          {
+            "id": "components-extended-components-kanban-css",
+            "label": "components-kanban.css",
+            "path": "components/extended/components-kanban.css",
+            "size": "14.1 KB"
+          },
+          {
+            "id": "components-extended-components-toc-css",
+            "label": "components-toc.css",
+            "path": "components/extended/components-toc.css",
+            "size": "3.6 KB"
+          },
+          {
+            "id": "components-extended-components-stat-card-css",
+            "label": "components-stat-card.css",
+            "path": "components/extended/components-stat-card.css",
+            "size": "1.0 KB"
+          },
+          {
+            "id": "components-extended-components-loader-css",
+            "label": "components-loader.css",
+            "path": "components/extended/components-loader.css",
+            "size": "3.0 KB"
+          },
+          {
+            "id": "components-extended-components-sidebar-menu-css",
+            "label": "components-sidebar-menu.css",
+            "path": "components/extended/components-sidebar-menu.css",
+            "size": "9.4 KB"
+          },
+          {
+            "id": "components-extended-components-table-advanced-css",
+            "label": "components-table-advanced.css",
+            "path": "components/extended/components-table-advanced.css",
+            "size": "26.2 KB"
+          },
+          {
+            "id": "components-extended-components-mega-menu-css",
+            "label": "components-mega-menu.css",
+            "path": "components/extended/components-mega-menu.css",
+            "size": "8.6 KB"
+          },
+          {
+            "id": "components-extended-components-menu-icon-css",
+            "label": "components-menu-icon.css",
+            "path": "components/extended/components-menu-icon.css",
+            "size": "3.5 KB"
+          },
+          {
+            "id": "components-extended-components-toast-css",
+            "label": "components-toast.css",
+            "path": "components/extended/components-toast.css",
+            "size": "9.3 KB"
+          },
+          {
+            "id": "components-extended-components-glyph-css",
+            "label": "components-glyph.css",
+            "path": "components/extended/components-glyph.css",
+            "size": "2.1 KB"
+          },
+          {
+            "id": "components-extended-components-calendar-css",
+            "label": "components-calendar.css",
+            "path": "components/extended/components-calendar.css",
+            "size": "12.8 KB"
+          },
+          {
+            "id": "components-extended-components-btn-loading-css",
+            "label": "components-btn-loading.css",
+            "path": "components/extended/components-btn-loading.css",
+            "size": "2.1 KB"
+          },
+          {
+            "id": "components-extended-components-lightbox-css",
+            "label": "components-lightbox.css",
+            "path": "components/extended/components-lightbox.css",
+            "size": "13.4 KB"
+          },
+          {
+            "id": "components-extended-components-filter-bar-css",
+            "label": "components-filter-bar.css",
+            "path": "components/extended/components-filter-bar.css",
+            "size": "6.4 KB"
+          },
+          {
+            "id": "components-extended-components-shell-css",
+            "label": "components-shell.css",
+            "path": "components/extended/components-shell.css",
+            "size": "7.8 KB"
+          }
+        ]
+      },
+      {
+        "id": "components-basic",
+        "label": "basic",
+        "path": "",
+        "size": "",
+        "isFolder": true,
+        "children": [
+          {
+            "id": "components-basic-components-tabs-css",
+            "label": "components-tabs.css",
+            "path": "components/basic/components-tabs.css",
+            "size": "6.6 KB"
+          },
+          {
+            "id": "components-basic-components-callout-css",
+            "label": "components-callout.css",
+            "path": "components/basic/components-callout.css",
+            "size": "1.9 KB"
+          },
+          {
+            "id": "components-basic-components-card-css",
+            "label": "components-card.css",
+            "path": "components/basic/components-card.css",
+            "size": "4.2 KB"
+          },
+          {
+            "id": "components-basic-components-divider-css",
+            "label": "components-divider.css",
+            "path": "components/basic/components-divider.css",
+            "size": "1.5 KB"
+          },
+          {
+            "id": "components-basic-components-dropdown-css",
+            "label": "components-dropdown.css",
+            "path": "components/basic/components-dropdown.css",
+            "size": "5.0 KB"
+          },
+          {
+            "id": "components-basic-components-tooltip-css",
+            "label": "components-tooltip.css",
+            "path": "components/basic/components-tooltip.css",
+            "size": "4.0 KB"
+          },
+          {
+            "id": "components-basic-components-indicator-css",
+            "label": "components-indicator.css",
+            "path": "components/basic/components-indicator.css",
+            "size": "2.7 KB"
+          },
+          {
+            "id": "components-basic-components-kbd-css",
+            "label": "components-kbd.css",
+            "path": "components/basic/components-kbd.css",
+            "size": "892 B"
+          },
+          {
+            "id": "components-basic-components-breadcrumb-css",
+            "label": "components-breadcrumb.css",
+            "path": "components/basic/components-breadcrumb.css",
+            "size": "3.9 KB"
+          },
+          {
+            "id": "components-basic-components-offcanvas-css",
+            "label": "components-offcanvas.css",
+            "path": "components/basic/components-offcanvas.css",
+            "size": "4.1 KB"
+          },
+          {
+            "id": "components-basic-components-toggle-css",
+            "label": "components-toggle.css",
+            "path": "components/basic/components-toggle.css",
+            "size": "4.5 KB"
+          },
+          {
+            "id": "components-basic-components-modal-css",
+            "label": "components-modal.css",
+            "path": "components/basic/components-modal.css",
+            "size": "9.8 KB"
+          },
+          {
+            "id": "components-basic-components-empty-css",
+            "label": "components-empty.css",
+            "path": "components/basic/components-empty.css",
+            "size": "1.4 KB"
+          },
+          {
+            "id": "components-basic-components-status-dot-css",
+            "label": "components-status-dot.css",
+            "path": "components/basic/components-status-dot.css",
+            "size": "1.4 KB"
+          },
+          {
+            "id": "components-basic-components-segmented-control-css",
+            "label": "components-segmented-control.css",
+            "path": "components/basic/components-segmented-control.css",
+            "size": "13.3 KB"
+          },
+          {
+            "id": "components-basic-components-list-group-css",
+            "label": "components-list-group.css",
+            "path": "components/basic/components-list-group.css",
+            "size": "939 B"
+          },
+          {
+            "id": "components-basic-components-ratio-css",
+            "label": "components-ratio.css",
+            "path": "components/basic/components-ratio.css",
+            "size": "423 B"
+          },
+          {
+            "id": "components-basic-components-close-icon-css",
+            "label": "components-close-icon.css",
+            "path": "components/basic/components-close-icon.css",
+            "size": "1.5 KB"
+          },
+          {
+            "id": "components-basic-components-btn-group-css",
+            "label": "components-btn-group.css",
+            "path": "components/basic/components-btn-group.css",
+            "size": "2.3 KB"
+          },
+          {
+            "id": "components-basic-components-button-css",
+            "label": "components-button.css",
+            "path": "components/basic/components-button.css",
+            "size": "6.0 KB"
+          },
+          {
+            "id": "components-basic-components-navbar-css",
+            "label": "components-navbar.css",
+            "path": "components/basic/components-navbar.css",
+            "size": "6.5 KB"
+          },
+          {
+            "id": "components-basic-components-basic-css",
+            "label": "_components-basic.css",
+            "path": "components/basic/_components-basic.css",
+            "size": "116.9 KB"
+          },
+          {
+            "id": "components-basic-components-alert-css",
+            "label": "components-alert.css",
+            "path": "components/basic/components-alert.css",
+            "size": "3.1 KB"
+          },
+          {
+            "id": "components-basic-components-table-css",
+            "label": "components-table.css",
+            "path": "components/basic/components-table.css",
+            "size": "20.4 KB"
+          },
+          {
+            "id": "components-basic-components-collapse-css",
+            "label": "components-collapse.css",
+            "path": "components/basic/components-collapse.css",
+            "size": "1.4 KB"
+          },
+          {
+            "id": "components-basic-components-descriptions-css",
+            "label": "components-descriptions.css",
+            "path": "components/basic/components-descriptions.css",
+            "size": "2.0 KB"
+          },
+          {
+            "id": "components-basic-components-pagination-css",
+            "label": "components-pagination.css",
+            "path": "components/basic/components-pagination.css",
+            "size": "3.5 KB"
+          },
+          {
+            "id": "components-basic-components-accordion-css",
+            "label": "components-accordion.css",
+            "path": "components/basic/components-accordion.css",
+            "size": "1.6 KB"
+          },
+          {
+            "id": "components-basic-components-utils-css",
+            "label": "components-utils.css",
+            "path": "components/basic/components-utils.css",
+            "size": "2.2 KB"
+          },
+          {
+            "id": "components-basic-components-badge-css",
+            "label": "components-badge.css",
+            "path": "components/basic/components-badge.css",
+            "size": "1.5 KB"
+          },
+          {
+            "id": "components-basic-components-progress-css",
+            "label": "components-progress.css",
+            "path": "components/basic/components-progress.css",
+            "size": "1.3 KB"
+          }
+        ]
+      },
+      {
+        "id": "components-components-css",
+        "label": "_components.css",
+        "path": "components/_components.css",
+        "size": "389.8 KB"
+      }
+    ]
+  },
+  {
+    "id": "core",
+    "label": "core",
+    "path": "",
+    "size": "",
+    "isFolder": true,
+    "children": [
+      {
+        "id": "core-utilities",
+        "label": "utilities",
+        "path": "",
+        "size": "",
+        "isFolder": true,
+        "children": [
+          {
+            "id": "core-utilities-utilities-spacing-css",
+            "label": "utilities-spacing.css",
+            "path": "core/utilities/utilities-spacing.css",
+            "size": "5.9 KB"
+          },
+          {
+            "id": "core-utilities-utilities-bleed-css",
+            "label": "utilities-bleed.css",
+            "path": "core/utilities/utilities-bleed.css",
+            "size": "626 B"
+          },
+          {
+            "id": "core-utilities-utilities-icons-css",
+            "label": "utilities-icons.css",
+            "path": "core/utilities/utilities-icons.css",
+            "size": "4.8 KB"
+          },
+          {
+            "id": "core-utilities-utilities-go-top-css",
+            "label": "utilities-go-top.css",
+            "path": "core/utilities/utilities-go-top.css",
+            "size": "1.0 KB"
+          },
+          {
+            "id": "core-utilities-utilities-text-css",
+            "label": "utilities-text.css",
+            "path": "core/utilities/utilities-text.css",
+            "size": "1.7 KB"
+          },
+          {
+            "id": "core-utilities-utilities-box-css",
+            "label": "utilities-box.css",
+            "path": "core/utilities/utilities-box.css",
+            "size": "2.7 KB"
+          },
+          {
+            "id": "core-utilities-utilities-animation-css",
+            "label": "utilities-animation.css",
+            "path": "core/utilities/utilities-animation.css",
+            "size": "1.7 KB"
+          },
+          {
+            "id": "core-utilities-utilities-fullscreen-css",
+            "label": "utilities-fullscreen.css",
+            "path": "core/utilities/utilities-fullscreen.css",
+            "size": "444 B"
+          },
+          {
+            "id": "core-utilities-utilities-css",
+            "label": "_utilities.css",
+            "path": "core/utilities/_utilities.css",
+            "size": "23.2 KB"
+          },
+          {
+            "id": "core-utilities-utilities-scroll-css",
+            "label": "utilities-scroll.css",
+            "path": "core/utilities/utilities-scroll.css",
+            "size": "1.3 KB"
+          },
+          {
+            "id": "core-utilities-utilities-align-css",
+            "label": "utilities-align.css",
+            "path": "core/utilities/utilities-align.css",
+            "size": "514 B"
+          },
+          {
+            "id": "core-utilities-utilities-direction-css",
+            "label": "utilities-direction.css",
+            "path": "core/utilities/utilities-direction.css",
+            "size": "496 B"
+          },
+          {
+            "id": "core-utilities-utilities-spacing-role-css",
+            "label": "utilities-spacing-role.css",
+            "path": "core/utilities/utilities-spacing-role.css",
+            "size": "1.5 KB"
+          },
+          {
+            "id": "core-utilities-utilities-display-css",
+            "label": "utilities-display.css",
+            "path": "core/utilities/utilities-display.css",
+            "size": "896 B"
+          }
+        ]
+      },
+      {
+        "id": "core-tokens",
+        "label": "tokens",
+        "path": "",
+        "size": "",
+        "isFolder": true,
+        "children": [
+          {
+            "id": "core-tokens-tokens-presets-css",
+            "label": "tokens-presets.css",
+            "path": "core/tokens/tokens-presets.css",
+            "size": "5.0 KB"
+          },
+          {
+            "id": "core-tokens-tokens-scale-css",
+            "label": "tokens-scale.css",
+            "path": "core/tokens/tokens-scale.css",
+            "size": "4.2 KB"
+          }
+        ]
+      },
+      {
+        "id": "core-utilities-css",
+        "label": "utilities.css",
+        "path": "core/utilities.css",
+        "size": "23.2 KB"
+      },
+      {
+        "id": "core-core-css",
+        "label": "_core.css",
+        "path": "core/_core.css",
+        "size": "56.4 KB"
+      },
+      {
+        "id": "core-base-css",
+        "label": "base.css",
+        "path": "core/base.css",
+        "size": "2.9 KB"
+      },
+      {
+        "id": "core-theme-css",
+        "label": "theme.css",
+        "path": "core/theme.css",
+        "size": "154 B"
+      },
+      {
+        "id": "core-layout-css",
+        "label": "layout.css",
+        "path": "core/layout.css",
+        "size": "13.6 KB"
+      },
+      {
+        "id": "core-reset-css",
+        "label": "reset.css",
+        "path": "core/reset.css",
+        "size": "1.2 KB"
+      },
+      {
+        "id": "core-forced-colors-css",
+        "label": "forced-colors.css",
+        "path": "core/forced-colors.css",
+        "size": "5.0 KB"
+      },
+      {
+        "id": "core-tokens-css",
+        "label": "tokens.css",
+        "path": "core/tokens.css",
+        "size": "15.5 KB"
+      }
+    ]
+  },
+  {
+    "id": "effects",
+    "label": "effects",
+    "path": "",
+    "size": "",
+    "isFolder": true,
+    "children": [
+      {
+        "id": "effects-effects-text-decor-css",
+        "label": "effects-text-decor.css",
+        "path": "effects/effects-text-decor.css",
+        "size": "3.1 KB"
+      },
+      {
+        "id": "effects-effects-text-typing-css",
+        "label": "effects-text-typing.css",
+        "path": "effects/effects-text-typing.css",
+        "size": "2.0 KB"
+      },
+      {
+        "id": "effects-effects-border-css",
+        "label": "effects-border.css",
+        "path": "effects/effects-border.css",
+        "size": "5.1 KB"
+      },
+      {
+        "id": "effects-effects-attention-css",
+        "label": "effects-attention.css",
+        "path": "effects/effects-attention.css",
+        "size": "4.8 KB"
+      },
+      {
+        "id": "effects-effects-shimmer-css",
+        "label": "effects-shimmer.css",
+        "path": "effects/effects-shimmer.css",
+        "size": "1.9 KB"
+      },
+      {
+        "id": "effects-effects-surface-css",
+        "label": "effects-surface.css",
+        "path": "effects/effects-surface.css",
+        "size": "4.7 KB"
+      },
+      {
+        "id": "effects-effects-css",
+        "label": "_effects.css",
+        "path": "effects/_effects.css",
+        "size": "53.7 KB"
+      },
+      {
+        "id": "effects-effects-text-css",
+        "label": "effects-text.css",
+        "path": "effects/effects-text.css",
+        "size": "16.6 KB"
+      },
+      {
+        "id": "effects-effects-text-motion-css",
+        "label": "effects-text-motion.css",
+        "path": "effects/effects-text-motion.css",
+        "size": "2.8 KB"
+      },
+      {
+        "id": "effects-effects-text-style-css",
+        "label": "effects-text-style.css",
+        "path": "effects/effects-text-style.css",
+        "size": "1.8 KB"
+      },
+      {
+        "id": "effects-effects-text-fill-css",
+        "label": "effects-text-fill.css",
+        "path": "effects/effects-text-fill.css",
+        "size": "2.6 KB"
+      },
+      {
+        "id": "effects-effects-text-interactive-css",
+        "label": "effects-text-interactive.css",
+        "path": "effects/effects-text-interactive.css",
+        "size": "2.2 KB"
+      },
+      {
+        "id": "effects-effects-media-css",
+        "label": "effects-media.css",
+        "path": "effects/effects-media.css",
+        "size": "6.2 KB"
+      },
+      {
+        "id": "effects-effects-text-depth-css",
+        "label": "effects-text-depth.css",
+        "path": "effects/effects-text-depth.css",
+        "size": "2.4 KB"
+      },
+      {
+        "id": "effects-effects-scroll-css",
+        "label": "effects-scroll.css",
+        "path": "effects/effects-scroll.css",
+        "size": "7.5 KB"
+      },
+      {
+        "id": "effects-effects-interaction-css",
+        "label": "effects-interaction.css",
+        "path": "effects/effects-interaction.css",
+        "size": "7.0 KB"
+      }
+    ]
+  },
+  {
+    "id": "en-extra-css",
+    "label": "en-extra.css",
+    "path": "en-extra.css",
+    "size": "657.1 KB"
+  },
+  {
+    "id": "en-css",
+    "label": "en.css",
+    "path": "en.css",
+    "size": "218.4 KB"
+  }
+]

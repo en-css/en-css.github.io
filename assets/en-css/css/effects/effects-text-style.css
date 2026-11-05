@@ -1,0 +1,64 @@
+/*!
+ * EN-CSS Effects: Text — Type & layout (`effects-text-style.css`)
+ * Typeface and layout styles: terminal, pixel, vertical writing and ransom-note lettering.
+ * Part of the text effects, which are split by group so you only load what you use.
+ * `effects-text.css` imports every group. Class names are unchanged.
+ */
+@layer en-utilities {
+  .en-fx-text-terminal {
+    font-family: var(--en-font-mono);
+    color: #0f0;
+    padding-block: var(--en-space-2);
+    padding-inline: var(--en-space-4);
+    background-color: #000;
+    border-inline-start: 4px solid #0f0;
+  }
+
+  .en-fx-text-pixel {
+    font-family: var(--en-font-mono);
+    font-weight: var(--en-font-bold);
+    text-transform: uppercase;
+    color: var(--en-text);
+    text-shadow: 2px 2px 0px var(--en-text-muted),
+      -1px -1px 0 var(--en-surface);
+  }
+
+  .en-fx-text-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    border-inline-end: 3px solid var(--en-primary);
+    font-weight: var(--en-font-bold);
+    letter-spacing: .125em;
+    align-items: center;
+    block-size: 80px;
+    padding-inline-end: var(--en-space-2);
+    display: inline-flex;
+  }
+
+  .en-fx-text-vertical--upright {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    border-inline-start: 3px solid var(--en-primary);
+    font-weight: var(--en-font-bold);
+    letter-spacing: .2em;
+    align-items: center;
+    padding-inline-start: var(--en-space-2);
+    display: inline-flex;
+  }
+
+  .en-fx-text-ransom {
+    font-weight: var(--en-font-bold);
+    color: var(--en-text);
+  }
+
+  .en-fx-text-ransom span:nth-child(odd) {
+    color: var(--en-primary);
+    display: inline-block;
+    transform: rotate(-3deg);
+  }
+
+  .en-fx-text-ransom span:nth-child(2n) {
+    display: inline-block;
+    transform: rotate(2deg);
+  }
+}

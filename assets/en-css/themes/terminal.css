@@ -1,0 +1,128 @@
+/*!
+ * EN-CSS Theme: Phosphor CRT Terminal
+ * Light Mode: Amber Vintage Paper / Reader
+ * Dark Mode: Hacker Green Phosphor CRT
+ */
+
+@layer en-tokens {
+  [data-en-theme="terminal"],
+  .en-theme-terminal {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#b45309, #22c55e); /* Amber / Phosphor Green */
+    --en-secondary: light-dark(#451a03, #10b981); /* Dark Amber / Emerald Glow */
+    --en-success: light-dark(#15803d, #4ade80);
+    --en-warning: light-dark(#a16207, #facc15);
+    --en-danger: light-dark(#b91c1c, #ef4444);
+    --en-info: light-dark(#0369a1, #06b6d4);
+
+    --en-success-hover: light-dark(#096d31, #68eb93);
+    --en-warning-hover: light-dark(#89530b, #fedd78);
+    --en-danger-hover: light-dark(#9e0f12, #fa5c57);
+    --en-info-hover: light-dark(#045787, #40c3e0);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#92400e, #4ad272);
+    --en-primary-active: light-dark(#78350f, #67df85);
+    --en-secondary-hover: light-dark(#310e00, #41c691);
+
+    --en-secondary-active: light-dark(#1c0600, #5fd3a1);
+    --en-success-active: light-dark(#085928, #82f8a6);
+    --en-warning-active: light-dark(#734402, #ffeebd);
+    --en-danger-active: light-dark(#840208, #fe776f);
+    --en-info-active: light-dark(#02466e, #5fd1eb);
+
+    /* ===== Soft Accent Surfaces ===== */
+    --en-primary-subtle: light-dark(#fef3c7, #022c0e);
+    --en-secondary-subtle: light-dark(#fde68a, #01240b);
+    --en-success-subtle: light-dark(#dcfce7, #022c10);
+    --en-warning-subtle: light-dark(#fef9c3, #2c2502);
+    --en-danger-subtle: light-dark(#fee2e2, #2c0202);
+    --en-info-subtle: light-dark(#e0f2fe, #02232c);
+
+    /* ===== Contextual Foregrounds ===== */
+    --en-fg-primary: light-dark(#ffffff, #001a05);
+    --en-fg-secondary: light-dark(#ffffff, #001a08);
+    --en-fg-success: light-dark(#ffffff, #001a06);
+    --en-fg-warning: light-dark(#ffffff, #1a1600);
+    --en-fg-danger: light-dark(#ffffff, #1a0000);
+    --en-fg-info: light-dark(#ffffff, #00141a);
+
+    /* ===== Contextual Text ===== */
+    --en-text-brand: light-dark(#a24b09, #22c55e);
+    --en-text-brand-hover: light-dark(#893e06, #4ade80);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fbf7ee, #030a04); /* Amber Paper vs Dark Matrix Void */
+    --en-bg-subtle: light-dark(#f2ead7, #071409);
+    --en-bg-surface: light-dark(#eee2c8, #0a1c0d);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#e5d5b3, #102b14);
+    --en-bg-active: light-dark(#dcc89e, #163b1c);
+
+    --en-text: light-dark(#3f2a1d, #22c55e); /* Deep Amber Text vs Green Phosphor */
+    --en-text-muted: light-dark(#785942, #319450);
+
+    --en-border: light-dark(#caba9c, #165b27);
+    --en-border-control: light-dark(#887a6f, #157839);
+    --en-border-subtle: light-dark(#d8caa0, #0f401b);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#b45309, #22c55e);
+    --en-disabled-bg: light-dark(#e5d5b3, #050f06);
+    --en-disabled-text: light-dark(#9c826b, #0b4018);
+    --en-overlay: light-dark(rgba(63, 42, 29, 0.5), rgba(0, 10, 2, 0.9));
+
+    /* Font Monospace Seutuhnya */
+    --en-font-sans: var(--en-font-mono);
+    --en-border-radius: 0px; /* Serba Tajam/Siku */
+
+    /* CRT Scanlines Texture */
+    --en-bg-size: 100% 4px;
+
+    /* ===== Inverted Neutral Layout (light/dark values swapped) ===== */
+    --en-bg-inverse: light-dark(#030a04, #fbf7ee);
+    --en-bg-subtle-inverse: light-dark(#071409, #f2ead7);
+    --en-bg-surface-inverse: light-dark(#0a1c0d, #eee2c8);
+    --en-text-inverse: light-dark(#22c55e, #3f2a1d);
+    --en-text-muted-inverse: light-dark(#319450, #785942);
+    --en-border-inverse: light-dark(#165b27, #caba9c);
+
+    /* Contextual Inverse Variants (light/dark values swapped) */
+    --en-primary-inverse: light-dark(#22c55e, #b45309);
+    --en-secondary-inverse: light-dark(#10b981, #451a03);
+    --en-success-inverse: light-dark(#4ade80, #15803d);
+    --en-warning-inverse: light-dark(#facc15, #a16207);
+    --en-danger-inverse: light-dark(#ef4444, #b91c1c);
+    --en-info-inverse: light-dark(#06b6d4, #0369a1);
+
+    --en-fg-primary-inverse: light-dark(#001a05, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#001a08, #ffffff);
+    --en-fg-success-inverse: light-dark(#001a06, #ffffff);
+    --en-fg-warning-inverse: light-dark(#1a1600, #ffffff);
+    --en-fg-danger-inverse: light-dark(#1a0000, #ffffff);
+    --en-fg-info-inverse: light-dark(#00141a, #ffffff);
+    --en-bg-texture: linear-gradient(
+      light-dark(transparent, rgba(0, 0, 0, 0)) 50%, 
+      light-dark(rgba(63, 42, 29, 0.04), rgba(0, 0, 0, 0.6)) 50%
+    );
+  }
+}
+
+@layer en-base {
+  [data-en-theme="terminal"] body,
+  .en-theme-terminal body {
+    background-color: var(--en-bg);
+    background-image: var(--en-bg-texture);
+    background-size: var(--en-bg-size);
+    background-attachment: fixed;
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="terminal"] body,
+    .en-theme-terminal body {
+      background-image: none;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@layer en-components {
+  .en-skeleton {
+    --_en-sk-base: var(--en-skeleton-base, light-dark(var(--en-color-neutral-300), var(--en-color-neutral-dark-600)));
+    --_en-sk-highlight: var(--en-skeleton-highlight, light-dark(var(--en-color-neutral-100), var(--en-color-neutral-dark-500)));
+    background: linear-gradient(90deg,
+      var(--_en-sk-base) 25%,
+      var(--_en-sk-highlight) 37%,
+      var(--_en-sk-base) 63%);
+    border-radius: var(--en-radius-sm);
+    background-size: 400% 100%;
+    animation: 1.4s infinite en-skeleton;
+  }
+
+  @keyframes en-skeleton {
+    0% {
+      background-position: 100%;
+    }
+
+    100% {
+      background-position: 0;
+    }
+  }
+
+  @keyframes en-skeleton-pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: .45;
+    }
+  }
+
+  .en-skeleton--text {
+    block-size: 1em;
+    inline-size: 100%;
+    display: block;
+  }
+
+  .en-skeleton--title {
+    block-size: 1.5em;
+    inline-size: 60%;
+    display: block;
+  }
+
+  .en-skeleton--circle {
+    inline-size: var(--en-skeleton-size, 2.5rem);
+    block-size: var(--en-skeleton-size, 2.5rem);
+    border-radius: 50%;
+    flex: none;
+    display: block;
+  }
+
+  .en-skeleton--rect {
+    inline-size: 100%;
+    block-size: var(--en-skeleton-height, 6rem);
+    border-radius: var(--en-radius-md);
+    display: block;
+  }
+
+  .en-skeleton--button {
+    inline-size: 6rem;
+    block-size: var(--en-control-height, 2.5rem);
+    border-radius: var(--en-radius-md);
+    display: block;
+  }
+
+  .en-skeleton--pill {
+    border-radius: var(--en-radius-full);
+  }
+
+  .en-skeleton--pulse {
+    background: var(--_en-sk-base);
+    animation: 1.6s ease-in-out infinite en-skeleton-pulse;
+  }
+
+  .en-skeleton--static {
+    background: var(--_en-sk-base);
+    animation: none;
+  }
+
+  .en-skeleton-group {
+    gap: var(--en-space-2);
+    display: grid;
+  }
+
+  .en-skeleton-group > .en-skeleton--text:last-child:not(:only-child) {
+    inline-size: 60%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .en-skeleton {
+      animation: none;
+    }
+  }
+}
+
+@layer en-utilities {
+  @media (forced-colors: active) {
+    .en-skeleton {
+      background: graytext;
+      border: 1px solid canvastext;
+      animation: none;
+    }
+  }
+}

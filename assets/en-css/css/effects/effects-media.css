@@ -1,0 +1,244 @@
+/*!
+ * EN-CSS Effects: Image & Media
+ * `.en-fx-zoom-hover`, `.en-fx-grayscale-hover`, `.en-fx-duotone-img`,
+ * `.en-fx-reveal-clip`, `.en-fx-parallax`
+ *
+ * Wrapper effects (zoom-hover, duotone-img, parallax) go on a container such as
+ * <figure> / <div> and style the <img>, <video>, <picture> or <svg> inside it.
+ * Modifiers work on their own. Scroll-driven effects show their final state
+ * where animation-timeline is unsupported.
+ */
+@layer en-utilities {
+  .en-fx-zoom-hover {
+    --en-fx-zoom-scale: 1.08;
+    --en-fx-zoom-duration: .5s;
+    overflow: hidden;
+  }
+
+  .en-fx-zoom-hover > :is(img, video, picture, svg, canvas) {
+    transition: scale var(--en-fx-zoom-duration) cubic-bezier(.2, .7, .2, 1);
+  }
+
+  .en-fx-zoom-hover:is(:hover, :focus-within) > :is(img, video, picture, svg, canvas) {
+    scale: var(--en-fx-zoom-scale);
+  }
+
+  :is(.en-fx-grayscale-hover, .en-fx-grayscale-hover--reverse) {
+    --en-fx-gray-amount: 1;
+    --_gray-on: grayscale(var(--en-fx-gray-amount));
+    filter: var(--_gray-on);
+    transition: filter .4s;
+  }
+
+  .en-fx-grayscale-hover:is(:hover, :focus-within) {
+    filter: none;
+  }
+
+  .en-fx-grayscale-hover--reverse:not(:is(:hover, :focus-within)) {
+    filter: none;
+  }
+
+  .en-fx-grayscale-hover--reverse:is(:hover, :focus-within) {
+    filter: var(--_gray-on);
+  }
+
+  :is(.en-fx-duotone-img, .en-fx-duotone-img--hover) {
+    --en-fx-duo-shadow: #1e1b4b;
+    --en-fx-duo-highlight: #fcd34d;
+    isolation: isolate;
+    position: relative;
+    overflow: hidden;
+  }
+
+  :is(.en-fx-duotone-img, .en-fx-duotone-img--hover) > :is(img, video, picture, svg, canvas) {
+    filter: grayscale() contrast(1.05);
+    transition: filter .4s;
+  }
+
+  :is(.en-fx-duotone-img, .en-fx-duotone-img--hover):before {
+    content: "";
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity .4s;
+    position: absolute;
+    inset: 0;
+  }
+
+  :is(.en-fx-duotone-img, .en-fx-duotone-img--hover):after {
+    content: "";
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity .4s;
+    position: absolute;
+    inset: 0;
+  }
+
+  :is(.en-fx-duotone-img, .en-fx-duotone-img--hover):before {
+    background: var(--en-fx-duo-highlight);
+    mix-blend-mode: multiply;
+  }
+
+  :is(.en-fx-duotone-img, .en-fx-duotone-img--hover):after {
+    background: var(--en-fx-duo-shadow);
+    mix-blend-mode: lighten;
+  }
+
+  .en-fx-duotone-img--hover:is(:hover, :focus-within):before {
+    opacity: 0;
+  }
+
+  .en-fx-duotone-img--hover:is(:hover, :focus-within):after {
+    opacity: 0;
+  }
+
+  .en-fx-duotone-img--hover:is(:hover, :focus-within) > :is(img, video, picture, svg, canvas) {
+    filter: none;
+  }
+
+  @supports (animation-timeline: view()) {
+    :is(.en-fx-reveal-clip, .en-fx-reveal-clip--up, .en-fx-reveal-clip--down, .en-fx-reveal-clip--circle) {
+      animation: linear both en-fx-clip-inline;
+      animation-timeline: view();
+      animation-range: entry 5% entry 70%;
+    }
+
+    .en-fx-reveal-clip--up {
+      animation-name: en-fx-clip-up;
+    }
+
+    .en-fx-reveal-clip--down {
+      animation-name: en-fx-clip-down;
+    }
+
+    .en-fx-reveal-clip--circle {
+      animation-name: en-fx-clip-circle;
+    }
+
+    @keyframes en-fx-clip-inline {
+      from {
+        clip-path: inset(0 100% 0 0);
+      }
+
+      to {
+        clip-path: inset(0);
+      }
+    }
+
+    @keyframes en-fx-clip-up {
+      from {
+        clip-path: inset(100% 0 0);
+      }
+
+      to {
+        clip-path: inset(0);
+      }
+    }
+
+    @keyframes en-fx-clip-down {
+      from {
+        clip-path: inset(0 0 100%);
+      }
+
+      to {
+        clip-path: inset(0);
+      }
+    }
+
+    @keyframes en-fx-clip-circle {
+      from {
+        clip-path: circle(0%);
+      }
+
+      to {
+        clip-path: circle(75%);
+      }
+    }
+
+    :is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) .en-fx-reveal-clip {
+      animation-name: en-fx-clip-inline-rtl;
+    }
+
+    .en-fx-reveal-clip:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+      animation-name: en-fx-clip-inline-rtl;
+    }
+
+    @keyframes en-fx-clip-inline-rtl {
+      from {
+        clip-path: inset(0 0 0 100%);
+      }
+
+      to {
+        clip-path: inset(0);
+      }
+    }
+  }
+
+  :is(.en-fx-parallax, .en-fx-parallax--reverse) {
+    --en-fx-parallax-distance: 8%;
+    --en-fx-parallax-scale: 1.2;
+    overflow: clip;
+  }
+
+  :is(.en-fx-parallax, .en-fx-parallax--reverse) > :is(img, video, picture, svg, canvas) {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    scale: var(--en-fx-parallax-scale);
+    display: block;
+  }
+
+  @supports (animation-timeline: view()) {
+    :is(.en-fx-parallax, .en-fx-parallax--reverse) > :is(img, video, picture, svg, canvas) {
+      animation: linear both en-fx-parallax;
+      animation-timeline: view();
+    }
+
+    .en-fx-parallax--reverse > :is(img, video, picture, svg, canvas) {
+      animation-direction: reverse;
+    }
+
+    @keyframes en-fx-parallax {
+      from {
+        translate: 0 calc(-1 * var(--en-fx-parallax-distance));
+      }
+
+      to {
+        translate: 0 var(--en-fx-parallax-distance);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :is(.en-fx-reveal-clip, .en-fx-reveal-clip--up, .en-fx-reveal-clip--down, .en-fx-reveal-clip--circle) {
+      animation: none !important;
+    }
+
+    :is(.en-fx-parallax, .en-fx-parallax--reverse) > :is(img, video, picture, svg, canvas) {
+      animation: none !important;
+    }
+
+    .en-fx-zoom-hover > :is(img, video, picture, svg, canvas) {
+      transition: none !important;
+    }
+
+    :is(.en-fx-grayscale-hover, .en-fx-grayscale-hover--reverse) {
+      transition: none !important;
+    }
+
+    :is(.en-fx-duotone-img, .en-fx-duotone-img--hover) > :is(img, video, picture, svg, canvas) {
+      transition: none !important;
+    }
+
+    :is(.en-fx-duotone-img, .en-fx-duotone-img--hover):before {
+      transition: none !important;
+    }
+
+    :is(.en-fx-duotone-img, .en-fx-duotone-img--hover):after {
+      transition: none !important;
+    }
+
+    .en-fx-zoom-hover:is(:hover, :focus-within) > :is(img, video, picture, svg, canvas) {
+      scale: none;
+    }
+  }
+}

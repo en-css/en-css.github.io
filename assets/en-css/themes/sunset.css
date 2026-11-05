@@ -1,0 +1,109 @@
+/*!
+ * EN-CSS Theme: Sunset
+ * Warm, vibrant theme inspired by sunset colors
+ * Perfect for: Creative apps, lifestyle brands, social platforms
+ * Vibe: Warm, energetic, optimistic
+ *
+ * Semantic palette (intentionally not the conventional hues):
+ * - Primary = Sunset orange, Secondary = Pink
+ * - Success = Golden yellow, Warning = Amber
+ * - Danger = Deep purple, Info = Peach
+ *
+ * Supports automatic light/dark mode via light-dark().
+ * Solid fills keep their hue; text on every state is >= 4.5:1.
+ */
+
+@layer en-tokens {
+  [data-en-theme="sunset"],
+  .en-theme-sunset {
+
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#f97316, #fb923c);
+    --en-secondary: light-dark(#d92576, #f472b6);
+    --en-success: light-dark(#eab308, #facc15);
+    --en-warning: light-dark(#d97706, #fbbf24);
+    --en-danger: light-dark(#9333ea, #c084fc);
+    --en-info: light-dark(#f08a5d, #fdba74);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#fd935b, #fda360);
+    --en-secondary-hover: light-dark(#c00b65, #fe80c1);
+    --en-success-hover: light-dark(#fec734, #fed964);
+    --en-warning-hover: light-dark(#ee8a2c, #fecd64);
+    --en-danger-hover: light-dark(#8113d5, #c894fe);
+    --en-info-hover: light-dark(#fda17a, #fec994);
+    --en-primary-active: light-dark(#feb189, #feb47f);
+    --en-secondary-active: light-dark(#a30855, #fd96c9);
+    --en-success-active: light-dark(#fedf9c, #ffe79f);
+    --en-warning-active: light-dark(#fda051, #fedc95);
+    --en-danger-active: light-dark(#6c0cb4, #d0a4ff);
+    --en-info-active: light-dark(#fdbfa4, #ffd8b2);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#ffedd5, #7c2d12);
+    --en-secondary-subtle: light-dark(#fce7f3, #500724);
+    --en-success-subtle: light-dark(#fef9c3, #422006);
+    --en-warning-subtle: light-dark(#fef3c7, #451a03);
+    --en-danger-subtle: light-dark(#e9d5ff, #3b0764);
+    --en-info-subtle: light-dark(#ffe4d6, #6b2a16);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#1c0f08, #1c0f08);
+    --en-fg-secondary: light-dark(#ffffff, #1c0f08);
+    --en-fg-success: light-dark(#1c0f08, #1c0f08);
+    --en-fg-warning: light-dark(#1c0f08, #1c0f08);
+    --en-fg-danger: light-dark(#ffffff, #1c0f08);
+    --en-fg-info: light-dark(#1c0f08, #1c0f08);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#ba5307, #fb923c);
+    --en-text-brand-hover: light-dark(#974307, #ffaf75);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fffcf5, #1c0f08);
+    --en-bg-subtle: light-dark(#fffbf7, #2d1810);
+    --en-bg-surface: light-dark(#fffcf5, #3e2419);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#fefdfb, #57371f);
+    --en-bg-active: light-dark(#e7e5e4, #92673f);
+
+    --en-text: light-dark(#1c1917, #e8d4bb);
+    --en-text-muted: light-dark(#6f6862, #c9a882);
+
+    --en-border: light-dark(#d6d3d1, #78542d);
+    --en-border-control: light-dark(#908d88, #867565);
+    --en-border-subtle: light-dark(#f5f5f4, #4d2f1f);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#ba5307, #fb923c);
+    --en-disabled-bg: light-dark(#fafaf9, #44281b);
+    --en-disabled-text: light-dark(#a8a29e, #a57c52);
+    --en-overlay: light-dark(rgba(28, 15, 8, 0.4), rgba(0, 0, 0, 0.6));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#1c1917, #e8d4bb);
+    --en-bg-subtle-inverse: light-dark(#6f6862, #c9a882);
+    --en-bg-surface-inverse: light-dark(#1c1917, #e8d4bb);
+
+    --en-text-inverse: light-dark(#fffcf5, #1c0f08);
+    --en-text-muted-inverse: light-dark(#fffbf7, #2d1810);
+
+    --en-border-inverse: light-dark(#78542d, #d6d3d1);
+
+    /* Contextual Inverse Variants (light/dark values swapped) */
+    --en-primary-inverse: light-dark(#fb923c, #f97316);
+    --en-secondary-inverse: light-dark(#f472b6, #d92576);
+    --en-success-inverse: light-dark(#facc15, #eab308);
+    --en-warning-inverse: light-dark(#fbbf24, #d97706);
+    --en-danger-inverse: light-dark(#c084fc, #9333ea);
+    --en-info-inverse: light-dark(#fdba74, #f08a5d);
+
+    --en-fg-primary-inverse: light-dark(#1c0f08, #1c0f08);
+    --en-fg-secondary-inverse: light-dark(#1c0f08, #ffffff);
+    --en-fg-success-inverse: light-dark(#1c0f08, #1c0f08);
+    --en-fg-warning-inverse: light-dark(#1c0f08, #1c0f08);
+    --en-fg-danger-inverse: light-dark(#1c0f08, #ffffff);
+    --en-fg-info-inverse: light-dark(#1c0f08, #1c0f08);
+  }
+}

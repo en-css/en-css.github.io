@@ -1,0 +1,37 @@
+@layer en-utilities {
+  .en-items-start {
+    align-items: start;
+  }
+
+  .en-items-center {
+    align-items: center;
+  }
+
+  .en-items-end {
+    align-items: end;
+  }
+
+  .en-items-baseline {
+    align-items: baseline;
+  }
+
+  .en-items-stretch {
+    align-items: stretch;
+  }
+
+  .en-justify-start {
+    justify-content: flex-start;
+  }
+
+  .en-justify-center {
+    justify-content: center;
+  }
+
+  .en-justify-end {
+    justify-content: flex-end;
+  }
+
+  .en-justify-between {
+    justify-content: space-between;
+  }
+}

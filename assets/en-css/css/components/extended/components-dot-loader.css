@@ -1,0 +1,667 @@
+/*!
+ * EN-CSS Dot Loader — 3-dot loading animations (`.en-loader`)
+ * Split into parts so a project can load only what it uses:
+ *   - components-dot-loader-base.css    structure, sizes, colors, reduced-motion (required)
+ *   - components-dot-loader-line.css    bounce, pulse, fade, wave, typing, stretch, flip
+ *   - components-dot-loader-orbit.css   orbit, triangle, spiral
+ *   - components-dot-loader-travel.css  collision, shuffle, helix
+ * This file imports all of them, so existing imports keep working.
+ */
+/*!
+ * EN-CSS Dot Loader: Base (`components-dot-loader-base.css`)
+ * Structure (`.en-loader`, `.en-loader__dot`), sizes (`--sm`, `--lg`), colors, the shared
+ * `en-loader-fade` keyframes and the reduced-motion / forced-colors fallbacks.
+ * Needed by every other part, and by the chat typing indicator. Without a variant class
+ * from the line, orbit or travel parts the dots are drawn but static.
+ * `components-dot-loader.css` imports every part.
+ */
+/*!
+ * EN-CSS Dot Loader: Orbit (`components-dot-loader-orbit.css`)
+ * Dots arranged on a circle that rotate or merge (orbit, triangle, spiral). Each sets a 3.125rem square box.
+ * Needs `components-dot-loader-base.css` (structure, colors, sizes and the shared
+ * `en-loader-fade` keyframes). `components-dot-loader.css` imports every part.
+ * Under `prefers-reduced-motion: reduce` these variants fall back to a gentle fade.
+ */
+/*!
+ * EN-CSS Dot Loader: Travel (`components-dot-loader-travel.css`)
+ * Dots that move across positions: collision, shuffle and helix. Each sets its own width.
+ * Needs `components-dot-loader-base.css` (structure, colors, sizes and the shared
+ * `en-loader-fade` keyframes). `components-dot-loader.css` imports every part.
+ * Under `prefers-reduced-motion: reduce` these variants fall back to a gentle fade.
+ */
+/*!
+ * EN-CSS Dot Loader: Line (`components-dot-loader-line.css`)
+ * Dots stay in a row and animate in place (bounce, pulse, fade, wave, typing, stretch, flip).
+ * Needs `components-dot-loader-base.css` (structure, colors, sizes and the shared
+ * `en-loader-fade` keyframes). `components-dot-loader.css` imports every part.
+ * Under `prefers-reduced-motion: reduce` these variants fall back to a gentle fade.
+ */
+@layer en-components {
+  .en-loader {
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+    line-height: 1;
+    display: inline-flex;
+  }
+
+  .en-loader__dot {
+    background: var(--en-primary);
+    border-radius: 50%;
+    width: .875rem;
+    height: .875rem;
+    display: inline-block;
+  }
+
+  .en-loader--sm {
+    gap: .5rem;
+  }
+
+  .en-loader--sm .en-loader__dot {
+    width: .625rem;
+    height: .625rem;
+  }
+
+  .en-loader--lg {
+    gap: 1rem;
+  }
+
+  .en-loader--lg .en-loader__dot {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  .en-loader--primary .en-loader__dot {
+    background: var(--en-primary);
+  }
+
+  .en-loader--secondary .en-loader__dot {
+    background: var(--en-secondary);
+  }
+
+  .en-loader--success .en-loader__dot {
+    background: var(--en-success);
+  }
+
+  .en-loader--warning .en-loader__dot {
+    background: var(--en-warning);
+  }
+
+  .en-loader--danger .en-loader__dot {
+    background: var(--en-danger);
+  }
+
+  .en-loader--info .en-loader__dot {
+    background: var(--en-info);
+  }
+
+  .en-loader__dot.en-loader__dot--primary {
+    background: var(--en-primary);
+  }
+
+  .en-loader__dot.en-loader__dot--secondary {
+    background: var(--en-secondary);
+  }
+
+  .en-loader__dot.en-loader__dot--success {
+    background: var(--en-success);
+  }
+
+  .en-loader__dot.en-loader__dot--warning {
+    background: var(--en-warning);
+  }
+
+  .en-loader__dot.en-loader__dot--danger {
+    background: var(--en-danger);
+  }
+
+  .en-loader__dot.en-loader__dot--info {
+    background: var(--en-info);
+  }
+
+  @keyframes en-loader-fade {
+    0%, 100% {
+      opacity: .15;
+      transform: scale(.8);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .en-loader__dot {
+      animation: 1.2s ease-in-out infinite en-loader-fade;
+    }
+  }
+
+  .en-loader--bounce .en-loader__dot {
+    animation: .6s cubic-bezier(.4, 0, .2, 1) infinite alternate en-loader-bounce;
+  }
+
+  .en-loader--bounce .en-loader__dot:first-child {
+    animation-delay: 0s;
+  }
+
+  .en-loader--bounce .en-loader__dot:nth-child(2) {
+    animation-delay: .2s;
+  }
+
+  .en-loader--bounce .en-loader__dot:nth-child(3) {
+    animation-delay: .4s;
+  }
+
+  @keyframes en-loader-bounce {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-1rem);
+    }
+  }
+
+  .en-loader--pulse .en-loader__dot {
+    animation: 1.2s ease-in-out infinite en-loader-pulse;
+  }
+
+  .en-loader--pulse .en-loader__dot:first-child {
+    animation-delay: 0s;
+  }
+
+  .en-loader--pulse .en-loader__dot:nth-child(2) {
+    animation-delay: .2s;
+  }
+
+  .en-loader--pulse .en-loader__dot:nth-child(3) {
+    animation-delay: .4s;
+  }
+
+  @keyframes en-loader-pulse {
+    0%, 100% {
+      opacity: .3;
+      transform: scale(.5);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1.35);
+      box-shadow: 0 0 .75rem;
+    }
+  }
+
+  .en-loader--fade .en-loader__dot {
+    animation: 1.2s infinite en-loader-fade;
+  }
+
+  .en-loader--fade .en-loader__dot:first-child {
+    animation-delay: 0s;
+  }
+
+  .en-loader--fade .en-loader__dot:nth-child(2) {
+    animation-delay: .4s;
+  }
+
+  .en-loader--fade .en-loader__dot:nth-child(3) {
+    animation-delay: .8s;
+  }
+
+  .en-loader--wave .en-loader__dot {
+    animation: .55s ease-in-out infinite alternate en-loader-wave;
+  }
+
+  .en-loader--wave .en-loader__dot:first-child {
+    animation-delay: -.36s;
+  }
+
+  .en-loader--wave .en-loader__dot:nth-child(2) {
+    animation-delay: -.18s;
+  }
+
+  .en-loader--wave .en-loader__dot:nth-child(3) {
+    animation-delay: 0s;
+  }
+
+  @keyframes en-loader-wave {
+    0% {
+      transform: translateY(.75rem) scale(.8);
+    }
+
+    100% {
+      transform: translateY(-.75rem) scale(1.1);
+      box-shadow: 0 0 .5rem;
+    }
+  }
+
+  .en-loader--typing .en-loader__dot {
+    animation: 1.4s ease-in-out infinite en-loader-typing;
+  }
+
+  .en-loader--typing .en-loader__dot:first-child {
+    animation-delay: 0s;
+  }
+
+  .en-loader--typing .en-loader__dot:nth-child(2) {
+    animation-delay: .2s;
+  }
+
+  .en-loader--typing .en-loader__dot:nth-child(3) {
+    animation-delay: .4s;
+  }
+
+  @keyframes en-loader-typing {
+    0%, 60%, 100% {
+      opacity: .3;
+      transform: translateY(0);
+    }
+
+    30% {
+      opacity: 1;
+      transform: translateY(-.5rem);
+    }
+  }
+
+  .en-loader--stretch .en-loader__dot {
+    animation: 1.2s ease-in-out infinite en-loader-stretch;
+  }
+
+  .en-loader--stretch .en-loader__dot:first-child {
+    animation-delay: 0s;
+  }
+
+  .en-loader--stretch .en-loader__dot:nth-child(2) {
+    animation-delay: .2s;
+  }
+
+  .en-loader--stretch .en-loader__dot:nth-child(3) {
+    animation-delay: .4s;
+  }
+
+  @keyframes en-loader-stretch {
+    0%, 100% {
+      border-radius: 50%;
+      width: .875rem;
+    }
+
+    50% {
+      border-radius: .5rem;
+      width: 2rem;
+      box-shadow: 0 0 .625rem;
+    }
+  }
+
+  .en-loader--flip {
+    perspective: 10rem;
+  }
+
+  .en-loader--flip .en-loader__dot {
+    animation: 1.4s ease-in-out infinite en-loader-flip;
+  }
+
+  .en-loader--flip .en-loader__dot:first-child {
+    animation-delay: 0s;
+  }
+
+  .en-loader--flip .en-loader__dot:nth-child(2) {
+    animation-delay: .2s;
+  }
+
+  .en-loader--flip .en-loader__dot:nth-child(3) {
+    animation-delay: .4s;
+  }
+
+  @keyframes en-loader-flip {
+    0% {
+      transform: rotateY(0);
+    }
+
+    50% {
+      transform: rotateY(180deg) scale(1.3);
+      box-shadow: 0 0 .75rem;
+    }
+
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .en-loader--bounce .en-loader__dot, .en-loader--pulse .en-loader__dot, .en-loader--fade .en-loader__dot, .en-loader--wave .en-loader__dot, .en-loader--typing .en-loader__dot, .en-loader--stretch .en-loader__dot, .en-loader--flip .en-loader__dot {
+      animation: 1.2s ease-in-out infinite en-loader-fade;
+    }
+  }
+
+  .en-loader--orbit {
+    width: 3.125rem;
+    height: 3.125rem;
+    animation: 1.4s linear infinite en-loader-orbit-spin;
+    position: relative;
+  }
+
+  .en-loader--orbit .en-loader__dot {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+  }
+
+  .en-loader--orbit .en-loader__dot:first-child {
+    transform: translate(-50%, -50%) rotate(0) translateY(-1.25rem);
+  }
+
+  .en-loader--orbit .en-loader__dot:nth-child(2) {
+    opacity: .7;
+    transform: translate(-50%, -50%) rotate(120deg) translateY(-1.25rem);
+  }
+
+  .en-loader--orbit .en-loader__dot:nth-child(3) {
+    opacity: .4;
+    transform: translate(-50%, -50%) rotate(240deg) translateY(-1.25rem);
+  }
+
+  @keyframes en-loader-orbit-spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .en-loader--triangle {
+    width: 3.125rem;
+    height: 3.125rem;
+    animation: 1.8s cubic-bezier(.68, -.55, .265, 1.55) infinite en-loader-triangle-spin;
+    position: relative;
+  }
+
+  .en-loader--triangle .en-loader__dot {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    box-shadow: 0 0 .625rem;
+  }
+
+  .en-loader--triangle .en-loader__dot:first-child {
+    transform: translate(-50%, -50%) rotate(0) translateY(-1.125rem);
+  }
+
+  .en-loader--triangle .en-loader__dot:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(120deg) translateY(-1.125rem);
+  }
+
+  .en-loader--triangle .en-loader__dot:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(240deg) translateY(-1.125rem);
+  }
+
+  @keyframes en-loader-triangle-spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .en-loader--spiral {
+    width: 3.125rem;
+    height: 3.125rem;
+    position: relative;
+  }
+
+  .en-loader--spiral .en-loader__dot {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+  }
+
+  .en-loader--spiral .en-loader__dot:first-child {
+    animation: 2s ease-in-out infinite en-loader-spiral-1;
+  }
+
+  .en-loader--spiral .en-loader__dot:nth-child(2) {
+    animation: 2s ease-in-out infinite en-loader-spiral-2;
+  }
+
+  .en-loader--spiral .en-loader__dot:nth-child(3) {
+    animation: 2s ease-in-out infinite en-loader-spiral-3;
+  }
+
+  @keyframes en-loader-spiral-1 {
+    0%, 100% {
+      transform: translate(-50%, -50%) rotate(0) translateY(-1.375rem) scale(1);
+    }
+
+    50% {
+      transform: translate(-50%, -50%) rotate(180deg) translateY(0) scale(1.4);
+    }
+  }
+
+  @keyframes en-loader-spiral-2 {
+    0%, 100% {
+      transform: translate(-50%, -50%) rotate(120deg) translateY(-1.375rem) scale(1);
+    }
+
+    50% {
+      transform: translate(-50%, -50%) rotate(300deg) translateY(0) scale(1.4);
+    }
+  }
+
+  @keyframes en-loader-spiral-3 {
+    0%, 100% {
+      transform: translate(-50%, -50%) rotate(240deg) translateY(-1.375rem) scale(1);
+    }
+
+    50% {
+      transform: translate(-50%, -50%) rotate(420deg) translateY(0) scale(1.4);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .en-loader--orbit, .en-loader--triangle {
+      animation: none;
+    }
+
+    .en-loader--spiral .en-loader__dot:nth-child(n) {
+      animation: 1.2s ease-in-out infinite en-loader-fade;
+    }
+  }
+
+  .en-loader--collision {
+    justify-content: center;
+    width: 4.375rem;
+    position: relative;
+  }
+
+  .en-loader--collision .en-loader__dot {
+    box-shadow: 0 0 .5rem;
+  }
+
+  .en-loader--collision .en-loader__dot:first-child {
+    animation: 1.2s infinite en-loader-collision-left;
+  }
+
+  .en-loader--collision .en-loader__dot:nth-child(2) {
+    animation: 1.2s infinite en-loader-collision-center;
+  }
+
+  .en-loader--collision .en-loader__dot:nth-child(3) {
+    animation: 1.2s infinite en-loader-collision-right;
+  }
+
+  @keyframes en-loader-collision-left {
+    0% {
+      animation-timing-function: cubic-bezier(.5, 0, .75, 0);
+      transform: translateX(-1.5rem);
+    }
+
+    25% {
+      transform: translateX(0);
+    }
+
+    75% {
+      animation-timing-function: cubic-bezier(.25, 1, .5, 1);
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-1.5rem);
+    }
+  }
+
+  @keyframes en-loader-collision-right {
+    0%, 25% {
+      animation-timing-function: cubic-bezier(.25, 1, .5, 1);
+      transform: translateX(0);
+    }
+
+    50% {
+      animation-timing-function: cubic-bezier(.5, 0, .75, 0);
+      transform: translateX(1.5rem);
+    }
+
+    75%, 100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes en-loader-collision-center {
+    0%, 20%, 30%, 70%, 80%, 100% {
+      transform: scale(1);
+    }
+
+    25%, 75% {
+      transform: scale(.82, 1.15);
+    }
+  }
+
+  .en-loader--shuffle {
+    width: 5rem;
+    height: 1.25rem;
+    position: relative;
+  }
+
+  .en-loader--shuffle .en-loader__dot {
+    animation: 1.8s cubic-bezier(.77, 0, .175, 1) infinite en-loader-shuffle;
+    position: absolute;
+    inset-block-start: .1875rem;
+  }
+
+  .en-loader--shuffle .en-loader__dot:first-child {
+    animation-name: en-loader-shuffle-1;
+    inset-inline-start: 0;
+  }
+
+  .en-loader--shuffle .en-loader__dot:nth-child(2) {
+    animation-name: en-loader-shuffle-2;
+    inset-inline-start: 1.875rem;
+  }
+
+  .en-loader--shuffle .en-loader__dot:nth-child(3) {
+    animation-name: en-loader-shuffle-3;
+    inset-inline-start: 3.75rem;
+  }
+
+  @keyframes en-loader-shuffle-1 {
+    0%, 100% {
+      z-index: 1;
+      transform: translateX(0) scale(1);
+    }
+
+    33% {
+      z-index: 3;
+      transform: translateX(1.875rem) translateY(-.75rem) scale(1.2);
+    }
+
+    66% {
+      z-index: 1;
+      transform: translateX(3.75rem) scale(1);
+    }
+  }
+
+  @keyframes en-loader-shuffle-2 {
+    0%, 100% {
+      transform: translateX(0) scale(1);
+    }
+
+    33% {
+      opacity: .6;
+      transform: translateX(1.875rem) scale(.8);
+    }
+
+    66% {
+      transform: translateX(-1.875rem) translateY(.75rem) scale(1.1);
+    }
+  }
+
+  @keyframes en-loader-shuffle-3 {
+    0%, 100% {
+      transform: translateX(0) scale(1);
+    }
+
+    33% {
+      transform: translateX(-3.75rem) scale(1);
+    }
+
+    66% {
+      opacity: .6;
+      transform: translateX(-1.875rem) scale(.8);
+    }
+  }
+
+  .en-loader--helix {
+    justify-content: center;
+    align-items: center;
+    width: 4.375rem;
+    height: 2.5rem;
+    position: relative;
+  }
+
+  .en-loader--helix .en-loader__dot {
+    animation: 1.6s ease-in-out infinite en-loader-helix;
+    position: absolute;
+  }
+
+  .en-loader--helix .en-loader__dot:first-child {
+    animation-delay: 0s;
+    inset-inline-start: .625rem;
+  }
+
+  .en-loader--helix .en-loader__dot:nth-child(2) {
+    animation-delay: -.53s;
+    inset-inline-start: 1.75rem;
+  }
+
+  .en-loader--helix .en-loader__dot:nth-child(3) {
+    animation-delay: -1.06s;
+    inset-inline-start: 2.875rem;
+  }
+
+  @keyframes en-loader-helix {
+    0% {
+      opacity: .4;
+      transform: translateY(-1rem) scale(.6);
+    }
+
+    50% {
+      opacity: 1;
+      transform: translateY(1rem) scale(1.2);
+      box-shadow: 0 0 .625rem;
+    }
+
+    100% {
+      opacity: .4;
+      transform: translateY(-1rem) scale(.6);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .en-loader--collision .en-loader__dot:nth-child(n), .en-loader--shuffle .en-loader__dot:nth-child(n), .en-loader--helix .en-loader__dot:nth-child(n) {
+      animation: 1.2s ease-in-out infinite en-loader-fade;
+    }
+  }
+}
+
+@layer en-utilities {
+  @media (forced-colors: active) {
+    .en-loader__dot {
+      forced-color-adjust: none;
+      background: canvastext;
+    }
+  }
+}

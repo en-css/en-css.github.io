@@ -1,0 +1,183 @@
+/*!
+ * EN-CSS Preset Print — print / PDF add-on (invoices, reports, articles)
+ * Add-on for any bundle. Import it LAST. Everything is inside @media print,
+ * so screens are untouched.
+ *
+ * What it does
+ *   - page: A4-friendly margins, black on white, ink-saving backgrounds
+ *   - hides interface chrome: navbars, sidebars, shell, bottom nav, FAB,
+ *     toasts, banners, skip links, buttons and anything marked .en-print-hidden
+ *   - keeps cards, figures, table rows, callouts and list items in one piece
+ *   - repeats table headers on every page; footers sit at the end of the table
+ *   - writes out the URL after external links in .en-prose and .en-print-links
+ *   - makes tables, cards and the app shell flow as plain blocks
+ *
+ * Classes
+ *   .en-print-hidden       not printed (also defined in utilities)
+ *   .en-print-only         printed only (also defined in utilities)
+ *   .en-print-break-before start a new page here
+ *   .en-print-break-after  break the page after this element
+ *   .en-print-avoid-break  keep this element on one page
+ *   .en-print-links        show link URLs inside this element
+ *   .en-print-color        keep colours (badges, charts) instead of saving ink
+ *
+ * Knobs: --en-print-margin (15mm)   --en-print-font-size (11pt)
+ *
+ * Attribute contract: no JavaScript, no state. Pair with <meta name="color-scheme">
+ * as usual; printing always uses the light scheme below.
+ *
+ * Sample (invoice):
+ *   <article class="en-print-page">
+ *     <header class="en-print-avoid-break">…logo, number, date…</header>
+ *     <table class="en-table"><thead>…</thead><tbody>…</tbody><tfoot>…</tfoot></table>
+ *     <footer class="en-print-avoid-break">…payment terms…</footer>
+ *   </article>
+ *
+ * Usage:
+ *   @import "@en32/en-css/en-preset-standard.css";
+ *   @import "@en32/en-css/en-preset-print.css";
+ *
+ * Sizes: see PRESETS.md (generated from src/presets/manifest.json)
+ */
+@layer en-reset, en-tokens, en-base, en-layout, en-components;
+
+@layer en-utilities {
+  @media print {
+    :root {
+      color-scheme: light;
+      font-size: var(--en-print-font-size, 11pt);
+    }
+
+    html, body {
+      color: #000;
+      background: #fff;
+    }
+
+    *, :before, :after {
+      box-shadow: none !important;
+      text-shadow: none !important;
+      backdrop-filter: none !important;
+    }
+
+    body :where(.en-card, .en-alert, .en-callout, .en-stat, .en-quote, .en-footer, .en-banner) {
+      background: none;
+    }
+
+    .en-print-color, .en-print-color * {
+      print-color-adjust: exact;
+    }
+
+    .en-print-hidden {
+      display: none !important;
+    }
+
+    :where(.en-navbar, .en-sidebar-menu, .en-offcanvas, .en-mega-menu, .en-shell__header, .en-shell__aside, .en-shell__scrim, .en-shell__burger, .en-bottom-nav, .en-fab, .en-fab-group, .en-toast-container, .en-banner, .en-skip-link, .en-sheet, .en-command-palette, .en-context-menu, .en-lightbox, .en-carousel__btn, .en-carousel__nav, .en-toc, .en-filter, .en-chip-input, .en-btn, button, [role="button"], [popover]):not(:is(.en-print-color, .en-print-only)) {
+      display: none !important;
+    }
+
+    .en-print-only {
+      display: revert !important;
+    }
+
+    :where(.en-shell, .en-shell__main, .en-with-sidebar, .en-kanban, .en-reel) {
+      block-size: auto !important;
+      max-block-size: none !important;
+      display: block !important;
+      overflow: visible !important;
+    }
+
+    :where(.en-shell__main) {
+      padding: 0;
+    }
+
+    :where(.en-sticky, [class*="sticky"]) {
+      position: static !important;
+    }
+
+    :where(h1, h2, h3, h4, h5, h6) {
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    :where(p, li, blockquote, dd) {
+      orphans: 3;
+      widows: 3;
+    }
+
+    :where(.en-card, .en-alert, .en-callout, .en-stat, .en-quote, .en-chart, .en-descriptions, figure, pre, blockquote, tr, img, svg, .en-print-avoid-break) {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    :where(img, svg, video) {
+      max-inline-size: 100%;
+    }
+
+    .en-print-break-before {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .en-print-break-after {
+      break-after: page;
+      page-break-after: always;
+    }
+
+    :where(table) {
+      border-collapse: collapse;
+      inline-size: 100%;
+    }
+
+    :where(thead) {
+      display: table-header-group;
+    }
+
+    :where(tfoot) {
+      display: table-footer-group;
+    }
+
+    :where(th, td) {
+      border-color: #000;
+    }
+
+    :where(.en-prose, .en-print-links) a[href^="http"]:after {
+      content: " (" attr(href) ")";
+      word-break: break-all;
+      color: #000;
+      font-size: .85em;
+    }
+
+    :where(.en-prose, .en-print-links) a[href^="#"]:after {
+      content: none;
+    }
+
+    :where(.en-prose, .en-print-links) a[href^="javascript:"]:after {
+      content: none;
+    }
+
+    :where(a) {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    :where(.en-prose) {
+      max-inline-size: none;
+    }
+
+    :where(pre, .en-code) {
+      white-space: pre-wrap;
+      overflow: visible;
+    }
+
+    .en-print-page {
+      border: 0;
+      max-inline-size: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+@page {
+  margin: var(--en-print-margin, 15mm);
+}

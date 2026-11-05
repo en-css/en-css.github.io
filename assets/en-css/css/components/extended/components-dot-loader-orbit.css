@@ -1,0 +1,137 @@
+/*!
+ * EN-CSS Dot Loader: Orbit (`components-dot-loader-orbit.css`)
+ * Dots arranged on a circle that rotate or merge (orbit, triangle, spiral). Each sets a 3.125rem square box.
+ * Needs `components-dot-loader-base.css` (structure, colors, sizes and the shared
+ * `en-loader-fade` keyframes). `components-dot-loader.css` imports every part.
+ * Under `prefers-reduced-motion: reduce` these variants fall back to a gentle fade.
+ */
+@layer en-components {
+  .en-loader--orbit {
+    width: 3.125rem;
+    height: 3.125rem;
+    animation: 1.4s linear infinite en-loader-orbit-spin;
+    position: relative;
+  }
+
+  .en-loader--orbit .en-loader__dot {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+  }
+
+  .en-loader--orbit .en-loader__dot:first-child {
+    transform: translate(-50%, -50%) rotate(0) translateY(-1.25rem);
+  }
+
+  .en-loader--orbit .en-loader__dot:nth-child(2) {
+    opacity: .7;
+    transform: translate(-50%, -50%) rotate(120deg) translateY(-1.25rem);
+  }
+
+  .en-loader--orbit .en-loader__dot:nth-child(3) {
+    opacity: .4;
+    transform: translate(-50%, -50%) rotate(240deg) translateY(-1.25rem);
+  }
+
+  @keyframes en-loader-orbit-spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .en-loader--triangle {
+    width: 3.125rem;
+    height: 3.125rem;
+    animation: 1.8s cubic-bezier(.68, -.55, .265, 1.55) infinite en-loader-triangle-spin;
+    position: relative;
+  }
+
+  .en-loader--triangle .en-loader__dot {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    box-shadow: 0 0 .625rem;
+  }
+
+  .en-loader--triangle .en-loader__dot:first-child {
+    transform: translate(-50%, -50%) rotate(0) translateY(-1.125rem);
+  }
+
+  .en-loader--triangle .en-loader__dot:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(120deg) translateY(-1.125rem);
+  }
+
+  .en-loader--triangle .en-loader__dot:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(240deg) translateY(-1.125rem);
+  }
+
+  @keyframes en-loader-triangle-spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .en-loader--spiral {
+    width: 3.125rem;
+    height: 3.125rem;
+    position: relative;
+  }
+
+  .en-loader--spiral .en-loader__dot {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+  }
+
+  .en-loader--spiral .en-loader__dot:first-child {
+    animation: 2s ease-in-out infinite en-loader-spiral-1;
+  }
+
+  .en-loader--spiral .en-loader__dot:nth-child(2) {
+    animation: 2s ease-in-out infinite en-loader-spiral-2;
+  }
+
+  .en-loader--spiral .en-loader__dot:nth-child(3) {
+    animation: 2s ease-in-out infinite en-loader-spiral-3;
+  }
+
+  @keyframes en-loader-spiral-1 {
+    0%, 100% {
+      transform: translate(-50%, -50%) rotate(0) translateY(-1.375rem) scale(1);
+    }
+
+    50% {
+      transform: translate(-50%, -50%) rotate(180deg) translateY(0) scale(1.4);
+    }
+  }
+
+  @keyframes en-loader-spiral-2 {
+    0%, 100% {
+      transform: translate(-50%, -50%) rotate(120deg) translateY(-1.375rem) scale(1);
+    }
+
+    50% {
+      transform: translate(-50%, -50%) rotate(300deg) translateY(0) scale(1.4);
+    }
+  }
+
+  @keyframes en-loader-spiral-3 {
+    0%, 100% {
+      transform: translate(-50%, -50%) rotate(240deg) translateY(-1.375rem) scale(1);
+    }
+
+    50% {
+      transform: translate(-50%, -50%) rotate(420deg) translateY(0) scale(1.4);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .en-loader--orbit, .en-loader--triangle {
+      animation: none;
+    }
+
+    .en-loader--spiral .en-loader__dot:nth-child(n) {
+      animation: 1.2s ease-in-out infinite en-loader-fade;
+    }
+  }
+}

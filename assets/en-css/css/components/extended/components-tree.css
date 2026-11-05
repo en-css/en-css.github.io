@@ -1,0 +1,332 @@
+@layer en-components {
+  .en-tree {
+    font-size: var(--en-text-sm);
+    line-height: var(--en-leading-normal);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .en-tree__item, .en-tree__node {
+    margin: 0;
+    position: relative;
+  }
+
+  .en-tree__node > summary {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    list-style: none;
+  }
+
+  .en-tree__node > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .en-tree__label, .en-tree__leaf {
+    align-items: center;
+    gap: var(--en-space-2);
+    padding-block: var(--en-space-2);
+    padding-inline: var(--en-space-2);
+    border-radius: var(--en-radius-sm);
+    color: var(--en-text);
+    transition: background var(--en-transition), color var(--en-transition);
+    text-decoration: none;
+    display: flex;
+  }
+
+  .en-tree__label:hover, .en-tree__leaf:hover {
+    background: var(--en-bg-hover);
+    color: var(--en-text);
+  }
+
+  .en-tree__label:active, .en-tree__leaf:active {
+    background: var(--en-bg-active);
+  }
+
+  .en-tree__label:focus-visible {
+    outline: 2px solid var(--en-focus-ring);
+    outline-offset: 2px;
+  }
+
+  .en-tree__leaf:focus-visible {
+    outline: 2px solid var(--en-focus-ring);
+    outline-offset: 2px;
+  }
+
+  .en-tree__leaf--active {
+    background: var(--en-primary-subtle);
+    color: var(--en-primary);
+    font-weight: 600;
+  }
+
+  .en-tree__leaf--active:hover {
+    background: color-mix(in oklab, var(--en-primary-subtle) 80%, var(--en-primary));
+  }
+
+  .en-tree__expander, .en-tree__checkbox, .en-tree__icon {
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 1.25em;
+    height: 1.25em;
+    display: inline-flex;
+  }
+
+  .en-tree__checkbox {
+    cursor: pointer;
+    border: 2px solid var(--en-border);
+    background-color: var(--en-bg-surface);
+    border-radius: var(--en-radius-sm);
+    transition: all var(--en-transition);
+    position: relative;
+  }
+
+  .en-tree__checkbox:hover {
+    border-color: var(--en-primary);
+  }
+
+  .en-tree__checkbox:checked {
+    background-color: var(--en-primary);
+    border-color: var(--en-primary);
+  }
+
+  .en-tree__checkbox:checked:after {
+    content: "";
+    border: solid var(--en-light);
+    border-width: 0 2.5px 2.5px 0;
+    width: .35em;
+    height: .7em;
+    position: absolute;
+    top: .05em;
+    left: .3em;
+    transform: rotate(45deg);
+  }
+
+  .en-tree__checkbox:indeterminate {
+    background-color: var(--en-primary);
+    border-color: var(--en-primary);
+  }
+
+  .en-tree__checkbox:indeterminate:after {
+    content: "";
+    background: var(--en-light);
+    border: none;
+    width: .6em;
+    height: 2.5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .en-tree__checkbox:focus-visible {
+    outline: 2px solid var(--en-focus-ring);
+    outline-offset: 2px;
+  }
+
+  .en-tree__expander {
+    transition: rotate var(--en-transition);
+  }
+
+  :is(.en-tree__node[open], .en-tree__item[aria-expanded="true"]) > .en-tree__label > .en-tree__expander {
+    rotate: 90deg;
+  }
+
+  .en-tree__children {
+    margin: 0;
+    padding: 0;
+    margin-block-start: var(--en-space-1);
+    padding-inline-start: calc(1.25em + var(--en-space-2));
+    list-style: none;
+  }
+
+  .en-tree__text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .en-tree__text--wrap {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .en-tree__badge {
+    border-radius: var(--en-radius-sm);
+    background: var(--en-bg-subtle);
+    color: var(--en-text-muted);
+    justify-content: center;
+    align-items: center;
+    margin-inline-start: auto;
+    padding: .15em .5em;
+    font-size: .85em;
+    font-weight: 600;
+    display: inline-flex;
+  }
+
+  .en-tree--compact .en-tree__label, .en-tree--compact .en-tree__leaf {
+    padding-block: var(--en-space-1);
+    font-size: .9em;
+  }
+
+  .en-tree--compact .en-tree__children {
+    margin-block-start: 0;
+  }
+
+  .en-tree--lines .en-tree__children {
+    border-inline-start: 1px solid var(--en-border);
+    margin-inline-start: .625em;
+    padding-inline-start: calc(.625em + var(--en-space-2));
+  }
+
+  .en-tree--lines .en-tree__item:before {
+    content: "";
+    width: var(--en-space-3);
+    background: var(--en-border);
+    height: 1px;
+    position: absolute;
+    inset-block-start: calc(var(--en-space-2) + .625em);
+    inset-inline-start: .625em;
+  }
+
+  .en-tree--lines .en-tree__item:last-child > .en-tree__children {
+    border-inline-start-color: #0000;
+  }
+
+  .en-tree--chevron :is(.en-tree__node, .en-tree__item[aria-expanded]) > .en-tree__label > .en-tree__expander:before {
+    content: "›";
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  .en-tree--arrow :is(.en-tree__node, .en-tree__item[aria-expanded]) > .en-tree__label > .en-tree__expander:before {
+    content: "→";
+    font-size: 1em;
+    line-height: 1;
+  }
+
+  .en-tree--plusminus :is(.en-tree__node, .en-tree__item[aria-expanded]) > .en-tree__label > .en-tree__expander:before {
+    content: "+";
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .en-tree--plusminus :is(.en-tree__node[open], .en-tree__item[aria-expanded="true"]) > .en-tree__label > .en-tree__expander {
+    rotate: 0deg;
+  }
+
+  .en-tree--plusminus :is(.en-tree__node[open], .en-tree__item[aria-expanded="true"]) > .en-tree__label > .en-tree__expander:before {
+    content: "−";
+  }
+
+  .en-tree--sm {
+    font-size: var(--en-text-xs);
+  }
+
+  .en-tree--lg {
+    font-size: var(--en-text-base);
+  }
+
+  .en-tree--dense .en-tree__label, .en-tree--dense .en-tree__leaf {
+    padding-block: .25em;
+    font-size: .875em;
+  }
+
+  .en-tree--dense .en-tree__expander, .en-tree--dense .en-tree__checkbox, .en-tree--dense .en-tree__icon {
+    width: 1em;
+    height: 1em;
+  }
+
+  .en-tree--dense .en-tree__children {
+    padding-inline-start: calc(1em + var(--en-space-2));
+  }
+
+  .en-tree__item[aria-expanded="false"] > .en-tree__children {
+    display: none;
+  }
+
+  .en-tree[role="tree"] .en-tree__label, .en-tree[role="tree"] .en-tree__leaf {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .en-tree__item[role="treeitem"]:focus {
+    outline: none;
+  }
+
+  .en-tree__item[role="treeitem"]:focus-visible {
+    outline: none;
+  }
+
+  .en-tree__item[role="treeitem"]:focus-visible > .en-tree__label {
+    outline: 2px solid var(--en-focus-ring);
+    outline-offset: 2px;
+  }
+
+  .en-tree__item[role="treeitem"]:focus-visible > .en-tree__leaf {
+    outline: 2px solid var(--en-focus-ring);
+    outline-offset: 2px;
+  }
+
+  .en-tree__item[aria-current="page"] > .en-tree__label, .en-tree__item[aria-current="page"] > .en-tree__leaf, .en-tree__item[aria-selected="true"] > .en-tree__label, .en-tree__item[aria-selected="true"] > .en-tree__leaf {
+    background: var(--en-primary-subtle);
+    color: var(--en-primary);
+    font-weight: 600;
+  }
+
+  .en-tree__item[aria-current="page"] > .en-tree__label:hover, .en-tree__item[aria-current="page"] > .en-tree__leaf:hover, .en-tree__item[aria-selected="true"] > .en-tree__label:hover, .en-tree__item[aria-selected="true"] > .en-tree__leaf:hover {
+    background: color-mix(in oklab, var(--en-primary-subtle) 80%, var(--en-primary));
+  }
+
+  .en-tree__item[aria-disabled="true"] > .en-tree__label, .en-tree__item[aria-disabled="true"] > .en-tree__leaf, .en-tree__label--disabled, .en-tree__leaf--disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .en-tree__badge--primary {
+    background: var(--en-primary);
+    color: var(--en-fg-primary);
+  }
+
+  .en-tree__badge--success {
+    background: var(--en-success);
+    color: var(--en-fg-success);
+  }
+
+  .en-tree__badge--danger {
+    background: var(--en-danger);
+    color: var(--en-fg-danger);
+  }
+
+  .en-tree__badge--warning {
+    background: var(--en-warning);
+    color: var(--en-fg-warning);
+  }
+
+  .en-tree__badge--info {
+    background: var(--en-info);
+    color: var(--en-fg-info);
+  }
+}
+
+@layer en-utilities {
+  @media (forced-colors: active) {
+    .en-tree__leaf--active, .en-tree__leaf--active:hover, .en-tree__item[aria-current="page"] > .en-tree__label, .en-tree__item[aria-current="page"] > .en-tree__leaf, .en-tree__item[aria-selected="true"] > .en-tree__label, .en-tree__item[aria-selected="true"] > .en-tree__leaf {
+      forced-color-adjust: none;
+      color: highlighttext;
+      background: highlight;
+    }
+
+    .en-tree__checkbox:checked {
+      forced-color-adjust: none;
+      background: highlight;
+      border-color: highlight;
+    }
+  }
+}

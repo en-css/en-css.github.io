@@ -1,0 +1,1 @@
+var e=[`video`,`square`,`portrait`];export{e as t};

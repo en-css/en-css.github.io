@@ -1,0 +1,93 @@
+@layer en-components {
+  .en-error-page {
+    justify-content: center;
+    align-items: center;
+    gap: var(--en-space-3);
+    min-block-size: var(--en-error-page-min, 60dvh);
+    padding: var(--en-space-8) var(--en-space-5);
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .en-error-page--fullscreen {
+    --en-error-page-min: 100dvh;
+  }
+
+  .en-error-page--compact {
+    --en-error-page-min: 0px;
+    padding-block: var(--en-space-6);
+  }
+
+  .en-error-page__code {
+    font-size: clamp(4rem, 14vw, 9rem);
+    font-weight: var(--en-font-bold);
+    letter-spacing: var(--en-tracking-tight);
+    color: var(--en-text-muted);
+    opacity: .45;
+    font-variant-numeric: tabular-nums;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .en-error-page__title {
+    font-size: var(--en-text-2xl);
+    font-weight: var(--en-font-bold);
+    color: var(--en-text);
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  .en-error-page__description {
+    max-inline-size: 32rem;
+    color: var(--en-text-muted);
+    text-wrap: pretty;
+    margin: 0;
+  }
+
+  .en-error-page__actions {
+    justify-content: center;
+    gap: var(--en-space-2);
+    flex-wrap: wrap;
+    margin-block-start: var(--en-space-3);
+    display: flex;
+  }
+
+  .en-error-page__details {
+    inline-size: min(100%, 36rem);
+    text-align: start;
+    font-size: var(--en-text-sm);
+    color: var(--en-text-muted);
+    margin-block-start: var(--en-space-4);
+  }
+
+  .en-error-page__details summary {
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .en-error-page__details summary:focus-visible {
+    outline: 2px solid var(--en-focus-ring);
+    outline-offset: 2px;
+    border-radius: var(--en-radius-sm);
+  }
+
+  .en-error-page__details pre {
+    margin: var(--en-space-2) 0 0;
+    padding: var(--en-space-3);
+    font-family: var(--en-font-mono);
+    background: var(--en-bg-subtle);
+    border: var(--en-border-width, 1px) solid var(--en-border);
+    border-radius: var(--en-radius-md);
+    overflow-x: auto;
+  }
+}
+
+@layer en-utilities {
+  @media (forced-colors: active) {
+    .en-error-page__code {
+      opacity: 1;
+      color: graytext;
+    }
+  }
+}

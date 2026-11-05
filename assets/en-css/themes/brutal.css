@@ -1,0 +1,185 @@
+/*!
+ * Theme: Neo-Brutalism
+ * Overrides for en-css tokens with hard shadows and halftone textures
+ */
+
+@layer en-tokens {
+  [data-en-theme="brutal"],
+  .en-theme-brutal {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#b11409, #facc15);
+    --en-secondary: light-dark(#3a86ff, #4cc9f0);
+    --en-success: light-dark(#06d6a0, #00f5d4);
+    --en-warning: light-dark(#ff9f1c, #ffb703);
+    --en-danger: light-dark(#ff006e, #ef233c);
+    --en-info: light-dark(#8338ec, #b5179e);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#8b0f07, #ffd54f);
+    --en-primary-active: light-dark(#650a05, #ffe082);
+    --en-secondary-hover: light-dark(#5697ff, #68d7fb);
+    --en-success-hover: light-dark(#48e3b0, #6effe3);
+    --en-warning-hover: light-dark(#ffb567, #fecc75);
+    --en-danger-hover: light-dark(#ff5081, #fa454f);
+    --en-info-hover: light-dark(#702ccc, #9b0b87);
+
+    --en-secondary-active: light-dark(#71a7fd, #94e2fe);
+    --en-success-active: light-dark(#69f0c0, #c8fff1);
+    --en-warning-active: light-dark(#feca96, #fedea9);
+    --en-danger-active: light-dark(#fd7594, #fd6668);
+    --en-info-active: light-dark(#5d20ae, #810a70);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#fee2e2, #4a0705);
+    --en-secondary-subtle: light-dark(#dbeafe, #1e3a5f);
+    --en-success-subtle: light-dark(#ccfbf1, #024f42);
+    --en-warning-subtle: light-dark(#fef3c7, #4a3507);
+    --en-danger-subtle: light-dark(#ffe4e6, #5a0024);
+    --en-info-subtle: light-dark(#f3e8ff, #3b1850);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#ffffff, #000000);
+    --en-fg-secondary: light-dark(#111111, #001a24);
+    --en-fg-success: light-dark(#111111, #001f1a);
+    --en-fg-warning: light-dark(#000000, #3d2500);
+    --en-fg-danger: light-dark(#111111, #1f000d);
+    --en-fg-info: light-dark(#ffffff, #ffffff);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#8b0f07, #facc15);
+    --en-text-brand-hover: light-dark(#650a05, #ffd54f);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fdfdfd, #111111);
+    --en-bg-subtle: light-dark(#e2e2d8, #1a1a1a);
+    --en-bg-surface: light-dark(#ffffff, #1e1e1e);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f5f5f5, #2a2a2a);
+    --en-bg-active: light-dark(#e8e8e8, #3a3a3a);
+
+    --en-text: light-dark(#000000, #ffffff);
+    --en-text-muted: light-dark(#333333, #cccccc);
+
+    --en-border: light-dark(#000000, #ffffff);
+    --en-border-control: light-dark(#7c7c7c, #6e6e6e);
+    --en-border-subtle: light-dark(#1a1a1a, #e5e5e5);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#b11409, #facc15);
+    --en-disabled-bg: light-dark(#f5f5f5, #2a2a2a);
+    --en-disabled-text: light-dark(#666666, #999999);
+    --en-overlay: light-dark(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#1a1a1a, #e2e2d8);
+    --en-bg-surface-inverse: light-dark(#1e1e1e, #ffffff);
+
+    --en-text-inverse: light-dark(#ffffff, #000000);
+    --en-text-muted-inverse: light-dark(#cccccc, #333333);
+
+    --en-border-inverse: light-dark(#ffffff, #000000);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#facc15, #b11409);
+    --en-secondary-inverse: light-dark(#4cc9f0, #3a86ff);
+    --en-success-inverse: light-dark(#00f5d4, #06d6a0);
+    --en-warning-inverse: light-dark(#ffb703, #ff9f1c);
+    --en-danger-inverse: light-dark(#ef233c, #ff006e);
+    --en-info-inverse: light-dark(#b5179e, #8338ec);
+
+    --en-fg-primary-inverse: light-dark(#000000, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#001a24, #111111);
+    --en-fg-success-inverse: light-dark(#001f1a, #111111);
+    --en-fg-warning-inverse: light-dark(#3d2500, #000000);
+    --en-fg-danger-inverse: light-dark(#1f000d, #111111);
+    --en-fg-info-inverse: light-dark(#ffffff, #ffffff);
+
+    /* ===== Border customization ===== */
+    --en-border-width: 3px;
+    --en-border-width-thick: 5px;
+
+    /* ===== Radius: Sharp corners (neo-brutalism) ===== */
+    --en-radius-sm: 0;
+    --en-radius-md: 0;
+    --en-radius-lg: 0;
+    --en-radius-xl: 0;
+
+    /* ===== Shadows: Hard box shadows ===== */
+    --en-shadow-sm: 3px 3px 0 var(--en-border);
+    --en-shadow-md: 5px 5px 0 var(--en-border);
+    --en-shadow-lg: 8px 8px 0 var(--en-border);
+
+    /* ===== Typography ===== */
+    --en-font-sans: "Space Grotesk", "Impact", "Inter", sans-serif;
+    --en-font-bold: 900;
+
+    /* ===== Animation: Bouncy ===== */
+    --en-ease-out: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* ===== Chaotic Graph Grid Pattern ===== */
+    --en-bg-texture: linear-gradient(to right, color-mix(in oklab, var(--en-border) 15%, transparent) 1px, transparent 1px),
+                     linear-gradient(to bottom, color-mix(in oklab, var(--en-border) 15%, transparent) 1px, transparent 1px);
+    --en-bg-size: 150px 150px;
+    --en-bg-position: 0 0;
+  }
+}
+
+@layer en-base {
+  [data-en-theme="brutal"] body,
+  .en-theme-brutal body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+    animation: en-theme-brutal-move-chaotic 14.5s ease-in-out infinite;
+  }
+
+  @keyframes en-theme-brutal-move-chaotic {
+    0% { background-position: 0px 0px; }
+    25% { background-position: -50px 30px; }
+    50% { background-position: 40px -60px; }
+    75% { background-position: -20px 40px; }
+    100% { background-position: 0px 0px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-en-theme="brutal"] body,
+    .en-theme-brutal body {
+      animation: none;
+    }
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="brutal"] body,
+    .en-theme-brutal body {
+      background-image: none;
+    }
+  }
+}
+
+@layer en-components {
+  /* Interactive offset animation on hover */
+  [data-en-theme="brutal"] .en-btn:hover,
+  .en-theme-brutal .en-btn:hover,
+  [data-en-theme="brutal"] .en-card:hover,
+  .en-theme-brutal .en-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px var(--en-border);
+  }
+
+  [data-en-theme="brutal"] .en-btn:active,
+  .en-theme-brutal .en-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px var(--en-border);
+  }
+
+  /* Hazard Stripe Texture Accent for Badges / Alert headers */
+  [data-en-theme="brutal"] .en-badge,
+  .en-theme-brutal .en-badge {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+  }
+}

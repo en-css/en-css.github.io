@@ -1,0 +1,124 @@
+/*!
+ * EN-CSS Theme: Windows
+ * Fluent design aesthetic with mica-like surfaces and subtle depth
+ * Supports automatic light/dark mode via light-dark()
+ */
+
+@layer en-tokens {
+  [data-en-theme="windows"],
+  .en-theme-windows {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#005fb8, #60cdff);
+    --en-secondary: light-dark(#5c5c5c, #a6a6a6);
+    --en-success: light-dark(#0f7b0f, #6ccb5f);
+    --en-warning: light-dark(#a76614, #fce100);
+    --en-danger: light-dark(#c42b1c, #ff99a4);
+    --en-info: light-dark(#005fb8, #60cdff);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#0053a0, #8fd9fd);
+    --en-primary-active: light-dark(#004889, #b3e4fe);
+    --en-secondary-hover: light-dark(#4c4c4c, #b4b4b4);
+    --en-success-hover: light-dark(#026804, #80d874);
+    --en-warning-hover: light-dark(#b37532, #fff196);
+    --en-danger-hover: light-dark(#a92013, #feb2b8);
+    --en-info-hover: light-dark(#014f9a, #8fd9fd);
+
+    --en-secondary-active: light-dark(#3c3c3c, #c2c2c2);
+    --en-success-active: light-dark(#025403, #94e689);
+    --en-warning-active: light-dark(#be8448, #fffef3);
+    --en-danger-active: light-dark(#8e1409, #fec8cc);
+    --en-info-active: light-dark(#003f7e, #b3e4fe);
+
+    /* ===== Soft Accent Surfaces ===== */
+    --en-primary-subtle: light-dark(#f3f9ff, #002e5c);
+    --en-secondary-subtle: light-dark(#f3f3f3, #2d2d2d);
+    --en-success-subtle: light-dark(#dff6dd, #053b05);
+    --en-warning-subtle: light-dark(#fff9cc, #4f2e00);
+    --en-danger-subtle: light-dark(#fde7e9, #62150e);
+    --en-info-subtle: light-dark(#f3f9ff, #002e5c);
+
+    /* ===== Contextual Foregrounds ===== */
+    --en-fg-primary: light-dark(#ffffff, #000000);
+    --en-fg-secondary: light-dark(#ffffff, #000000);
+    --en-fg-success: light-dark(#ffffff, #000000);
+    --en-fg-warning: light-dark(#000000, #000000);
+    --en-fg-danger: light-dark(#ffffff, #000000);
+    --en-fg-info: light-dark(#ffffff, #000000);
+
+    /* ===== Contextual Text ===== */
+    --en-text-brand: light-dark(#005fb8, #60cdff);
+    --en-text-brand-hover: light-dark(#0053a0, #9bddfe);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#f3f3f3, #202020);
+    --en-bg-subtle: light-dark(#fafafa, #282828);
+    --en-bg-surface: light-dark(#ffffff, #2c2c2c);
+
+    --en-bg-hover: light-dark(#f3f3f3, #323232);
+    --en-bg-active: light-dark(#ededed, #3f3f3f);
+
+    --en-text: light-dark(#1a1a1a, #ffffff);
+    --en-text-muted: light-dark(#5c5c5c, #a6a6a6);
+
+    --en-border: light-dark(#e5e5e5, #404040);
+    --en-border-control: light-dark(#868686, #797979);
+    --en-border-subtle: light-dark(#f0f0f0, #333333);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#005fb8, #60cdff);
+    --en-disabled-bg: light-dark(#f9f9f9, #282828);
+    --en-disabled-text: light-dark(#9e9e9e, #797979);
+    --en-overlay: light-dark(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.6));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#202020, #f3f3f3);
+    --en-bg-subtle-inverse: light-dark(#282828, #fafafa);
+    --en-bg-surface-inverse: light-dark(#2c2c2c, #ffffff);
+    
+    --en-text-inverse: light-dark(#ffffff, #1a1a1a);
+    --en-text-muted-inverse: light-dark(#a6a6a6, #5c5c5c);
+    
+    --en-border-inverse: light-dark(#404040, #e5e5e5);
+    
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#60cdff, #005fb8);
+    --en-secondary-inverse: light-dark(#a6a6a6, #5c5c5c);
+    --en-success-inverse: light-dark(#6ccb5f, #0f7b0f);
+    --en-warning-inverse: light-dark(#fce100, #a76614);
+    --en-danger-inverse: light-dark(#ff99a4, #c42b1c);
+    --en-info-inverse: light-dark(#60cdff, #005fb8);
+
+    --en-fg-primary-inverse: light-dark(#000000, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#000000, #ffffff);
+    --en-fg-success-inverse: light-dark(#000000, #ffffff);
+    --en-fg-warning-inverse: light-dark(#000000, #000000);
+    --en-fg-danger-inverse: light-dark(#000000, #ffffff);
+    --en-fg-info-inverse: light-dark(#000000, #ffffff);
+
+    /* ===== Depth ===== */
+    --en-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04), 0 -1px 1px rgba(0, 0, 0, 0.02);
+    --en-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.04), 0 -1px 1px rgba(0, 0, 0, 0.02);
+    --en-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.06), 0 -1px 1px rgba(0, 0, 0, 0.02);
+
+    /* ===== Radius ===== */
+    --en-radius-sm: 0.25rem;
+    --en-radius-md: 0.5rem;
+    --en-radius-lg: 0.5rem;
+    --en-radius-xl: 0.5rem;
+
+    /* ===== Backdrop Filter ===== */
+    --en-backdrop-filter: blur(30px);
+  }
+}
+
+@layer en-components {
+  [data-en-theme="windows"] .en-card,
+  .en-theme-windows .en-card {
+    background: light-dark(rgba(255, 255, 255, 0.5), rgba(44, 44, 44, 0.5));
+    backdrop-filter: var(--en-backdrop-filter);
+    border: 1px solid light-dark(rgba(0,0,0,0.05), rgba(255,255,255,0.08));
+    border-top-color: light-dark(rgba(255,255,255,0.4), rgba(255,255,255,0.15));
+    box-shadow: var(--en-shadow-md);
+  }
+}

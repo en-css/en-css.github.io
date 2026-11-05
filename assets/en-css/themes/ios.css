@@ -1,0 +1,110 @@
+/*!
+ * EN-CSS Theme: iOS
+ * Mobile-first aesthetic with distinct rounded elements inspired by iOS design
+ * Supports automatic light/dark mode via light-dark()
+ */
+
+@layer en-tokens {
+  [data-en-theme="ios"],
+  .en-theme-ios {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#0971e9, #0374e3);
+    --en-secondary: light-dark(#8e8e93, #98989d);
+    --en-success: light-dark(#34c759, #30d158);
+    --en-warning: light-dark(#ff9500, #ff9f0a);
+    --en-danger: light-dark(#e71816, #e3231f);
+    --en-info: light-dark(#5ac8fa, #64d2ff);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#0160cb, #0a63c2);
+    --en-primary-active: light-dark(#0550a9, #0253a5);
+    --en-secondary-hover: light-dark(#9c9ca0, #a6a6ab);
+    --en-success-hover: light-dark(#55d46e, #54de6e);
+    --en-warning-hover: light-dark(#fead5f, #ffb564);
+    --en-danger-hover: light-dark(#c90e0e, #c61917);
+    --en-info-hover: light-dark(#80d5fe, #93ddfe);
+
+    --en-secondary-active: light-dark(#aaaaae, #b4b4b8);
+    --en-success-active: light-dark(#6fe182, #70eb83);
+    --en-warning-active: light-dark(#fdc28d, #feca94);
+    --en-danger-active: light-dark(#ac0407, #a9100f);
+    --en-info-active: light-dark(#a5e1ff, #b9e9ff);
+
+    /* ===== Soft Accent Surfaces ===== */
+    --en-primary-subtle: light-dark(#e5f1ff, #00224d);
+    --en-secondary-subtle: light-dark(#f2f2f7, #1c1c1e);
+    --en-success-subtle: light-dark(#eaf8ee, #0b2d15);
+    --en-warning-subtle: light-dark(#fff4e5, #3d2300);
+    --en-danger-subtle: light-dark(#ffeceb, #3d0e0c);
+    --en-info-subtle: light-dark(#effafc, #15303d);
+
+    /* ===== Contextual Foregrounds ===== */
+    --en-fg-primary: light-dark(#ffffff, #ffffff);
+    --en-fg-secondary: light-dark(#000000, #1c1c1e);
+    --en-fg-success: light-dark(#000000, #000000);
+    --en-fg-warning: light-dark(#000000, #3d2300);
+    --en-fg-danger: light-dark(#ffffff, #ffffff);
+    --en-fg-info: light-dark(#000000, #15303d);
+
+    /* ===== Contextual Text ===== */
+    --en-text-brand: light-dark(#0368da, #0a84ff);
+    --en-text-brand-hover: light-dark(#0358ba, #3a9cff);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#f2f2f7, #000000);
+    --en-bg-subtle: light-dark(#ebebf0, #1c1c1e);
+    --en-bg-surface: light-dark(#ffffff, #1c1c1e);
+
+    --en-bg-hover: light-dark(#e5e5ea, #2c2c2e);
+    --en-bg-active: light-dark(#d1d1d6, #3a3a3c);
+
+    --en-text: light-dark(#000000, #ffffff);
+    --en-text-muted: light-dark(#68686c, #98989d);
+
+    --en-border: light-dark(#c6c6c8, #38383a);
+    --en-border-control: light-dark(#808083, #6e6e6e);
+    --en-border-subtle: light-dark(#e5e5ea, #2c2c2e);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#007aff, #0a84ff);
+    --en-disabled-bg: light-dark(#f2f2f7, #1c1c1e);
+    --en-disabled-text: light-dark(#8e8e93, #636366);
+    --en-overlay: light-dark(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#000000, #f2f2f7);
+    --en-bg-subtle-inverse: light-dark(#1c1c1e, #ebebf0);
+    --en-bg-surface-inverse: light-dark(#1c1c1e, #ffffff);
+
+    --en-text-inverse: light-dark(#ffffff, #000000);
+    --en-text-muted-inverse: light-dark(#98989d, #8a8a8e);
+
+    --en-border-inverse: light-dark(#38383a, #c6c6c8);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#0374e3, #0971e9);
+    --en-secondary-inverse: light-dark(#98989d, #8e8e93);
+    --en-success-inverse: light-dark(#30d158, #34c759);
+    --en-warning-inverse: light-dark(#ff9f0a, #ff9500);
+    --en-danger-inverse: light-dark(#e3231f, #e71816);
+    --en-info-inverse: light-dark(#64d2ff, #5ac8fa);
+
+    --en-fg-primary-inverse: light-dark(#ffffff, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#1c1c1e, #000000);
+    --en-fg-success-inverse: light-dark(#000000, #000000);
+    --en-fg-warning-inverse: light-dark(#3d2300, #000000);
+    --en-fg-danger-inverse: light-dark(#ffffff, #ffffff);
+    --en-fg-info-inverse: light-dark(#15303d, #000000);
+
+    /* ===== Depth ===== */
+    --en-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --en-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+    --en-shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+    /* ===== Radius ===== */
+    --en-radius-sm: 0.25rem;
+    --en-radius-md: 0.5rem;
+    --en-radius-lg: 0.75rem;
+    --en-radius-xl: 1rem;
+  }
+}

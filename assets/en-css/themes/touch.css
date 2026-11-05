@@ -1,0 +1,158 @@
+/*!
+ * EN-CSS Theme: Touch
+ * Spacious theme optimized for touch interfaces with larger padding
+ * Perfect for: Mobile apps, kiosks, tablet interfaces, touch-first applications
+ * Vibe: Spacious, accessible, touch-friendly
+ * Supports automatic light/dark mode via light-dark()
+ *
+ * Layout is driven by the --en-density axis: it needs en-extra.css (tokens-scale.css)
+ * and data-en-theme="touch" on <html>. Without the scale tokens only colors,
+ * radius, shadows, focus ring and horizontal input padding apply.
+ */
+
+@layer en-tokens {
+  [data-en-theme="touch"],
+  .en-theme-touch {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#3b82f6, #60a5fa);
+    --en-secondary: light-dark(#8f61fb, #a78bfa);
+    --en-success: light-dark(#10b981, #34d399);
+    --en-warning: light-dark(#f59e0b, #fbbf24);
+    --en-danger: light-dark(#ef4444, #f87171);
+    --en-info: light-dark(#06b6d4, #22d3ee);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#4f92fe, #93c5fd);
+    --en-primary-active: light-dark(#6ba2fb, #bfdbfe);
+    --en-secondary-hover: light-dark(#9b76ff, #b49dfd);
+    --en-success-hover: light-dark(#41c691, #58e0a9);
+    --en-warning-hover: light-dark(#feb048, #ffd172);
+    --en-danger-hover: light-dark(#fa5c57, #fd8886);
+    --en-info-hover: light-dark(#40c3e0, #51e1fa);
+
+    --en-secondary-active: light-dark(#a68cfc, #c0b0fd);
+    --en-success-active: light-dark(#5fd3a1, #75edb9);
+    --en-warning-active: light-dark(#fec481, #fee4af);
+    --en-danger-active: light-dark(#fe776f, #fea09d);
+    --en-info-active: light-dark(#5fd1eb, #8bebfe);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#dbeafe, #1e3a8a);
+    --en-secondary-subtle: light-dark(#f3e8ff, #3d1e5a);
+    --en-success-subtle: light-dark(#d1fae5, #064e3b);
+    --en-warning-subtle: light-dark(#fef3c7, #422006);
+    --en-danger-subtle: light-dark(#fee2e2, #7f1d1d);
+    --en-info-subtle: light-dark(#cffafe, #083344);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#0f1520, #0b1220);
+    --en-fg-secondary: light-dark(#0f1520, #0b1220);
+    --en-fg-success: light-dark(#0f1520, #0b1220);
+    --en-fg-warning: light-dark(#000000, #0b1220);
+    --en-fg-danger: light-dark(#0f1520, #0b1220);
+    --en-fg-info: light-dark(#0f1520, #0b1220);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#266ddf, #60a5fa);
+    --en-text-brand-hover: light-dark(#105aca, #93c5fd);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fbfcfd, #0f1520);
+    /* Texture: Subtle gradient mesh */
+    --en-bg-texture: radial-gradient(at 0% 0%, color-mix(in oklab, var(--en-primary) 5%, transparent) 0px, transparent 50%),
+                     radial-gradient(at 100% 0%, color-mix(in oklab, var(--en-secondary) 5%, transparent) 0px, transparent 50%);
+    --en-bg-size: 100% 100%;
+    --en-bg-position: 0 0;
+    --en-bg-subtle: light-dark(#f8fafc, #1e293b);
+    --en-bg-surface: light-dark(#ffffff, #1e293b);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f1f5f9, #334155);
+    --en-bg-active: light-dark(#e2e8f0, #475569);
+
+    --en-text: light-dark(#0f172a, #f1f5f9);
+    --en-text-muted: light-dark(#637389, #94a3b8);
+
+    --en-border: light-dark(#e2e8f0, #334155);
+    --en-border-control: light-dark(#878c96, #72787f);
+    --en-border-subtle: light-dark(#f1f5f9, #1e293b);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#3b82f6, #60a5fa);
+    --en-disabled-bg: light-dark(#f8fafc, #0f172a);
+    --en-disabled-text: light-dark(#94a3b8, #475569);
+    --en-overlay: light-dark(rgba(15, 23, 42, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#1e293b, #f8fafc);
+    --en-bg-surface-inverse: light-dark(#1e293b, #ffffff);
+
+    --en-text-inverse: light-dark(#f1f5f9, #0f172a);
+    --en-text-muted-inverse: light-dark(#94a3b8, #64748b);
+
+    --en-border-inverse: light-dark(#334155, #e2e8f0);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#60a5fa, #3b82f6);
+    --en-secondary-inverse: light-dark(#a78bfa, #8f61fb);
+    --en-success-inverse: light-dark(#34d399, #10b981);
+    --en-warning-inverse: light-dark(#fbbf24, #f59e0b);
+    --en-danger-inverse: light-dark(#f87171, #ef4444);
+    --en-info-inverse: light-dark(#22d3ee, #06b6d4);
+
+    --en-fg-primary-inverse: light-dark(#0b1220, #0f1520);
+    --en-fg-secondary-inverse: light-dark(#0b1220, #0f1520);
+    --en-fg-success-inverse: light-dark(#0b1220, #0f1520);
+    --en-fg-warning-inverse: light-dark(#0b1220, #000000);
+    --en-fg-danger-inverse: light-dark(#0b1220, #0f1520);
+    --en-fg-info-inverse: light-dark(#0b1220, #0f1520);
+
+    /* ===== Layout: density axis ===== */
+    /* Spacing, control heights and vertical input padding derive from --en-density
+       (core/tokens/tokens-scale.css, loaded by en-extra.css). Derived tokens resolve
+       on :root, so put data-en-theme="touch" on <html>. */
+    --en-density: 1.25;
+
+    /* ===== Spacious Form Padding for Touch (horizontal padding is not derived from an axis) ===== */
+    --en-input-padding-x: 1em;
+    --en-input-padding-sm-x: 0.8em;
+    --en-input-padding-lg-x: 1.3em;
+
+    /* ===== Floating label adjustments for larger padding ===== */
+    --en-input-floating-padding-top: 1.5em;
+    --en-input-floating-padding-bottom: 0.65em;
+
+    /* ===== Larger border radius for friendly feel ===== */
+    --en-radius-sm: 0.5rem;   /* 8px */
+    --en-radius-md: 0.75rem;  /* 12px */
+    --en-radius-lg: 1rem;     /* 16px */
+    --en-radius-xl: 1.5rem;   /* 24px */
+
+    /* ===== Prominent shadows for depth perception ===== */
+    --en-shadow-sm: 0 2px 4px rgb(0 0 0 / 0.08);
+    --en-shadow-md: 0 4px 12px rgb(0 0 0 / 0.12);
+    --en-shadow-lg: 0 10px 30px rgb(0 0 0 / 0.16);
+
+    /* ===== Larger focus ring for visibility ===== */
+    --en-ring-width: 3px;
+    --en-ring-offset: 3px;
+  }
+}
+
+@layer en-base {
+  [data-en-theme="touch"] body,
+  .en-theme-touch body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="touch"] body,
+    .en-theme-touch body {
+      background-image: none;
+    }
+  }
+}

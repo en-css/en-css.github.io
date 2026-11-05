@@ -1,0 +1,339 @@
+@layer en-components {
+  .en-adorned {
+    --en-adorned-bg: var(--en-bg-subtle);
+    --en-adorned-fg: var(--en-text);
+    --en-adorned-muted: var(--en-text-muted);
+    --en-adorned-border: var(--en-border-control);
+    --en-adorned-focus-border: var(--en-focus-ring);
+    --en-adorned-focus-ring: color-mix(in oklab, var(--en-focus-ring) 25%, transparent);
+    --en-adorned-py: var(--en-input-padding-y);
+    --en-adorned-px: var(--en-input-padding-x);
+    --en-adorned-gap: var(--en-space-2);
+    align-items: center;
+    gap: var(--en-adorned-gap);
+    width: 100%;
+    padding-inline: var(--en-adorned-px);
+    color: var(--en-adorned-fg);
+    background: var(--en-adorned-bg);
+    border: var(--en-border-width) var(--en-border-style) var(--en-adorned-border);
+    border-radius: var(--en-border-radius, var(--en-radius-md));
+    transition: border-color var(--en-transition), box-shadow var(--en-transition);
+    display: flex;
+  }
+
+  .en-adorned:focus-within {
+    border-color: var(--en-adorned-focus-border);
+    box-shadow: 0 0 0 var(--en-ring-width) var(--en-adorned-focus-ring);
+  }
+
+  .en-adorned > :is(.en-input, .en-select, .en-textarea) {
+    width: auto;
+    min-width: 0;
+    padding-block: var(--en-adorned-py);
+    color: inherit;
+    box-shadow: none;
+    opacity: 1;
+    background-color: #0000;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    flex: auto;
+    padding-inline-start: 0;
+  }
+
+  .en-adorned > :is(.en-input, .en-select, .en-textarea):is(:hover, :focus, :focus-visible, :user-invalid, :disabled) {
+    width: auto;
+    min-width: 0;
+    padding-block: var(--en-adorned-py);
+    color: inherit;
+    box-shadow: none;
+    opacity: 1;
+    background-color: #0000;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    flex: auto;
+    padding-inline-start: 0;
+  }
+
+  .en-adorned > :is(.en-input, .en-textarea) {
+    padding-inline-end: 0;
+  }
+
+  .en-adorned > .en-select :is(option, optgroup) {
+    color: var(--en-text);
+    background-color: var(--en-bg-surface);
+  }
+
+  @supports (appearance: base-select) and (anchor-name: --a) {
+    .en-adorned:has( > .en-select:not([multiple]):not([size])) {
+      anchor-name: --en-adorned-field;
+    }
+
+    .en-adorned > .en-select:not([multiple]):not([size]) {
+      appearance: base-select;
+    }
+
+    .en-adorned > .en-select:not([multiple]):not([size])::picker(select) {
+      appearance: base-select;
+    }
+
+    .en-adorned > .en-select::picker-icon {
+      display: none;
+    }
+
+    .en-adorned > .en-select::picker(select) {
+      position-anchor: --en-adorned-field;
+      box-sizing: border-box;
+      min-inline-size: anchor-size(inline);
+      inline-size: anchor-size(inline);
+      margin-block: var(--en-space-1);
+      padding: var(--en-space-1);
+      color: var(--en-text);
+      background: var(--en-bg-surface);
+      border: var(--en-border-width) var(--en-border-style) var(--en-adorned-border);
+      border-radius: var(--en-border-radius, var(--en-radius-md));
+    }
+
+    .en-adorned > .en-select option {
+      padding: var(--en-space-2) var(--en-space-3);
+      border-radius: var(--en-radius-sm);
+    }
+
+    .en-adorned > .en-select option:is(:hover, :focus-visible, :checked) {
+      background: var(--en-bg-subtle);
+    }
+  }
+
+  .en-adorned > .en-input[type="search"]::-webkit-search-cancel-button {
+    appearance: none;
+    display: none;
+  }
+
+  .en-adorned > .en-input[type="search"]::-webkit-search-decoration {
+    appearance: none;
+    display: none;
+  }
+
+  .en-adorned > .en-input::-ms-clear {
+    display: none;
+  }
+
+  .en-adorned__start, .en-adorned__end {
+    color: var(--en-adorned-muted);
+    white-space: nowrap;
+    flex: none;
+    align-items: center;
+    gap: .25em;
+    line-height: 1;
+    display: inline-flex;
+  }
+
+  .en-adorned__start > :is(svg, img) {
+    flex: none;
+    width: 1.25em;
+    height: 1.25em;
+  }
+
+  .en-adorned__end > :is(svg, img) {
+    flex: none;
+    width: 1.25em;
+    height: 1.25em;
+  }
+
+  :is(svg, img).en-adorned__start {
+    flex: none;
+    width: 1.25em;
+    height: 1.25em;
+  }
+
+  :is(svg, img).en-adorned__end {
+    flex: none;
+    width: 1.25em;
+    height: 1.25em;
+  }
+
+  .en-adorned__start--divided {
+    border-inline-end: var(--en-border-width) var(--en-border-style) var(--en-adorned-border);
+    align-self: stretch;
+    padding-inline-end: var(--en-adorned-gap);
+  }
+
+  .en-adorned__end--divided {
+    border-inline-start: var(--en-border-width) var(--en-border-style) var(--en-adorned-border);
+    align-self: stretch;
+    padding-inline-start: var(--en-adorned-gap);
+  }
+
+  :is(button, a).en-adorned__start {
+    appearance: none;
+    font: inherit;
+    border-radius: var(--en-radius-sm);
+    cursor: pointer;
+    background: none;
+    border: 0;
+    margin: -.25em;
+    padding: .25em;
+    text-decoration: none;
+  }
+
+  :is(button, a).en-adorned__end {
+    appearance: none;
+    font: inherit;
+    border-radius: var(--en-radius-sm);
+    cursor: pointer;
+    background: none;
+    border: 0;
+    margin: -.25em;
+    padding: .25em;
+    text-decoration: none;
+  }
+
+  :is(button, a).en-adorned__start:hover {
+    color: var(--en-adorned-fg);
+  }
+
+  :is(button, a).en-adorned__end:hover {
+    color: var(--en-adorned-fg);
+  }
+
+  :is(button, a).en-adorned__start:focus-visible {
+    outline: 2px solid var(--en-focus-ring);
+    outline-offset: 1px;
+  }
+
+  :is(button, a).en-adorned__end:focus-visible {
+    outline: 2px solid var(--en-focus-ring);
+    outline-offset: 1px;
+  }
+
+  :is(button, a).en-adorned__start:disabled {
+    cursor: not-allowed;
+    opacity: var(--en-opacity-disabled);
+  }
+
+  :is(button, a).en-adorned__end:disabled {
+    cursor: not-allowed;
+    opacity: var(--en-opacity-disabled);
+  }
+
+  .en-adorned--sm {
+    --en-adorned-py: var(--en-input-padding-sm-y);
+    --en-adorned-px: var(--en-input-padding-sm-x);
+    font-size: var(--en-text-sm);
+  }
+
+  .en-adorned--lg {
+    --en-adorned-py: var(--en-input-padding-lg-y);
+    --en-adorned-px: var(--en-input-padding-lg-x);
+    font-size: var(--en-text-lg);
+  }
+
+  .en-adorned--multiline {
+    align-items: flex-start;
+  }
+
+  .en-adorned--multiline > :is(.en-adorned__start, .en-adorned__end):not([class*="--divided"]) {
+    margin-block-start: var(--en-adorned-py);
+  }
+
+  .en-adorned--multiline > :is(.en-adorned__start--divided, .en-adorned__end--divided) {
+    padding-block-start: var(--en-adorned-py);
+  }
+
+  .en-adorned__top, .en-adorned__bottom {
+    align-items: center;
+    gap: var(--en-adorned-gap);
+    min-width: 0;
+    color: var(--en-adorned-muted);
+    grid-column: 1 / -1;
+    display: flex;
+  }
+
+  .en-adorned__top {
+    padding-block-start: var(--en-adorned-py);
+  }
+
+  .en-adorned__bottom {
+    padding-block-end: var(--en-adorned-py);
+  }
+
+  .en-adorned__top--end, .en-adorned__bottom--end {
+    justify-content: flex-end;
+  }
+
+  .en-adorned__top--divided, .en-adorned__bottom--divided {
+    margin-inline: calc(-1 * var(--en-adorned-px));
+    padding-block: var(--en-space-2);
+    padding-inline: var(--en-adorned-px);
+  }
+
+  .en-adorned__top--divided {
+    border-block-end: var(--en-border-width) var(--en-border-style) var(--en-adorned-border);
+  }
+
+  .en-adorned__bottom--divided {
+    border-block-start: var(--en-border-width) var(--en-border-style) var(--en-adorned-border);
+  }
+
+  .en-adorned:has( > :is(.en-adorned__top, .en-adorned__bottom)) {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0;
+    display: grid;
+  }
+
+  .en-adorned:has( > :is(.en-adorned__top, .en-adorned__bottom)):has( > .en-adorned__start) {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .en-adorned:has( > :is(.en-adorned__top, .en-adorned__bottom)):has( > .en-adorned__end) {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .en-adorned:has( > :is(.en-adorned__top, .en-adorned__bottom)):has( > .en-adorned__start):has( > .en-adorned__end) {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .en-adorned--invalid {
+    --en-adorned-border: var(--en-danger);
+    --en-adorned-focus-border: var(--en-danger);
+    --en-adorned-focus-ring: color-mix(in oklab, var(--en-danger) 25%, transparent);
+  }
+
+  .en-adorned:has( > :is(.en-input, .en-select, .en-textarea):is(:user-invalid, [aria-invalid="true"])) {
+    --en-adorned-border: var(--en-danger);
+    --en-adorned-focus-border: var(--en-danger);
+    --en-adorned-focus-ring: color-mix(in oklab, var(--en-danger) 25%, transparent);
+  }
+
+  .en-adorned--valid {
+    --en-adorned-border: var(--en-success);
+    --en-adorned-focus-border: var(--en-success);
+    --en-adorned-focus-ring: color-mix(in oklab, var(--en-success) 25%, transparent);
+  }
+
+  .en-adorned--disabled {
+    --en-adorned-bg: var(--en-disabled-bg);
+    --en-adorned-fg: var(--en-disabled-text);
+    --en-adorned-muted: var(--en-disabled-text);
+    opacity: var(--en-opacity-disabled);
+    cursor: not-allowed;
+  }
+
+  .en-adorned:has( > :is(.en-input, .en-select, .en-textarea):disabled) {
+    --en-adorned-bg: var(--en-disabled-bg);
+    --en-adorned-fg: var(--en-disabled-text);
+    --en-adorned-muted: var(--en-disabled-text);
+    opacity: var(--en-opacity-disabled);
+    cursor: not-allowed;
+  }
+}
+
+@layer en-utilities {
+  @media (forced-colors: active) {
+    .en-adorned:focus-within {
+      outline-offset: 2px;
+      outline: 2px solid highlight;
+    }
+  }
+}

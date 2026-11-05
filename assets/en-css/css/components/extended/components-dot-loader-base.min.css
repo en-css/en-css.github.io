@@ -1,0 +1,9 @@
+/*!
+ * EN-CSS Dot Loader: Base (`components-dot-loader-base.css`)
+ * Structure (`.en-loader`, `.en-loader__dot`), sizes (`--sm`, `--lg`), colors, the shared
+ * `en-loader-fade` keyframes and the reduced-motion / forced-colors fallbacks.
+ * Needed by every other part, and by the chat typing indicator. Without a variant class
+ * from the line, orbit or travel parts the dots are drawn but static.
+ * `components-dot-loader.css` imports every part.
+ */
+@layer en-components{.en-loader{justify-content:center;align-items:center;gap:.75rem;line-height:1;display:inline-flex}.en-loader__dot{background:var(--en-primary);border-radius:50%;width:.875rem;height:.875rem;display:inline-block}.en-loader--sm{gap:.5rem}.en-loader--sm .en-loader__dot{width:.625rem;height:.625rem}.en-loader--lg{gap:1rem}.en-loader--lg .en-loader__dot{width:1.125rem;height:1.125rem}.en-loader--primary .en-loader__dot{background:var(--en-primary)}.en-loader--secondary .en-loader__dot{background:var(--en-secondary)}.en-loader--success .en-loader__dot{background:var(--en-success)}.en-loader--warning .en-loader__dot{background:var(--en-warning)}.en-loader--danger .en-loader__dot{background:var(--en-danger)}.en-loader--info .en-loader__dot{background:var(--en-info)}.en-loader__dot.en-loader__dot--primary{background:var(--en-primary)}.en-loader__dot.en-loader__dot--secondary{background:var(--en-secondary)}.en-loader__dot.en-loader__dot--success{background:var(--en-success)}.en-loader__dot.en-loader__dot--warning{background:var(--en-warning)}.en-loader__dot.en-loader__dot--danger{background:var(--en-danger)}.en-loader__dot.en-loader__dot--info{background:var(--en-info)}@keyframes en-loader-fade{0%,to{opacity:.15;transform:scale(.8)}50%{opacity:1;transform:scale(1.1)}}@media (prefers-reduced-motion:reduce){.en-loader__dot{animation:1.2s ease-in-out infinite en-loader-fade}}}@layer en-utilities{@media (forced-colors:active){.en-loader__dot{forced-color-adjust:none;background:canvastext}}}

@@ -1,0 +1,153 @@
+/*!
+ * EN-CSS Theme: Solarized
+ * Classic low-eyestrain developer theme with distinct warm/cool tones.
+ */
+
+@layer en-tokens {
+  [data-en-theme="solarized"],
+  .en-theme-solarized {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#3294dc, #2aa198);
+    --en-secondary: light-dark(#2aa198, #3294dc);
+    --en-success: light-dark(#859900, #859900);
+    --en-warning: light-dark(#b58900, #b58900);
+    --en-danger: light-dark(#dc322f, #fb524a);
+    --en-info: light-dark(#3294dc, #3294dc);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#4ca2e6, #33b5aa);
+    --en-primary-active: light-dark(#62b0f0, #3fc9bc);
+    --en-secondary-hover: light-dark(#48aea5, #4ca2e6);
+    --en-success-hover: light-dark(#93a732, #93a732);
+    --en-warning-hover: light-dark(#c19832, #c19832);
+    --en-danger-hover: light-dark(#bf2826, #ff6f64);
+    --en-info-hover: light-dark(#4ca2e6, #4ca2e6);
+
+    --en-secondary-active: light-dark(#60bbb2, #62b0f0);
+    --en-success-active: light-dark(#a1b44d, #a1b44d);
+    --en-warning-active: light-dark(#cda74e, #cda74e);
+    --en-danger-active: light-dark(#a41e1d, #fe8c80);
+    --en-info-active: light-dark(#62b0f0, #62b0f0);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#e0f2fe, #00242e);
+    --en-secondary-subtle: light-dark(#ccfbf1, #012a3b);
+    --en-success-subtle: light-dark(#f7fee7, #292b00);
+    --en-warning-subtle: light-dark(#fef9c3, #322701);
+    --en-danger-subtle: light-dark(#fee2e2, #4a0f0e);
+    --en-info-subtle: light-dark(#e0f2fe, #022b41);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#002b36, #002b36);
+    --en-fg-secondary: light-dark(#002b36, #002b36);
+    --en-fg-success: light-dark(#002b36, #002b36);
+    --en-fg-warning: light-dark(#002b36, #002b36);
+    --en-fg-danger: light-dark(#ffffff, #002b36);
+    --en-fg-info: light-dark(#002b36, #002b36);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#0d6ba7, #39aca3);
+    --en-text-brand-hover: light-dark(#08598d, #50bfb6);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fdf6e3, #002b36);
+    /* Texture: Subtle gradient mesh */
+    --en-bg-texture: radial-gradient(at 0% 0%, color-mix(in oklab, var(--en-primary) 5%, transparent) 0px, transparent 50%),
+                     radial-gradient(at 100% 0%, color-mix(in oklab, var(--en-secondary) 5%, transparent) 0px, transparent 50%);
+    --en-bg-size: 100% 100%;
+    --en-bg-position: 0 0;
+    --en-bg-subtle: light-dark(#eee8d5, #073642);
+    --en-bg-surface: light-dark(#eee8d5, #073642);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f5f0e0, #0a4654);
+    --en-bg-active: light-dark(#eee8d5, #0d5666);
+
+    --en-text: light-dark(#073642, #93a1a1); /* base1: palette tone, keeps >= 4.5:1 on base02 surfaces */
+    --en-text-muted: light-dark(#546a71, #93a1a1);
+
+    --en-border: light-dark(#93a1a1, #586e75);
+    --en-border-control: light-dark(#6c8584, #6d8285);
+    --en-border-subtle: light-dark(#b5c4c5, #3d4f54);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#0d6ba7, #2aa198);
+    --en-disabled-bg: light-dark(#fdf6e3, #002b36);
+    --en-disabled-text: light-dark(#93a1a1, #586e75);
+    --en-overlay: light-dark(rgba(7, 54, 66, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#073642, #eee8d5);
+    --en-bg-surface-inverse: light-dark(#073642, #eee8d5);
+
+    --en-text-inverse: light-dark(#839496, #073642);
+    --en-text-muted-inverse: light-dark(#93a1a1, #586e75);
+
+    --en-border-inverse: light-dark(#586e75, #93a1a1);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#2aa198, #3294dc);
+    --en-secondary-inverse: light-dark(#3294dc, #2aa198);
+    --en-success-inverse: light-dark(#859900, #859900);
+    --en-warning-inverse: light-dark(#b58900, #b58900);
+    --en-danger-inverse: light-dark(#fb524a, #dc322f);
+    --en-info-inverse: light-dark(#3294dc, #3294dc);
+
+    --en-fg-primary-inverse: light-dark(#002b36, #002b36);
+    --en-fg-secondary-inverse: light-dark(#002b36, #002b36);
+    --en-fg-success-inverse: light-dark(#002b36, #002b36);
+    --en-fg-warning-inverse: light-dark(#002b36, #002b36);
+    --en-fg-danger-inverse: light-dark(#002b36, #ffffff);
+    --en-fg-info-inverse: light-dark(#002b36, #002b36);
+
+    /* Custom Ornaments & Structure */
+    --en-border-radius: 0; /* Sharp edges */
+    --en-radius-sm: 0;
+    --en-radius-md: 0;
+    --en-radius-lg: 0;
+    --en-radius-xl: 0;
+    --en-border-style: solid;
+    --en-border-width: 2px;
+    --en-shadow-sm: none; /* Flat design */
+    --en-shadow-md: none;
+    --en-shadow-lg: none;
+    --en-font-sans: var(--en-font-mono); /* Force monospace for code feel */
+  }
+}
+
+@layer en-base {
+  [data-en-theme="solarized"] body,
+  .en-theme-solarized body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="solarized"] body,
+    .en-theme-solarized body {
+      background-image: none;
+    }
+  }
+}
+
+@layer en-components {
+  /* Solarized structural tweaks */
+  [data-en-theme="solarized"] .en-card,
+  .en-theme-solarized .en-card,
+  [data-en-theme="solarized"] .en-btn,
+  .en-theme-solarized .en-btn {
+    border-width: 2px;
+    border-color: var(--en-text-muted);
+    box-shadow: 2px 2px 0px var(--en-text-muted);
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+
+  [data-en-theme="solarized"] .en-btn:active,
+  .en-theme-solarized .en-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px var(--en-text-muted);
+  }
+}

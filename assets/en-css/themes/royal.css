@@ -1,0 +1,139 @@
+/*!
+ * EN-CSS Theme: Royal Gold
+ * Elegant, luxurious theme with gold accents.
+ */
+
+@layer en-tokens {
+  [data-en-theme="royal"],
+  .en-theme-royal {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#c59b27, #ffd700);
+    --en-secondary: light-dark(#8a661c, #d4af37);
+    --en-success: light-dark(#2e7d32, #4caf50);
+    --en-warning: light-dark(#d43f0f, #ff5722);
+    --en-danger: light-dark(#c62828, #f44336);
+    --en-info: light-dark(#1565c0, #2196f3);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#d1aa47, #ffe44d);
+    --en-primary-active: light-dark(#ddb960, #fff199);
+    --en-secondary-hover: light-dark(#765613, #e0be55);
+    --en-success-hover: light-dark(#236a27, #62bc64);
+    --en-warning-hover: light-dark(#b83407, #fc7955);
+    --en-danger-hover: light-dark(#aa1d1e, #ff5c4c);
+    --en-info-hover: light-dark(#0a54a5, #42a5fc);
+
+    --en-secondary-active: light-dark(#624609, #edcd6e);
+    --en-success-active: light-dark(#18571d, #76c977);
+    --en-warning-active: light-dark(#9d2901, #ff9274);
+    --en-danger-active: light-dark(#901215, #fc7d6d);
+    --en-info-active: light-dark(#01448a, #64b3fe);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#fef9c3, #4a3810);
+    --en-secondary-subtle: light-dark(#fef3c7, #35280b);
+    --en-success-subtle: light-dark(#dcfce7, #113a14);
+    --en-warning-subtle: light-dark(#ffedd5, #4a1806);
+    --en-danger-subtle: light-dark(#fee2e2, #4a0d0d);
+    --en-info-subtle: light-dark(#dbeafe, #0a254a);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#16082b, #1a1110);
+    --en-fg-secondary: light-dark(#ffffff, #1a1308);
+    --en-fg-success: light-dark(#ffffff, #0a2c0a);
+    --en-fg-warning: light-dark(#ffffff, #3d0f05);
+    --en-fg-danger: light-dark(#ffffff, #3d0a0a);
+    --en-fg-info: light-dark(#ffffff, #0a1a35);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#8e6e0f, #ffd700);
+    --en-text-brand-hover: light-dark(#7a5d02, #ffe44d);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fcfaff, #16082b);
+    /* Texture: Subtle gradient mesh */
+    --en-bg-texture: radial-gradient(at 0% 0%, color-mix(in oklab, var(--en-primary) 5%, transparent) 0px, transparent 50%),
+                     radial-gradient(at 100% 0%, color-mix(in oklab, var(--en-secondary) 5%, transparent) 0px, transparent 50%);
+    --en-bg-size: 100% 100%;
+    --en-bg-position: 0 0;
+    --en-bg-subtle: light-dark(#f5f0e6, #1d1818);
+    --en-bg-surface: light-dark(#ffffff, #251e1e);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#faf7f0, #2d2424);
+    --en-bg-active: light-dark(#f5f0e6, #362c2c);
+
+    --en-text: light-dark(#3e2c2c, #f5f0e6);
+    --en-text-muted: light-dark(#7c6767, #a39191);
+
+    --en-border: light-dark(#e6d5b8, #423636);
+    --en-border-control: light-dark(#8e8385, #766c7b);
+    --en-border-subtle: light-dark(#f0e6d5, #362c2c);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#8e6e0f, #ffd700);
+    --en-disabled-bg: light-dark(#faf7f0, #1d1818);
+    --en-disabled-text: light-dark(#9d8b7a, #6e5e4e);
+    --en-overlay: light-dark(rgba(62, 44, 44, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#1d1818, #f5f0e6);
+    --en-bg-surface-inverse: light-dark(#251e1e, #ffffff);
+
+    --en-text-inverse: light-dark(#f5f0e6, #3e2c2c);
+    --en-text-muted-inverse: light-dark(#a39191, #857070);
+
+    --en-border-inverse: light-dark(#423636, #e6d5b8);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#ffd700, #c59b27);
+    --en-secondary-inverse: light-dark(#d4af37, #8a661c);
+    --en-success-inverse: light-dark(#4caf50, #2e7d32);
+    --en-warning-inverse: light-dark(#ff5722, #d43f0f);
+    --en-danger-inverse: light-dark(#f44336, #c62828);
+    --en-info-inverse: light-dark(#2196f3, #1565c0);
+
+    --en-fg-primary-inverse: light-dark(#1a1110, #16082b);
+    --en-fg-secondary-inverse: light-dark(#1a1308, #ffffff);
+    --en-fg-success-inverse: light-dark(#0a2c0a, #ffffff);
+    --en-fg-warning-inverse: light-dark(#3d0f05, #ffffff);
+    --en-fg-danger-inverse: light-dark(#3d0a0a, #ffffff);
+    --en-fg-info-inverse: light-dark(#0a1a35, #ffffff);
+
+    /* Ornaments */
+    --en-shadow-sm: 0 4px 15px light-dark(rgba(197, 155, 39, 0.15), rgba(0, 0, 0, 0.6));
+    --en-font-sans: "Georgia", "Playfair Display", serif;
+  }
+}
+
+@layer en-base {
+  [data-en-theme="royal"] body,
+  .en-theme-royal body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="royal"] body,
+    .en-theme-royal body {
+      background-image: none;
+    }
+  }
+}
+
+@layer en-components {
+  /* Golden accents */
+  [data-en-theme="royal"] .en-card,
+  .en-theme-royal .en-card {
+    border-top: 3px solid var(--en-primary);
+  }
+
+  [data-en-theme="royal"] .en-btn,
+  .en-theme-royal .en-btn {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}

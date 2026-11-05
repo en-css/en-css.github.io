@@ -1,0 +1,114 @@
+/*!
+ * EN-CSS Preset A11y — accessibility add-on
+ * Add-on for any bundle (core, lite, standard, extra ...). Import it LAST.
+ *
+ * What it adds
+ *   - prefers-contrast: more   same effect as <html data-contrast="more"> (firmer
+ *                              borders, muted text and control borders)
+ *   - thick focus              3px focus ring on every focusable element,
+ *                              including form controls, with a safe offset
+ *   - prefers-reduced-motion   animations and smooth scrolling are switched off,
+ *                              not only shortened (the base reset only shortens)
+ *   - prefers-reduced-transparency   frosted / translucent surfaces turn opaque
+ *   - forced-colors            links, focus, :target and selection stay visible
+ *   - [data-motion="none"]     the same motion cut-off, chosen by the user in the app
+ *   - target scroll margin     anchored headings are not hidden under sticky bars
+ *
+ * Knobs: --en-a11y-ring (3px)  --en-a11y-target-margin (4.5rem, for sticky headers)
+ *
+ * Attribute contract: no JavaScript and no markup. Optional switches on <html>:
+ *   data-contrast="more"  data-motion="none" (see core/tokens/tokens-presets.css)
+ *
+ * Usage:
+ *   @import "@en32/en-css/en-preset-standard.css";
+ *   @import "@en32/en-css/en-preset-a11y.css";
+ *
+ * Sizes: see PRESETS.md (generated from src/presets/manifest.json)
+ */
+@layer en-reset;
+
+@layer en-tokens {
+  @media (prefers-contrast: more) {
+    :root:not([data-contrast="normal"]) {
+      --en-border: color-mix(in oklab, var(--en-text) 55%, var(--en-bg));
+      --en-border-subtle: color-mix(in oklab, var(--en-text) 30%, var(--en-bg));
+      --en-border-control: color-mix(in oklab, var(--en-text) 70%, var(--en-bg));
+      --en-text-muted: color-mix(in oklab, var(--en-text) 82%, var(--en-bg));
+      --en-disabled-text: color-mix(in oklab, var(--en-text) 55%, var(--en-bg));
+    }
+  }
+}
+
+@layer en-base, en-layout, en-components;
+
+@layer en-utilities {
+  :where(a[href], button, summary, [role="button"], [tabindex]:not([tabindex="-1"]), input, select, textarea, [contenteditable="true"]):focus-visible {
+    outline: var(--en-a11y-ring, 3px) solid var(--en-focus-ring);
+    outline-offset: 2px;
+  }
+
+  :where(input, select, textarea):focus-visible {
+    box-shadow: none;
+  }
+
+  :target {
+    scroll-margin-block-start: var(--en-a11y-target-margin, 4.5rem);
+  }
+
+  :where(h1, h2, h3, h4, h5, h6)[id] {
+    scroll-margin-block-start: var(--en-a11y-target-margin, 4.5rem);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+
+    *, :before, :after {
+      scroll-behavior: auto !important;
+      transition: none !important;
+      animation: none !important;
+    }
+
+    .en-spinner {
+      border-color: var(--en-primary);
+    }
+  }
+
+  :root[data-motion="none"] *, :root[data-motion="none"] :before, :root[data-motion="none"] :after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  @media (prefers-reduced-transparency: reduce) {
+    *, :before, :after {
+      backdrop-filter: none !important;
+    }
+
+    :where(.en-modal, .en-offcanvas, .en-sheet, .en-dropdown__menu, .en-popover, .en-navbar, .en-banner) {
+      background-color: var(--en-bg-surface);
+      opacity: 1;
+    }
+  }
+
+  @media (forced-colors: active) {
+    :where(a[href], button, summary, [role="button"], [tabindex]:not([tabindex="-1"]), input, select, textarea):focus-visible {
+      outline-color: highlight;
+      outline-width: var(--en-a11y-ring, 3px);
+    }
+
+    :target {
+      outline-offset: 2px;
+      outline: 2px solid highlight;
+    }
+
+    :where(p, li, td, dd, figcaption) a[href] {
+      text-decoration: underline;
+    }
+
+    :where(a[href]):hover {
+      text-decoration-thickness: 2px;
+    }
+  }
+}

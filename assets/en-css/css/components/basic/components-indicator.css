@@ -1,0 +1,122 @@
+@layer en-components {
+  .en-indicator {
+    --_dir: 1;
+    vertical-align: middle;
+    flex: none;
+    display: inline-flex;
+    position: relative;
+  }
+
+  .en-indicator:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+    --_dir: -1;
+  }
+
+  .en-indicator__item {
+    --en-indicator-bg: var(--en-primary);
+    --en-indicator-fg: var(--en-fg-primary);
+    --_x: 50%;
+    --_y: -50%;
+    translate: calc(var(--_x) * var(--_dir)) var(--_y);
+    z-index: 1;
+    box-sizing: border-box;
+    block-size: 1.25rem;
+    min-inline-size: 1.25rem;
+    font-size: var(--en-text-xs);
+    font-weight: var(--en-font-semibold);
+    white-space: nowrap;
+    color: var(--en-indicator-fg);
+    background: var(--en-indicator-bg);
+    border-radius: var(--en-radius-full);
+    justify-content: center;
+    align-items: center;
+    padding-inline: .3rem;
+    line-height: 1;
+    display: inline-flex;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+  }
+
+  .en-indicator__item[hidden] {
+    display: none;
+  }
+
+  .en-indicator__item--top-start {
+    --_x: -50%;
+    inset-inline: 0 auto;
+  }
+
+  .en-indicator__item--bottom-end {
+    --_y: 50%;
+    inset-block: auto 0;
+  }
+
+  .en-indicator__item--bottom-start {
+    --_x: -50%;
+    --_y: 50%;
+    inset-block: auto 0;
+    inset-inline: 0 auto;
+  }
+
+  .en-indicator__item--primary {
+    --en-indicator-bg: var(--en-primary);
+    --en-indicator-fg: var(--en-fg-primary);
+  }
+
+  .en-indicator__item--success {
+    --en-indicator-bg: var(--en-success);
+    --en-indicator-fg: var(--en-fg-success);
+  }
+
+  .en-indicator__item--warning {
+    --en-indicator-bg: var(--en-warning);
+    --en-indicator-fg: var(--en-fg-warning);
+  }
+
+  .en-indicator__item--danger {
+    --en-indicator-bg: var(--en-danger);
+    --en-indicator-fg: var(--en-fg-danger);
+  }
+
+  .en-indicator__item--info {
+    --en-indicator-bg: var(--en-info);
+    --en-indicator-fg: var(--en-fg-info);
+  }
+
+  .en-indicator__item--neutral {
+    --en-indicator-bg: var(--en-text-muted);
+    --en-indicator-fg: var(--en-bg);
+  }
+
+  .en-indicator__item--dot {
+    block-size: .625rem;
+    inline-size: .625rem;
+    min-inline-size: 0;
+    padding: 0;
+  }
+
+  .en-indicator__item--ring {
+    box-shadow: 0 0 0 2px var(--en-bg);
+  }
+
+  .en-indicator__item--pulse:after {
+    content: "";
+    background: inherit;
+    border-radius: inherit;
+    animation: 1.6s ease-out infinite en-indicator-pulse;
+    position: absolute;
+    inset: 0;
+  }
+
+  @keyframes en-indicator-pulse {
+    from {
+      opacity: .6;
+      transform: scale(1);
+    }
+
+    to {
+      opacity: 0;
+      transform: scale(2.2);
+    }
+  }
+}

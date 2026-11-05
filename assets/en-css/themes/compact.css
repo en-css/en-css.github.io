@@ -1,0 +1,156 @@
+/*!
+ * EN-CSS Theme: Compact
+ * Space-efficient theme with reduced padding for data-dense interfaces
+ * Perfect for: Dashboards, admin panels, data-heavy applications
+ * Vibe: Efficient, professional, information-dense
+ * Supports automatic light/dark mode via light-dark()
+ *
+ * Layout is driven by the --en-density axis: it needs en-extra.css (tokens-scale.css)
+ * and data-en-theme="compact" on <html>. Without the scale tokens only colors,
+ * radius and horizontal input padding apply.
+ */
+
+@layer en-tokens {
+  [data-en-theme="compact"],
+  .en-theme-compact {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#2563eb, #3b82f6);
+    --en-secondary: light-dark(#64748b, #94a3b8);
+    --en-success: light-dark(#16a34a, #4ade80);
+    --en-warning: light-dark(#d97706, #fbbf24);
+    --en-danger: light-dark(#dc2626, #f87171);
+    --en-info: light-dark(#0891b2, #22d3ee);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#1d4ed8, #60a5fa);
+    --en-primary-active: light-dark(#1e40af, #93c5fd);
+    --en-secondary-hover: light-dark(#556377, #a3b1c5);
+    --en-success-hover: light-dark(#3db05d, #68eb93);
+    --en-warning-hover: light-dark(#e48835, #ffd172);
+    --en-danger-hover: light-dark(#bf1c1d, #fd8886);
+    --en-info-hover: light-dark(#369ebd, #51e1fa);
+
+    --en-secondary-active: light-dark(#465264, #b2bfd2);
+    --en-success-active: light-dark(#57bd6f, #82f8a6);
+    --en-warning-active: light-dark(#ef9850, #fee4af);
+    --en-danger-active: light-dark(#a31215, #fea09d);
+    --en-info-active: light-dark(#50acc9, #8bebfe);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#eff6ff, #1e3a8a);
+    --en-secondary-subtle: light-dark(#f1f5f9, #1e293b);
+    --en-success-subtle: light-dark(#dcfce7, #14532d);
+    --en-warning-subtle: light-dark(#fef3c7, #422006);
+    --en-danger-subtle: light-dark(#fee2e2, #7f1d1d);
+    --en-info-subtle: light-dark(#cffafe, #083344);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#ffffff, #0b1220);
+    --en-fg-secondary: light-dark(#ffffff, #0b1220);
+    --en-fg-success: light-dark(#0e1116, #0b1220);
+    --en-fg-warning: light-dark(#000000, #0b1220);
+    --en-fg-danger: light-dark(#ffffff, #0b1220);
+    --en-fg-info: light-dark(#0e1116, #0b1220);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#2563eb, #3b82f6);
+    --en-text-brand-hover: light-dark(#1d4ed8, #60a5fa);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fcfcfc, #0e1116);
+    /* Texture: Subtle gradient mesh */
+    --en-bg-texture: radial-gradient(at 0% 0%, color-mix(in oklab, var(--en-primary) 5%, transparent) 0px, transparent 50%),
+                     radial-gradient(at 100% 0%, color-mix(in oklab, var(--en-secondary) 5%, transparent) 0px, transparent 50%);
+    --en-bg-size: 100% 100%;
+    --en-bg-position: 0 0;
+    --en-bg-subtle: light-dark(#f4f4f5, #111519);
+    --en-bg-surface: light-dark(#ffffff, #171b22);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#fafafa, #1d2129);
+    --en-bg-active: light-dark(#f4f4f5, #252931);
+
+    --en-text: light-dark(#18181b, #e4e4e7);
+    --en-text-muted: light-dark(#6d6d76, #a1a1aa);
+
+    --en-border: light-dark(#e4e4e7, #27272a);
+    --en-border-control: light-dark(#888889, #6a6c70);
+    --en-border-subtle: light-dark(#fafafa, #1d2129);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#2563eb, #3b82f6);
+    --en-disabled-bg: light-dark(#fafafa, #0d0e12);
+    --en-disabled-text: light-dark(#a1a1aa, #52525b);
+    --en-overlay: light-dark(rgba(24, 24, 27, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#111519, #f4f4f5);
+    --en-bg-surface-inverse: light-dark(#171b22, #ffffff);
+
+    --en-text-inverse: light-dark(#e4e4e7, #18181b);
+    --en-text-muted-inverse: light-dark(#a1a1aa, #71717a);
+
+    --en-border-inverse: light-dark(#27272a, #e4e4e7);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#3b82f6, #2563eb);
+    --en-secondary-inverse: light-dark(#94a3b8, #64748b);
+    --en-success-inverse: light-dark(#4ade80, #16a34a);
+    --en-warning-inverse: light-dark(#fbbf24, #d97706);
+    --en-danger-inverse: light-dark(#f87171, #dc2626);
+    --en-info-inverse: light-dark(#22d3ee, #0891b2);
+
+    --en-fg-primary-inverse: light-dark(#0b1220, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#0b1220, #ffffff);
+    --en-fg-success-inverse: light-dark(#0b1220, #0e1116);
+    --en-fg-warning-inverse: light-dark(#0b1220, #000000);
+    --en-fg-danger-inverse: light-dark(#0b1220, #ffffff);
+    --en-fg-info-inverse: light-dark(#0b1220, #0e1116);
+
+    /* ===== Layout: density axis ===== */
+    /* Spacing, control heights and vertical input padding derive from --en-density
+       (core/tokens/tokens-scale.css, loaded by en-extra.css). Derived tokens resolve
+       on :root, so put data-en-theme="compact" on <html>. */
+    --en-density: 0.8;
+
+    /* ===== Compact Form Padding (horizontal padding is not derived from an axis) ===== */
+    --en-input-padding-x: 0.6em;
+    --en-input-padding-sm-x: 0.5em;
+    --en-input-padding-lg-x: 0.8em;
+
+    /* ===== Reduced border radius for a more efficient look ===== */
+    --en-radius-sm: 0.125rem; /* 2px */
+    --en-radius-md: 0.25rem;  /* 4px */
+    --en-radius-lg: 0.375rem; /* 6px */
+
+    /* ===== Subtle shadows ===== */
+    --en-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.04);
+    --en-shadow-md: 0 2px 4px rgb(0 0 0 / 0.06);
+    --en-shadow-lg: 0 4px 8px rgb(0 0 0 / 0.08);
+  }
+}
+
+@layer en-base {
+  [data-en-theme="compact"] body,
+  .en-theme-compact body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="compact"] body,
+    .en-theme-compact body {
+      background-image: none;
+    }
+  }
+}
+
+@layer en-components {
+  [data-en-theme="compact"] .en-switch__track::before,
+  .en-theme-compact .en-switch__track::before {
+    border-radius: var(--en-radius-md);
+  }
+}

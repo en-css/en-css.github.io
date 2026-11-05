@@ -1,0 +1,36 @@
+{
+  "endpoints": [
+    {
+      "name": "users",
+      "path": "/assets/api/jqr-docs/users.json",
+      "description": "User profiles and accounts",
+      "count": 8
+    },
+    {
+      "name": "posts",
+      "path": "/assets/api/jqr-docs/posts.json",
+      "description": "Blog posts and articles",
+      "count": 8
+    },
+    {
+      "name": "products",
+      "path": "/assets/api/jqr-docs/products.json",
+      "description": "E-commerce product catalog",
+      "count": 10
+    },
+    {
+      "name": "todos",
+      "path": "/assets/api/jqr-docs/todos.json",
+      "description": "Todo items and tasks",
+      "count": 8
+    },
+    {
+      "name": "comments",
+      "path": "/assets/api/jqr-docs/comments.json",
+      "description": "Comments on blog posts",
+      "count": 8
+    }
+  ],
+  "version": "1.0.0",
+  "lastUpdated": "2024-03-15"
+}

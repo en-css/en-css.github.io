@@ -1,0 +1,70 @@
+@layer en-components {
+  .en-stepper {
+    counter-reset: step;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+
+  .en-stepper li {
+    align-items: center;
+    gap: var(--en-space-2);
+    color: var(--en-text-muted);
+    font-size: var(--en-text-sm);
+    display: flex;
+  }
+
+  .en-stepper li:before {
+    content: counter(step);
+    counter-increment: step;
+    border: 2px solid var(--en-border);
+    border-radius: 50%;
+    place-items: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    font-weight: 600;
+    display: grid;
+  }
+
+  .en-stepper li:not(:last-child):after {
+    content: "";
+    background: var(--en-border);
+    width: 2.5rem;
+    height: 2px;
+    margin-inline: var(--en-space-2);
+  }
+
+  .en-stepper li.en-stepper__done:before {
+    content: "✓";
+    background: var(--en-success);
+    border-color: var(--en-success);
+    color: var(--en-fg-success);
+  }
+
+  .en-stepper li.en-stepper__active:before {
+    border-color: var(--en-primary);
+    color: var(--en-primary);
+  }
+}
+
+@layer en-utilities {
+  @media (forced-colors: active) {
+    .en-stepper li:before {
+      border-color: canvastext;
+    }
+
+    .en-stepper li.en-stepper__done:before, .en-stepper li.en-stepper__active:before {
+      forced-color-adjust: none;
+      color: highlighttext;
+      background: highlight;
+      border-color: highlight;
+    }
+
+    .en-stepper li:not(:last-child):after {
+      forced-color-adjust: none;
+      background: canvastext;
+    }
+  }
+}

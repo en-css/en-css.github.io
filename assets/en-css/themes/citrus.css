@@ -1,0 +1,153 @@
+/*!
+ * EN-CSS Theme: Citrus / Fruity
+ * Bright energetic mix of lemon, lime, and tangerine.
+ */
+
+@layer en-tokens {
+  [data-en-theme="citrus"],
+  .en-theme-citrus {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#ff9f1c, #ffbf69);
+    --en-secondary: light-dark(#cddc39, #dce775);
+    --en-success: light-dark(#4caf50, #81c784);
+    --en-warning: light-dark(#ffc107, #ffd54f);
+    --en-danger: light-dark(#f44336, #e57373);
+    --en-info: light-dark(#00bcd4, #4dd0e1);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#ffb567, #ffd08c);
+    --en-primary-active: light-dark(#feca96, #ffe1af);
+    --en-secondary-hover: light-dark(#dbea5c, #ebf68d);
+    --en-success-hover: light-dark(#62bc64, #93d495);
+    --en-warning-hover: light-dark(#fed57d, #ffe7a1);
+    --en-danger-hover: light-dark(#ff5c4c, #f08483);
+    --en-info-hover: light-dark(#41c9e0, #6adeed);
+
+    --en-secondary-active: light-dark(#eaf979, #faffd9);
+    --en-success-active: light-dark(#76c977, #a5e2a7);
+    --en-warning-active: light-dark(#ffe7b5, #fff7df);
+    --en-danger-active: light-dark(#fc7d6d, #fb9694);
+    --en-info-active: light-dark(#61d7ec, #83ebfa);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#fff7ed, #4a2e0a);
+    --en-secondary-subtle: light-dark(#f7fee7, #3e4215);
+    --en-success-subtle: light-dark(#dcfce7, #14532d);
+    --en-warning-subtle: light-dark(#fef9c3, #422006);
+    --en-danger-subtle: light-dark(#fee2e2, #7f1d1d);
+    --en-info-subtle: light-dark(#cffafe, #083344);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#2a1600, #1f1810);
+    --en-fg-secondary: light-dark(#000000, #1f1f08);
+    --en-fg-success: light-dark(#2a1600, #0a2008);
+    --en-fg-warning: light-dark(#000000, #3d2500);
+    --en-fg-danger: light-dark(#2a1600, #3d0a0a);
+    --en-fg-info: light-dark(#2a1600, #003d42);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#a36309, #ffbf69);
+    --en-text-brand-hover: light-dark(#8b5409, #ffd08c);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fffbeb, #2a1600);
+    /* Texture: Subtle gradient mesh */
+    --en-bg-texture: radial-gradient(at 0% 0%, color-mix(in oklab, var(--en-primary) 5%, transparent) 0px, transparent 50%),
+                     radial-gradient(at 100% 0%, color-mix(in oklab, var(--en-secondary) 5%, transparent) 0px, transparent 50%);
+    --en-bg-size: 100% 100%;
+    --en-bg-position: 0 0;
+    --en-bg-subtle: light-dark(#fcf3e3, #2e2418);
+    --en-bg-surface: light-dark(#ffffff, #3d3020);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#fff9ed, #38301d);
+    --en-bg-active: light-dark(#fcf3e3, #423624);
+
+    --en-text: light-dark(#5a3a0e, #fefdfa);
+    --en-text-muted: light-dark(#9b6005, #cca059);
+
+    --en-border: light-dark(#ffe5b4, #6e4719);
+    --en-border-control: light-dark(#9a8564, #897e70);
+    --en-border-subtle: light-dark(#fcf3e3, #38301d);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#a36309, #ffbf69);
+    --en-disabled-bg: light-dark(#fffcf5, #241e13);
+    --en-disabled-text: light-dark(#c49865, #876239);
+    --en-overlay: light-dark(rgba(90, 58, 14, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#2e2418, #fcf3e3);
+    --en-bg-surface-inverse: light-dark(#3d3020, #ffffff);
+
+    --en-text-inverse: light-dark(#fefdfa, #5a3a0e);
+    --en-text-muted-inverse: light-dark(#cca059, #b57317);
+
+    --en-border-inverse: light-dark(#6e4719, #ffe5b4);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#ffbf69, #ff9f1c);
+    --en-secondary-inverse: light-dark(#dce775, #cddc39);
+    --en-success-inverse: light-dark(#81c784, #4caf50);
+    --en-warning-inverse: light-dark(#ffd54f, #ffc107);
+    --en-danger-inverse: light-dark(#e57373, #f44336);
+    --en-info-inverse: light-dark(#4dd0e1, #00bcd4);
+
+    --en-fg-primary-inverse: light-dark(#1f1810, #2a1600);
+    --en-fg-secondary-inverse: light-dark(#1f1f08, #000000);
+    --en-fg-success-inverse: light-dark(#0a2008, #2a1600);
+    --en-fg-warning-inverse: light-dark(#3d2500, #000000);
+    --en-fg-danger-inverse: light-dark(#3d0a0a, #2a1600);
+    --en-fg-info-inverse: light-dark(#003d42, #2a1600);
+
+    /* Ornaments - Bubbly and popping */
+    --en-border-radius: var(--en-radius-lg);
+    --en-border-width: 4px;
+    --en-border-style: solid;
+    --en-shadow-sm: 0 6px 0px light-dark(#ffe5b4, #6e4719);
+    --en-shadow-md: 0 10px 0px light-dark(#ff9f1c, #cca059);
+    --en-transition: 200ms cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy */
+    --en-font-sans: "Fredoka One", "Baloo 2", system-ui, sans-serif;
+  }
+}
+
+@layer en-base {
+  [data-en-theme="citrus"] body,
+  .en-theme-citrus body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="citrus"] body,
+    .en-theme-citrus body {
+      background-image: none;
+    }
+  }
+}
+
+@layer en-components {
+  /* Bubbly elements */
+  [data-en-theme="citrus"] .en-btn,
+  .en-theme-citrus .en-btn {
+    font-weight: 800;
+    box-shadow: var(--en-shadow-sm);
+    margin-bottom: 6px; /* Space for the shadow */
+  }
+
+  [data-en-theme="citrus"] .en-btn:active,
+  .en-theme-citrus .en-btn:active {
+    transform: translateY(6px);
+    box-shadow: 0 0px 0px transparent;
+    margin-bottom: 0px;
+  }
+
+  [data-en-theme="citrus"] .en-card,
+  .en-theme-citrus .en-card {
+    border: 4px solid var(--en-primary);
+    box-shadow: var(--en-shadow-md);
+  }
+}

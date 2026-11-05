@@ -1,0 +1,169 @@
+@layer en-components {
+  .en-offcanvas {
+    --en-offcanvas-gap: 0px;
+    --en-offcanvas-width: min(85vw, 20rem);
+    --en-offcanvas-radius: var(--en-radius-xl);
+    inset-block: var(--en-offcanvas-gap);
+    width: var(--en-offcanvas-width);
+    background: var(--en-bg-surface);
+    box-shadow: var(--en-shadow-lg);
+    z-index: var(--en-z-modal);
+    visibility: hidden;
+    transition: transform var(--en-duration-base) var(--en-ease-out),
+                translate var(--en-duration-base) var(--en-ease-out),
+                visibility var(--en-duration-base) allow-discrete;
+    flex-direction: column;
+    display: flex;
+    position: fixed;
+  }
+
+  .en-offcanvas--start {
+    translate: calc(-100% - var(--en-offcanvas-gap)) 0;
+    inset-inline-start: var(--en-offcanvas-gap);
+  }
+
+  .en-offcanvas--end {
+    translate: calc(100% + var(--en-offcanvas-gap)) 0;
+    inset-inline-end: var(--en-offcanvas-gap);
+  }
+
+  .en-offcanvas:not(:is(.en-offcanvas--start, .en-offcanvas--end)) {
+    translate: calc(-100% - var(--en-offcanvas-gap)) 0;
+    inset-inline-start: var(--en-offcanvas-gap);
+  }
+
+  .en-offcanvas--open {
+    visibility: visible;
+    translate: 0;
+  }
+
+  @starting-style {
+    .en-offcanvas--open {
+      translate: calc(-100% - var(--en-offcanvas-gap)) 0;
+    }
+
+    .en-offcanvas--end.en-offcanvas--open {
+      translate: calc(100% + var(--en-offcanvas-gap)) 0;
+    }
+  }
+
+  .en-offcanvas--sm {
+    --en-offcanvas-width: min(80vw, 16rem);
+  }
+
+  .en-offcanvas--lg {
+    --en-offcanvas-width: min(90vw, 28rem);
+  }
+
+  @media (width <= 479px) {
+    .en-offcanvas--responsive {
+      --en-offcanvas-width: calc(100vw - 2 * var(--en-offcanvas-gap));
+    }
+  }
+
+  .en-offcanvas--floating {
+    --en-offcanvas-gap: var(--en-space-3);
+    border: 1px solid var(--en-border);
+    border-radius: var(--en-offcanvas-radius);
+    overflow: hidden;
+  }
+
+  .en-offcanvas--rounded:not(.en-offcanvas--floating) {
+    border-start-end-radius: var(--en-offcanvas-radius);
+    border-end-end-radius: var(--en-offcanvas-radius);
+    overflow: hidden;
+  }
+
+  .en-offcanvas--rounded.en-offcanvas--end:not(.en-offcanvas--floating) {
+    border-radius: 0;
+    border-start-start-radius: var(--en-offcanvas-radius);
+    border-end-start-radius: var(--en-offcanvas-radius);
+  }
+
+  .en-offcanvas--compact .en-offcanvas__header {
+    padding-block: var(--en-space-2);
+    padding-inline: var(--en-space-3);
+  }
+
+  .en-offcanvas--compact .en-offcanvas__title {
+    font-size: var(--en-text-base);
+  }
+
+  .en-offcanvas--compact .en-offcanvas__body {
+    padding: var(--en-space-3);
+  }
+
+  .en-offcanvas--compact .en-offcanvas__footer {
+    padding-block: var(--en-space-2);
+    padding-inline: var(--en-space-3);
+  }
+
+  .en-offcanvas__header {
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--en-space-3);
+    padding-block: var(--en-space-4);
+    padding-inline: var(--en-space-5);
+    border-block-end: 1px solid var(--en-border);
+    display: flex;
+  }
+
+  .en-offcanvas__title {
+    font-size: var(--en-text-lg);
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .en-offcanvas__close {
+    font-size: var(--en-text-xl);
+    cursor: pointer;
+    color: var(--en-text-muted);
+    padding: var(--en-space-1);
+    background: none;
+    border: none;
+    line-height: 1;
+  }
+
+  .en-offcanvas__close:hover {
+    color: var(--en-text);
+  }
+
+  .en-offcanvas__body {
+    --en-input-ring-inset: inset;
+    padding: var(--en-space-5);
+    flex: auto;
+    overflow-y: auto;
+  }
+
+  .en-offcanvas__footer {
+    justify-content: flex-end;
+    gap: var(--en-space-2);
+    padding-block: var(--en-space-4);
+    padding-inline: var(--en-space-5);
+    border-block-start: 1px solid var(--en-border);
+    background: var(--en-bg-subtle);
+    display: flex;
+  }
+
+  .en-offcanvas__backdrop {
+    background: var(--en-backdrop-bg);
+    z-index: var(--en-z-overlay);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--en-duration-base) var(--en-ease-out),
+                visibility var(--en-duration-base) allow-discrete;
+    position: fixed;
+    inset: 0;
+  }
+
+  .en-offcanvas__backdrop--open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @starting-style {
+    .en-offcanvas__backdrop--open {
+      opacity: 0;
+    }
+  }
+}

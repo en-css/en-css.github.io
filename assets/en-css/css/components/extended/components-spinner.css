@@ -1,0 +1,85 @@
+@layer en-components {
+  .en-spinner {
+    inline-size: var(--en-spinner-size, 1.5rem);
+    block-size: var(--en-spinner-size, 1.5rem);
+    border: var(--en-spinner-width, 3px) solid var(--en-spinner-track, var(--en-bg-subtle));
+    border-block-start-color: var(--en-spinner-color, var(--en-primary));
+    animation: en-spin var(--en-spinner-duration, .7s) linear infinite;
+    border-radius: 50%;
+    flex: none;
+  }
+
+  @keyframes en-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .en-spinner--inline {
+    vertical-align: -.2em;
+    display: inline-block;
+  }
+
+  .en-spinner--xs {
+    --en-spinner-size: .75rem;
+    --en-spinner-width: 2px;
+  }
+
+  .en-spinner--sm {
+    --en-spinner-size: 1rem;
+    --en-spinner-width: 2px;
+  }
+
+  .en-spinner--lg {
+    --en-spinner-size: 2.25rem;
+    --en-spinner-width: 4px;
+  }
+
+  .en-spinner--xl {
+    --en-spinner-size: 3rem;
+    --en-spinner-width: 5px;
+  }
+
+  .en-spinner--secondary {
+    --en-spinner-color: var(--en-secondary);
+  }
+
+  .en-spinner--success {
+    --en-spinner-color: var(--en-success);
+  }
+
+  .en-spinner--warning {
+    --en-spinner-color: var(--en-warning);
+  }
+
+  .en-spinner--danger {
+    --en-spinner-color: var(--en-danger);
+  }
+
+  .en-spinner--info {
+    --en-spinner-color: var(--en-info);
+  }
+
+  .en-spinner--current {
+    --en-spinner-color: currentColor;
+    --en-spinner-track: color-mix(in oklab, currentColor 20%, transparent);
+  }
+
+  .en-spinner--slow {
+    --en-spinner-duration: 1.2s;
+  }
+
+  .en-spinner--fast {
+    --en-spinner-duration: .45s;
+  }
+}
+
+@layer en-utilities {
+  @media (forced-colors: active) {
+    .en-spinner {
+      forced-color-adjust: none;
+      border-color: graytext;
+      border-block-start-color: highlight;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+/*!
+ * EN-CSS Effects: Text — Fill (`effects-text-fill.css`)
+ * Static colour fills that clip the gradient or pattern to the glyphs (`background-clip: text`). Check contrast: the text colour is transparent.
+ * Part of the text effects, which are split by group so you only load what you use.
+ * `effects-text.css` imports every group. Class names are unchanged.
+ */
+@layer en-utilities {
+  .en-fx-text-gradient {
+    background: linear-gradient(var(--_en-fx-text-dir, to right), var(--en-primary), var(--en-secondary));
+    color: #0000;
+    font-weight: var(--en-font-bold);
+    background-clip: text;
+  }
+
+  .en-fx-text-duotone {
+    background: linear-gradient(to bottom, var(--en-text) 50%, var(--en-danger) 50%);
+    color: #0000;
+    font-weight: var(--en-font-bold);
+    background-clip: text;
+  }
+
+  .en-fx-text-masked {
+    background: repeating-linear-gradient(45deg,
+      var(--en-text),
+      var(--en-text) 5px,
+      var(--en-primary) 5px,
+      var(--en-primary) 10px);
+    color: #0000;
+    font-weight: var(--en-font-bold);
+    background-clip: text;
+  }
+
+  .en-fx-text-chrome {
+    background: linear-gradient(180deg, var(--en-surface) 0%, var(--en-text-muted) 45%, var(--en-text) 55%, var(--en-surface) 100%);
+    color: #0000;
+    font-weight: var(--en-font-bold);
+    background-clip: text;
+  }
+
+  .en-fx-text-split {
+    background: linear-gradient(var(--_en-fx-text-dir, to right), var(--en-primary) 50%, var(--en-secondary) 50%);
+    color: #0000;
+    font-weight: var(--en-font-bold);
+    background-clip: text;
+    font-style: italic;
+  }
+
+  [dir="rtl"] :is(.en-fx-text-gradient, .en-fx-text-split) {
+    --_en-fx-text-dir: to left;
+  }
+
+  :is(.en-fx-text-gradient, .en-fx-text-split)[dir="rtl"] {
+    --_en-fx-text-dir: to left;
+  }
+
+  :is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) :is(.en-fx-text-gradient, .en-fx-text-split) {
+    --_en-fx-text-dir: to left;
+  }
+
+  :is(.en-fx-text-gradient, .en-fx-text-split):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+    --_en-fx-text-dir: to left;
+  }
+
+  .en-fx-text-gold-foil {
+    background: repeating-linear-gradient(-45deg, #cfb53b, #ffdf73 10px, #cfb53b 20px);
+    color: #0000;
+    text-shadow: 1px 1px 2px #0006;
+    font-weight: var(--en-font-bold);
+    background-clip: text;
+  }
+}

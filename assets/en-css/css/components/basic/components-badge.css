@@ -1,0 +1,73 @@
+@layer en-components {
+  .en-badge {
+    font-size: var(--en-text-xs);
+    border-radius: var(--en-radius-md);
+    background: var(--en-bg-subtle);
+    color: var(--en-text);
+    align-items: center;
+    padding-block: .15em;
+    padding-inline: .65em;
+    font-weight: 600;
+    display: inline-flex;
+  }
+
+  .en-badge--primary {
+    background: var(--en-primary);
+    color: var(--en-fg-primary);
+  }
+
+  .en-badge--secondary {
+    background: var(--en-secondary);
+    color: var(--en-fg-secondary);
+  }
+
+  .en-badge--success {
+    background: var(--en-success);
+    color: var(--en-fg-success);
+  }
+
+  .en-badge--warning {
+    background: var(--en-warning);
+    color: var(--en-fg-warning);
+  }
+
+  .en-badge--danger {
+    background: var(--en-danger);
+    color: var(--en-fg-danger);
+  }
+
+  .en-badge--info {
+    background: var(--en-info);
+    color: var(--en-fg-info);
+  }
+
+  .en-badge--subtle-primary {
+    background: var(--en-primary-subtle);
+    color: var(--en-text-brand);
+  }
+
+  .en-badge--subtle-secondary {
+    background: var(--en-secondary-subtle);
+    color: var(--en-text);
+  }
+
+  .en-badge--subtle-success {
+    background: var(--en-success-subtle);
+    color: var(--en-success);
+  }
+
+  .en-badge--subtle-warning {
+    background: var(--en-warning-subtle);
+    color: var(--en-warning);
+  }
+
+  .en-badge--subtle-danger {
+    background: var(--en-danger-subtle);
+    color: var(--en-danger);
+  }
+
+  .en-badge--subtle-info {
+    background: var(--en-info-subtle);
+    color: var(--en-info);
+  }
+}

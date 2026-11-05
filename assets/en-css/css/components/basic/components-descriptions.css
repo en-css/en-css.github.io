@@ -1,0 +1,88 @@
+@layer en-components {
+  .en-descriptions {
+    column-gap: var(--en-space-4);
+    row-gap: var(--en-space-2);
+    grid-template-columns: max-content 1fr;
+    margin: 0;
+    display: grid;
+  }
+
+  .en-descriptions dt {
+    font-weight: var(--en-font-medium);
+    color: var(--en-text-muted);
+  }
+
+  .en-descriptions dd {
+    margin: 0;
+  }
+
+  .en-descriptions--bordered dt, .en-descriptions--bordered dd {
+    padding-block: var(--en-space-3);
+    padding-inline: var(--en-space-4);
+    border-block-end: var(--en-border-width) var(--en-border-style) var(--en-border);
+  }
+
+  .en-descriptions--stack {
+    row-gap: var(--en-space-1);
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .en-descriptions--stack dd {
+    overflow-wrap: anywhere;
+    min-inline-size: 0;
+  }
+
+  .en-descriptions--stack dd + dt {
+    margin-block-start: var(--en-space-3);
+  }
+
+  .en-descriptions--stack.en-descriptions--bordered {
+    row-gap: 0;
+  }
+
+  .en-descriptions--stack.en-descriptions--bordered dt {
+    border-block-end: 0;
+    padding-block-end: 0;
+  }
+
+  .en-descriptions--stack.en-descriptions--bordered dd {
+    padding-block-start: var(--en-space-1);
+  }
+
+  .en-descriptions--stack.en-descriptions--bordered dd + dt {
+    margin-block-start: 0;
+  }
+
+  @media (width <= 767px) {
+    .en-descriptions--stack-mobile {
+      row-gap: var(--en-space-1);
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .en-descriptions--stack-mobile dd {
+      overflow-wrap: anywhere;
+      min-inline-size: 0;
+    }
+
+    .en-descriptions--stack-mobile dd + dt {
+      margin-block-start: var(--en-space-3);
+    }
+
+    .en-descriptions--stack-mobile.en-descriptions--bordered {
+      row-gap: 0;
+    }
+
+    .en-descriptions--stack-mobile.en-descriptions--bordered dt {
+      border-block-end: 0;
+      padding-block-end: 0;
+    }
+
+    .en-descriptions--stack-mobile.en-descriptions--bordered dd {
+      padding-block-start: var(--en-space-1);
+    }
+
+    .en-descriptions--stack-mobile.en-descriptions--bordered dd + dt {
+      margin-block-start: 0;
+    }
+  }
+}

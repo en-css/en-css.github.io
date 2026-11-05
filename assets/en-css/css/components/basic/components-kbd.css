@@ -1,0 +1,40 @@
+@layer en-components {
+  .en-kbd {
+    min-inline-size: 1.75em;
+    font-family: var(--en-font-mono);
+    font-size: .9em;
+    font-weight: var(--en-font-medium);
+    color: var(--en-text);
+    white-space: nowrap;
+    background: var(--en-surface);
+    border: var(--en-border-width) var(--en-border-style) var(--en-border);
+    border-radius: var(--en-radius-sm);
+    box-shadow: var(--en-shadow-sm);
+    border-block-end-width: 2px;
+    justify-content: center;
+    align-items: center;
+    padding-block: .1em;
+    padding-inline: .45em;
+    line-height: 1.4;
+    display: inline-flex;
+  }
+
+  .en-kbd--sm {
+    font-size: var(--en-text-xs);
+  }
+
+  .en-kbd--lg {
+    font-size: var(--en-text-base);
+  }
+
+  .en-kbd-group {
+    align-items: center;
+    gap: var(--en-space-1);
+    display: inline-flex;
+  }
+
+  .en-kbd-group__sep {
+    color: var(--en-text-muted);
+    font-size: .9em;
+  }
+}

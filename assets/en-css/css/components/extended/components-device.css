@@ -1,0 +1,435 @@
+@layer en-components {
+  .en-device {
+    --en-device-scale: 1;
+    --en-device-color: #111318;
+    --en-device-ring: #ffffff24;
+    --en-device-metal-1: #343840;
+    --en-device-metal-2: #1a1c21;
+    --en-device-w: 390px;
+    --en-device-h: 844px;
+    --en-device-bezel: 12px;
+    --en-device-bezel-bottom: 12px;
+    --en-device-radius: 54px;
+    --en-device-extra: 0px;
+    --_fw: calc(var(--en-device-w) + var(--en-device-bezel) * 2);
+    --_fh: calc(var(--en-device-h) + var(--en-device-bezel) + var(--en-device-bezel-bottom));
+    --_screen-radius: max(calc(var(--en-device-radius) - var(--en-device-bezel)), 2px);
+    align-items: center;
+    gap: var(--en-space-3);
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0;
+    display: inline-flex;
+  }
+
+  .en-device__stage {
+    width: calc(var(--_fw) * var(--en-device-scale));
+    height: calc((var(--_fh) + var(--en-device-extra)) * var(--en-device-scale));
+    transition: width var(--en-duration-base) var(--en-ease-out),
+                height var(--en-duration-base) var(--en-ease-out);
+    flex: none;
+    position: relative;
+  }
+
+  .en-device__body {
+    width: var(--_fw);
+    height: calc(var(--_fh) + var(--en-device-extra));
+    transform: scale(var(--en-device-scale));
+    transform-origin: 0 0;
+    transition: transform var(--en-duration-base) var(--en-ease-out);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .en-device__frame {
+    box-sizing: border-box;
+    width: var(--_fw);
+    height: var(--_fh);
+    padding: var(--en-device-bezel) var(--en-device-bezel) var(--en-device-bezel-bottom);
+    background-color: var(--en-device-color);
+    border-radius: var(--en-device-radius);
+    box-shadow: inset 0 0 0 2px var(--en-device-ring),
+                0 0 0 1px #00000080,
+                var(--en-shadow-lg);
+    position: relative;
+  }
+
+  .en-device__screen {
+    box-sizing: border-box;
+    width: var(--en-device-w);
+    height: var(--en-device-h);
+    background-color: var(--en-bg, #fff);
+    color: var(--en-text);
+    border-radius: var(--_screen-radius);
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    container: en-device / size;
+  }
+
+  .en-device__content {
+    object-fit: cover;
+    background-color: #0000;
+    border: 0;
+    flex: auto;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    display: block;
+    overflow: auto;
+  }
+
+  .en-device__caption {
+    font-size: var(--en-text-sm);
+    color: var(--en-text-muted);
+    text-align: center;
+  }
+
+  .en-device__browser {
+    align-items: center;
+    gap: var(--en-space-3);
+    height: 36px;
+    padding-inline: var(--en-space-3);
+    background-color: var(--en-bg-subtle, #f3f4f6);
+    border-bottom: var(--en-border-width) var(--en-border-style) var(--en-border);
+    font-size: var(--en-text-xs);
+    color: var(--en-text-muted);
+    flex: none;
+    display: flex;
+    position: relative;
+  }
+
+  .en-device__browser:before {
+    content: "";
+    background-color: #ff5f57;
+    border-radius: 50%;
+    flex: none;
+    width: 10px;
+    height: 10px;
+    margin-inline-end: 34px;
+    box-shadow: 18px 0 #febc2e, 36px 0 #28c840;
+  }
+
+  .en-device__url {
+    min-width: 0;
+    max-width: 640px;
+    padding: 3px var(--en-space-3);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    background-color: var(--en-bg-surface, #fff);
+    border: var(--en-border-width) var(--en-border-style) var(--en-border);
+    border-radius: var(--en-radius-full);
+    flex: auto;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+
+  .en-device--silver {
+    --en-device-color: #d7dae0;
+    --en-device-ring: #0000001f;
+    --en-device-metal-1: #e9ebef;
+    --en-device-metal-2: #b8bdc6;
+  }
+
+  .en-device--scale-25 {
+    --en-device-scale: .25;
+  }
+
+  .en-device--scale-50 {
+    --en-device-scale: .5;
+  }
+
+  .en-device--scale-75 {
+    --en-device-scale: .75;
+  }
+
+  .en-device--scale-100 {
+    --en-device-scale: 1;
+  }
+
+  .en-device--phone .en-device__screen {
+    --en-safe-area-bottom: 21px;
+  }
+
+  .en-device--phone .en-device__screen:before {
+    content: "";
+    z-index: 2;
+    pointer-events: none;
+    background-color: #000;
+    border-radius: 17px;
+    width: 120px;
+    height: 34px;
+    position: absolute;
+    top: 11px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .en-device--phone .en-device__screen:after {
+    content: "";
+    z-index: 2;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    background-color: #808080b3;
+    border-radius: 3px;
+    width: 134px;
+    height: 5px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .en-device--phone .en-device__frame:before, .en-device--phone .en-device__frame:after {
+    content: "";
+    background-color: var(--en-device-metal-2);
+    border-radius: 2px;
+    width: 3px;
+    position: absolute;
+  }
+
+  .en-device--phone .en-device__frame:before {
+    height: 64px;
+    box-shadow: 0 84px 0 var(--en-device-metal-2);
+    top: 150px;
+    left: -3px;
+  }
+
+  .en-device--phone .en-device__frame:after {
+    height: 96px;
+    top: 200px;
+    right: -3px;
+  }
+
+  .en-device--phone.en-device--landscape {
+    --en-device-w: 844px;
+    --en-device-h: 390px;
+  }
+
+  .en-device--phone.en-device--landscape .en-device__screen {
+    --en-safe-area-bottom: 0px;
+  }
+
+  .en-device--phone.en-device--landscape .en-device__screen:before {
+    width: 34px;
+    height: 120px;
+    top: 50%;
+    left: 11px;
+    transform: translateY(-50%);
+  }
+
+  .en-device--phone.en-device--landscape .en-device__screen:after {
+    width: 5px;
+    height: 134px;
+    bottom: 50%;
+    left: auto;
+    right: 8px;
+    transform: translateY(50%);
+  }
+
+  .en-device--phone.en-device--landscape .en-device__frame:before, .en-device--phone.en-device--landscape .en-device__frame:after {
+    display: none;
+  }
+
+  .en-device--tablet {
+    --en-device-w: 820px;
+    --en-device-h: 1180px;
+    --en-device-bezel: 18px;
+    --en-device-bezel-bottom: 18px;
+    --en-device-radius: 36px;
+    --en-device-scale: .6;
+  }
+
+  .en-device--tablet.en-device--landscape {
+    --en-device-w: 1180px;
+    --en-device-h: 820px;
+  }
+
+  .en-device--tablet .en-device__frame:before {
+    content: "";
+    background-color: #ffffff2e;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .en-device--tablet.en-device--landscape .en-device__frame:before {
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+  }
+
+  .en-device--laptop {
+    --en-device-w: 1280px;
+    --en-device-h: 800px;
+    --en-device-bezel: 14px;
+    --en-device-bezel-bottom: 14px;
+    --en-device-radius: 22px;
+    --en-device-extra: 18px;
+    --en-device-scale: .6;
+  }
+
+  .en-device--laptop .en-device__frame {
+    border-end-end-radius: 4px;
+    border-end-start-radius: 4px;
+  }
+
+  .en-device--laptop .en-device__frame:before {
+    content: "";
+    background-color: #fff3;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .en-device--laptop .en-device__frame:after {
+    content: "";
+    z-index: 1;
+    background-color: var(--en-device-metal-2);
+    border-radius: 0 0 10px 10px;
+    width: 14%;
+    height: 6px;
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .en-device--laptop .en-device__body:after {
+    content: "";
+    left: -5%;
+    right: -5%;
+    top: var(--_fh);
+    height: var(--en-device-extra);
+    background: linear-gradient(to bottom, var(--en-device-metal-1), var(--en-device-metal-2));
+    border-radius: 0 0 20px 20px / 0 0 14px 14px;
+    position: absolute;
+    box-shadow: 0 6px 14px #00000040;
+  }
+
+  .en-device--desktop {
+    --en-device-w: 1440px;
+    --en-device-h: 900px;
+    --en-device-bezel: 14px;
+    --en-device-bezel-bottom: 44px;
+    --en-device-radius: 20px;
+    --en-device-extra: 96px;
+    --en-device-scale: .5;
+  }
+
+  .en-device--desktop .en-device__body:before {
+    content: "";
+    top: calc(var(--_fh) - 2px);
+    background: linear-gradient(to right, var(--en-device-metal-2), var(--en-device-metal-1) 50%, var(--en-device-metal-2));
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+    width: 150px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .en-device--desktop .en-device__body:after {
+    content: "";
+    top: calc(var(--_fh) + 76px);
+    background: linear-gradient(to bottom, var(--en-device-metal-1), var(--en-device-metal-2));
+    border-radius: 10px 10px 4px 4px;
+    width: 300px;
+    height: 18px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 6px 12px #00000040;
+  }
+
+  .en-device--tv {
+    --en-device-w: 1920px;
+    --en-device-h: 1080px;
+    --en-device-bezel: 10px;
+    --en-device-bezel-bottom: 10px;
+    --en-device-radius: 12px;
+    --en-device-extra: 44px;
+    --en-device-scale: .4;
+  }
+
+  .en-device--tv .en-device__frame:after {
+    content: "";
+    background-color: #ffffff40;
+    border-radius: 2px;
+    width: 24px;
+    height: 3px;
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .en-device--tv .en-device__body:before, .en-device--tv .en-device__body:after {
+    content: "";
+    top: calc(var(--_fh) - 2px);
+    background: linear-gradient(to right, var(--en-device-metal-2), var(--en-device-metal-1));
+    clip-path: polygon(0 100%, 16% 0, 84% 0, 100% 100%);
+    width: 140px;
+    height: 46px;
+    position: absolute;
+  }
+
+  .en-device--tv .en-device__body:before {
+    left: 14%;
+  }
+
+  .en-device--tv .en-device__body:after {
+    right: 14%;
+  }
+
+  .en-device-group {
+    justify-content: center;
+    align-items: flex-end;
+    gap: var(--en-space-8);
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  @media (width <= 640px) {
+    .en-device--laptop, .en-device--desktop, .en-device--tv {
+      --en-device-scale: .25;
+    }
+
+    .en-device--tablet {
+      --en-device-scale: .35;
+    }
+  }
+}
+
+@layer en-utilities {
+  @media (prefers-reduced-motion: reduce) {
+    .en-device__stage, .en-device__body {
+      transition: none;
+    }
+  }
+
+  @media (forced-colors: active) {
+    .en-device__frame {
+      box-shadow: none;
+      border: 2px solid canvastext;
+    }
+  }
+
+  @media print {
+    .en-device__frame {
+      box-shadow: none;
+    }
+  }
+}

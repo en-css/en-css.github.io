@@ -1,0 +1,167 @@
+/*!
+ * EN-CSS Effects: Border & Glow
+ * `.en-fx-glow`, `.en-fx-border-gradient`, `.en-fx-border-spin`,
+ * `.en-fx-border-draw`, `.en-fx-aurora`
+ * Ring effects (border-gradient, border-spin, border-draw) use ::before, so do not
+ * combine them with each other, with `.en-fx-noise`, or with components that draw
+ * their own ::before. `.en-fx-aurora` uses background-image (as do grid, dots,
+ * gloss and stripes). Modifiers work on their own.
+ */
+@property --en-fx-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@property --en-fx-draw {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@layer en-utilities {
+  :is(.en-fx-glow, .en-fx-glow--hover, .en-fx-glow--pulse) {
+    --en-fx-glow-color: var(--en-primary, #3b82f6);
+    --en-fx-glow-size: 1.25rem;
+    --_glow-on: 0 0 0 1px color-mix(in srgb, var(--en-fx-glow-color) 45%, transparent),
+      0 0 var(--en-fx-glow-size) color-mix(in srgb, var(--en-fx-glow-color) 55%, transparent);
+    --_glow-off: 0 0 0 0 transparent, 0 0 0 transparent;
+    box-shadow: var(--_glow-on);
+    transition: box-shadow .25s;
+  }
+
+  .en-fx-glow--hover {
+    box-shadow: var(--_glow-off);
+  }
+
+  .en-fx-glow--hover:is(:hover, :focus-visible) {
+    box-shadow: var(--_glow-on);
+  }
+
+  .en-fx-glow--pulse {
+    animation: 2.4s ease-in-out infinite en-fx-glow-pulse;
+  }
+
+  @keyframes en-fx-glow-pulse {
+    50% {
+      box-shadow: 0 0 0 1px color-mix(in srgb, var(--en-fx-glow-color) 25%, transparent),
+        0 0 calc(var(--en-fx-glow-size) * 1.8) color-mix(in srgb, var(--en-fx-glow-color) 70%, transparent);
+    }
+  }
+
+  :is(.en-fx-border-gradient, .en-fx-border-spin) {
+    --en-fx-from: var(--en-primary, #3b82f6);
+    --en-fx-to: color-mix(in oklab, var(--en-primary, #3b82f6) 45%, #ec4899);
+    --en-fx-angle-static: 135deg;
+    --en-fx-border-width: 2px;
+    position: relative;
+  }
+
+  :is(.en-fx-border-gradient, .en-fx-border-spin):before {
+    content: "";
+    padding: var(--en-fx-border-width);
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(var(--en-fx-angle-static), var(--en-fx-from), var(--en-fx-to));
+    -webkit-mask-composite: xor;
+    position: absolute;
+    inset: 0;
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  }
+
+  .en-fx-border-spin {
+    --en-fx-spin-duration: 4s;
+  }
+
+  .en-fx-border-spin:before {
+    background: conic-gradient(from var(--en-fx-angle),
+      var(--en-fx-from),
+      var(--en-fx-to),
+      var(--en-fx-from));
+    animation: en-fx-spin var(--en-fx-spin-duration) linear infinite;
+  }
+
+  @keyframes en-fx-spin {
+    to {
+      --en-fx-angle: 360deg;
+    }
+  }
+
+  .en-fx-border-draw {
+    --en-fx-draw-color: var(--en-primary, #3b82f6);
+    --en-fx-draw-width: 2px;
+    --en-fx-draw-duration: .6s;
+    position: relative;
+  }
+
+  .en-fx-border-draw:before {
+    content: "";
+    padding: var(--en-fx-draw-width);
+    border-radius: inherit;
+    pointer-events: none;
+    background: conic-gradient(from 0deg,
+      var(--en-fx-draw-color) var(--en-fx-draw),
+      transparent var(--en-fx-draw));
+    -webkit-mask-composite: xor;
+    transition: --en-fx-draw var(--en-fx-draw-duration) ease;
+    position: absolute;
+    inset: 0;
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  }
+
+  .en-fx-border-draw:is(:hover, :focus-within):before {
+    --en-fx-draw: 360deg;
+  }
+
+  [dir="rtl"] .en-fx-border-draw:before {
+    scale: -1 1;
+  }
+
+  .en-fx-border-draw[dir="rtl"]:before {
+    scale: -1 1;
+  }
+
+  :is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) .en-fx-border-draw:before {
+    scale: -1 1;
+  }
+
+  .en-fx-border-draw:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)):before {
+    scale: -1 1;
+  }
+
+  :is(.en-fx-aurora, .en-fx-aurora--static) {
+    --en-fx-aurora-1: color-mix(in srgb, var(--en-primary, #3b82f6) 65%, transparent);
+    --en-fx-aurora-2: #ec489973;
+    --en-fx-aurora-3: #22d3ee66;
+    --en-fx-aurora-duration: 14s;
+    background-image: radial-gradient(40% 50% at 20% 30%, var(--en-fx-aurora-1), transparent),
+      radial-gradient(45% 55% at 80% 25%, var(--en-fx-aurora-2), transparent),
+      radial-gradient(50% 50% at 50% 85%, var(--en-fx-aurora-3), transparent);
+    background-position: 0 0, 100% 0, 50% 100%;
+    background-size: 200% 200%;
+  }
+
+  .en-fx-aurora {
+    animation: en-fx-aurora var(--en-fx-aurora-duration) ease-in-out infinite alternate;
+  }
+
+  @keyframes en-fx-aurora {
+    to {
+      background-position: 100% 100%, 0 100%, 50% 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .en-fx-glow--pulse, .en-fx-border-spin:before, .en-fx-aurora {
+      animation: none !important;
+    }
+
+    .en-fx-border-draw:before {
+      transition: none !important;
+    }
+
+    :is(.en-fx-glow, .en-fx-glow--hover, .en-fx-glow--pulse) {
+      transition: none !important;
+    }
+  }
+}

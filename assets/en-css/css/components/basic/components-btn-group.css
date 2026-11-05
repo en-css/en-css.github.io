@@ -1,0 +1,98 @@
+@layer en-components {
+  .en-btn-group {
+    --en-btn-group-active-bg: var(--en-primary);
+    --en-btn-group-active-fg: var(--en-fg-primary);
+    --en-btn-group-active-border: var(--en-primary);
+    vertical-align: middle;
+    display: inline-flex;
+    position: relative;
+  }
+
+  .en-btn-group > .en-btn {
+    min-inline-size: var(--en-btn-group-min, 0);
+    flex: 0 auto;
+    position: relative;
+  }
+
+  .en-btn-group:not(.en-btn-group--vertical) > .en-btn:not(:first-child) {
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+    margin-inline-start: -1px;
+  }
+
+  .en-btn-group:not(.en-btn-group--vertical) > .en-btn:not(:last-child) {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+  }
+
+  .en-btn-group > .en-btn:is(:hover, :focus-visible, :active) {
+    z-index: 1;
+  }
+
+  .en-btn-group > .en-btn:is(.en-btn--active, [aria-pressed="true"], [aria-current="true"]) {
+    z-index: 1;
+    color: var(--en-btn-group-active-fg);
+    background: var(--en-btn-group-active-bg);
+    border-color: var(--en-btn-group-active-border);
+  }
+
+  .en-btn-group--vertical {
+    flex-direction: column;
+  }
+
+  .en-btn-group--vertical > .en-btn:not(:first-child) {
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+    margin-block-start: -1px;
+  }
+
+  .en-btn-group--vertical > .en-btn:not(:last-child) {
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
+  }
+
+  .en-btn-group--fill {
+    inline-size: 100%;
+    display: flex;
+  }
+
+  .en-btn-group--fill > .en-btn {
+    flex: 1 1 0;
+  }
+
+  .en-btn-group--equal:not(.en-btn-group--vertical) {
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    display: inline-grid;
+  }
+
+  .en-btn-group--sm > .en-btn {
+    padding-block: var(--en-input-padding-sm-y);
+    padding-inline: var(--en-input-padding-sm-x);
+    font-size: var(--en-text-sm);
+  }
+
+  .en-btn-group--lg > .en-btn {
+    padding-block: var(--en-input-padding-lg-y);
+    padding-inline: var(--en-input-padding-lg-x);
+    font-size: var(--en-text-lg);
+  }
+
+  .en-toolbar {
+    align-items: center;
+    gap: var(--en-space-2) var(--en-space-4);
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .en-toolbar__sep {
+    inline-size: var(--en-border-width);
+    background: var(--en-border);
+    align-self: stretch;
+    min-block-size: 1.5rem;
+  }
+
+  .en-toolbar__spacer {
+    flex: auto;
+  }
+}

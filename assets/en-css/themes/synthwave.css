@@ -1,0 +1,142 @@
+/*!
+ * EN-CSS Theme: Synthwave
+ * High energy retrowave aesthetics. Neon lines and dark gradients.
+ */
+
+@layer en-tokens {
+  [data-en-theme="synthwave"],
+  .en-theme-synthwave {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#ff007f, #00f0ff);
+    --en-secondary: light-dark(#7000ff, #ff007f);
+    --en-success: light-dark(#00ff9d, #00ff9d);
+    --en-warning: light-dark(#ffea00, #ffea00);
+    --en-danger: light-dark(#ff2a2a, #ff2a2a);
+    --en-info: light-dark(#00b8ff, #00b8ff);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#ff508f, #33f3ff);
+    --en-primary-active: light-dark(#fd769f, #66f6ff);
+    --en-secondary-hover: light-dark(#5e06d7, #ff508f);
+    --en-success-hover: light-dark(#a0ffc6, #a0ffc6);
+    --en-warning-hover: light-dark(#fff8b9, #fff8b9);
+    --en-danger-hover: light-dark(#ff5b50, #ff5b50);
+    --en-info-hover: light-dark(#5ec5fd, #5ec5fd);
+
+    --en-secondary-active: light-dark(#4c05b1, #fd769f);
+    --en-success-active: light-dark(#ddffe9, #ddffe9);
+    --en-warning-active: light-dark(#fffff4, #fffff4);
+    --en-danger-active: light-dark(#fc7d70, #fc7d70);
+    --en-info-active: light-dark(#85d2fe, #85d2fe);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#ffe4e6, #330028);
+    --en-secondary-subtle: light-dark(#f3e8ff, #280042);
+    --en-success-subtle: light-dark(#dcfce7, #004a33);
+    --en-warning-subtle: light-dark(#fef9c3, #4a4000);
+    --en-danger-subtle: light-dark(#fee2e2, #4a0a0a);
+    --en-info-subtle: light-dark(#e0f2fe, #00384a);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#1a052e, #0d0221);
+    --en-fg-secondary: light-dark(#ffffff, #0d0221);
+    --en-fg-success: light-dark(#1a052e, #0d0221);
+    --en-fg-warning: light-dark(#0d0221, #0d0221);
+    --en-fg-danger: light-dark(#1a052e, #0d0221);
+    --en-fg-info: light-dark(#1a052e, #0d0221);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#d4126a, #00f0ff);
+    --en-text-brand-hover: light-dark(#b9005a, #33f3ff);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fdf0ff, #1a052e);
+    --en-bg-subtle: light-dark(#ffe4f0, #17101f);
+    --en-bg-surface: light-dark(rgba(255, 255, 255, 0.8), rgba(36, 27, 47, 0.8));
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#fff0f8, #201828);
+    --en-bg-active: light-dark(#ffe4f0, #2a2030);
+
+    --en-text: light-dark(#4a004a, #e0d8f0);
+    --en-text-muted: light-dark(#8a4a8a, #9e8fb8);
+
+    --en-border: light-dark(#ffb3d9, #4f3b6d);
+    --en-border-control: light-dark(#a073a1, #756687);
+    --en-border-subtle: light-dark(#ffd4ec, #3a2d4f);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#ff007f, #00f0ff);
+    --en-disabled-bg: light-dark(#fff0f8, #0d0a12);
+    --en-disabled-text: light-dark(#b38ab3, #5a4a66);
+    --en-overlay: light-dark(rgba(74, 0, 74, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#17101f, #ffe4f0);
+    --en-bg-surface-inverse: light-dark(rgba(36, 27, 47, 0.8), rgba(255, 255, 255, 0.8));
+
+    --en-text-inverse: light-dark(#e0d8f0, #4a004a);
+    --en-text-muted-inverse: light-dark(#9e8fb8, #8a4a8a);
+
+    --en-border-inverse: light-dark(#4f3b6d, #ffb3d9);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#00f0ff, #ff007f);
+    --en-secondary-inverse: light-dark(#ff007f, #7000ff);
+    --en-success-inverse: light-dark(#00ff9d, #00ff9d);
+    --en-warning-inverse: light-dark(#ffea00, #ffea00);
+    --en-danger-inverse: light-dark(#ff2a2a, #ff2a2a);
+    --en-info-inverse: light-dark(#00b8ff, #00b8ff);
+
+    --en-fg-primary-inverse: light-dark(#0d0221, #1a052e);
+    --en-fg-secondary-inverse: light-dark(#0d0221, #ffffff);
+    --en-fg-success-inverse: light-dark(#0d0221, #1a052e);
+    --en-fg-warning-inverse: light-dark(#0d0221, #0d0221);
+    --en-fg-danger-inverse: light-dark(#0d0221, #1a052e);
+    --en-fg-info-inverse: light-dark(#0d0221, #1a052e);
+
+    /* Synthwave Grid & Effects */
+    --en-bg-texture: linear-gradient(to bottom, transparent 90%, light-dark(rgba(255, 0, 127, 0.1), rgba(0, 240, 255, 0.1)) 90%) 0 0 / 100% 40px,
+                     linear-gradient(to right, transparent 90%, light-dark(rgba(255, 0, 127, 0.1), rgba(0, 240, 255, 0.1)) 90%) 0 0 / 40px 100%;
+    --en-border-radius: 0;
+    --en-radius-sm: 0;
+    --en-radius-md: 0;
+    --en-radius-lg: 0;
+    --en-radius-xl: 0;
+    --en-shadow-sm: 0 0 10px var(--en-primary);
+    --en-shadow-md: 0 0 20px var(--en-primary);
+    --en-shadow-lg: 0 0 30px var(--en-primary);
+  }
+}
+
+@layer en-base {
+  [data-en-theme="synthwave"] body, .en-theme-synthwave body {
+    background-image: var(--en-bg-texture);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="synthwave"] body,
+    .en-theme-synthwave body {
+      background-image: none;
+    }
+  }
+}
+
+@layer en-components {
+  /* Glowing buttons and cards */
+  [data-en-theme="synthwave"] .en-card,
+  .en-theme-synthwave .en-card {
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--en-primary);
+    box-shadow: 0 0 15px light-dark(rgba(255, 0, 127, 0.3), rgba(0, 240, 255, 0.2)), inset 0 0 15px light-dark(rgba(255, 0, 127, 0.1), rgba(0, 240, 255, 0.1));
+  }
+
+  [data-en-theme="synthwave"] .en-btn,
+  .en-theme-synthwave .en-btn {
+    text-transform: uppercase;
+    text-shadow: 0 0 5px var(--en-fg-primary);
+    border: 1px solid var(--en-primary);
+  }
+}

@@ -1,0 +1,195 @@
+@layer en-utilities {
+  @media (forced-colors: active) {
+    .en-badge, .en-progress, .en-pagination__item--active, .en-segmented__item--active, .en-segmented > input:checked + label {
+      outline-offset: -1px;
+      outline: 1px solid canvastext;
+    }
+
+    .en-segmented > label:has( > input:checked) {
+      outline-offset: -1px;
+      outline: 1px solid canvastext;
+    }
+
+    .en-modal, .en-offcanvas, .en-dropdown__menu {
+      outline: 1px solid canvastext;
+    }
+
+    .en-status-dot {
+      forced-color-adjust: none;
+      background-color: canvastext;
+    }
+
+    .en-indicator__item {
+      forced-color-adjust: none;
+      color: highlighttext;
+      background-color: highlight;
+    }
+
+    .en-progress__bar {
+      forced-color-adjust: none;
+      background-color: highlight;
+    }
+
+    .en-pagination__item--active, .en-segmented__item--active, .en-segmented > input:checked + label {
+      forced-color-adjust: none;
+      color: highlighttext;
+      background-color: highlight;
+    }
+
+    .en-segmented > label:has( > input:checked) {
+      forced-color-adjust: none;
+      color: highlighttext;
+      background-color: highlight;
+    }
+
+    .en-check-btn input:checked ~ .en-check-btn__label {
+      forced-color-adjust: none;
+      color: highlighttext;
+      background-color: highlight;
+      border-color: highlight;
+    }
+
+    .en-switch__track {
+      forced-color-adjust: none;
+      background-color: graytext;
+    }
+
+    .en-switch__track:before {
+      forced-color-adjust: none;
+      background-color: canvas;
+    }
+
+    .en-switch input:checked ~ .en-switch__track {
+      background-color: highlight;
+    }
+
+    .en-switch input:checked ~ .en-switch__track:before {
+      background-color: highlighttext;
+    }
+
+    .en-check input[type="checkbox"]:checked {
+      forced-color-adjust: none;
+      background-color: highlight;
+      border-color: highlight;
+    }
+
+    .en-check input[type="checkbox"]:indeterminate {
+      forced-color-adjust: none;
+      background-color: highlight;
+      border-color: highlight;
+    }
+
+    .en-radio input[type="radio"]:checked {
+      forced-color-adjust: none;
+      background-color: highlight;
+      border-color: highlight;
+    }
+
+    .en-check input[type="checkbox"]:checked:after {
+      border-color: highlighttext;
+    }
+
+    .en-check input[type="checkbox"]:indeterminate:after {
+      forced-color-adjust: none;
+      background-color: highlighttext;
+    }
+
+    .en-radio input[type="radio"]:checked:after {
+      forced-color-adjust: none;
+      background-color: highlighttext;
+    }
+
+    .en-tabs__list {
+      box-shadow: none;
+      border-block-end: 1px solid canvastext;
+    }
+
+    .en-tabs--vertical > .en-tabs__list {
+      border-block-end: 0;
+    }
+
+    .en-tabs__tab {
+      forced-color-adjust: none;
+      color: buttontext;
+      background-color: canvas;
+      border-color: #0000;
+    }
+
+    .en-tabs__tab:is([aria-selected="true"], .en-tabs__tab--active, :has( > input:checked)) {
+      color: highlight;
+      border-block-end-color: highlight;
+    }
+
+    .en-tabs--vertical .en-tabs__tab:is([aria-selected="true"], .en-tabs__tab--active, :has( > input:checked)) {
+      border-block-end-color: #0000;
+      border-inline-end-color: highlight;
+    }
+
+    .en-tabs--pills .en-tabs__tab:is([aria-selected="true"], .en-tabs__tab--active, :has( > input:checked)) {
+      color: highlighttext;
+      background-color: highlight;
+    }
+
+    .en-tabs__tab:is(:disabled, [aria-disabled="true"], .en-tabs__tab--disabled, :has( > input:disabled)) {
+      color: graytext;
+    }
+
+    .en-btn-group > .en-btn:is(.en-btn--active, [aria-pressed="true"], [aria-current="true"]) {
+      forced-color-adjust: none;
+      color: highlighttext;
+      background-color: highlight;
+      border-color: highlight;
+    }
+
+    .en-input:focus-visible {
+      outline-offset: 2px;
+      outline: 2px solid highlight;
+    }
+
+    .en-select:focus-visible {
+      outline-offset: 2px;
+      outline: 2px solid highlight;
+    }
+
+    .en-textarea:focus-visible {
+      outline-offset: 2px;
+      outline: 2px solid highlight;
+    }
+
+    .en-input-group:focus-within {
+      outline-offset: 2px;
+      outline: 2px solid highlight;
+    }
+
+    .en-btn:not(:is(.en-btn--ghost, .en-btn--link)) {
+      border: 1px solid buttontext;
+    }
+
+    .en-btn:is([aria-pressed="true"], .en-btn--active) {
+      forced-color-adjust: none;
+      color: highlighttext;
+      background-color: highlight;
+    }
+
+    .en-alert, .en-callout, .en-card, .en-kbd, .en-navbar, .en-empty, .en-close-icon {
+      outline-offset: -1px;
+      outline: 1px solid canvastext;
+    }
+
+    .en-accordion__item, .en-table th, .en-table td {
+      border-color: canvastext;
+    }
+
+    .en-field--floating-outlined > .en-label {
+      color: canvastext;
+    }
+
+    .en-field--floating-outlined > :is(.en-input, .en-textarea):is(:focus, :not(:placeholder-shown)) ~ .en-label {
+      background: linear-gradient(#0000 50%, canvas 50%);
+    }
+
+    .en-field--floating-outlined > :is(.en-input, .en-textarea):disabled ~ .en-label {
+      color: graytext;
+    }
+  }
+}

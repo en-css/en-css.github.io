@@ -1,0 +1,151 @@
+/*!
+ * EN-CSS Theme: Lavender / Amethyst
+ * Soft purples and lilacs for a calm, soothing interface.
+ */
+
+@layer en-tokens {
+  [data-en-theme="lavender"],
+  .en-theme-lavender {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#9e60e8, #c497f5);
+    --en-secondary: light-dark(#b583f1, #d3b3f8);
+    --en-success: light-dark(#88d49e, #a7e3b8);
+    --en-warning: light-dark(#f6c96e, #f9db9b);
+    --en-danger: light-dark(#ef7a85, #f4a2aa);
+    --en-info: light-dark(#6bc3d6, #9bd5e2);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#aa72f1, #d4abf7);
+    --en-primary-active: light-dark(#b684fa, #e3bff9);
+    --en-secondary-hover: light-dark(#c294fb, #dfc5fe);
+    --en-success-hover: light-dark(#9be2ae, #b9f1c8);
+    --en-warning-hover: light-dark(#ffd991, #ffebc3);
+    --en-danger-hover: light-dark(#fa8c95, #feb3ba);
+    --en-info-hover: light-dark(#80d1e3, #ade3ef);
+
+    --en-secondary-active: light-dark(#cca7fd, #e9d8ff);
+    --en-success-active: light-dark(#aeefbf, #cbffd9);
+    --en-warning-active: light-dark(#ffebc7, #fffcf6);
+    --en-danger-active: light-dark(#fea2a8, #ffc9cd);
+    --en-info-active: light-dark(#94deef, #bff1fd);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#fae8ff, #2e1447);
+    --en-secondary-subtle: light-dark(#f3e8ff, #3a1a5c);
+    --en-success-subtle: light-dark(#dcfce7, #2a4d33);
+    --en-warning-subtle: light-dark(#fef9c3, #4a3819);
+    --en-danger-subtle: light-dark(#ffe4e6, #4a1f24);
+    --en-info-subtle: light-dark(#cffafe, #1a3d47);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#1a0f2e, #140a24);
+    --en-fg-secondary: light-dark(#1a0f2e, #1a0a2e);
+    --en-fg-success: light-dark(#1a0f2e, #0f2618);
+    --en-fg-warning: light-dark(#000000, #3d2500);
+    --en-fg-danger: light-dark(#1a0f2e, #2e0a10);
+    --en-fg-info: light-dark(#1a0f2e, #0a1f24);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#8f50d7, #c497f5);
+    --en-text-brand-hover: light-dark(#7d3cc3, #d4abf7);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fbf7ff, #1a0f2e);
+    /* Texture: Subtle gradient mesh */
+    --en-bg-texture: radial-gradient(at 0% 0%, color-mix(in oklab, var(--en-primary) 5%, transparent) 0px, transparent 50%),
+                     radial-gradient(at 100% 0%, color-mix(in oklab, var(--en-secondary) 5%, transparent) 0px, transparent 50%);
+    --en-bg-size: 100% 100%;
+    --en-bg-position: 0 0;
+    --en-bg-subtle: light-dark(#f0e6fc, #1c0f33);
+    --en-bg-surface: light-dark(#ffffff, #231242);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f5f0fd, #2d1850);
+    --en-bg-active: light-dark(#f0e6fc, #3a1f5e);
+
+    --en-text: light-dark(#3b1e5a, #f9f6fd);
+    --en-text-muted: light-dark(#7a46aa, #a682db);
+
+    --en-border: light-dark(#dac3f8, #45266e);
+    --en-border-control: light-dark(#8c799f, #71697f);
+    --en-border-subtle: light-dark(#e8d9fc, #3a1f5e);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#9b5de5, #c497f5);
+    --en-disabled-bg: light-dark(#f5f0fc, #1a0f2e);
+    --en-disabled-text: light-dark(#a882c4, #6e4891);
+    --en-overlay: light-dark(rgba(59, 30, 90, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#1c0f33, #f0e6fc);
+    --en-bg-surface-inverse: light-dark(#231242, #ffffff);
+
+    --en-text-inverse: light-dark(#f9f6fd, #3b1e5a);
+    --en-text-muted-inverse: light-dark(#a682db, #7a46aa);
+
+    --en-border-inverse: light-dark(#45266e, #dac3f8);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#c497f5, #9e60e8);
+    --en-secondary-inverse: light-dark(#d3b3f8, #b583f1);
+    --en-success-inverse: light-dark(#a7e3b8, #88d49e);
+    --en-warning-inverse: light-dark(#f9db9b, #f6c96e);
+    --en-danger-inverse: light-dark(#f4a2aa, #ef7a85);
+    --en-info-inverse: light-dark(#9bd5e2, #6bc3d6);
+
+    --en-fg-primary-inverse: light-dark(#140a24, #1a0f2e);
+    --en-fg-secondary-inverse: light-dark(#1a0a2e, #1a0f2e);
+    --en-fg-success-inverse: light-dark(#0f2618, #1a0f2e);
+    --en-fg-warning-inverse: light-dark(#3d2500, #000000);
+    --en-fg-danger-inverse: light-dark(#2e0a10, #1a0f2e);
+    --en-fg-info-inverse: light-dark(#0a1f24, #1a0f2e);
+
+    /* Ornaments - Soft and rounded */
+    --en-radius-md: 1.5rem;
+    --en-border-width: 2px;
+    --en-border-style: solid;
+    --en-shadow-sm: 0 4px 15px light-dark(rgba(155, 93, 229, 0.1), rgba(0, 0, 0, 0.3));
+    --en-shadow-md: 0 8px 25px light-dark(rgba(155, 93, 229, 0.15), rgba(0, 0, 0, 0.4));
+    --en-transition: 300ms ease-in-out;
+    --en-font-sans: "Nunito", "Quicksand", system-ui, sans-serif;
+  }
+}
+
+@layer en-base {
+  [data-en-theme="lavender"] body,
+  .en-theme-lavender body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="lavender"] body,
+    .en-theme-lavender body {
+      background-image: none;
+    }
+  }
+}
+
+@layer en-components {
+  /* Soft interactive elements */
+  [data-en-theme="lavender"] .en-btn,
+  .en-theme-lavender .en-btn {
+    box-shadow: var(--en-shadow-sm);
+  }
+  
+  [data-en-theme="lavender"] .en-btn:hover,
+  .en-theme-lavender .en-btn:hover {
+    transform: translate3d(2px, 2px, 2px) scale(1.05);
+    box-shadow: var(--en-shadow-md);
+  }
+
+  [data-en-theme="lavender"] .en-card,
+  .en-theme-lavender .en-card {
+    border: 2px solid light-dark(rgba(218, 195, 248, 0.5), rgba(69, 38, 110, 0.5));
+    backdrop-filter: blur(8px);
+    background: light-dark(rgba(255, 255, 255, 0.8), rgba(35, 18, 66, 0.8));
+  }
+}

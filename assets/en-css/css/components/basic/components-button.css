@@ -1,0 +1,184 @@
+@layer en-components {
+  .en-btn {
+    --en-btn-accent: var(--en-border);
+    --en-btn-accent-hover: var(--en-bg-hover);
+    --en-btn-accent-fg: var(--en-text);
+    --en-btn-outline-fg: var(--en-text);
+    --en-btn-outline-hover-bg: var(--en-bg-hover);
+    --en-btn-outline-hover-fg: var(--en-text);
+    --en-btn-bg: var(--en-bg-surface);
+    --en-btn-fg: var(--en-text);
+    --en-btn-border: var(--en-border);
+    --en-btn-hover-bg: var(--en-bg-hover);
+    --en-btn-hover-fg: var(--en-text);
+    --en-btn-hover-border: var(--en-border);
+    justify-content: center;
+    align-items: center;
+    gap: var(--en-space-2);
+    padding-block: var(--en-input-padding-y);
+    padding-inline: var(--en-input-padding-x);
+    font: inherit;
+    font-weight: 500;
+    line-height: var(--en-leading-normal);
+    border: 1px solid var(--en-btn-border);
+    border-radius: var(--en-radius-md);
+    background: var(--en-btn-bg);
+    color: var(--en-btn-fg);
+    cursor: pointer;
+    transition: background var(--en-transition), 
+                color var(--en-transition), 
+                border-color var(--en-transition), 
+                box-shadow var(--en-transition), 
+                translate var(--en-transition);
+    text-decoration: none;
+    display: inline-flex;
+  }
+
+  .en-btn:hover {
+    background: var(--en-btn-hover-bg);
+    color: var(--en-btn-hover-fg);
+    border-color: var(--en-btn-hover-border);
+  }
+
+  .en-btn:active {
+    translate: 0 1px;
+  }
+
+  .en-btn:focus-visible {
+    outline: 2px solid var(--en-focus-ring);
+    outline-offset: 2px;
+  }
+
+  .en-btn:disabled {
+    opacity: var(--en-opacity-disabled);
+    cursor: not-allowed;
+  }
+
+  .en-btn--primary {
+    --en-btn-accent: var(--en-primary);
+    --en-btn-accent-hover: var(--en-primary-hover);
+    --en-btn-accent-fg: var(--en-fg-primary);
+    --en-btn-outline-fg: var(--en-primary);
+    --en-btn-outline-hover-bg: var(--en-primary);
+    --en-btn-outline-hover-fg: var(--en-fg-primary);
+    --en-btn-bg: transparent;
+    --en-btn-fg: var(--en-btn-outline-fg);
+    --en-btn-border: var(--en-btn-accent);
+    --en-btn-hover-bg: var(--en-btn-outline-hover-bg);
+    --en-btn-hover-fg: var(--en-btn-outline-hover-fg);
+    --en-btn-hover-border: var(--en-btn-accent);
+  }
+
+  .en-btn--secondary {
+    --en-btn-accent: var(--en-secondary);
+    --en-btn-accent-hover: var(--en-secondary-hover);
+    --en-btn-accent-fg: var(--en-fg-secondary);
+    --en-btn-outline-fg: var(--en-secondary);
+    --en-btn-outline-hover-bg: var(--en-secondary);
+    --en-btn-outline-hover-fg: var(--en-fg-secondary);
+    --en-btn-bg: transparent;
+    --en-btn-fg: var(--en-btn-outline-fg);
+    --en-btn-border: var(--en-btn-accent);
+    --en-btn-hover-bg: var(--en-btn-outline-hover-bg);
+    --en-btn-hover-fg: var(--en-btn-outline-hover-fg);
+    --en-btn-hover-border: var(--en-btn-accent);
+  }
+
+  .en-btn--success {
+    --en-btn-accent: var(--en-success);
+    --en-btn-accent-hover: var(--en-success-hover);
+    --en-btn-accent-fg: var(--en-fg-success);
+    --en-btn-outline-fg: var(--en-success);
+    --en-btn-outline-hover-bg: var(--en-success);
+    --en-btn-outline-hover-fg: var(--en-fg-success);
+    --en-btn-bg: transparent;
+    --en-btn-fg: var(--en-btn-outline-fg);
+    --en-btn-border: var(--en-btn-accent);
+    --en-btn-hover-bg: var(--en-btn-outline-hover-bg);
+    --en-btn-hover-fg: var(--en-btn-outline-hover-fg);
+    --en-btn-hover-border: var(--en-btn-accent);
+  }
+
+  .en-btn--warning {
+    --en-btn-accent: var(--en-warning);
+    --en-btn-accent-hover: var(--en-warning-hover);
+    --en-btn-accent-fg: var(--en-fg-warning);
+    --en-btn-outline-fg: var(--en-warning);
+    --en-btn-outline-hover-bg: var(--en-warning);
+    --en-btn-outline-hover-fg: var(--en-fg-warning);
+    --en-btn-bg: transparent;
+    --en-btn-fg: var(--en-btn-outline-fg);
+    --en-btn-border: var(--en-btn-accent);
+    --en-btn-hover-bg: var(--en-btn-outline-hover-bg);
+    --en-btn-hover-fg: var(--en-btn-outline-hover-fg);
+    --en-btn-hover-border: var(--en-btn-accent);
+  }
+
+  .en-btn--danger {
+    --en-btn-accent: var(--en-danger);
+    --en-btn-accent-hover: var(--en-danger-hover);
+    --en-btn-accent-fg: var(--en-fg-danger);
+    --en-btn-outline-fg: var(--en-danger);
+    --en-btn-outline-hover-bg: var(--en-danger);
+    --en-btn-outline-hover-fg: var(--en-fg-danger);
+    --en-btn-bg: transparent;
+    --en-btn-fg: var(--en-btn-outline-fg);
+    --en-btn-border: var(--en-btn-accent);
+    --en-btn-hover-bg: var(--en-btn-outline-hover-bg);
+    --en-btn-hover-fg: var(--en-btn-outline-hover-fg);
+    --en-btn-hover-border: var(--en-btn-accent);
+  }
+
+  .en-btn--info {
+    --en-btn-accent: var(--en-info);
+    --en-btn-accent-hover: var(--en-info-hover);
+    --en-btn-accent-fg: var(--en-fg-info);
+    --en-btn-outline-fg: var(--en-info);
+    --en-btn-outline-hover-bg: var(--en-info);
+    --en-btn-outline-hover-fg: var(--en-fg-info);
+    --en-btn-bg: transparent;
+    --en-btn-fg: var(--en-btn-outline-fg);
+    --en-btn-border: var(--en-btn-accent);
+    --en-btn-hover-bg: var(--en-btn-outline-hover-bg);
+    --en-btn-hover-fg: var(--en-btn-outline-hover-fg);
+    --en-btn-hover-border: var(--en-btn-accent);
+  }
+
+  .en-btn--solid {
+    --en-btn-bg: var(--en-btn-accent);
+    --en-btn-fg: var(--en-btn-accent-fg);
+    --en-btn-border: var(--en-btn-accent);
+    --en-btn-hover-bg: var(--en-btn-accent-hover);
+    --en-btn-hover-fg: var(--en-btn-accent-fg);
+    --en-btn-hover-border: var(--en-btn-accent-hover);
+  }
+
+  .en-btn--ghost {
+    --en-btn-bg: transparent;
+    --en-btn-fg: var(--en-btn-outline-fg);
+    --en-btn-border: transparent;
+    --en-btn-hover-bg: var(--en-bg-hover);
+    --en-btn-hover-fg: var(--en-btn-outline-fg);
+    --en-btn-hover-border: transparent;
+  }
+
+  .en-btn--sm {
+    padding-block: var(--en-input-padding-sm-y);
+    padding-inline: var(--en-input-padding-sm-x);
+    font-size: var(--en-text-sm);
+  }
+
+  .en-btn--lg {
+    padding-block: var(--en-input-padding-lg-y);
+    padding-inline: var(--en-input-padding-lg-x);
+    font-size: var(--en-text-lg);
+  }
+
+  .en-btn--full {
+    width: 100%;
+  }
+
+  .en-btn--round {
+    border-radius: var(--en-radius-full);
+  }
+}

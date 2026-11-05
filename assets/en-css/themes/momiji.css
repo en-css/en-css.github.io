@@ -1,0 +1,128 @@
+/*!
+ * EN-CSS Theme: Momiji (Autumn / Aki)
+ * Light Mode: Warm Maple Gold & Sunset Crimson
+ * Dark Mode: Dusk Temple Forest
+ */
+
+@layer en-tokens {
+  [data-en-theme="momiji"],
+  .en-theme-momiji {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#c2410c, #fb923c); /* Maple Orange */
+    --en-secondary: light-dark(#9f1239, #f43f5e); /* Autumn Red / Crimson */
+    --en-success: light-dark(#15803d, #4ade80);
+    --en-warning: light-dark(#d97706, #fbbf24);
+    --en-danger: light-dark(#b91c1c, #f87171);
+    --en-info: light-dark(#0369a1, #38bdf8);
+
+    --en-success-hover: light-dark(#096d31, #68eb93);
+    --en-warning-hover: light-dark(#e48835, #ffd172);
+    --en-danger-hover: light-dark(#9e0f12, #fd8886);
+    --en-info-hover: light-dark(#045787, #64cafd);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#a73503, #ffa767);
+    --en-primary-active: light-dark(#8b2c05, #febd90);
+    --en-secondary-hover: light-dark(#85032c, #ff596f);
+
+    --en-secondary-active: light-dark(#690422, #fd7b86);
+    --en-success-active: light-dark(#085928, #82f8a6);
+    --en-warning-active: light-dark(#ef9850, #fee4af);
+    --en-danger-active: light-dark(#840208, #fea09d);
+    --en-info-active: light-dark(#02466e, #8ed6fd);
+
+    /* ===== Soft Accent Surfaces ===== */
+    --en-primary-subtle: light-dark(#ffedd5, #341206);
+    --en-secondary-subtle: light-dark(#ffe4e6, #310610);
+    --en-success-subtle: light-dark(#dcfce7, #02260d);
+    --en-warning-subtle: light-dark(#fef3c7, #331900);
+    --en-danger-subtle: light-dark(#fee2e2, #330505);
+    --en-info-subtle: light-dark(#e0f2fe, #021e33);
+
+    /* ===== Contextual Foregrounds ===== */
+    --en-fg-primary: light-dark(#ffffff, #1c0700);
+    --en-fg-secondary: light-dark(#ffffff, #1f0107);
+    --en-fg-success: light-dark(#ffffff, #001a07);
+    --en-fg-warning: light-dark(#120905, #1f0e00);
+    --en-fg-danger: light-dark(#ffffff, #210000);
+    --en-fg-info: light-dark(#ffffff, #001221);
+
+    /* ===== Contextual Text ===== */
+    --en-text-brand: light-dark(#c74908, #fb923c);
+    --en-text-brand-hover: light-dark(#ab3e09, #fdba74);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fdfbf7, #120905); /* Warm Parchment vs Dark Amber Void */
+    --en-bg-subtle: light-dark(#f7f0e6, #1c0e08);
+    --en-bg-surface: light-dark(#ffffff, #26140b);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f1e4d3, #331b0e);
+    --en-bg-active: light-dark(#ebd8c0, #422312);
+
+    --en-text: light-dark(#451a03, #ffedd5);
+    --en-text-muted: light-dark(#78350f, #fdba74);
+
+    --en-border: light-dark(#fed7aa, #59250b);
+    --en-border-control: light-dark(#9a8273, #76695c);
+    --en-border-subtle: light-dark(#ffedd5, #3d1907);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#c2410c, #fb923c);
+    --en-disabled-bg: light-dark(#f7f0e6, #140a06);
+    --en-disabled-text: light-dark(#a3816c, #634533);
+    --en-overlay: light-dark(rgba(69, 26, 3, 0.45), rgba(18, 9, 5, 0.88));
+
+    /* Typography & Ornaments */
+    --en-font-sans: "Garamond", "Georgia", serif;
+    --en-border-radius: var(--en-radius-md);
+
+    /* Warm Grain Background */
+    --en-bg-size: 100% 100%;
+
+    /* ===== Inverted Neutral Layout (light/dark values swapped) ===== */
+    --en-bg-inverse: light-dark(#120905, #fdfbf7);
+    --en-bg-subtle-inverse: light-dark(#1c0e08, #f7f0e6);
+    --en-bg-surface-inverse: light-dark(#26140b, #ffffff);
+    --en-text-inverse: light-dark(#ffedd5, #451a03);
+    --en-text-muted-inverse: light-dark(#fdba74, #78350f);
+    --en-border-inverse: light-dark(#59250b, #fed7aa);
+
+    /* Contextual Inverse Variants (light/dark values swapped) */
+    --en-primary-inverse: light-dark(#fb923c, #c2410c);
+    --en-secondary-inverse: light-dark(#f43f5e, #9f1239);
+    --en-success-inverse: light-dark(#4ade80, #15803d);
+    --en-warning-inverse: light-dark(#fbbf24, #d97706);
+    --en-danger-inverse: light-dark(#f87171, #b91c1c);
+    --en-info-inverse: light-dark(#38bdf8, #0369a1);
+
+    --en-fg-primary-inverse: light-dark(#1c0700, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#1f0107, #ffffff);
+    --en-fg-success-inverse: light-dark(#001a07, #ffffff);
+    --en-fg-warning-inverse: light-dark(#1f0e00, #120905);
+    --en-fg-danger-inverse: light-dark(#210000, #ffffff);
+    --en-fg-info-inverse: light-dark(#001221, #ffffff);
+    --en-bg-texture: radial-gradient(
+      circle at 80% 20%,
+      light-dark(rgba(251, 146, 60, 0.12), rgba(194, 65, 12, 0.15)) 0%,
+      transparent 50%
+    );
+  }
+}
+
+@layer en-base {
+  [data-en-theme="momiji"] body,
+  .en-theme-momiji body {
+    background-color: var(--en-bg);
+    background-image: var(--en-bg-texture);
+    background-size: var(--en-bg-size);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="momiji"] body,
+    .en-theme-momiji body {
+      background-image: none;
+    }
+  }
+}

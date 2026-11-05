@@ -1,0 +1,106 @@
+@layer en-components {
+  .en-glyph {
+    width: 100%;
+    aspect-ratio: var(--en-aspect-square);
+    --en-glyph-font-size: 75cqw;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    font-weight: 900;
+    line-height: 1;
+    display: flex;
+    container-type: inline-size;
+  }
+
+  .en-glyph > * {
+    font-size: var(--en-glyph-font-size);
+  }
+
+  .en-glyph svg {
+    width: 100cqw;
+    height: 100cqw;
+  }
+
+  .en-glyph--circle {
+    border-radius: var(--en-radius-circle);
+  }
+
+  .en-glyph__max {
+    font-size: 100cqw;
+  }
+
+  .en-glyph__mid {
+    font-size: 50cqw;
+  }
+
+  .en-glyph__min {
+    font-size: 25cqw;
+  }
+
+  .en-glyph-btn {
+    aspect-ratio: var(--en-aspect-square);
+    --en-glyph-font-size: 75cqw;
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    font-size: inherit;
+    cursor: pointer;
+    transition: background var(--en-transition), 
+                box-shadow var(--en-transition), 
+                translate var(--en-transition),
+                border-color var(--en-transition);
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    min-width: 2rem;
+    padding: 0;
+    text-decoration: none;
+    display: inline-flex;
+    container-type: inline-size;
+  }
+
+  .en-glyph-btn > * {
+    font-size: var(--en-glyph-font-size);
+  }
+
+  .en-glyph-svg svg {
+    font-size: 75cqw;
+  }
+
+  .en-glyph-svg--max svg {
+    font-size: 100cqw;
+  }
+
+  .en-glyph-svg--mid svg {
+    font-size: 50cqw;
+  }
+
+  .en-glyph-svg--min svg {
+    font-size: 25cqw;
+  }
+
+  .en-glyph-btn--sm {
+    width: 2rem;
+    min-width: 2rem;
+  }
+
+  .en-glyph-btn--lg {
+    width: 4rem;
+    min-width: 4rem;
+  }
+
+  .en-glyph-btn--xl {
+    width: 5rem;
+    min-width: 5rem;
+  }
+}
+
+@layer en-utilities {
+  @media (forced-colors: active) {
+    .en-glyph-btn {
+      border: 1px solid buttontext;
+    }
+  }
+}

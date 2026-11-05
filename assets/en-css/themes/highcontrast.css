@@ -1,0 +1,147 @@
+/*!
+ * Theme: High Contrast
+ * Overrides for en-css tokens
+ *
+ * Designed for maximum accessibility, meeting WCAG 2.1 Level AAA:
+ * every text / background pair has a contrast ratio of at least 7:1.
+ *
+ * Light mode: white background / black text.
+ * Dark mode : black background / white text.
+ */
+
+@layer en-tokens {
+  [data-en-theme="highcontrast"],
+  .en-theme-highcontrast {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#0054b7, #ffff00);
+    --en-secondary: light-dark(#003f8a, #00e5ff);
+    --en-success: light-dark(#0a6708, #00ff6a);
+    --en-warning: light-dark(#8a4500, #ffb700);
+    --en-danger: light-dark(#b30000, #fc625c);
+    --en-info: light-dark(#5200a8, #c87aff);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#064595, #ffff33);
+    --en-primary-active: light-dark(#023678, #ffff66);
+    --en-secondary-hover: light-dark(#00306c, #82edff);
+    --en-success-hover: light-dark(#055404, #9efead);
+    --en-warning-hover: light-dark(#723800, #fecc74);
+    --en-danger-hover: light-dark(#950100, #fe7f76);
+    --en-info-hover: light-dark(#400185, #d092ff);
+
+    --en-secondary-active: light-dark(#012250, #bdf5fe);
+    --en-success-active: light-dark(#014100, #d8ffdc);
+    --en-warning-active: light-dark(#5a2c02, #fedea9);
+    --en-danger-active: light-dark(#770603, #fe988f);
+    --en-info-active: light-dark(#2e0363, #d8a8fe);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#dbeafe, #001f4a);
+    --en-secondary-subtle: light-dark(#e0f2fe, #001a35);
+    --en-success-subtle: light-dark(#dcfce7, #002a00);
+    --en-warning-subtle: light-dark(#fef3c7, #351a00);
+    --en-danger-subtle: light-dark(#fee2e2, #4a0000);
+    --en-info-subtle: light-dark(#f3e8ff, #1f0042);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#ffffff, #000000);
+    --en-fg-secondary: light-dark(#ffffff, #000000);
+    --en-fg-success: light-dark(#ffffff, #000000);
+    --en-fg-warning: light-dark(#ffffff, #000000);
+    --en-fg-danger: light-dark(#ffffff, #000000);
+    --en-fg-info: light-dark(#ffffff, #000000);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#0452b0, #ffff00);
+    --en-text-brand-hover: light-dark(#004293, #ffff33);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#ffffff, #000000);
+    --en-bg-subtle: light-dark(#f0f0f0, #1a1a1a);
+    --en-bg-surface: light-dark(#fafafa, #0d0d0d);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#e8e8e8, #2a2a2a);
+    --en-bg-active: light-dark(#e0e0e0, #3a3a3a);
+
+    --en-text: light-dark(#000000, #ffffff);
+    --en-text-muted: light-dark(#333333, #cccccc);
+
+    --en-border: light-dark(#000000, #ffffff);
+    --en-border-control: light-dark(#000000, #ffffff);
+    --en-border-subtle: light-dark(#333333, #cccccc);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#005fcc, #ffff00);
+    --en-disabled-bg: light-dark(#f5f5f5, #1a1a1a);
+    --en-disabled-text: light-dark(#666666, #999999);
+    --en-overlay: light-dark(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#000000, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#1a1a1a, #f0f0f0);
+    --en-bg-surface-inverse: light-dark(#0d0d0d, #fafafa);
+
+    --en-text-inverse: light-dark(#ffffff, #000000);
+    --en-text-muted-inverse: light-dark(#cccccc, #333333);
+
+    --en-border-inverse: light-dark(#ffffff, #000000);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#ffff00, #0054b7);
+    --en-secondary-inverse: light-dark(#00e5ff, #003f8a);
+    --en-success-inverse: light-dark(#00ff6a, #0a6708);
+    --en-warning-inverse: light-dark(#ffb700, #8a4500);
+    --en-danger-inverse: light-dark(#fc625c, #b30000);
+    --en-info-inverse: light-dark(#c87aff, #5200a8);
+
+    --en-fg-primary-inverse: light-dark(#000000, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#000000, #ffffff);
+    --en-fg-success-inverse: light-dark(#000000, #ffffff);
+    --en-fg-warning-inverse: light-dark(#000000, #ffffff);
+    --en-fg-danger-inverse: light-dark(#000000, #ffffff);
+    --en-fg-info-inverse: light-dark(#000000, #ffffff);
+
+    /* ===== Border width & style ===== */
+    --en-border-width: 2px;
+    --en-border-width-thick: 3px;
+    --en-border-style: solid;
+
+    /* ===== Radius ===== */
+    --en-radius-sm: 0;
+    --en-radius-md: 0;
+    --en-radius-lg: 0;
+    --en-radius-xl: 0;
+    --en-radius-full: 9999px;
+    --en-radius-circle: 50%;
+
+    /* ===== Shadow ===== */
+    --en-shadow-sm: 2px 2px 0 var(--en-border);
+    --en-shadow-md: 4px 4px 0 var(--en-border);
+    --en-shadow-lg: 6px 6px 0 var(--en-border);
+
+    /* ===== Typography ===== */
+    --en-font-sans: "Atkinson Hyperlegible", "Arial", "Helvetica Neue", system-ui, sans-serif;
+    --en-leading-normal: 1.7;
+    --en-leading-relaxed: 1.9;
+    --en-font-normal: 500;
+    --en-font-medium: 600;
+    --en-font-semibold: 700;
+    --en-font-bold: 900;
+    --en-tracking-normal: 0.02em;
+    --en-tracking-wide: 0.06em;
+
+    /* ===== Transition ===== */
+    --en-duration-fast: 0ms;
+    --en-duration-base: 100ms;
+    --en-duration-slow: 200ms;
+    --en-ease-out: linear;
+    --en-ease-in-out: linear;
+
+    /* ===== Focus ring ===== */
+    --en-ring-color: var(--en-focus-ring);
+    --en-ring-width: 3px;
+    --en-ring-offset: 3px;
+    --en-ring-offset-color: var(--en-bg);
+  }
+}

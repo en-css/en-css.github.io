@@ -1,0 +1,201 @@
+@layer en-components {
+  .en-card {
+    --en-input-ring-inset: inset;
+    background: var(--en-bg-surface);
+    border: 1px solid var(--en-border);
+    border-radius: var(--en-radius-lg);
+    box-shadow: var(--en-shadow-sm);
+    flex-direction: column;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .en-card__image {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .en-card__header {
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--en-space-3);
+    padding: var(--en-space-4);
+    border-block-end: 1px solid var(--en-border);
+    display: flex;
+  }
+
+  .en-card__title {
+    font-size: var(--en-text-lg);
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .en-card__subtitle {
+    font-size: var(--en-text-sm);
+    color: var(--en-text-muted);
+    margin-block-start: var(--en-space-1);
+  }
+
+  .en-card__body {
+    padding: var(--en-space-4);
+    flex: auto;
+  }
+
+  .en-card__footer {
+    align-items: center;
+    gap: var(--en-space-2);
+    padding-block: var(--en-space-3);
+    padding-inline: var(--en-space-4);
+    border-block-start: 1px solid var(--en-border);
+    background: var(--en-bg-subtle);
+    display: flex;
+  }
+
+  .en-card--flush .en-card__body {
+    padding: 0;
+  }
+
+  .en-card--no-body {
+    align-items: flex-start;
+  }
+
+  .en-card--no-body .en-card__header, .en-card--no-body .en-card__body, .en-card--no-body .en-card__footer {
+    padding: 0;
+  }
+
+  .en-card--hover:hover {
+    box-shadow: var(--en-shadow-lg);
+    translate: 0 -2px;
+  }
+
+  .en-card--hover {
+    transition: box-shadow var(--en-duration-fast) var(--en-ease-out),
+                translate var(--en-duration-fast) var(--en-ease-out);
+  }
+
+  .en-card--responsive {
+    inline-size: 100%;
+    container-type: inline-size;
+  }
+
+  @container (width >= 400px) {
+    .en-card--responsive .en-card__body {
+      gap: var(--en-space-4);
+      display: flex;
+    }
+  }
+
+  .en-card--fullscreen input[type="checkbox"] {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  .en-card__expand {
+    cursor: pointer;
+    opacity: 0;
+    background: none;
+    border: none;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    transition: opacity .2s;
+    display: inline-flex;
+    position: relative;
+  }
+
+  .en-card--fullscreen:hover .en-card__expand {
+    opacity: 1;
+  }
+
+  .en-card__expand svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--en-text);
+    transition: stroke .2s;
+  }
+
+  .en-card__expand:hover svg {
+    stroke: var(--en-primary);
+  }
+
+  .en-card__close {
+    cursor: pointer;
+    background: none;
+    border: none;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    transition: rotate .3s cubic-bezier(.34, 1.56, .64, 1);
+    display: none;
+    position: relative;
+  }
+
+  .en-card__close:before, .en-card__close:after {
+    content: "";
+    background-color: var(--en-text);
+    border-radius: var(--en-radius-full);
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  .en-card__close:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .en-card__close:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .en-card__close:hover {
+    rotate: 90deg;
+  }
+
+  .en-card__close:hover:before, .en-card__close:hover:after {
+    background-color: var(--en-danger);
+  }
+
+  .en-card--fullscreen:has(input[type="checkbox"]:checked) {
+    z-index: var(--en-z-modal);
+    border-radius: 0;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0;
+    position: fixed;
+    inset: 0;
+    container-type: normal;
+  }
+
+  .en-card--fullscreen:has(input[type="checkbox"]:checked) .en-card__expand {
+    display: none;
+  }
+
+  .en-card--fullscreen:has(input[type="checkbox"]:checked) .en-card__close {
+    display: inline-flex;
+  }
+
+  .en-card--fullscreen:has(input[type="checkbox"]:checked) > .en-card__header {
+    flex-shrink: 0;
+  }
+
+  .en-card--fullscreen:has(input[type="checkbox"]:checked) > .en-card__body {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .en-card--fullscreen:has(input[type="checkbox"]:checked) > .en-card__footer {
+    flex-shrink: 0;
+  }
+}

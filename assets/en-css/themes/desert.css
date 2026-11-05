@@ -1,0 +1,140 @@
+/*!
+ * EN-CSS Theme: Desert/Sand
+ * Warm desert theme with sandy and terracotta tones, organic typography, and heat ornaments.
+ * Supports automatic light/dark mode via light-dark()
+ */
+
+@layer en-tokens {
+  [data-en-theme="desert"],
+  .en-theme-desert {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#C19A6B, #E97451);
+    --en-secondary: light-dark(#d46b20, #f4a460);
+    --en-success: light-dark(#9ACD32, #ADFF2F);
+    --en-warning: light-dark(#FF8C00, #FFD700);
+    --en-danger: light-dark(#d66463, #ff6347);
+    --en-info: light-dark(#87CEEB, #00CED1);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#cea97d, #f48b6f);
+    --en-primary-active: light-dark(#dab78f, #ffa28d);
+    --en-secondary-hover: light-dark(#df7c3d, #feb579);
+    --en-success-hover: light-dark(#aadb53, #dcffba);
+    --en-warning-hover: light-dark(#fda55d, #ffe893);
+    --en-danger-hover: light-dark(#e17673, #fd826a);
+    --en-info-hover: light-dark(#9adcf7, #46dbde);
+
+    --en-secondary-active: light-dark(#ea8d55, #ffc99f);
+    --en-success-active: light-dark(#bae96e, #fbfff5);
+    --en-warning-active: light-dark(#feba86, #fff8db);
+    --en-danger-active: light-dark(#ec8784, #fd9b87);
+    --en-info-active: light-dark(#b6e9fe, #67e9eb);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#fff7ed, #4a1f10);
+    --en-secondary-subtle: light-dark(#fff7ed, #4a240b);
+    --en-success-subtle: light-dark(#f7fee7, #374c0d);
+    --en-warning-subtle: light-dark(#fef9c3, #4a2f00);
+    --en-danger-subtle: light-dark(#fee2e2, #4a1f1f);
+    --en-info-subtle: light-dark(#e0f2fe, #003d42);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#2b1c10, #2a1810);
+    --en-fg-secondary: light-dark(#2b1c10, #2a1408);
+    --en-fg-success: light-dark(#2b1c10, #1f2605);
+    --en-fg-warning: light-dark(#000000, #3d2500);
+    --en-fg-danger: light-dark(#2b1c10, #3d0f0f);
+    --en-fg-info: light-dark(#2b1c10, #002a3a);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#8f6a3c, #e97451);
+    --en-text-brand-hover: light-dark(#7d592b, #f48b6f);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fff7ed, #2b1c10);
+    --en-bg-subtle: light-dark(#FFE4C4, #2A1F18);
+    --en-bg-surface: light-dark(#FFFAF0, #3A2820);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#FFEFD5, #33261D);
+    --en-bg-active: light-dark(#FFE4C4, #3D2E22);
+
+    --en-text: light-dark(#3E2723, #F5DEB3);
+    --en-text-muted: light-dark(#7b6346, #d2b48c);
+
+    --en-border: light-dark(#DEB887, #5D4037);
+    --en-border-control: light-dark(#8d7c76, #8a775d);
+    --en-border-subtle: light-dark(#FFEFD5, #33261D);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#8f6a3c, #e97451);
+    --en-disabled-bg: light-dark(#FFFAF5, #221913);
+    --en-disabled-text: light-dark(#A69382, #8B7355);
+    --en-overlay: light-dark(rgba(62, 39, 35, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#2A1F18, #FFE4C4);
+    --en-bg-surface-inverse: light-dark(#3A2820, #FFFAF0);
+
+    --en-text-inverse: light-dark(#F5DEB3, #3E2723);
+    --en-text-muted-inverse: light-dark(#D2B48C, #8B7355);
+
+    --en-border-inverse: light-dark(#5D4037, #DEB887);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#E97451, #C19A6B);
+    --en-secondary-inverse: light-dark(#f4a460, #d46b20);
+    --en-success-inverse: light-dark(#ADFF2F, #9ACD32);
+    --en-warning-inverse: light-dark(#FFD700, #FF8C00);
+    --en-danger-inverse: light-dark(#ff6347, #d66463);
+    --en-info-inverse: light-dark(#00CED1, #87CEEB);
+
+    --en-fg-primary-inverse: light-dark(#2a1810, #2b1c10);
+    --en-fg-secondary-inverse: light-dark(#2a1408, #2b1c10);
+    --en-fg-success-inverse: light-dark(#1f2605, #2b1c10);
+    --en-fg-warning-inverse: light-dark(#3d2500, #000000);
+    --en-fg-danger-inverse: light-dark(#3d0f0f, #2b1c10);
+    --en-fg-info-inverse: light-dark(#002a3a, #2b1c10);
+
+    /* Typography Override */
+    --en-font-sans: "Quicksand", system-ui, -apple-system, sans-serif;
+    
+    /* Texture: Sand grain pattern dynamically adapting to light/dark via color-mix */
+    --en-bg-texture: radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--en-warning) 10%, transparent) 1px, transparent 1.5px);
+  }
+}
+
+@layer en-base {
+  /* Texture Sizing & Ornament Watermark */
+  [data-en-theme="desert"] body, .en-theme-desert body {
+    background-size: 20px 20px;
+    background-image: var(--en-bg-texture);
+  }
+  
+  [data-en-theme="desert"] body::before, .en-theme-desert body::before {
+    content: "🜂"; /* Alchemical symbol for Fire */
+    position: fixed;
+    bottom: -5vh;
+    inset-inline-end: -2vw;
+    font-size: 45vw;
+    color: color-mix(in oklab, var(--en-primary) 4%, transparent);
+    z-index: -1;
+    pointer-events: none;
+    line-height: 1;
+    font-family: serif;
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="desert"] body,
+    .en-theme-desert body {
+      background-image: none;
+    }
+
+    [data-en-theme="desert"] body::before,
+    .en-theme-desert body::before {
+      display: none;
+    }
+  }
+}

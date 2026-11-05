@@ -1,0 +1,149 @@
+/*!
+ * EN-CSS Theme: Earthy/Nature
+ * Organic, natural theme inspired by earth and nature.
+ * Supports automatic light/dark mode via light-dark()
+ */
+
+@layer en-tokens {
+  [data-en-theme="earthy"],
+  .en-theme-earthy {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#897254, #cd853f);
+    --en-secondary: light-dark(#6B8E23, #9ACD32);
+    --en-success: light-dark(#1d881e, #32cd32);
+    --en-warning: light-dark(#D2691E, #FF8C00);
+    --en-danger: light-dark(#a0522d, #cf5e5d);
+    --en-info: light-dark(#5F9EA0, #66CDAA);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#766147, #dda062);
+    --en-primary-active: light-dark(#63513a, #edb885);
+    --en-secondary-hover: light-dark(#7a9b3d, #aadb53);
+    --en-success-hover: light-dark(#137415, #54da51);
+    --en-warning-hover: light-dark(#dd7a3c, #fda55d);
+    --en-danger-hover: light-dark(#894423, #da6f6d);
+    --en-info-hover: light-dark(#71abad, #7cdab9);
+
+    --en-secondary-active: light-dark(#88a853, #bae96e);
+    --en-success-active: light-dark(#08610b, #6fe76a);
+    --en-warning-active: light-dark(#e88b53, #feba86);
+    --en-danger-active: light-dark(#723619, #e5817d);
+    --en-info-active: light-dark(#83b9ba, #92e8c8);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#fef3c7, #3e2e1a);
+    --en-secondary-subtle: light-dark(#f7fee7, #2a3b0e);
+    --en-success-subtle: light-dark(#dcfce7, #0a3a0e);
+    --en-warning-subtle: light-dark(#fff7ed, #4a240a);
+    --en-danger-subtle: light-dark(#fee2e2, #3e1c0f);
+    --en-info-subtle: light-dark(#ccfbf1, #1f3d3e);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#FFFFFF, #2C2416);
+    --en-fg-secondary: light-dark(#141c12, #1f2408);
+    --en-fg-success: light-dark(#FFFFFF, #0a1f0a);
+    --en-fg-warning: light-dark(#141c12, #3d1408);
+    --en-fg-danger: light-dark(#FFFFFF, #2e0f08);
+    --en-fg-info: light-dark(#141c12, #1f2f2f);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#836c4e, #d58d47);
+    --en-text-brand-hover: light-dark(#715b3d, #e9a05a);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#f6f7f4, #141c12);
+    --en-bg-subtle: light-dark(#EEE8AA, #2C2416);
+    --en-bg-surface: light-dark(#FFFAF0, #3A3226);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#F5EFB5, #342A1B);
+    --en-bg-active: light-dark(#EEE8AA, #3D3020);
+
+    --en-text: light-dark(#2C2416, #E8DCC8);
+    --en-text-muted: light-dark(#6B5D4F, #C4B5A0);
+
+    --en-border: light-dark(#D2B48C, #5D4E3A);
+    --en-border-control: light-dark(#817d73, #848272);
+    --en-border-subtle: light-dark(#F5EFB5, #342A1B);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#8B7355, #CD853F);
+    --en-disabled-bg: light-dark(#FFFCF5, #221E13);
+    --en-disabled-text: light-dark(#9B8D7F, #7A6E5C);
+    --en-overlay: light-dark(rgba(44, 36, 22, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#2C2416, #EEE8AA);
+    --en-bg-surface-inverse: light-dark(#3A3226, #FFFAF0);
+
+    --en-text-inverse: light-dark(#E8DCC8, #2C2416);
+    --en-text-muted-inverse: light-dark(#C4B5A0, #6B5D4F);
+
+    --en-border-inverse: light-dark(#5D4E3A, #D2B48C);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#cd853f, #897254);
+    --en-secondary-inverse: light-dark(#9ACD32, #6B8E23);
+    --en-success-inverse: light-dark(#32cd32, #1d881e);
+    --en-warning-inverse: light-dark(#FF8C00, #D2691E);
+    --en-danger-inverse: light-dark(#cf5e5d, #a0522d);
+    --en-info-inverse: light-dark(#66CDAA, #5F9EA0);
+
+    --en-fg-primary-inverse: light-dark(#2C2416, #FFFFFF);
+    --en-fg-secondary-inverse: light-dark(#1f2408, #141c12);
+    --en-fg-success-inverse: light-dark(#0a1f0a, #FFFFFF);
+    --en-fg-warning-inverse: light-dark(#3d1408, #141c12);
+    --en-fg-danger-inverse: light-dark(#2e0f08, #FFFFFF);
+    --en-fg-info-inverse: light-dark(#1f2f2f, #141c12);
+    
+    /* Typography Override */
+    --en-font-sans: "Quicksand", system-ui, -apple-system, sans-serif;
+
+    /* Texture: Topographic/Woodgrain lines */
+    --en-bg-attachment: fixed;
+    --en-bg-size: 100vw 100vh;
+    --en-bg-texture: repeating-linear-gradient(
+      45deg,
+      color-mix(in oklab, var(--en-text) 2%, transparent),
+      color-mix(in oklab, var(--en-text) 2%, transparent) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+  }
+}
+
+@layer en-base {
+  [data-en-theme="earthy"] body, .en-theme-earthy body {
+    background-image: var(--en-bg-texture);
+    background-size: var(--en-bg-size);
+    background-attachment: var(--en-bg-attachment);
+  }
+
+  [data-en-theme="earthy"] body::before, .en-theme-earthy body::before {
+    content: "🜃"; /* Alchemical symbol for Earth */
+    position: fixed;
+    top: -10vh;
+    inset-inline-start: -5vw;
+    font-size: 50vw;
+    color: color-mix(in oklab, var(--en-success) 3%, transparent);
+    z-index: -1;
+    pointer-events: none;
+    line-height: 1;
+    font-family: serif;
+    rotate: -15deg;
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="earthy"] body,
+    .en-theme-earthy body {
+      background-image: none;
+    }
+
+    [data-en-theme="earthy"] body::before,
+    .en-theme-earthy body::before {
+      display: none;
+    }
+  }
+}

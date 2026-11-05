@@ -1,0 +1,149 @@
+/*!
+ * EN-CSS Theme: Coffee/Mocha
+ * Warm, cozy paper & lounge aesthetic
+ */
+
+@layer en-tokens {
+  [data-en-theme="coffee"],
+  .en-theme-coffee {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#8b4513, #d2691e);
+    --en-secondary: light-dark(#a0522d, #cd853f);
+    --en-success: light-dark(#556b2f, #8fbc8f);
+    --en-warning: light-dark(#cd853f, #e9967a);
+    --en-danger: light-dark(#8b0000, #ff6347);
+    --en-info: light-dark(#8b7355, #d2b48c);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#6d340f, #dd7a3c);
+    --en-primary-active: light-dark(#552812, #e88b53);
+    --en-secondary-hover: light-dark(#894423, #d99555);
+    --en-success-hover: light-dark(#465924, #9fca9f);
+    --en-warning-hover: light-dark(#d99555, #f5a68c);
+    --en-danger-hover: light-dark(#6e0201, #fd826a);
+    --en-info-hover: light-dark(#978164, #dfc39d);
+
+    --en-secondary-active: light-dark(#723619, #e4a46a);
+    --en-success-active: light-dark(#374819, #b0d7af);
+    --en-warning-active: light-dark(#e4a46a, #feb79f);
+    --en-danger-active: light-dark(#540000, #fd9b87);
+    --en-info-active: light-dark(#a48e74, #ecd2af);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#fff7ed, #361e0a);
+    --en-secondary-subtle: light-dark(#fff7ed, #3e210f);
+    --en-success-subtle: light-dark(#f0fdf4, #222b13);
+    --en-warning-subtle: light-dark(#ffedd5, #4a2a19);
+    --en-danger-subtle: light-dark(#fee2e2, #350000);
+    --en-info-subtle: light-dark(#fef3c7, #352e22);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#ffffff, #231709);
+    --en-fg-secondary: light-dark(#ffffff, #231709);
+    --en-fg-success: light-dark(#ffffff, #231709);
+    --en-fg-warning: light-dark(#000000, #3d2500);
+    --en-fg-danger: light-dark(#ffffff, #450a0a);
+    --en-fg-info: light-dark(#000000, #3d3020);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#6d340f, #d76e25);
+    --en-text-brand-hover: light-dark(#552812, #ec813c);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fdf8f5, #231709);
+    --en-bg-subtle: light-dark(#f4ece1, #241a15);
+    --en-bg-surface: light-dark(#fffdfa, #2d201a);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f9f3eb, #332519);
+    --en-bg-active: light-dark(#f4ece1, #3d2c1f);
+
+    --en-text: light-dark(#2c1d11, #f5deb3);
+    --en-text-muted: light-dark(#7c6354, #c5a880);
+
+    --en-border: light-dark(#e2d2c1, #4a3528);
+    --en-border-control: light-dark(#8c827a, #7f6f54);
+    --en-border-subtle: light-dark(#efe3d5, #3d2c1f);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#8b4513, #d2691e);
+    --en-disabled-bg: light-dark(#f5f0ea, #1f1812);
+    --en-disabled-text: light-dark(#9a8570, #7a6750);
+    --en-overlay: light-dark(rgba(44, 29, 17, 0.4), rgba(0, 0, 0, 0.6));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#241a15, #f4ece1);
+    --en-bg-surface-inverse: light-dark(#2d201a, #fffdfa);
+
+    --en-text-inverse: light-dark(#f5deb3, #2c1d11);
+    --en-text-muted-inverse: light-dark(#c5a880, #7c6354);
+
+    --en-border-inverse: light-dark(#4a3528, #e2d2c1);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#d2691e, #8b4513);
+    --en-secondary-inverse: light-dark(#cd853f, #a0522d);
+    --en-success-inverse: light-dark(#8fbc8f, #556b2f);
+    --en-warning-inverse: light-dark(#e9967a, #cd853f);
+    --en-danger-inverse: light-dark(#ff6347, #8b0000);
+    --en-info-inverse: light-dark(#d2b48c, #8b7355);
+
+    --en-fg-primary-inverse: light-dark(#231709, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#231709, #ffffff);
+    --en-fg-success-inverse: light-dark(#231709, #ffffff);
+    --en-fg-warning-inverse: light-dark(#3d2500, #000000);
+    --en-fg-danger-inverse: light-dark(#450a0a, #ffffff);
+    --en-fg-info-inverse: light-dark(#3d3020, #000000);
+
+    /* ===== Shadows: Warm vintage ===== */
+    --en-shadow-sm: 0 2px 6px light-dark(rgba(60, 30, 10, 0.05), rgba(0, 0, 0, 0.3));
+    --en-shadow-md: 0 4px 15px light-dark(rgba(60, 30, 10, 0.08), rgba(0, 0, 0, 0.5));
+    --en-shadow-lg: 0 8px 25px light-dark(rgba(60, 30, 10, 0.12), rgba(0, 0, 0, 0.6));
+
+    /* ===== Texture: Warm paper grain / linen crosshatch ===== */
+    --en-bg-size: 6px 6px;
+    --en-bg-position: 0 0;
+    --en-bg-texture: 
+      repeating-linear-gradient(0deg, transparent, transparent 3px, light-dark(rgba(139, 69, 19, 0.02), rgba(245, 222, 179, 0.02)) 3px, light-dark(rgba(139, 69, 19, 0.02), rgba(245, 222, 179, 0.02)) 6px),
+      repeating-linear-gradient(90deg, transparent, transparent 3px, light-dark(rgba(139, 69, 19, 0.02), rgba(245, 222, 179, 0.02)) 3px, light-dark(rgba(139, 69, 19, 0.02), rgba(245, 222, 179, 0.02)) 6px);
+  }
+}
+
+@layer en-base {
+  [data-en-theme="coffee"] body,
+  .en-theme-coffee body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="coffee"] body,
+    .en-theme-coffee body {
+      background-image: none;
+    }
+  }
+}
+
+@layer en-components {
+  /* Cozy vintage card frame ornament */
+  [data-en-theme="coffee"] .en-card,
+  .en-theme-coffee .en-card {
+    border: 1px solid var(--en-border);
+    position: relative;
+    box-shadow: var(--en-shadow-md);
+  }
+
+  /* Inner subtle warm border glow */
+  [data-en-theme="coffee"] .en-card::after,
+  .en-theme-coffee .en-card::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border: 1px dashed light-dark(rgba(139, 69, 19, 0.15), rgba(210, 105, 30, 0.2));
+    pointer-events: none;
+    border-radius: calc(var(--en-radius-md) - 2px);
+  }
+}

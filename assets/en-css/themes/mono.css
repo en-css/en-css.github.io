@@ -1,0 +1,149 @@
+/*!
+ * EN-CSS Theme: Mono
+ * Monochromatic theme based solely on black and white.
+ * (Replaces the former `monochrome` theme, which was merged into this one.)
+ *
+ * Light mode : White background / black text.
+ * Dark mode  : Black background / white text.
+ *
+ * Statuses are told apart by lightness only: the darker (light mode) or
+ * lighter (dark mode) the fill, the more "primary" it reads. Always pair a
+ * status colour with an icon or label; lightness alone is not a signal.
+ * Text on every solid state is >= 4.5:1.
+ */
+
+@layer en-tokens {
+  [data-en-theme="mono"],
+  .en-theme-mono {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#000000, #ffffff);
+    --en-secondary: light-dark(#4d4d4d, #b3b3b3);
+    --en-success: light-dark(#333333, #cccccc);
+    --en-warning: light-dark(#666666, #999999);
+    --en-danger: light-dark(#1a1a1a, #e6e6e6);
+    --en-info: light-dark(#595959, #a6a6a6);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#1a1a1a, #e6e6e6);
+    --en-secondary-hover: light-dark(#575757, #a3a3a3);
+    --en-success-hover: light-dark(#3d3d3d, #bfbfbf);
+    --en-warning-hover: light-dark(#6c6c6c, #8c8c8c);
+    --en-danger-hover: light-dark(#262626, #d9d9d9);
+    --en-info-hover: light-dark(#636363, #999999);
+
+    --en-primary-active: light-dark(#333333, #cccccc);
+    --en-secondary-active: light-dark(#616161, #939393);
+    --en-success-active: light-dark(#474747, #b3b3b3);
+    --en-warning-active: light-dark(#737373, #808080);
+    --en-danger-active: light-dark(#333333, #cccccc);
+    --en-info-active: light-dark(#6e6e6e, #8c8c8c);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#f5f5f5, #1a1a1a);
+    --en-secondary-subtle: light-dark(#e5e5e5, #2a2a2a);
+    --en-success-subtle: light-dark(#e8e8e8, #262626);
+    --en-warning-subtle: light-dark(#e0e0e0, #333333);
+    --en-danger-subtle: light-dark(#e8e8e8, #262626);
+    --en-info-subtle: light-dark(#e5e5e5, #2a2a2a);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#ffffff, #000000);
+    --en-fg-secondary: light-dark(#ffffff, #000000);
+    --en-fg-success: light-dark(#ffffff, #000000);
+    --en-fg-warning: light-dark(#ffffff, #000000);
+    --en-fg-danger: light-dark(#ffffff, #000000);
+    --en-fg-info: light-dark(#ffffff, #000000);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#000000, #ffffff);
+    --en-text-brand-hover: light-dark(#1a1a1a, #e6e6e6);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fcfcfc, #121212);
+    --en-bg-subtle: light-dark(#f0f0f0, #1a1a1a);
+    --en-bg-surface: light-dark(#fafafa, #0d0d0d);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#e8e8e8, #2a2a2a);
+    --en-bg-active: light-dark(#e0e0e0, #3a3a3a);
+
+    --en-text: light-dark(#000000, #ffffff);
+    --en-text-muted: light-dark(#666666, #999999);
+
+    --en-border: light-dark(#000000, #ffffff);
+    --en-border-control: light-dark(#000000, #ffffff);
+    --en-border-subtle: light-dark(#333333, #cccccc);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#000000, #ffffff);
+    --en-disabled-bg: light-dark(#f5f5f5, #1a1a1a);
+    --en-disabled-text: light-dark(#999999, #666666);
+    --en-overlay: light-dark(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#000000, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#1a1a1a, #f0f0f0);
+    --en-bg-surface-inverse: light-dark(#0d0d0d, #fafafa);
+
+    --en-text-inverse: light-dark(#ffffff, #000000);
+    --en-text-muted-inverse: light-dark(#999999, #666666);
+
+    --en-border-inverse: light-dark(#ffffff, #000000);
+
+    /* Contextual Inverse Variants (light/dark values swapped) */
+    --en-primary-inverse: light-dark(#ffffff, #000000);
+    --en-secondary-inverse: light-dark(#b3b3b3, #4d4d4d);
+    --en-success-inverse: light-dark(#cccccc, #333333);
+    --en-warning-inverse: light-dark(#999999, #666666);
+    --en-danger-inverse: light-dark(#e6e6e6, #1a1a1a);
+    --en-info-inverse: light-dark(#a6a6a6, #595959);
+
+    --en-fg-primary-inverse: light-dark(#000000, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#000000, #ffffff);
+    --en-fg-success-inverse: light-dark(#000000, #ffffff);
+    --en-fg-warning-inverse: light-dark(#000000, #ffffff);
+    --en-fg-danger-inverse: light-dark(#000000, #ffffff);
+    --en-fg-info-inverse: light-dark(#000000, #ffffff);
+
+    /* ===== Border width & style ===== */
+    --en-border-width: 1px;
+    --en-border-width-thick: 2px;
+    --en-border-style: solid;
+
+    /* ===== Radius ===== */
+    --en-radius-sm: 0;
+    --en-radius-md: 0;
+    --en-radius-lg: 0;
+    --en-radius-xl: 0;
+    --en-radius-full: 9999px;
+
+    /* ===== Shadow ===== */
+    --en-shadow-sm: 2px 2px 0 var(--en-border);
+    --en-shadow-md: 4px 4px 0 var(--en-border);
+    --en-shadow-lg: 6px 6px 0 var(--en-border);
+
+    /* ===== Typography ===== */
+    --en-font-sans: system-ui, -apple-system, sans-serif;
+    --en-leading-normal: 1.5;
+    --en-leading-relaxed: 1.625;
+    --en-font-normal: 400;
+    --en-font-medium: 500;
+    --en-font-semibold: 600;
+    --en-font-bold: 700;
+    --en-tracking-normal: 0em;
+    --en-tracking-wide: 0.025em;
+  }
+}
+
+@layer en-components {
+  /* Switch thumb should match the square aesthetic in mono theme */
+  [data-en-theme="mono"] .en-switch__track,
+  .en-theme-mono .en-switch__track {
+    border-radius: 0;
+  }
+
+  [data-en-theme="mono"] .en-switch__track::before,
+  .en-theme-mono .en-switch__track::before {
+    border-radius: 0;
+  }
+}

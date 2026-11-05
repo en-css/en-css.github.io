@@ -1,0 +1,149 @@
+/*!
+ * EN-CSS Theme: Ruby/Jewel
+ * Elegant, luxurious theme inspired by ruby gemstone
+ * Supports automatic light/dark mode via light-dark()
+ */
+
+@layer en-tokens {
+  [data-en-theme="ruby"],
+  .en-theme-ruby {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#DC2626, #F87171);
+    --en-secondary: light-dark(#9F1239, #FB7185);
+    --en-success: light-dark(#059669, #34D399);
+    --en-warning: light-dark(#D97706, #FBBF24);
+    --en-danger: light-dark(#B91C1C, #EF4444);
+    --en-info: light-dark(#7C3AED, #A78BFA);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#B91C1C, #FCA5A5);
+    --en-primary-active: light-dark(#991B1B, #FECACA);
+    --en-secondary-hover: light-dark(#85032c, #fe8b98);
+    --en-success-hover: light-dark(#35a378, #58e0a9);
+    --en-warning-hover: light-dark(#e48835, #ffd172);
+    --en-danger-hover: light-dark(#9e0f12, #fa5c57);
+    --en-info-hover: light-dark(#6a2ecd, #b49dfd);
+
+    --en-secondary-active: light-dark(#690422, #fda4ad);
+    --en-success-active: light-dark(#4faf87, #75edb9);
+    --en-warning-active: light-dark(#ef9850, #fee4af);
+    --en-danger-active: light-dark(#840208, #fe776f);
+    --en-info-active: light-dark(#5821ae, #c0b0fd);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#fee2e2, #4a0d0d);
+    --en-secondary-subtle: light-dark(#ffe4e6, #3e0619);
+    --en-success-subtle: light-dark(#d1fae5, #053824);
+    --en-warning-subtle: light-dark(#fef3c7, #453208);
+    --en-danger-subtle: light-dark(#fee2e2, #3e0909);
+    --en-info-subtle: light-dark(#f3e8ff, #2e1450);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#FFFFFF, #1A0A0A);
+    --en-fg-secondary: light-dark(#FFFFFF, #1a0408);
+    --en-fg-success: light-dark(#2e0007, #022c22);
+    --en-fg-warning: light-dark(#000000, #3d2500);
+    --en-fg-danger: light-dark(#FFFFFF, #1a0606);
+    --en-fg-info: light-dark(#FFFFFF, #1e0a3d);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#d82122, #f87171);
+    --en-text-brand-hover: light-dark(#bf0111, #fca5a5);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fdf2f8, #2e0007);
+    --en-bg-subtle: light-dark(#FFE4E6, #2A1414);
+    --en-bg-surface: light-dark(#FFFFFF, #3A1E1E);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#FFECEE, #3F2222);
+    --en-bg-active: light-dark(#FFE4E6, #4D2828);
+
+    --en-text: light-dark(#450A0A, #FECACA);
+    --en-text-muted: light-dark(#7F1D1D, #FCA5A5);
+
+    --en-border: light-dark(#FECACA, #7F1D1D);
+    --en-border-control: light-dark(#9b777a, #98676a);
+    --en-border-subtle: light-dark(#FEE2E2, #5A1414);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#DC2626, #F87171);
+    --en-disabled-bg: light-dark(#FEF2F2, #2A1414);
+    --en-disabled-text: light-dark(#9F1239, #BE185D);
+    --en-overlay: light-dark(rgba(69, 10, 10, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#2A1414, #FFE4E6);
+    --en-bg-surface-inverse: light-dark(#3A1E1E, #FFFFFF);
+
+    --en-text-inverse: light-dark(#FECACA, #450A0A);
+    --en-text-muted-inverse: light-dark(#FCA5A5, #7F1D1D);
+
+    --en-border-inverse: light-dark(#7F1D1D, #FECACA);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#F87171, #DC2626);
+    --en-secondary-inverse: light-dark(#FB7185, #9F1239);
+    --en-success-inverse: light-dark(#34D399, #059669);
+    --en-warning-inverse: light-dark(#FBBF24, #D97706);
+    --en-danger-inverse: light-dark(#EF4444, #B91C1C);
+    --en-info-inverse: light-dark(#A78BFA, #7C3AED);
+
+    --en-fg-primary-inverse: light-dark(#1A0A0A, #FFFFFF);
+    --en-fg-secondary-inverse: light-dark(#1a0408, #FFFFFF);
+    --en-fg-success-inverse: light-dark(#022c22, #2e0007);
+    --en-fg-warning-inverse: light-dark(#3d2500, #000000);
+    --en-fg-danger-inverse: light-dark(#1a0606, #FFFFFF);
+    --en-fg-info-inverse: light-dark(#1e0a3d, #FFFFFF);
+
+    /* Typography */
+    --en-font-sans: "Quicksand", system-ui, -apple-system, sans-serif;
+
+    /* Texture: Faceted jewel/diamond reflections */
+    --en-bg-texture: 
+      linear-gradient(135deg, color-mix(in oklab, var(--en-primary) 3%, transparent) 25%, transparent 25%),
+      linear-gradient(225deg, color-mix(in oklab, var(--en-secondary) 3%, transparent) 25%, transparent 25%),
+      linear-gradient(45deg, color-mix(in oklab, var(--en-primary) 3%, transparent) 25%, transparent 25%),
+      linear-gradient(315deg, color-mix(in oklab, var(--en-secondary) 3%, transparent) 25%, transparent 25%);
+    --en-bg-size: 80px 80px;
+    --en-bg-position: 40px 0, 40px 0, 0 0, 0 0;    
+  }
+}
+
+@layer en-base {
+  [data-en-theme="ruby"] body, .en-theme-ruby body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  [data-en-theme="ruby"] body::before,
+  .en-theme-ruby body::before {
+    content: "\1F525\FE0E";
+    position: fixed;
+    top: 50%;
+    inset-inline: 0;
+    margin-inline: auto;
+    width: fit-content;
+    translate: 0 -50%;
+    font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", serif;
+    font-size: 60vw;
+    line-height: 1;
+    color: color-mix(in oklab, var(--en-primary) 10%, transparent);
+    pointer-events: none;
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="ruby"] body,
+    .en-theme-ruby body {
+      background-image: none;
+    }
+
+    [data-en-theme="ruby"] body::before,
+    .en-theme-ruby body::before {
+      display: none;
+    }
+  }
+}

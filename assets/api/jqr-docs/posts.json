@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "title": "Getting Started with JQR",
+    "excerpt": "Learn the basics of jQuery Reactive framework and how to build reactive applications.",
+    "content": "jQuery Reactive (JQR) is a lightweight reactive framework that brings Vue-like reactivity to jQuery. In this post, we'll explore the core concepts...",
+    "tags": ["tutorial", "beginner", "jqr"],
+    "publishedAt": "2024-01-10",
+    "likes": 42,
+    "comments": 8
+  },
+  {
+    "id": 2,
+    "userId": 2,
+    "title": "Advanced Reactivity Patterns",
+    "excerpt": "Deep dive into computed values, watchers, and reactive state management.",
+    "content": "Once you've mastered the basics, it's time to explore advanced patterns in JQR. This includes computed properties, watchers, and complex state...",
+    "tags": ["advanced", "reactivity", "patterns"],
+    "publishedAt": "2024-01-15",
+    "likes": 67,
+    "comments": 12
+  },
+  {
+    "id": 3,
+    "userId": 3,
+    "title": "Building a Todo App",
+    "excerpt": "A practical guide to building a full-featured todo application with JQR.",
+    "content": "Let's build a complete todo application using JQR. We'll cover form handling, list management, local storage, and more...",
+    "tags": ["tutorial", "project", "todo"],
+    "publishedAt": "2024-01-20",
+    "likes": 89,
+    "comments": 15
+  },
+  {
+    "id": 4,
+    "userId": 4,
+    "title": "Async State Management",
+    "excerpt": "Master async data fetching with JQR's asyncState feature.",
+    "content": "Working with APIs is a common requirement. JQR's asyncState makes it easy to fetch data, handle loading states, and manage errors...",
+    "tags": ["async", "api", "ajax"],
+    "publishedAt": "2024-01-25",
+    "likes": 103,
+    "comments": 22
+  },
+  {
+    "id": 5,
+    "userId": 1,
+    "title": "Form Validation Made Easy",
+    "excerpt": "Explore JQR's powerful form validation with model modifiers.",
+    "content": "Forms are everywhere, and validation is crucial. Learn how to use JQR's model modifiers to create robust, user-friendly forms...",
+    "tags": ["forms", "validation", "ux"],
+    "publishedAt": "2024-02-01",
+    "likes": 76,
+    "comments": 18
+  },
+  {
+    "id": 6,
+    "userId": 6,
+    "title": "Custom Directives Guide",
+    "excerpt": "Learn how to create your own directives to extend JQR's functionality.",
+    "content": "JQR's directive system is extensible. Create custom directives for tooltips, drag-and-drop, infinite scroll, and more...",
+    "tags": ["directives", "advanced", "extensibility"],
+    "publishedAt": "2024-02-05",
+    "likes": 54,
+    "comments": 9
+  },
+  {
+    "id": 7,
+    "userId": 7,
+    "title": "Performance Optimization Tips",
+    "excerpt": "Best practices for building fast and efficient JQR applications.",
+    "content": "Performance matters. Learn how to optimize your JQR apps with computed values, debouncing, lazy loading, and more...",
+    "tags": ["performance", "optimization", "best-practices"],
+    "publishedAt": "2024-02-10",
+    "likes": 92,
+    "comments": 14
+  },
+  {
+    "id": 8,
+    "userId": 8,
+    "title": "Component Architecture",
+    "excerpt": "Design patterns for building scalable component-based applications.",
+    "content": "As your app grows, architecture becomes important. Learn how to structure your JQR components for maintainability and reusability...",
+    "tags": ["architecture", "components", "design-patterns"],
+    "publishedAt": "2024-02-15",
+    "likes": 118,
+    "comments": 26
+  }
+]

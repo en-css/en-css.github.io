@@ -1,0 +1,161 @@
+/*!
+ * EN-CSS Theme: Midnight/Cosmic
+ * Deep, mysterious theme inspired by night sky with stellar textures.
+ * Supports automatic light/dark mode via light-dark()
+ */
+
+@layer en-tokens {
+  [data-en-theme="midnight"],
+  .en-theme-midnight {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#1E3A8A, #60A5FA);
+    --en-secondary: light-dark(#6264ef, #818cf8);
+    --en-success: light-dark(#059669, #34D399);
+    --en-warning: light-dark(#D97706, #FBBF24);
+    --en-danger: light-dark(#DC2626, #F87171);
+    --en-info: light-dark(#0284C7, #38BDF8);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#132b71, #93c5fd);
+    --en-primary-active: light-dark(#091c59, #bfdbfe);
+    --en-secondary-hover: light-dark(#5455d0, #909cfe);
+    --en-success-hover: light-dark(#35a378, #58e0a9);
+    --en-warning-hover: light-dark(#e48835, #ffd172);
+    --en-danger-hover: light-dark(#bf1c1d, #fd8886);
+    --en-info-hover: light-dark(#3192d1, #64cafd);
+
+    --en-secondary-active: light-dark(#4646b2, #a1adfe);
+    --en-success-active: light-dark(#4faf87, #75edb9);
+    --en-warning-active: light-dark(#ef9850, #fee4af);
+    --en-danger-active: light-dark(#a31215, #fea09d);
+    --en-info-active: light-dark(#4ba0db, #8ed6fd);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#dbeafe, #0f1a35);
+    --en-secondary-subtle: light-dark(#e0e7ff, #1e1f5a);
+    --en-success-subtle: light-dark(#d1fae5, #053824);
+    --en-warning-subtle: light-dark(#fef3c7, #453208);
+    --en-danger-subtle: light-dark(#fee2e2, #4a0d0d);
+    --en-info-subtle: light-dark(#e0f2fe, #0a2e3e);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#FFFFFF, #0A0E1A);
+    --en-fg-secondary: light-dark(#FFFFFF, #0F0F2E);
+    --en-fg-success: light-dark(#050b14, #022c22);
+    --en-fg-warning: light-dark(#000000, #3d2500);
+    --en-fg-danger: light-dark(#FFFFFF, #450a0a);
+    --en-fg-info: light-dark(#050b14, #0a1929);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#1E3A8A, #60A5FA);
+    --en-text-brand-hover: light-dark(#102877, #93c5fd);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#f0f4f8, #050b14);
+    --en-bg-subtle: light-dark(#E0E7FF, #1A1F3A);
+    --en-bg-surface: light-dark(#FFFFFF, #1E2A4A);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#F0F4FF, #252F50);
+    --en-bg-active: light-dark(#E0E7FF, #2D3A5C);
+
+    --en-text: light-dark(#1E293B, #E0E7FF);
+    --en-text-muted: light-dark(#475569, #94A3B8);
+
+    --en-border: light-dark(#C7D2FE, #3730A3);
+    --en-border-control: light-dark(#78808c, #72798a);
+    --en-border-subtle: light-dark(#DDD6FE, #2e2674);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#1E3A8A, #60A5FA);
+    --en-disabled-bg: light-dark(#f1f5f9, #1a1f35);
+    --en-disabled-text: light-dark(#64748b, #64748b);
+    --en-overlay: light-dark(rgba(30, 41, 59, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#1A1F3A, #E0E7FF);
+    --en-bg-surface-inverse: light-dark(#1E2A4A, #FFFFFF);
+
+    --en-text-inverse: light-dark(#E0E7FF, #1E293B);
+    --en-text-muted-inverse: light-dark(#94A3B8, #475569);
+
+    --en-border-inverse: light-dark(#3730A3, #C7D2FE);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#60A5FA, #1E3A8A);
+    --en-secondary-inverse: light-dark(#818cf8, #6264ef);
+    --en-success-inverse: light-dark(#34D399, #059669);
+    --en-warning-inverse: light-dark(#FBBF24, #D97706);
+    --en-danger-inverse: light-dark(#F87171, #DC2626);
+    --en-info-inverse: light-dark(#38BDF8, #0284C7);
+
+    --en-fg-primary-inverse: light-dark(#0A0E1A, #FFFFFF);
+    --en-fg-secondary-inverse: light-dark(#0F0F2E, #FFFFFF);
+    --en-fg-success-inverse: light-dark(#022c22, #050b14);
+    --en-fg-warning-inverse: light-dark(#3d2500, #000000);
+    --en-fg-danger-inverse: light-dark(#450a0a, #FFFFFF);
+    --en-fg-info-inverse: light-dark(#0a1929, #050b14);
+
+    /* Typography Override */
+    --en-font-sans: "Fredoka", "Quicksand", system-ui, -apple-system, sans-serif;
+
+    /* Texture: Aurora Borealis / Cosmic glow */
+    --en-bg-size: 150% 150%;
+    --en-bg-texture: 
+      radial-gradient(circle at 20% 20%, color-mix(in oklab, var(--en-primary) 40%, transparent) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, color-mix(in oklab, var(--en-secondary) 30%, transparent) 0%, transparent 40%),
+      radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--en-info) 30%, transparent) 0%, transparent 50%);
+  }
+}
+
+@layer en-base {
+  [data-en-theme="midnight"] body, .en-theme-midnight body {
+    background-color: var(--en-bg);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+    animation: en-theme-midnight-move-aurora 20s ease infinite alternate;
+  }
+
+  @keyframes en-theme-midnight-move-aurora {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-en-theme="midnight"] body,
+    .en-theme-midnight body {
+      animation: none;
+    }
+  }
+
+  [data-en-theme="midnight"] body::before, .en-theme-midnight body::before {
+    content: "🜄"; /* Alchemical symbol for Water / Fluidity */
+    position: fixed;
+    top: 50%;
+    inset-inline: 0;
+    margin-inline: auto;
+    width: fit-content;
+    translate: 0 -50%;
+    font-size: 60vw;
+    color: color-mix(in oklab, var(--en-primary) 3%, transparent);
+    z-index: -1;
+    pointer-events: none;
+    line-height: 1;
+    font-family: serif;
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="midnight"] body,
+    .en-theme-midnight body {
+      background-image: none;
+    }
+
+    [data-en-theme="midnight"] body::before,
+    .en-theme-midnight body::before {
+      display: none;
+    }
+  }
+}

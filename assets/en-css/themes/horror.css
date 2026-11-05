@@ -1,0 +1,192 @@
+/*!
+ * EN-CSS Theme: Horror (Dark Mode) / Overcast Gloom (Light Mode)
+ * Light Mode: Cold gloomy overcast sky with fog slates.
+ * Dark Mode: Pitch black void with bloody crimson accents and eerie bone tones.
+ */
+
+@layer en-tokens {
+  [data-en-theme="horror"],
+  .en-theme-horror {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#4a607a, #8b0000); /* Cold Storm Slate vs Crimson Blood */
+    --en-secondary: light-dark(#5c6b73, #4a0e4e); /* Gloomy Slate vs Spectral Purple */
+    --en-success: light-dark(#3a7d5c, #005214); /* Muted Moss vs Dark Crypt Green */
+    --en-warning: light-dark(#a36829, #7a5200); /* Dull Amber vs Dried Bone Gold */
+    --en-danger: light-dark(#9e2a2b, #c20101); /* Blood Rust vs Fresh Blood Red */
+    --en-info: light-dark(#3d5a80, #143d47); /* Foggy Cyan vs Eerie Deep Abyss */
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#3a4d63, #6e0201);
+    --en-primary-active: light-dark(#2b3b4d, #540000);
+    --en-secondary-hover: light-dark(#4d5a61, #37013b);
+    --en-success-hover: light-dark(#2e6a4d, #003f0e);
+    --en-warning-hover: light-dark(#8d5820, #654300);
+    --en-danger-hover: light-dark(#851e20, #a30403);
+    --en-info-hover: light-dark(#30496b, #072d36);
+
+    --en-secondary-active: light-dark(#3e494f, #230025);
+    --en-success-active: light-dark(#23583e, #012e08);
+    --en-warning-active: light-dark(#774917, #503503);
+    --en-danger-active: light-dark(#6d1115, #860302);
+    --en-info-active: light-dark(#233956, #011e25);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#dce3eb, #2a080c);
+    --en-secondary-subtle: light-dark(#e0e6e9, #1f0524);
+    --en-success-subtle: light-dark(#d9e8df, #052208);
+    --en-warning-subtle: light-dark(#eee5da, #291a00);
+    --en-danger-subtle: light-dark(#ebd8d8, #330000);
+    --en-info-subtle: light-dark(#dae3ed, #061e24);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#ffffff, #f0e6e6);
+    --en-fg-secondary: light-dark(#ffffff, #ebd9eb);
+    --en-fg-success: light-dark(#ffffff, #d5eed5);
+    --en-fg-warning: light-dark(#ffffff, #f5eacc);
+    --en-fg-danger: light-dark(#ffffff, #e6d7d7);
+    --en-fg-info: light-dark(#ffffff, #cce6ec);
+
+    /* ===== Contextual Text ===== */
+    --en-text-brand: light-dark(#3a4d63, #ff3333);
+    --en-text-brand-hover: light-dark(#2b3b4d, #ff6666);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#c0c7d1, #070304); /* Overcast Gray vs Pitch Black Void */
+    --en-bg-subtle: light-dark(#b0b9c5, #12080a);
+    --en-bg-surface: light-dark(#d3d9e2, #1a0b0e);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#a8b2bf, #291015);
+    --en-bg-active: light-dark(#9ca7b5, #38151c);
+
+    --en-text: light-dark(#1c232b, #e6d7d7); /* Cold Steel Gray vs Ghost Pale Bone */
+    --en-text-muted: light-dark(#3f4854, #9c8080); /* Gloomy Fog Gray vs Dried Blood Gray */
+
+    --en-border: light-dark(#8d98a6, #52141a);
+    --en-border-control: light-dark(#596068, #6b6263);
+    --en-border-subtle: light-dark(#9faab8, #380d11);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#4a607a, #cc0000);
+    --en-disabled-bg: light-dark(#b0b7c0, #140d0e);
+    --en-disabled-text: light-dark(#707882, #5c4949);
+    --en-overlay: light-dark(rgba(28, 35, 43, 0.6), rgba(0, 0, 0, 0.88));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#070304, #c0c7d1);
+    --en-bg-subtle-inverse: light-dark(#12080a, #b0b9c5);
+    --en-bg-surface-inverse: light-dark(#1a0b0e, #d3d9e2);
+
+    --en-text-inverse: light-dark(#e6d7d7, #1c232b);
+    --en-text-muted-inverse: light-dark(#9c8080, #505a66);
+
+    --en-border-inverse: light-dark(#52141a, #8d98a6);
+
+    /* Contextual Inverse Variants (light/dark values swapped) */
+    --en-primary-inverse: light-dark(#8b0000, #4a607a);
+    --en-secondary-inverse: light-dark(#4a0e4e, #5c6b73);
+    --en-success-inverse: light-dark(#005214, #3a7d5c);
+    --en-warning-inverse: light-dark(#7a5200, #a36829);
+    --en-danger-inverse: light-dark(#c20101, #9e2a2b);
+    --en-info-inverse: light-dark(#143d47, #3d5a80);
+
+    --en-fg-primary-inverse: light-dark(#f0e6e6, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#ebd9eb, #ffffff);
+    --en-fg-success-inverse: light-dark(#d5eed5, #ffffff);
+    --en-fg-warning-inverse: light-dark(#f5eacc, #ffffff);
+    --en-fg-danger-inverse: light-dark(#e6d7d7, #ffffff);
+    --en-fg-info-inverse: light-dark(#cce6ec, #ffffff);
+
+    /* Typography & Radius Overrides */
+    --en-font-sans: "Georgia", "Garamond", system-ui, serif;
+    --en-border-radius: var(--en-radius-sm);
+    --en-shadow-sm: 0 2px 8px light-dark(rgba(40, 50, 60, 0.2), rgba(139, 0, 0, 0.35));
+    --en-shadow-lg: 0 8px 24px light-dark(rgba(20, 30, 40, 0.3), rgba(0, 0, 0, 0.9));
+
+    /* Tekstur: Overcast Cloud Vignette (Light) / Dark Blood Edge Vignette (Dark) */
+    --en-bg-size: 100% 100%, 250px 250px;
+    --en-bg-texture: 
+      radial-gradient(
+        circle at 50% 50%, 
+        light-dark(transparent, rgba(139, 0, 0, 0.08)) 0%, 
+        light-dark(rgba(60, 70, 85, 0.35), rgba(0, 0, 0, 0.95)) 100%
+      ),
+      linear-gradient(
+        light-dark(rgba(255, 255, 255, 0.05), rgba(30, 0, 0, 0.2)) 1px, 
+        transparent 1px
+      );
+  }
+}
+
+@layer en-base {
+  [data-en-theme="horror"] body,
+  .en-theme-horror body {
+    background-color: var(--en-bg);
+    background-image: var(--en-bg-texture);
+    background-size: var(--en-bg-size);
+    background-attachment: fixed;
+    animation: en-horror-fog-drift 14s ease-in-out infinite alternate;
+  }
+
+  /* Slowly drifting fog */
+  @keyframes en-horror-fog-drift {
+    0% { background-position: 0% 0%, 0 0; }
+    100% { background-position: 100% 100%, 60px 60px; }
+  }
+
+  /* Motion off */
+  @media (prefers-reduced-motion: reduce) {
+    [data-en-theme="horror"] body,
+    .en-theme-horror body {
+      animation: none;
+    }
+  }
+
+  /* Watermark ornament (occult / death symbol) */
+  [data-en-theme="horror"] body::before,
+  .en-theme-horror body::before {
+    content: "🜔"; /* Alchemical symbol for Salt */
+    position: fixed;
+    top: 50%;
+    inset-inline: 0;
+    margin-inline: auto;
+    width: fit-content;
+    translate: 0 -50%;
+    font-size: 45vw;
+    color: light-dark(rgba(40, 50, 60, 0.05), rgba(139, 0, 0, 0.04));
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+    line-height: 1;
+    font-family: serif;
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="horror"] body,
+    .en-theme-horror body {
+      background-image: none;
+    }
+
+    [data-en-theme="horror"] body::before,
+    .en-theme-horror body::before {
+      display: none;
+    }
+  }
+}
+
+@layer en-components {
+  /* Gothic / horror component tweaks */
+  [data-en-theme="horror"] .en-card,
+  .en-theme-horror .en-card {
+    border-width: 1px;
+    box-shadow: var(--en-shadow-lg);
+    transition: border-color var(--en-transition), box-shadow var(--en-transition);
+  }
+
+  [data-en-theme="horror"] .en-card:hover,
+  .en-theme-horror .en-card:hover {
+    border-color: light-dark(#4a607a, #8b0000);
+    box-shadow: 0 0 18px light-dark(rgba(74, 96, 122, 0.35), rgba(139, 0, 0, 0.5));
+  }
+}

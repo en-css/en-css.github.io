@@ -1,0 +1,243 @@
+/*!
+ * EN-CSS Effects: Interaction (`.en-fx-ripple`, `.en-fx-lift`, `.en-fx-ping`)
+ * Pure CSS. Every modifier works on its own and respects prefers-reduced-motion.
+ *
+ * Pseudo-elements: ripple, ping and arrow-slide use ::after — do not combine them
+ * with each other or with other ::after effects (e.g. shimmer) on the same element.
+ * Optional JS hooks (tilt, magnet) are plain custom properties; each effect still
+ * has a sensible no-JS hover state.
+ */
+@layer en-utilities {
+  .en-fx-ripple {
+    --en-fx-ripple-color: light-dark(#00000024, #ffffff38);
+    isolation: isolate;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .en-fx-ripple:after {
+    content: "";
+    left: var(--en-fx-ripple-x, 50%);
+    top: var(--en-fx-ripple-y, 50%);
+    aspect-ratio: 1;
+    background: var(--en-fx-ripple-color);
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 50%;
+    width: 250%;
+    transition: opacity .45s ease-out, scale 0s .45s;
+    position: absolute;
+    translate: -50% -50%;
+    scale: 0;
+  }
+
+  .en-fx-ripple:active:after {
+    opacity: 1;
+    transition: scale .55s cubic-bezier(.2, .7, .2, 1), opacity;
+    scale: 1;
+  }
+
+  .en-fx-lift {
+    --en-fx-lift-distance: .25rem;
+    --en-fx-lift-shadow: var(--en-shadow-lg, 0 10px 25px #00000026);
+    transition: translate .2s, box-shadow .2s;
+  }
+
+  .en-fx-lift:is(:hover, :focus-visible) {
+    translate: 0 calc(-1 * var(--en-fx-lift-distance));
+    box-shadow: var(--en-fx-lift-shadow);
+  }
+
+  .en-fx-lift:active {
+    translate: 0 calc(-.4 * var(--en-fx-lift-distance));
+  }
+
+  .en-fx-ping {
+    --en-fx-ping-color: var(--en-primary, currentColor);
+    --en-fx-ping-size: .6rem;
+    --en-fx-ping-duration: 1.6s;
+    position: relative;
+  }
+
+  .en-fx-ping:after {
+    content: "";
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--en-fx-ping-color) 60%, transparent);
+    pointer-events: none;
+    animation: en-fx-ping var(--en-fx-ping-duration) cubic-bezier(0, 0, .2, 1) infinite;
+    position: absolute;
+    inset: 0;
+  }
+
+  @keyframes en-fx-ping {
+    75%, 100% {
+      box-shadow: 0 0 0 var(--en-fx-ping-size) transparent;
+    }
+  }
+
+  :is(.en-fx-tilt, .en-fx-tilt--left, .en-fx-tilt--right, .en-fx-tilt--up, .en-fx-tilt--down) {
+    --en-fx-tilt-angle: 8deg;
+    --en-fx-tilt-perspective: 800px;
+    --_tilt-dx: .8;
+    --_tilt-dy: -.4;
+    transition: transform .3s;
+  }
+
+  .en-fx-tilt--left {
+    --_tilt-dx: -.8;
+  }
+
+  .en-fx-tilt--up {
+    --_tilt-dx: 0;
+    --_tilt-dy: -1;
+  }
+
+  .en-fx-tilt--down {
+    --_tilt-dx: 0;
+    --_tilt-dy: 1;
+  }
+
+  :is(.en-fx-tilt, .en-fx-tilt--left, .en-fx-tilt--right, .en-fx-tilt--up, .en-fx-tilt--down):is(:hover, :focus-visible) {
+    transform: perspective(var(--en-fx-tilt-perspective))
+      rotateX(calc(var(--en-fx-tilt-y, var(--_tilt-dy)) * var(--en-fx-tilt-angle) * -1))
+      rotateY(calc(var(--en-fx-tilt-x, var(--_tilt-dx)) * var(--en-fx-tilt-angle)));
+  }
+
+  .en-fx-press {
+    --en-fx-press-scale: .96;
+    transition: scale .18s cubic-bezier(.3, 1.6, .5, 1);
+  }
+
+  .en-fx-press:active {
+    scale: var(--en-fx-press-scale);
+    transition-duration: 80ms;
+  }
+
+  .en-fx-magnet {
+    --en-fx-magnet-distance: .6rem;
+    --en-fx-magnet-scale: 1.04;
+    transition: translate .2s ease-out, scale .2s ease-out;
+  }
+
+  .en-fx-magnet:is(:hover, :focus-visible) {
+    scale: var(--en-fx-magnet-scale);
+    translate: calc(var(--en-fx-magnet-x, 0) * var(--en-fx-magnet-distance))
+      calc(var(--en-fx-magnet-y, 0) * var(--en-fx-magnet-distance));
+  }
+
+  :is(.en-fx-underline-grow, .en-fx-underline-grow--center) {
+    --en-fx-underline-color: currentColor;
+    --en-fx-underline-thickness: 2px;
+    background-image: linear-gradient(var(--en-fx-underline-color), var(--en-fx-underline-color));
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% var(--en-fx-underline-thickness);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    text-decoration: none;
+    transition: background-size .3s;
+  }
+
+  .en-fx-underline-grow--center {
+    background-position: 50% 100%;
+  }
+
+  [dir="rtl"] .en-fx-underline-grow {
+    background-position: 100% 100%;
+  }
+
+  .en-fx-underline-grow[dir="rtl"] {
+    background-position: 100% 100%;
+  }
+
+  :is(.en-fx-underline-grow, .en-fx-underline-grow--center):is(:hover, :focus-visible) {
+    background-size: 100% var(--en-fx-underline-thickness);
+  }
+
+  :is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) .en-fx-underline-grow {
+    background-position: 100% 100%;
+  }
+
+  .en-fx-underline-grow:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+    background-position: 100% 100%;
+  }
+
+  .en-fx-arrow-slide {
+    --en-fx-arrow: "→";
+    --en-fx-arrow-distance: .3em;
+    --_arrow-dir: 1;
+  }
+
+  .en-fx-arrow-slide:after {
+    content: var(--en-fx-arrow);
+    margin-inline-start: .4em;
+    transition: translate .2s;
+    display: inline-block;
+  }
+
+  .en-fx-arrow-slide:is(:hover, :focus-visible):after {
+    translate: calc(var(--en-fx-arrow-distance) * var(--_arrow-dir)) 0;
+  }
+
+  [dir="rtl"] .en-fx-arrow-slide {
+    --en-fx-arrow: "←";
+    --_arrow-dir: -1;
+  }
+
+  .en-fx-arrow-slide[dir="rtl"] {
+    --en-fx-arrow: "←";
+    --_arrow-dir: -1;
+  }
+
+  :is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) .en-fx-arrow-slide {
+    --en-fx-arrow: "←";
+    --_arrow-dir: -1;
+  }
+
+  .en-fx-arrow-slide:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+    --en-fx-arrow: "←";
+    --_arrow-dir: -1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .en-fx-ripple:after, .en-fx-ping:after {
+      transition: none !important;
+      animation: none !important;
+    }
+
+    .en-fx-arrow-slide:after {
+      transition: none !important;
+    }
+
+    :is(.en-fx-lift, .en-fx-tilt, .en-fx-tilt--left, .en-fx-tilt--right, .en-fx-tilt--up, .en-fx-tilt--down) {
+      transition: none !important;
+    }
+
+    :is(.en-fx-press, .en-fx-magnet, .en-fx-underline-grow, .en-fx-underline-grow--center) {
+      transition: none !important;
+    }
+
+    .en-fx-lift:is(:hover, :focus-visible, :active) {
+      translate: none;
+    }
+
+    :is(.en-fx-tilt, .en-fx-tilt--left, .en-fx-tilt--right, .en-fx-tilt--up, .en-fx-tilt--down):is(:hover, :focus-visible) {
+      transform: none;
+    }
+
+    .en-fx-press:active {
+      translate: none;
+      scale: none;
+    }
+
+    .en-fx-magnet:is(:hover, :focus-visible) {
+      translate: none;
+      scale: none;
+    }
+
+    .en-fx-arrow-slide:is(:hover, :focus-visible):after {
+      translate: none;
+    }
+  }
+}

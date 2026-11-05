@@ -1,0 +1,187 @@
+/*!
+ * EN-CSS Effects: Loading & Attention
+ * `.en-fx-pulse`, `.en-fx-heartbeat`, `.en-fx-breathe`, `.en-fx-float`,
+ * `.en-fx-wiggle`, `.en-fx-shake`, `.en-fx-stripes`
+ *
+ * Works on any element (not only text). Modifiers work on their own.
+ * Animated properties, to avoid clashes when combining effects:
+ *   pulse -> opacity | heartbeat, breathe -> scale | float, shake -> translate | wiggle -> rotate
+ * (do not combine heartbeat + breathe, or float + shake, on one element).
+ * Progress bars: the .en-progress component already has striped/animated variants;
+ * `.en-fx-stripes` is the generic version for buttons, badges, banners, etc.
+ */
+@layer en-utilities {
+  .en-fx-pulse {
+    --en-fx-pulse-min: .45;
+    --en-fx-pulse-duration: 1.8s;
+    animation: en-fx-pulse var(--en-fx-pulse-duration) ease-in-out infinite;
+  }
+
+  @keyframes en-fx-pulse {
+    50% {
+      opacity: var(--en-fx-pulse-min);
+    }
+  }
+
+  .en-fx-heartbeat {
+    --en-fx-heartbeat-scale: 1.14;
+    --en-fx-heartbeat-duration: 1.3s;
+    animation: en-fx-heartbeat var(--en-fx-heartbeat-duration) ease-in-out infinite;
+  }
+
+  @keyframes en-fx-heartbeat {
+    0%, 40%, 100% {
+      scale: 1;
+    }
+
+    14% {
+      scale: var(--en-fx-heartbeat-scale);
+    }
+
+    28% {
+      scale: 1;
+    }
+
+    34% {
+      scale: calc(1 + (var(--en-fx-heartbeat-scale) - 1) * .7);
+    }
+  }
+
+  .en-fx-breathe {
+    --en-fx-breathe-scale: 1.04;
+    --en-fx-breathe-duration: 4s;
+    animation: en-fx-breathe var(--en-fx-breathe-duration) ease-in-out infinite;
+  }
+
+  @keyframes en-fx-breathe {
+    50% {
+      scale: var(--en-fx-breathe-scale);
+      opacity: .85;
+    }
+  }
+
+  .en-fx-float {
+    --en-fx-float-distance: .5rem;
+    --en-fx-float-duration: 3.2s;
+    animation: en-fx-float var(--en-fx-float-duration) ease-in-out infinite;
+  }
+
+  @keyframes en-fx-float {
+    50% {
+      translate: 0 calc(-1 * var(--en-fx-float-distance));
+    }
+  }
+
+  :is(.en-fx-wiggle, .en-fx-wiggle--hover) {
+    --en-fx-wiggle-angle: 4deg;
+    --en-fx-wiggle-duration: .6s;
+  }
+
+  .en-fx-wiggle {
+    animation: en-fx-wiggle var(--en-fx-wiggle-duration) ease-in-out infinite;
+  }
+
+  .en-fx-wiggle--hover:is(:hover, :focus-visible) {
+    animation: en-fx-wiggle var(--en-fx-wiggle-duration) ease-in-out infinite;
+  }
+
+  @keyframes en-fx-wiggle {
+    0%, 100% {
+      rotate: 0deg;
+    }
+
+    25% {
+      rotate: calc(-1 * var(--en-fx-wiggle-angle));
+    }
+
+    75% {
+      rotate: var(--en-fx-wiggle-angle);
+    }
+  }
+
+  :is(.en-fx-shake, .en-fx-shake--hover, .en-fx-shake--once) {
+    --en-fx-shake-distance: .35rem;
+    --en-fx-shake-duration: .5s;
+  }
+
+  .en-fx-shake {
+    animation: en-fx-shake var(--en-fx-shake-duration) linear infinite;
+  }
+
+  .en-fx-shake--once {
+    animation: en-fx-shake var(--en-fx-shake-duration) linear 1;
+  }
+
+  .en-fx-shake--hover:is(:hover, :focus-visible) {
+    animation: en-fx-shake var(--en-fx-shake-duration) linear infinite;
+  }
+
+  @keyframes en-fx-shake {
+    0%, 100% {
+      translate: 0;
+    }
+
+    15%, 55% {
+      translate: calc(-1 * var(--en-fx-shake-distance)) 0;
+    }
+
+    35%, 75% {
+      translate: var(--en-fx-shake-distance) 0;
+    }
+
+    90% {
+      translate: calc(-.4 * var(--en-fx-shake-distance)) 0;
+    }
+  }
+
+  :is(.en-fx-stripes, .en-fx-stripes--static) {
+    --en-fx-stripe-color: #ffffff40;
+    --en-fx-stripe-size: 1rem;
+    --en-fx-stripe-duration: 1s;
+    background-image: linear-gradient(45deg,
+      var(--en-fx-stripe-color) 25%,
+      transparent 25%,
+      transparent 50%,
+      var(--en-fx-stripe-color) 50%,
+      var(--en-fx-stripe-color) 75%,
+      transparent 75%,
+      transparent);
+    background-size: var(--en-fx-stripe-size) var(--en-fx-stripe-size);
+  }
+
+  .en-fx-stripes {
+    animation: en-fx-stripes var(--en-fx-stripe-duration) linear infinite;
+  }
+
+  @keyframes en-fx-stripes {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: var(--en-fx-stripe-size) 0;
+    }
+  }
+
+  [dir="rtl"] .en-fx-stripes {
+    animation-direction: reverse;
+  }
+
+  .en-fx-stripes[dir="rtl"] {
+    animation-direction: reverse;
+  }
+
+  :is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) .en-fx-stripes {
+    animation-direction: reverse;
+  }
+
+  .en-fx-stripes:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+    animation-direction: reverse;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :is(.en-fx-pulse, .en-fx-heartbeat, .en-fx-breathe, .en-fx-float, .en-fx-wiggle, .en-fx-wiggle--hover, .en-fx-shake, .en-fx-shake--hover, .en-fx-shake--once, .en-fx-stripes) {
+      animation: none !important;
+    }
+  }
+}

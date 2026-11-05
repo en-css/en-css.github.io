@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "postId": 1,
+    "userId": 2,
+    "userName": "Bob Smith",
+    "userAvatar": "https://i.pravatar.cc/150?img=2",
+    "text": "Great introduction! Very helpful for beginners.",
+    "createdAt": "2024-01-11T10:30:00Z",
+    "likes": 5
+  },
+  {
+    "id": 2,
+    "postId": 1,
+    "userId": 3,
+    "userName": "Charlie Brown",
+    "userAvatar": "https://i.pravatar.cc/150?img=3",
+    "text": "Could you add more examples about computed values?",
+    "createdAt": "2024-01-11T14:20:00Z",
+    "likes": 3
+  },
+  {
+    "id": 3,
+    "postId": 2,
+    "userId": 1,
+    "userName": "Alice Johnson",
+    "userAvatar": "https://i.pravatar.cc/150?img=1",
+    "text": "The watch pattern example is exactly what I needed!",
+    "createdAt": "2024-01-16T09:15:00Z",
+    "likes": 8
+  },
+  {
+    "id": 4,
+    "postId": 2,
+    "userId": 4,
+    "userName": "Diana Prince",
+    "userAvatar": "https://i.pravatar.cc/150?img=4",
+    "text": "How does this compare to Vue's reactivity system?",
+    "createdAt": "2024-01-16T11:45:00Z",
+    "likes": 12
+  },
+  {
+    "id": 5,
+    "postId": 3,
+    "userId": 6,
+    "userName": "Frank Miller",
+    "userAvatar": "https://i.pravatar.cc/150?img=6",
+    "text": "I built this and it works perfectly! Thanks for the tutorial.",
+    "createdAt": "2024-01-21T08:30:00Z",
+    "likes": 15
+  },
+  {
+    "id": 6,
+    "postId": 3,
+    "userId": 7,
+    "userName": "Grace Lee",
+    "userAvatar": "https://i.pravatar.cc/150?img=7",
+    "text": "Can you add drag and drop functionality to this?",
+    "createdAt": "2024-01-21T16:20:00Z",
+    "likes": 7
+  },
+  {
+    "id": 7,
+    "postId": 4,
+    "userId": 8,
+    "userName": "Henry Wilson",
+    "userAvatar": "https://i.pravatar.cc/150?img=8",
+    "text": "asyncState is a game changer! No more manual loading states.",
+    "createdAt": "2024-01-26T13:10:00Z",
+    "likes": 22
+  },
+  {
+    "id": 8,
+    "postId": 4,
+    "userId": 2,
+    "userName": "Bob Smith",
+    "userAvatar": "https://i.pravatar.cc/150?img=2",
+    "text": "How do you handle error retries with asyncState?",
+    "createdAt": "2024-01-26T15:40:00Z",
+    "likes": 9
+  }
+]

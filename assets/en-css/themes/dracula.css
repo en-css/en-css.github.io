@@ -1,0 +1,146 @@
+/*!
+ * EN-CSS Theme: Dracula
+ * Dark, vampiric theme with vibrant neon purple & pink accents.
+ */
+
+@layer en-tokens {
+  [data-en-theme="dracula"],
+  .en-theme-dracula {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#bd93f9, #ff79c6);
+    --en-secondary: light-dark(#ff79c6, #bd93f9);
+    --en-success: light-dark(#50fa7b, #50fa7b);
+    --en-warning: light-dark(#f1fa8c, #f1fa8c);
+    --en-danger: light-dark(#ff5555, #ff5555);
+    --en-info: light-dark(#8be9fd, #8be9fd);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#c9a5fe, #ff92d0);
+    --en-primary-active: light-dark(#d4b9ff, #ffabe0);
+    --en-secondary-hover: light-dark(#fe97cf, #c9a5fe);
+    --en-success-hover: light-dark(#9bfeab, #9bfeab);
+    --en-warning-hover: light-dark(#fffff8, #fffff8);
+    --en-danger-hover: light-dark(#fd7872, #fd7872);
+    --en-info-hover: light-dark(#bbf2fe, #bbf2fe);
+
+    --en-secondary-active: light-dark(#fdb1d9, #d4b9ff);
+    --en-success-active: light-dark(#d6ffdb, #d6ffdb);
+    --en-warning-active: light-dark(#fffff8, #fffff8);
+    --en-danger-active: light-dark(#fc938c, #fc938c);
+    --en-info-active: light-dark(#e6faff, #e6faff);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#fae8ff, #3d1450);
+    --en-secondary-subtle: light-dark(#fce7f3, #3d1450);
+    --en-success-subtle: light-dark(#dcfce7, #0a4a1a);
+    --en-warning-subtle: light-dark(#fef9c7, #4a4a12);
+    --en-danger-subtle: light-dark(#fee2e2, #4a0c0c);
+    --en-info-subtle: light-dark(#e0f2fe, #084147);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#282a36, #282a36);
+    --en-fg-secondary: light-dark(#282a36, #282a36);
+    --en-fg-success: light-dark(#282a36, #0a2e14);
+    --en-fg-warning: light-dark(#282a36, #3d3d12);
+    --en-fg-danger: light-dark(#1e1f29, #2e0a0a);
+    --en-fg-info: light-dark(#282a36, #083a3d);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#845abb, #fd98cf);
+    --en-text-brand-hover: light-dark(#7348a7, #feb9dd);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fcf4f8, #1e1f29);
+    /* Texture: Subtle gradient mesh */
+    --en-bg-texture: radial-gradient(at 0% 0%, color-mix(in oklab, var(--en-primary) 5%, transparent) 0px, transparent 50%),
+                     radial-gradient(at 100% 0%, color-mix(in oklab, var(--en-secondary) 5%, transparent) 0px, transparent 50%);
+    --en-bg-size: 100% 100%;
+    --en-bg-position: 0 0;
+    --en-bg-subtle: light-dark(#e2e2dc, #44475a);
+    --en-bg-surface: light-dark(#ffffff, #44475a);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f5f5f0, #5a5d70);
+    --en-bg-active: light-dark(#e8e8e0, #6f7388);
+
+    --en-text: light-dark(#282a36, #f8f8f2);
+    --en-text-muted: light-dark(#516191, #a5b7ed);
+
+    --en-border: light-dark(#bd93f9, #6272a4);
+    --en-border-control: light-dark(#7d7b84, #9a9b9c);
+    --en-border-subtle: light-dark(#d4b3ff, #505766);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#845abb, #ff79c6);
+    --en-disabled-bg: light-dark(#f5f5f5, #3a3c4a);
+    --en-disabled-text: light-dark(#9999aa, #6272a4);
+    --en-overlay: light-dark(rgba(40, 42, 54, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#44475a, #e2e2dc);
+    --en-bg-surface-inverse: light-dark(#44475a, #ffffff);
+
+    --en-text-inverse: light-dark(#f8f8f2, #282a36);
+    --en-text-muted-inverse: light-dark(#6272a4, #6272a4);
+
+    --en-border-inverse: light-dark(#6272a4, #bd93f9);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#ff79c6, #bd93f9);
+    --en-secondary-inverse: light-dark(#bd93f9, #ff79c6);
+    --en-success-inverse: light-dark(#50fa7b, #50fa7b);
+    --en-warning-inverse: light-dark(#f1fa8c, #f1fa8c);
+    --en-danger-inverse: light-dark(#ff5555, #ff5555);
+    --en-info-inverse: light-dark(#8be9fd, #8be9fd);
+
+    --en-fg-primary-inverse: light-dark(#282a36, #282a36);
+    --en-fg-secondary-inverse: light-dark(#282a36, #282a36);
+    --en-fg-success-inverse: light-dark(#0a2e14, #282a36);
+    --en-fg-warning-inverse: light-dark(#3d3d12, #282a36);
+    --en-fg-danger-inverse: light-dark(#2e0a0a, #1e1f29);
+    --en-fg-info-inverse: light-dark(#083a3d, #282a36);
+
+    /* ===== Shadows: Dramatic neon glow ===== */
+    --en-shadow-sm: 0 2px 8px light-dark(rgba(189, 147, 249, 0.2), rgba(255, 121, 198, 0.15));
+    --en-shadow-md: 0 4px 14px light-dark(rgba(189, 147, 249, 0.3), rgba(255, 121, 198, 0.2));
+    --en-shadow-lg: 0 8px 24px light-dark(rgba(189, 147, 249, 0.4), rgba(255, 121, 198, 0.3));
+
+    /* ===== Radius: Generous curves ===== */
+    --en-radius-lg: 1rem;
+    --en-radius-xl: 1.5rem;
+  }
+}
+
+@layer en-base {
+  [data-en-theme="dracula"] body,
+  .en-theme-dracula body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="dracula"] body,
+    .en-theme-dracula body {
+      background-image: none;
+    }
+  }
+}
+
+@layer en-components {
+  /* Glowing elements for Dracula */
+  [data-en-theme="dracula"] .en-card,
+  .en-theme-dracula .en-card {
+    border-inline-start: 4px solid var(--en-primary);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 0 10px light-dark(transparent, rgba(189, 147, 249, 0.1));
+  }
+
+  [data-en-theme="dracula"] .en-btn,
+  .en-theme-dracula .en-btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}

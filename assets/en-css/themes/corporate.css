@@ -1,0 +1,149 @@
+/*!
+ * EN-CSS Theme: Corporate/Professional
+ * Crisp, clean enterprise grid aesthetic
+ */
+
+@layer en-tokens {
+  [data-en-theme="corporate"],
+  .en-theme-corporate {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#1e40af, #3b82f6);
+    --en-secondary: light-dark(#475569, #94a3b8);
+    --en-success: light-dark(#0d9488, #14b8a6);
+    --en-warning: light-dark(#b45309, #f59e0b);
+    --en-danger: light-dark(#be123c, #f43f5e);
+    --en-info: light-dark(#0369a1, #0ea5e9);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#143093, #4f92fe);
+    --en-primary-active: light-dark(#0b2178, #6ba2fb);
+    --en-secondary-hover: light-dark(#384556, #a3b1c5);
+    --en-success-hover: light-dark(#37a195, #43c5b4);
+    --en-warning-hover: light-dark(#9b4501, #feb048);
+    --en-danger-hover: light-dark(#a30430, #ff596f);
+    --en-info-hover: light-dark(#045787, #3eb3f3);
+
+    --en-secondary-active: light-dark(#2a3544, #b2bfd2);
+    --en-success-active: light-dark(#51aea2, #61d2c1);
+    --en-warning-active: light-dark(#813904, #fec481);
+    --en-danger-active: light-dark(#860326, #fd7b86);
+    --en-info-active: light-dark(#02466e, #5bc1fd);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#dbeafe, #1e3a8a);
+    --en-secondary-subtle: light-dark(#f1f5f9, #1e293b);
+    --en-success-subtle: light-dark(#ccfbf1, #134e4a);
+    --en-warning-subtle: light-dark(#fef3c7, #422006);
+    --en-danger-subtle: light-dark(#ffe4e6, #500724);
+    --en-info-subtle: light-dark(#e0f2fe, #0c4a6e);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#ffffff, #0f172a);
+    --en-fg-secondary: light-dark(#ffffff, #0f172a);
+    --en-fg-success: light-dark(#0f172a, #0f172a);
+    --en-fg-warning: light-dark(#ffffff, #3d2500);
+    --en-fg-danger: light-dark(#ffffff, #0f172a);
+    --en-fg-info: light-dark(#ffffff, #0f172a);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#1e40af, #4f90fb);
+    --en-text-brand-hover: light-dark(#1e3a8a, #6fa5fd);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#f8f9fa, #0f172a);
+    --en-bg-subtle: light-dark(#f1f5f9, #152035);
+    --en-bg-surface: light-dark(#ffffff, #1e293b);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f8fafc, #1e293b);
+    --en-bg-active: light-dark(#f1f5f9, #334155);
+
+    --en-text: light-dark(#0f172a, #f1f5f9);
+    --en-text-muted: light-dark(#607086, #94a3b8);
+
+    --en-border: light-dark(#cbd5e1, #334155);
+    --en-border-control: light-dark(#848892, #707683);
+    --en-border-subtle: light-dark(#e2e8f0, #1e293b);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#1e40af, #3b82f6);
+    --en-disabled-bg: light-dark(#f8fafc, #1a2332);
+    --en-disabled-text: light-dark(#94a3b8, #64748b);
+    --en-overlay: light-dark(rgba(15, 23, 42, 0.4), rgba(0, 0, 0, 0.6));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#152035, #f1f5f9);
+    --en-bg-surface-inverse: light-dark(#1e293b, #ffffff);
+
+    --en-text-inverse: light-dark(#f1f5f9, #0f172a);
+    --en-text-muted-inverse: light-dark(#94a3b8, #64748b);
+
+    --en-border-inverse: light-dark(#334155, #cbd5e1);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#3b82f6, #1e40af);
+    --en-secondary-inverse: light-dark(#94a3b8, #475569);
+    --en-success-inverse: light-dark(#14b8a6, #0d9488);
+    --en-warning-inverse: light-dark(#f59e0b, #b45309);
+    --en-danger-inverse: light-dark(#f43f5e, #be123c);
+    --en-info-inverse: light-dark(#0ea5e9, #0369a1);
+
+    --en-fg-primary-inverse: light-dark(#0f172a, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#0f172a, #ffffff);
+    --en-fg-success-inverse: light-dark(#0f172a, #0f172a);
+    --en-fg-warning-inverse: light-dark(#3d2500, #ffffff);
+    --en-fg-danger-inverse: light-dark(#0f172a, #ffffff);
+    --en-fg-info-inverse: light-dark(#0f172a, #ffffff);
+
+    /* ===== Shadows: Subtle professional ===== */
+    --en-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --en-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --en-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+    /* ===== Radius: Minimal professional ===== */
+    --en-radius-sm: 0.25rem;
+    --en-radius-md: 0.375rem;
+    --en-radius-lg: 0.5rem;
+
+    /* ===== Texture: Precision grid pattern ===== */
+    --en-bg-size: 24px 24px;
+    --en-bg-position: 0 0;
+    --en-bg-texture: 
+      linear-gradient(to right, light-dark(rgba(203, 213, 225, 0.4), rgba(51, 65, 85, 0.3)) 1px, transparent 1px),
+      linear-gradient(to bottom, light-dark(rgba(203, 213, 225, 0.4), rgba(51, 65, 85, 0.3)) 1px, transparent 1px);
+  }
+}
+
+@layer en-base {
+  [data-en-theme="corporate"] body,
+  .en-theme-corporate body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="corporate"] body,
+    .en-theme-corporate body {
+      background-image: none;
+    }
+  }
+}
+
+@layer en-components {
+  /* Corporate top accent bar on cards */
+  [data-en-theme="corporate"] .en-card,
+  .en-theme-corporate .en-card {
+    border-top: 3px solid var(--en-primary);
+    box-shadow: var(--en-shadow-sm);
+  }
+
+  /* Table refinement */
+  [data-en-theme="corporate"] table,
+  .en-theme-corporate table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+}

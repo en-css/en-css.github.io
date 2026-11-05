@@ -1,0 +1,65 @@
+/*!
+ * EN-CSS Effects: Text — Interactive reveal (`effects-text-interactive.css`)
+ * Hover- and tap-driven text: blurred privacy, redacted spoilers and the sliding underline.
+ * Part of the text effects, which are split by group so you only load what you use.
+ * `effects-text.css` imports every group. Class names are unchanged.
+ */
+@layer en-utilities {
+  .en-fx-text-blur {
+    color: #0000;
+    text-shadow: 0 0 8px var(--en-text);
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .en-fx-text-blur:hover {
+    text-shadow: none;
+    color: var(--en-text);
+  }
+
+  .en-fx-text-redacted {
+    background-color: var(--en-text);
+    color: var(--en-text);
+    padding-inline: var(--en-space-1);
+    border-radius: var(--en-radius-sm);
+    transition: background-color var(--en-duration-base) ease, color var(--en-duration-base) ease;
+    cursor: pointer;
+  }
+
+  .en-fx-text-redacted:hover, .en-fx-text-redacted:active {
+    color: var(--en-text);
+    background-color: #0000;
+  }
+
+  .en-fx-text-underline-slide {
+    color: var(--en-text);
+    font-weight: var(--en-font-bold);
+    background-image: linear-gradient(var(--en-primary), var(--en-primary));
+    transition: background-size var(--en-duration-base) var(--en-ease-out);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    position: relative;
+  }
+
+  .en-fx-text-underline-slide:hover {
+    background-size: 100% 2px;
+  }
+
+  [dir="rtl"] .en-fx-text-underline-slide {
+    background-position: 100% 100%;
+  }
+
+  .en-fx-text-underline-slide[dir="rtl"] {
+    background-position: 100% 100%;
+  }
+
+  :is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) .en-fx-text-underline-slide {
+    background-position: 100% 100%;
+  }
+
+  .en-fx-text-underline-slide:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+    background-position: 100% 100%;
+  }
+}

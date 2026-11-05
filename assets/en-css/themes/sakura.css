@@ -1,0 +1,128 @@
+/*!
+ * EN-CSS Theme: Sakura (Spring / Haru)
+ * Light Mode: Soft Cherry Blossom & Spring Breeze
+ * Dark Mode: Yozakura (Midnight Sakura Festival)
+ */
+
+@layer en-tokens {
+  [data-en-theme="sakura"],
+  .en-theme-sakura {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#db2777, #f472b6); /* Rose Crimson vs Blossom Pink */
+    --en-secondary: light-dark(#65a30d, #a3e635); /* Fresh Leaf Green */
+    --en-success: light-dark(#15803d, #4ade80);
+    --en-warning: light-dark(#b45309, #fbbf24);
+    --en-danger: light-dark(#be123c, #fb7185);
+    --en-info: light-dark(#0284c7, #38bdf8);
+
+    --en-success-hover: light-dark(#096d31, #68eb93);
+    --en-warning-hover: light-dark(#9b4501, #ffd172);
+    --en-danger-hover: light-dark(#a30430, #fe8b98);
+    --en-info-hover: light-dark(#3192d1, #64cafd);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#be185d, #fd87c3);
+    --en-primary-active: light-dark(#9d174d, #ffa1ce);
+    --en-secondary-hover: light-dark(#76b036, #b4f45a);
+
+    --en-secondary-active: light-dark(#86bd51, #ccff8d);
+    --en-success-active: light-dark(#085928, #82f8a6);
+    --en-warning-active: light-dark(#813904, #fee4af);
+    --en-danger-active: light-dark(#860326, #fda4ad);
+    --en-info-active: light-dark(#4ba0db, #8ed6fd);
+
+    /* ===== Soft Accent Surfaces ===== */
+    --en-primary-subtle: light-dark(#fce7f3, #2d0a1d);
+    --en-secondary-subtle: light-dark(#ecfccb, #122003);
+    --en-success-subtle: light-dark(#dcfce7, #03270e);
+    --en-warning-subtle: light-dark(#fef3c7, #2f1700);
+    --en-danger-subtle: light-dark(#ffe4e6, #31040f);
+    --en-info-subtle: light-dark(#e0f2fe, #032136);
+
+    /* ===== Contextual Foregrounds ===== */
+    --en-fg-primary: light-dark(#ffffff, #1f0412);
+    --en-fg-secondary: light-dark(#12060f, #0d1700);
+    --en-fg-success: light-dark(#ffffff, #001f07);
+    --en-fg-warning: light-dark(#ffffff, #1a0c00);
+    --en-fg-danger: light-dark(#ffffff, #210008);
+    --en-fg-info: light-dark(#12060f, #001221);
+
+    /* ===== Contextual Text ===== */
+    --en-text-brand: light-dark(#be185d, #f472b6);
+    --en-text-brand-hover: light-dark(#9d174d, #f687b3);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fff5f8, #12060f); /* Soft Pink Cream vs Night Yozakura */
+    --en-bg-subtle: light-dark(#fbe8f0, #1e0b19);
+    --en-bg-surface: light-dark(#ffffff, #281023);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f7dbe7, #35162e);
+    --en-bg-active: light-dark(#f2cfdf, #431c3b);
+
+    --en-text: light-dark(#4c0519, #fce7f3);
+    --en-text-muted: light-dark(#831843, #f472b6);
+
+    --en-border: light-dark(#f472b6, #5b1a41);
+    --en-border-control: light-dark(#a27884, #74646f);
+    --en-border-subtle: light-dark(#fbcfe8, #42122f);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#db2777, #f472b6);
+    --en-disabled-bg: light-dark(#fbe8f0, #180814);
+    --en-disabled-text: light-dark(#9f7285, #683c50);
+    --en-overlay: light-dark(rgba(76, 5, 25, 0.4), rgba(18, 6, 15, 0.85));
+
+    /* Typography & Ornaments */
+    --en-font-sans: "Quicksand", "Hiragino Sans", system-ui, sans-serif;
+    --en-border-radius: var(--en-radius-lg);
+
+    /* Petal Scatter Pattern */
+    --en-bg-size: 60px 60px;
+
+    /* ===== Inverted Neutral Layout (light/dark values swapped) ===== */
+    --en-bg-inverse: light-dark(#12060f, #fff5f8);
+    --en-bg-subtle-inverse: light-dark(#1e0b19, #fbe8f0);
+    --en-bg-surface-inverse: light-dark(#281023, #ffffff);
+    --en-text-inverse: light-dark(#fce7f3, #4c0519);
+    --en-text-muted-inverse: light-dark(#f472b6, #831843);
+    --en-border-inverse: light-dark(#5b1a41, #f472b6);
+
+    /* Contextual Inverse Variants (light/dark values swapped) */
+    --en-primary-inverse: light-dark(#f472b6, #db2777);
+    --en-secondary-inverse: light-dark(#a3e635, #65a30d);
+    --en-success-inverse: light-dark(#4ade80, #15803d);
+    --en-warning-inverse: light-dark(#fbbf24, #b45309);
+    --en-danger-inverse: light-dark(#fb7185, #be123c);
+    --en-info-inverse: light-dark(#38bdf8, #0284c7);
+
+    --en-fg-primary-inverse: light-dark(#1f0412, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#0d1700, #12060f);
+    --en-fg-success-inverse: light-dark(#001f07, #ffffff);
+    --en-fg-warning-inverse: light-dark(#1a0c00, #ffffff);
+    --en-fg-danger-inverse: light-dark(#210008, #ffffff);
+    --en-fg-info-inverse: light-dark(#001221, #12060f);
+    --en-bg-texture: radial-gradient(
+      circle at 50% 50%,
+      light-dark(rgba(219, 39, 119, 0.06), rgba(244, 114, 182, 0.08)) 20%,
+      transparent 20%
+    );
+  }
+}
+
+@layer en-base {
+  [data-en-theme="sakura"] body,
+  .en-theme-sakura body {
+    background-color: var(--en-bg);
+    background-image: var(--en-bg-texture);
+    background-size: var(--en-bg-size);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="sakura"] body,
+    .en-theme-sakura body {
+      background-image: none;
+    }
+  }
+}

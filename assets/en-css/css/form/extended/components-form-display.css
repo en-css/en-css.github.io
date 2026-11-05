@@ -1,0 +1,76 @@
+@layer en-components {
+  .en-form-display {
+    align-items: center;
+    gap: var(--en-space-2);
+    width: 100%;
+    padding: var(--en-input-padding-y) var(--en-input-padding-x);
+    font-size: var(--en-text-base);
+    line-height: var(--en-leading-normal);
+    color: var(--en-text);
+    background: var(--en-bg-subtle);
+    border: var(--en-border-width) var(--en-border-style) var(--en-border);
+    border-radius: var(--en-border-radius, var(--en-radius-md));
+    min-height: 2.5rem;
+    display: inline-flex;
+  }
+
+  .en-form-display--sm {
+    padding: var(--en-input-padding-sm-y) var(--en-input-padding-sm-x);
+    font-size: var(--en-text-sm);
+    min-height: 2rem;
+  }
+
+  .en-form-display--lg {
+    padding: var(--en-input-padding-lg-y) var(--en-input-padding-lg-x);
+    font-size: var(--en-text-lg);
+    min-height: 3rem;
+  }
+
+  .en-form-display--ghost {
+    border: none;
+    border-block-end: var(--en-border-width) var(--en-border-style) var(--en-border);
+    background: none;
+    border-radius: 0;
+    padding-inline: 0;
+  }
+
+  .en-form-display--muted {
+    color: var(--en-text-muted);
+    opacity: .85;
+  }
+
+  .en-form-display--disabled {
+    background: var(--en-disabled-bg);
+    color: var(--en-disabled-text);
+    opacity: var(--en-opacity-disabled);
+    cursor: not-allowed;
+  }
+
+  .en-form-display--success {
+    border-color: var(--en-success);
+    background: color-mix(in oklab, var(--en-success) 8%, var(--en-bg-surface));
+  }
+
+  .en-form-display--warning {
+    border-color: var(--en-warning);
+    background: color-mix(in oklab, var(--en-warning) 8%, var(--en-bg-surface));
+  }
+
+  .en-form-display--danger {
+    border-color: var(--en-danger);
+    background: color-mix(in oklab, var(--en-danger) 8%, var(--en-bg-surface));
+  }
+
+  .en-form-display--info {
+    border-color: var(--en-info);
+    background: color-mix(in oklab, var(--en-info) 8%, var(--en-bg-surface));
+  }
+}
+
+@layer en-utilities {
+  @media (forced-colors: active) {
+    .en-form-display {
+      border-color: canvastext;
+    }
+  }
+}

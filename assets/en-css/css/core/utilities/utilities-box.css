@@ -1,0 +1,180 @@
+@layer en-utilities {
+  .en-border {
+    border: var(--en-border-width) var(--en-border-style) var(--en-border);
+  }
+
+  .en-border-0 {
+    border: 0;
+  }
+
+  .en-border-thick {
+    border: var(--en-border-width-thick) var(--en-border-style) var(--en-border);
+  }
+
+  .en-primary, .en-bg--primary {
+    background-color: var(--en-primary);
+    color: var(--en-fg-primary);
+  }
+
+  .en-secondary, .en-bg--secondary {
+    background-color: var(--en-secondary);
+    color: var(--en-fg-secondary);
+  }
+
+  .en-info, .en-bg--info {
+    background-color: var(--en-info);
+    color: var(--en-fg-info);
+  }
+
+  .en-success, .en-bg--success {
+    background-color: var(--en-success);
+    color: var(--en-fg-success);
+  }
+
+  .en-warning, .en-bg--warning {
+    background-color: var(--en-warning);
+    color: var(--en-fg-warning);
+  }
+
+  .en-danger, .en-bg--danger {
+    background-color: var(--en-danger);
+    color: var(--en-fg-danger);
+  }
+
+  .en-border--primary {
+    border-color: var(--en-primary);
+  }
+
+  .en-border--secondary {
+    border-color: var(--en-secondary);
+  }
+
+  .en-border--success {
+    border-color: var(--en-success);
+  }
+
+  .en-border--warning {
+    border-color: var(--en-warning);
+  }
+
+  .en-border--danger {
+    border-color: var(--en-danger);
+  }
+
+  .en-border--info {
+    border-color: var(--en-info);
+  }
+
+  .en-rounded-0 {
+    border-radius: var(--en-radius-0);
+  }
+
+  .en-rounded-sm {
+    border-radius: var(--en-radius-sm);
+  }
+
+  .en-rounded {
+    border-radius: var(--en-radius-md);
+  }
+
+  .en-rounded-lg {
+    border-radius: var(--en-radius-lg);
+  }
+
+  .en-rounded-full {
+    border-radius: var(--en-radius-full);
+  }
+
+  .en-relative {
+    position: relative;
+  }
+
+  .en-absolute {
+    position: absolute;
+  }
+
+  .en-fixed {
+    position: fixed;
+  }
+
+  .en-sticky {
+    position: sticky;
+    top: 0;
+  }
+
+  .en-overflow-hidden {
+    overflow: hidden;
+  }
+
+  .en-overflow-auto {
+    overflow: auto;
+  }
+
+  .en-inset-0 {
+    inset: 0;
+  }
+
+  .en-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .en-w-full {
+    width: 100%;
+  }
+
+  .en-h-full {
+    height: 100%;
+  }
+
+  .en-w-auto {
+    width: auto;
+  }
+
+  .en-h-auto {
+    height: auto;
+  }
+
+  .en-max-w-full {
+    max-width: 100%;
+  }
+
+  .en-max-h-full {
+    max-height: 100%;
+  }
+
+  .en-no-select {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .en-cursor-pointer {
+    cursor: pointer;
+  }
+
+  .en-cursor-default {
+    cursor: default;
+  }
+
+  .en-no-pointer-events {
+    pointer-events: none;
+  }
+
+  .en-overflow-clip-x {
+    overflow-x: clip;
+  }
+
+  .en-overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .en-full-absolute {
+    position: absolute;
+    inset: 0;
+  }
+
+  .en-full-fixed {
+    position: fixed;
+    inset: 0;
+  }
+}

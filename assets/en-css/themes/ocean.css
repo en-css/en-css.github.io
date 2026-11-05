@@ -1,0 +1,147 @@
+/*!
+ * EN-CSS Theme: Ocean/Marine
+ * Fresh, trustworthy theme inspired by the ocean
+ * Supports automatic light/dark mode via light-dark()
+ */
+
+@layer en-tokens {
+  [data-en-theme="ocean"],
+  .en-theme-ocean {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#4A90E2, #5DADE2);
+    --en-secondary: light-dark(#00BCD4, #26C6DA);
+    --en-success: light-dark(#078476, #26a69a);
+    --en-warning: light-dark(#FFB300, #FFC107);
+    --en-danger: light-dark(#D32F2F, #EF5350);
+    --en-info: light-dark(#0c8bd4, #29b6f6);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#5e9eec, #7ec4f5);
+    --en-primary-active: light-dark(#71adf5, #9cd5f8);
+    --en-secondary-hover: light-dark(#41c9e0, #4fd3e6);
+    --en-success-hover: light-dark(#0c7064, #47b3a7);
+    --en-warning-hover: light-dark(#ffc86e, #fed57d);
+    --en-danger-hover: light-dark(#b72525, #fa6862);
+    --en-info-hover: light-dark(#3699de, #54c4fd);
+
+    --en-secondary-active: light-dark(#61d7ec, #6de1f2);
+    --en-success-active: light-dark(#025d53, #60c0b5);
+    --en-warning-active: light-dark(#fedba5, #ffe7b5);
+    --en-danger-active: light-dark(#9b1a1c, #fe8179);
+    --en-info-active: light-dark(#50a7e8, #7fd0fe);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#dbeafe, #1e3a5f);
+    --en-secondary-subtle: light-dark(#cffafe, #04424a);
+    --en-success-subtle: light-dark(#ccfbf1, #033631);
+    --en-warning-subtle: light-dark(#fef3c7, #4a3900);
+    --en-danger-subtle: light-dark(#fee2e2, #4a0f0f);
+    --en-info-subtle: light-dark(#e0f2fe, #0a344a);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#001f29, #0a1929);
+    --en-fg-secondary: light-dark(#001f29, #001f24);
+    --en-fg-success: light-dark(#FFFFFF, #002621);
+    --en-fg-warning: light-dark(#000000, #3d2500);
+    --en-fg-danger: light-dark(#FFFFFF, #450a0a);
+    --en-fg-info: light-dark(#001f29, #001a24);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#316eb7, #5dade2);
+    --en-text-brand-hover: light-dark(#1e5ca4, #7ec4f5);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#e0f7fa, #001f29);
+    --en-bg-subtle: light-dark(#E0F2FE, #132F4C);
+    --en-bg-surface: light-dark(#FFFFFF, #1E3A5F);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f0f9ff, #1e293b);
+    --en-bg-active: light-dark(#dbeafe, #334155);
+
+    --en-text: light-dark(#0C4A6E, #E0F2FE);
+    --en-text-muted: light-dark(#0369A1, #7DD3FC);
+
+    --en-border: light-dark(#BAE6FD, #1E40AF);
+    --en-border-control: light-dark(#5a8aa2, #748d98);
+    --en-border-subtle: light-dark(#d1eafc, #173862);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#316eb7, #5dade2);
+    --en-disabled-bg: light-dark(#f1f5f9, #1a2d42);
+    --en-disabled-text: light-dark(#64748b, #5a7090);
+    --en-overlay: light-dark(rgba(12, 74, 110, 0.4), rgba(0, 0, 0, 0.6));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#132F4C, #E0F2FE);
+    --en-bg-surface-inverse: light-dark(#1E3A5F, #FFFFFF);
+
+    --en-text-inverse: light-dark(#E0F2FE, #0C4A6E);
+    --en-text-muted-inverse: light-dark(#7DD3FC, #0369A1);
+
+    --en-border-inverse: light-dark(#1E40AF, #BAE6FD);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#5DADE2, #4A90E2);
+    --en-secondary-inverse: light-dark(#26C6DA, #00BCD4);
+    --en-success-inverse: light-dark(#26a69a, #078476);
+    --en-warning-inverse: light-dark(#FFC107, #FFB300);
+    --en-danger-inverse: light-dark(#EF5350, #D32F2F);
+    --en-info-inverse: light-dark(#29b6f6, #0c8bd4);
+
+    --en-fg-primary-inverse: light-dark(#0a1929, #001f29);
+    --en-fg-secondary-inverse: light-dark(#001f24, #001f29);
+    --en-fg-success-inverse: light-dark(#002621, #FFFFFF);
+    --en-fg-warning-inverse: light-dark(#3d2500, #000000);
+    --en-fg-danger-inverse: light-dark(#450a0a, #FFFFFF);
+    --en-fg-info-inverse: light-dark(#001a24, #001f29);
+
+    /* ===== Typography ===== */
+    --en-font-sans: "Quicksand", system-ui, -apple-system, sans-serif;
+
+    /* ===== Texture: Sea bubbles ===== */
+    --en-bg-size: 60px 60px;
+    --en-bg-position: 0 0;
+    --en-bg-texture: 
+      radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--en-secondary) 15%, transparent) 2px, transparent 3px),
+      radial-gradient(circle at 70% 80%, color-mix(in oklab, var(--en-primary) 10%, transparent) 3px, transparent 4px);
+  }
+}
+
+@layer en-base {
+  [data-en-theme="ocean"] body,
+  .en-theme-ocean body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  [data-en-theme="ocean"] body::before,
+  .en-theme-ocean body::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='100' height='100' fill='none' stroke='currentColor' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Symbol: Alchemical Symbol for To Dissolve (U+1F75E) --%3E%3Cpath d='M 20,35 C 20,65 50,75 50,75 C 50,75 80,65 80,35' /%3E%3Cline x1='50' y1='25' x2='50' y2='75' /%3E%3Cline x1='32' y1='25' x2='68' y2='25' /%3E%3C/svg%3E%0A");
+    position: fixed;
+    bottom: -5vh;
+    inset-inline-end: 5vw;
+    font-size: 40vw;
+    color: color-mix(in oklab, var(--en-info) 4%, transparent);
+    z-index: -1;
+    pointer-events: none;
+    line-height: 1;
+    font-family: serif;
+    rotate: -10deg;
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="ocean"] body,
+    .en-theme-ocean body {
+      background-image: none;
+    }
+
+    [data-en-theme="ocean"] body::before,
+    .en-theme-ocean body::before {
+      display: none;
+    }
+  }
+}

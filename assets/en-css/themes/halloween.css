@@ -1,0 +1,158 @@
+/*!
+ * EN-CSS Theme: Halloween / Pumpkin
+ * Deep purples, dark greys, and vibrant pumpkin orange.
+ */
+
+@layer en-tokens {
+  [data-en-theme="halloween"],
+  .en-theme-halloween {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#f77f00, #ff9e3b);
+    --en-secondary: light-dark(#6a0dad, #9c4dcc);
+    --en-success: light-dark(#55a630, #80b918);
+    --en-warning: light-dark(#fcbf49, #ffd166);
+    --en-danger: light-dark(#d00000, #e63946);
+    --en-info: light-dark(#457b9d, #a8dadc);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#fc9447, #ffb85d);
+    --en-primary-active: light-dark(#feab72, #ffd07f);
+    --en-secondary-hover: light-dark(#56058e, #8740b1);
+    --en-success-hover: light-dark(#68b349, #90c740);
+    --en-warning-hover: light-dark(#fed285, #fee3a9);
+    --en-danger-hover: light-dark(#b00704, #f15258);
+    --en-info-hover: light-dark(#396987, #b9e8ea);
+
+    --en-secondary-active: light-dark(#42046e, #723497);
+    --en-success-active: light-dark(#7ac05f, #a1d45c);
+    --en-warning-active: light-dark(#fee4b8, #fff4de);
+    --en-danger-active: light-dark(#920804, #fb686a);
+    --en-info-active: light-dark(#2d5772, #cbf6f8);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#fff7ed, #4a2700);
+    --en-secondary-subtle: light-dark(#f3e8ff, #2a0445);
+    --en-success-subtle: light-dark(#f0fdf4, #214012);
+    --en-warning-subtle: light-dark(#fef9c3, #4a3c18);
+    --en-danger-subtle: light-dark(#fee2e2, #4a0000);
+    --en-info-subtle: light-dark(#e0f2fe, #1a2e3d);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#140700, #121212);
+    --en-fg-secondary: light-dark(#ffffff, #ffffff);
+    --en-fg-success: light-dark(#140700, #0a2000);
+    --en-fg-warning: light-dark(#000000, #3d2500);
+    --en-fg-danger: light-dark(#ffffff, #1a0000);
+    --en-fg-info: light-dark(#ffffff, #0a1a1f);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#ab5706, #ff9e3b);
+    --en-text-brand-hover: light-dark(#924a06, #ffb85d);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fff3ed, #140700);
+    /* Texture: Subtle gradient mesh */
+    --en-bg-texture: radial-gradient(at 0% 0%, color-mix(in oklab, var(--en-primary) 5%, transparent) 0px, transparent 50%),
+                     radial-gradient(at 100% 0%, color-mix(in oklab, var(--en-secondary) 5%, transparent) 0px, transparent 50%);
+    --en-bg-size: 100% 100%;
+    --en-bg-position: 0 0;
+    --en-bg-subtle: light-dark(#eaeaea, #1e1e1e);
+    --en-bg-surface: light-dark(#ffffff, #2c2c2c);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f5f5f5, #3a3a3a);
+    --en-bg-active: light-dark(#eaeaea, #4a4a4a);
+
+    --en-text: light-dark(#212529, #f8f9fa);
+    --en-text-muted: light-dark(#495057, #ced4da);
+
+    --en-border: light-dark(#343a40, #555555);
+    --en-border-control: light-dark(#83807f, #7f7976);
+    --en-border-subtle: light-dark(#495057, #3a3a3a);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#ab5706, #ff9e3b);
+    --en-disabled-bg: light-dark(#e9ecef, #2a2a2a);
+    --en-disabled-text: light-dark(#6c757d, #6c6c6c);
+    --en-overlay: light-dark(rgba(33, 37, 41, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#1e1e1e, #eaeaea);
+    --en-bg-surface-inverse: light-dark(#2c2c2c, #ffffff);
+
+    --en-text-inverse: light-dark(#f8f9fa, #212529);
+    --en-text-muted-inverse: light-dark(#ced4da, #495057);
+
+    --en-border-inverse: light-dark(#555555, #343a40);
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#ff9e3b, #f77f00);
+    --en-secondary-inverse: light-dark(#9c4dcc, #6a0dad);
+    --en-success-inverse: light-dark(#80b918, #55a630);
+    --en-warning-inverse: light-dark(#ffd166, #fcbf49);
+    --en-danger-inverse: light-dark(#e63946, #d00000);
+    --en-info-inverse: light-dark(#a8dadc, #457b9d);
+
+    --en-fg-primary-inverse: light-dark(#121212, #140700);
+    --en-fg-secondary-inverse: light-dark(#ffffff, #ffffff);
+    --en-fg-success-inverse: light-dark(#0a2000, #140700);
+    --en-fg-warning-inverse: light-dark(#3d2500, #000000);
+    --en-fg-danger-inverse: light-dark(#1a0000, #ffffff);
+    --en-fg-info-inverse: light-dark(#0a1a1f, #ffffff);
+
+    /* Ornaments - Sharp and jagged */
+    --en-radius-sm: 0px;
+    --en-radius-md: 0px;
+    --en-radius-lg: 0px;
+    --en-radius-xl: 0px;
+    --en-border-width: 3px;
+    --en-border-style: solid;
+    --en-shadow-sm: 4px 4px 0px light-dark(#212529, #000000);
+    --en-shadow-md: 8px 8px 0px light-dark(#212529, #000000);
+    --en-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --en-font-sans: "Creepster", "Oswald", system-ui, sans-serif;
+  }
+}
+
+@layer en-base {
+  [data-en-theme="halloween"] body,
+  .en-theme-halloween body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    [data-en-theme="halloween"] body,
+    .en-theme-halloween body {
+      background-image: none;
+    }
+  }
+}
+
+@layer en-components {
+  /* Sharp stark elements */
+  [data-en-theme="halloween"] .en-btn,
+  .en-theme-halloween .en-btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 3px solid var(--en-border);
+    box-shadow: var(--en-shadow-sm);
+  }
+
+  [data-en-theme="halloween"] .en-btn:active,
+  .en-theme-halloween .en-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px transparent;
+  }
+
+  [data-en-theme="halloween"] .en-card,
+  .en-theme-halloween .en-card {
+    border-radius: 0;
+    border: 3px solid var(--en-primary);
+    box-shadow: var(--en-shadow-md);
+  }
+}

@@ -1,0 +1,1 @@
+@layer en-utilities{.en-fullscreen{z-index:var(--en-fullscreen-z,var(--en-z-modal));box-sizing:border-box;overscroll-behavior:contain;background:var(--en-bg);block-size:100dvh;max-block-size:none;max-inline-size:none;color:var(--en-text);position:fixed;inset:0;overflow:auto;margin:0!important}.en-fullscreen::backdrop{background:var(--en-bg)}}

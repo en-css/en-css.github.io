@@ -1,0 +1,1 @@
+@layer en-components{.en-ratio{position:relative;overflow:hidden}.en-ratio>img,.en-ratio>video,.en-ratio>iframe{object-fit:cover;width:100%;height:100%}.en-ratio--square{aspect-ratio:var(--en-aspect-square)}.en-ratio--video{aspect-ratio:var(--en-aspect-video)}.en-ratio--portrait{aspect-ratio:var(--en-aspect-portrait)}}

@@ -1,0 +1,211 @@
+/*!
+ * Theme: Cyberpunk (Neon / HUD)
+ * Light Mode: Emboss / Neumorphism
+ * Dark Mode: Cyberpunk HUD with scanlines & neon glow
+ */
+
+@layer en-tokens {
+  [data-en-theme="cyberpunk"],
+  .en-theme-cyberpunk {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#cd15cc, #00f0ff);
+    --en-secondary: light-dark(#8a2be2, #ff00ff);
+    --en-success: light-dark(#008f11, #39ff14);
+    --en-warning: light-dark(#ff8c00, #ffb300);
+    --en-danger: light-dark(#d90000, #ff003c);
+    --en-info: light-dark(#005bb5, #00e5ff);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#b30cb2, #1affff);
+    --en-primary-active: light-dark(#990398, #4dffff);
+    --en-secondary-hover: light-dark(#761fc3, #fe60fb);
+    --en-success-hover: light-dark(#2f9c31, #a2fe96);
+    --en-warning-hover: light-dark(#fda55d, #ffc86e);
+    --en-danger-hover: light-dark(#b90a06, #fe505a);
+    --en-info-hover: light-dark(#004b97, #82edff);
+
+    --en-secondary-active: light-dark(#6213a5, #fe86fb);
+    --en-success-active: light-dark(#49a848, #d9ffd3);
+    --en-warning-active: light-dark(#feba86, #fedba5);
+    --en-danger-active: light-dark(#9a0c07, #ff7273);
+    --en-info-active: light-dark(#043c78, #bdf5fe);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#fae8ff, #00363d);
+    --en-secondary-subtle: light-dark(#f3e8ff, #470050);
+    --en-success-subtle: light-dark(#dcfce7, #003a06);
+    --en-warning-subtle: light-dark(#fef3c7, #4a2f00);
+    --en-danger-subtle: light-dark(#fee2e2, #4a0000);
+    --en-info-subtle: light-dark(#dbeafe, #001f24);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#ffffff, #001f24);
+    --en-fg-secondary: light-dark(#ffffff, #1a0020);
+    --en-fg-success: light-dark(#090014, #002e05);
+    --en-fg-warning: light-dark(#000000, #3d2500);
+    --en-fg-danger: light-dark(#ffffff, #1f0005);
+    --en-fg-info: light-dark(#ffffff, #001f24);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#b305b3, #00f0ff);
+    --en-text-brand-hover: light-dark(#980598, #1affff);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#fdf0ff, #090014);
+    --en-bg-subtle: light-dark(#d4d4d8, #0a0a16);
+    --en-bg-surface: light-dark(#e4e4e7, #0f0f22);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f4f4f5, #14141f);
+    --en-bg-active: light-dark(#e4e4e7, #1a1a2a);
+
+    --en-text: light-dark(#18181b, #00f0ff);
+    --en-text-muted: light-dark(#52525b, #ff77ff);
+
+    --en-border: light-dark(rgba(161, 161, 170, 0.25), #ff007f);
+    --en-border-control: light-dark(#767178, #056e80);
+    --en-border-subtle: light-dark(rgba(161, 161, 170, 0.15), #cc0066);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#d100d1, #00f0ff);
+    --en-disabled-bg: light-dark(#f4f4f5, #0d0d18);
+    --en-disabled-text: light-dark(#a1a1aa, #3d3d52);
+    --en-overlay: light-dark(rgba(24, 24, 27, 0.4), rgba(0, 0, 0, 0.7));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#0a0a16, #d4d4d8);
+    --en-bg-surface-inverse: light-dark(#0f0f22, #e4e4e7);
+
+    --en-text-inverse: light-dark(#00f0ff, #18181b);
+    --en-text-muted-inverse: light-dark(#ff77ff, #52525b);
+
+    --en-border-inverse: light-dark(#ff007f, rgba(161, 161, 170, 0.25));
+
+    /* Contextual Inverse Variants */
+    --en-primary-inverse: light-dark(#00f0ff, #cd15cc);
+    --en-secondary-inverse: light-dark(#ff00ff, #8a2be2);
+    --en-success-inverse: light-dark(#39ff14, #008f11);
+    --en-warning-inverse: light-dark(#ffb300, #ff8c00);
+    --en-danger-inverse: light-dark(#ff003c, #d90000);
+    --en-info-inverse: light-dark(#00e5ff, #005bb5);
+
+    --en-fg-primary-inverse: light-dark(#001f24, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#1a0020, #ffffff);
+    --en-fg-success-inverse: light-dark(#002e05, #090014);
+    --en-fg-warning-inverse: light-dark(#3d2500, #000000);
+    --en-fg-danger-inverse: light-dark(#1f0005, #ffffff);
+    --en-fg-info-inverse: light-dark(#001f24, #ffffff);
+
+    /* ===== Shadows: Emboss (light) / Neon glow (dark) ===== */
+    --en-shadow-sm: 
+      3px 3px 6px light-dark(rgba(0, 0, 0, 0.1), transparent),
+      -3px -3px 6px light-dark(rgba(255, 255, 255, 0.6), transparent),
+      0 0 8px light-dark(transparent, rgba(0, 240, 255, 0.3)),
+      inset 0 0 10px light-dark(transparent, rgba(0, 240, 255, 0.1));
+    
+    --en-shadow-md: 
+      6px 6px 12px light-dark(rgba(0, 0, 0, 0.15), transparent),
+      -6px -6px 12px light-dark(rgba(255, 255, 255, 0.8), transparent),
+      0 0 10px light-dark(transparent, rgba(0, 240, 255, 0.4)),
+      inset 0 0 15px light-dark(transparent, rgba(0, 240, 255, 0.15));
+    
+    --en-shadow-lg: 
+      10px 10px 20px light-dark(rgba(0, 0, 0, 0.2), transparent),
+      -10px -10px 20px light-dark(rgba(255, 255, 255, 0.9), transparent),
+      0 0 15px light-dark(transparent, rgba(0, 240, 255, 0.5)),
+      inset 0 0 20px light-dark(transparent, rgba(0, 240, 255, 0.2));
+
+    /* ===== Texture: CRT Scanlines (dark mode only) ===== */
+    --en-bg-size: 100% 4px;
+    --en-bg-position: 0 0;
+    --en-bg-texture: linear-gradient(
+      light-dark(transparent, rgba(18, 16, 16, 0)) 50%, 
+      light-dark(transparent, rgba(0, 0, 0, 0.4)) 50%
+    );
+  }
+}
+
+@layer en-base {
+  [data-en-theme="cyberpunk"] body,
+  .en-theme-cyberpunk body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+
+  /* Tech glow / emboss effect on headings */
+  [data-en-theme="cyberpunk"] h1,
+  [data-en-theme="cyberpunk"] h2,
+  .en-theme-cyberpunk h1,
+  .en-theme-cyberpunk h2 {
+    text-shadow: 
+      1px 1px 0px light-dark(rgba(255, 255, 255, 0.7), transparent),
+      -1px -1px 1px light-dark(rgba(0, 0, 0, 0.15), transparent),
+      0 0 8px light-dark(transparent, rgba(0, 240, 255, 0.8));
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Decorative layers are not rendered under Windows High Contrast */
+  @media (forced-colors: active) {
+    /* The HUD label is invisible in light mode only; do not let it show up when colors are forced */
+    [data-en-theme="cyberpunk"] .en-card::before,
+    .en-theme-cyberpunk .en-card::before {
+      display: none;
+    }
+
+    [data-en-theme="cyberpunk"] body,
+    .en-theme-cyberpunk body {
+      background-image: none;
+    }
+  }
+}
+
+@layer en-components {
+  /* Base card/btn settings */
+  [data-en-theme="cyberpunk"] .en-card,
+  .en-theme-cyberpunk .en-card,
+  [data-en-theme="cyberpunk"] .en-btn,
+  .en-theme-cyberpunk .en-btn {
+    border: 1px solid var(--en-border);
+    box-shadow: var(--en-shadow-md);
+    transition: all 0.3s ease;
+  }
+
+  /* Cyber corner accent bracket - hidden in light mode */
+  [data-en-theme="cyberpunk"] .en-card::before,
+  .en-theme-cyberpunk .en-card::before {
+    content: "// HUD_SYS_v2.0";
+    position: absolute;
+    top: 4px;
+    inset-inline-end: 8px;
+    font-family: var(--en-font-mono);
+    font-size: 0.65rem;
+    color: light-dark(transparent, var(--en-secondary));
+    opacity: 0.7;
+    pointer-events: none;
+  }
+}
+
+/* 
+  Isolate structural Dark Mode features (like clip-path and sharp corners) 
+  using media queries and data attributes, since light-dark() only works for colors.
+*/
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"])[data-en-theme="cyberpunk"] .en-card,
+  :root:not([data-theme="light"]) .en-theme-cyberpunk .en-card,
+  :root:not([data-theme="light"])[data-en-theme="cyberpunk"] .en-btn,
+  :root:not([data-theme="light"]) .en-theme-cyberpunk .en-btn {
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+}
+
+:root[data-theme="dark"][data-en-theme="cyberpunk"] .en-card,
+:root[data-theme="dark"] .en-theme-cyberpunk .en-card,
+:root[data-theme="dark"][data-en-theme="cyberpunk"] .en-btn,
+:root[data-theme="dark"] .en-theme-cyberpunk .en-btn {
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}

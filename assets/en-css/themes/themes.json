@@ -1,0 +1,1142 @@
+[
+  {
+    "file": "coffee.css",
+    "name": "Coffee/Mocha",
+    "description": "Warm, inviting theme inspired by coffee culture",
+    "category": "brown",
+    "colors": {
+      "light": [
+        "#8B4513",
+        "#FFFFFF",
+        "#A0522D",
+        "#FDF8F5",
+        "#F4ECE1",
+        "#FFFDFA",
+        "#2C1D11",
+        "#7C6354",
+        "#E2D2C1"
+      ],
+      "dark": [
+        "#D2691E",
+        "#231709",
+        "#CD853F",
+        "#231709",
+        "#241A15",
+        "#2D201A",
+        "#F5DEB3",
+        "#C5A880",
+        "#4A3528"
+      ]
+    }
+  },
+  {
+    "file": "earthy.css",
+    "name": "Earthy/Nature",
+    "description": "Organic, natural theme inspired by earth and nature",
+    "category": "brown",
+    "colors": {
+      "light": [
+        "#897254",
+        "#FFFFFF",
+        "#6B8E23",
+        "#F6F7F4",
+        "#EEE8AA",
+        "#FFFAF0",
+        "#2C2416",
+        "#6B5D4F",
+        "#D2B48C"
+      ],
+      "dark": [
+        "#CD853F",
+        "#2C2416",
+        "#9ACD32",
+        "#141C12",
+        "#2C2416",
+        "#3A3226",
+        "#E8DCC8",
+        "#C4B5A0",
+        "#5D4E3A"
+      ]
+    }
+  },
+  {
+    "file": "desert.css",
+    "name": "Desert/Sand",
+    "description": "Warm desert theme with sandy and terracotta tones",
+    "category": "brown",
+    "colors": {
+      "light": [
+        "#C19A6B",
+        "#2B1C10",
+        "#D46B20",
+        "#FFF7ED",
+        "#FFE4C4",
+        "#FFFAF0",
+        "#3E2723",
+        "#7B6346",
+        "#DEB887"
+      ],
+      "dark": [
+        "#E97451",
+        "#2A1810",
+        "#F4A460",
+        "#2B1C10",
+        "#2A1F18",
+        "#3A2820",
+        "#F5DEB3",
+        "#D2B48C",
+        "#5D4037"
+      ]
+    }
+  },
+  {
+    "file": "ocean.css",
+    "name": "Ocean/Marine",
+    "description": "Fresh, trustworthy theme inspired by the ocean",
+    "category": "blue",
+    "colors": {
+      "light": [
+        "#4A90E2",
+        "#001F29",
+        "#00BCD4",
+        "#E0F7FA",
+        "#E0F2FE",
+        "#FFFFFF",
+        "#0C4A6E",
+        "#0369A1",
+        "#BAE6FD"
+      ],
+      "dark": [
+        "#5DADE2",
+        "#0A1929",
+        "#26C6DA",
+        "#001F29",
+        "#132F4C",
+        "#1E3A5F",
+        "#E0F2FE",
+        "#7DD3FC",
+        "#1E40AF"
+      ]
+    }
+  },
+  {
+    "file": "arctic.css",
+    "name": "Arctic/Ice",
+    "description": "Clean, modern theme inspired by arctic ice",
+    "category": "blue",
+    "colors": {
+      "light": [
+        "#148ACE",
+        "#041C2C",
+        "#0891B2",
+        "#F0F9FF",
+        "#E0F2FE",
+        "#FDFEFF",
+        "#0C4A6E",
+        "#0369A1",
+        "#C5EAFD"
+      ],
+      "dark": [
+        "#38BDF8",
+        "#0F172A",
+        "#22D3EE",
+        "#041C2C",
+        "#0F172A",
+        "#0C182B",
+        "#F0F9FF",
+        "#7DD3FC",
+        "#11445F"
+      ]
+    }
+  },
+  {
+    "file": "midnight.css",
+    "name": "Midnight/Cosmic",
+    "description": "Deep, mysterious theme inspired by night sky",
+    "category": "blue",
+    "colors": {
+      "light": [
+        "#1E3A8A",
+        "#FFFFFF",
+        "#6264EF",
+        "#F0F4F8",
+        "#E0E7FF",
+        "#FFFFFF",
+        "#1E293B",
+        "#475569",
+        "#C7D2FE"
+      ],
+      "dark": [
+        "#60A5FA",
+        "#0A0E1A",
+        "#818CF8",
+        "#050B14",
+        "#1A1F3A",
+        "#1E2A4A",
+        "#E0E7FF",
+        "#94A3B8",
+        "#3730A3"
+      ]
+    }
+  },
+  {
+    "file": "corporate.css",
+    "name": "Corporate/Professional",
+    "description": "Professional, trustworthy theme for business applications",
+    "category": "blue",
+    "colors": {
+      "light": [
+        "#1E40AF",
+        "#FFFFFF",
+        "#475569",
+        "#F8F9FA",
+        "#F1F5F9",
+        "#FFFFFF",
+        "#0F172A",
+        "#607086",
+        "#CBD5E1"
+      ],
+      "dark": [
+        "#3B82F6",
+        "#0F172A",
+        "#94A3B8",
+        "#0F172A",
+        "#152035",
+        "#1E293B",
+        "#F1F5F9",
+        "#94A3B8",
+        "#334155"
+      ]
+    }
+  },
+  {
+    "file": "sunset.css",
+    "name": "Sunset/Dusk",
+    "description": "Warm, vibrant theme inspired by sunset colors",
+    "category": "orange",
+    "colors": {
+      "light": [
+        "#F97316",
+        "#1C0F08",
+        "#D92576",
+        "#FFFCF5",
+        "#FFFBF7",
+        "#FFFCF5",
+        "#1C1917",
+        "#6F6862",
+        "#D6D3D1"
+      ],
+      "dark": [
+        "#FB923C",
+        "#1C0F08",
+        "#F472B6",
+        "#1C0F08",
+        "#2D1810",
+        "#3E2419",
+        "#E8D4BB",
+        "#C9A882",
+        "#78542D"
+      ]
+    }
+  },
+  {
+    "file": "ruby.css",
+    "name": "Ruby/Jewel",
+    "description": "Elegant, luxurious theme inspired by ruby gemstone",
+    "category": "red",
+    "colors": {
+      "light": [
+        "#DC2626",
+        "#FFFFFF",
+        "#9F1239",
+        "#FDF2F8",
+        "#FFE4E6",
+        "#FFFFFF",
+        "#450A0A",
+        "#7F1D1D",
+        "#FECACA"
+      ],
+      "dark": [
+        "#F87171",
+        "#1A0A0A",
+        "#FB7185",
+        "#2E0007",
+        "#2A1414",
+        "#3A1E1E",
+        "#FECACA",
+        "#FCA5A5",
+        "#7F1D1D"
+      ]
+    }
+  },
+  {
+    "file": "horror.css",
+    "name": "Horror",
+    "description": "Gothic gloom: cold fog by day, blood and shadow by night",
+    "category": "red",
+    "colors": {
+      "light": [
+        "#4A607A",
+        "#FFFFFF",
+        "#5C6B73",
+        "#C0C7D1",
+        "#B0B9C5",
+        "#D3D9E2",
+        "#1C232B",
+        "#3F4854",
+        "#8D98A6"
+      ],
+      "dark": [
+        "#8B0000",
+        "#F0E6E6",
+        "#4A0E4E",
+        "#070304",
+        "#12080A",
+        "#1A0B0E",
+        "#E6D7D7",
+        "#9C8080",
+        "#52141A"
+      ]
+    }
+  },
+  {
+    "file": "momiji.css",
+    "name": "Momiji / Autumn",
+    "description": "Japanese autumn in maple gold and sunset crimson",
+    "category": "red",
+    "colors": {
+      "light": [
+        "#C2410C",
+        "#FFFFFF",
+        "#9F1239",
+        "#FDFBF7",
+        "#F7F0E6",
+        "#FFFFFF",
+        "#451A03",
+        "#78350F",
+        "#FED7AA"
+      ],
+      "dark": [
+        "#FB923C",
+        "#1C0700",
+        "#F43F5E",
+        "#120905",
+        "#1C0E08",
+        "#26140B",
+        "#FFEDD5",
+        "#FDBA74",
+        "#59250B"
+      ]
+    }
+  },
+  {
+    "file": "sakura.css",
+    "name": "Sakura / Spring",
+    "description": "Soft cherry blossom pinks and a spring breeze",
+    "category": "red",
+    "colors": {
+      "light": [
+        "#DB2777",
+        "#FFFFFF",
+        "#65A30D",
+        "#FFF5F8",
+        "#FBE8F0",
+        "#FFFFFF",
+        "#4C0519",
+        "#831843",
+        "#F472B6"
+      ],
+      "dark": [
+        "#F472B6",
+        "#1F0412",
+        "#A3E635",
+        "#12060F",
+        "#1E0B19",
+        "#281023",
+        "#FCE7F3",
+        "#F472B6",
+        "#5B1A41"
+      ]
+    }
+  },
+  {
+    "file": "brutal.css",
+    "name": "Brutal",
+    "description": "Bold, neobrutalist design with high contrast",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#B11409",
+        "#FFFFFF",
+        "#3A86FF",
+        "#FDFDFD",
+        "#E2E2D8",
+        "#FFFFFF",
+        "#000000",
+        "#333333",
+        "#000000"
+      ],
+      "dark": [
+        "#FACC15",
+        "#000000",
+        "#4CC9F0",
+        "#111111",
+        "#1A1A1A",
+        "#1E1E1E",
+        "#FFFFFF",
+        "#CCCCCC",
+        "#FFFFFF"
+      ]
+    }
+  },
+  {
+    "file": "nature.css",
+    "name": "Nature",
+    "description": "Green, natural tones inspired by forests and plants",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#4F7942",
+        "#F0FDF4",
+        "#6FA8DC",
+        "#F4FCF6",
+        "#EEEADD",
+        "#FFFFFF",
+        "#3E2723",
+        "#7F6156",
+        "#D7CCC8"
+      ],
+      "dark": [
+        "#81C784",
+        "#0B1A13",
+        "#81D4FA",
+        "#0A1F10",
+        "#1C2D22",
+        "#203328",
+        "#F1F8E9",
+        "#A5D6A7",
+        "#2E4736"
+      ]
+    }
+  },
+  {
+    "file": "nord.css",
+    "name": "Nord",
+    "description": "Arctic, frosted palette with muted colors",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#5578A3",
+        "#FFFFFF",
+        "#81A1C1",
+        "#ECEFF4",
+        "#E5E9F0",
+        "#FFFFFF",
+        "#2E3440",
+        "#4C566A",
+        "#D8DEE9"
+      ],
+      "dark": [
+        "#88C0D0",
+        "#2E3440",
+        "#8FBCBB",
+        "#2E3440",
+        "#3B4252",
+        "#434C5E",
+        "#ECEFF4",
+        "#D8DEE9",
+        "#4C566A"
+      ]
+    }
+  },
+  {
+    "file": "pastel.css",
+    "name": "Pastel",
+    "description": "Soft, gentle colors with a dreamy feel",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#FFB3BA",
+        "#4A4A4A",
+        "#BAE1FF",
+        "#FFF8F8",
+        "#F4EFE6",
+        "#FFFFFF",
+        "#4A4A4A",
+        "#6B6B6B",
+        "#4A4A4A"
+      ],
+      "dark": [
+        "#FF8CA6",
+        "#241B24",
+        "#82C9FF",
+        "#241B24",
+        "#363231",
+        "#332F2D",
+        "#F4EFE6",
+        "#A09C99",
+        "#F4EFE6"
+      ]
+    }
+  },
+  {
+    "file": "retro.css",
+    "name": "Retro",
+    "description": "Vintage, nostalgic feel with warm colors",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#D81159",
+        "#FFFFFF",
+        "#00A8CC",
+        "#FFF9E6",
+        "#EEE8D5",
+        "#FFFFFF",
+        "#2D2D2D",
+        "#59696B",
+        "#2D2D2D"
+      ],
+      "dark": [
+        "#F91880",
+        "#000000",
+        "#00F0FF",
+        "#261C0B",
+        "#131316",
+        "#1C1C21",
+        "#E0E0FF",
+        "#A599CE",
+        "#F91880"
+      ]
+    }
+  },
+  {
+    "file": "cyberpunk.css",
+    "name": "Cyberpunk",
+    "description": "Neon futuristic dark mode with embossed light mode",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#CD15CC",
+        "#FFFFFF",
+        "#8A2BE2",
+        "#FDF0FF",
+        "#D4D4D8",
+        "#E4E4E7",
+        "#18181B",
+        "#52525B",
+        "#E6DCEA"
+      ],
+      "dark": [
+        "#00F0FF",
+        "#001F24",
+        "#FF00FF",
+        "#090014",
+        "#0A0A16",
+        "#0F0F22",
+        "#00F0FF",
+        "#FF77FF",
+        "#FF007F"
+      ]
+    }
+  },
+  {
+    "file": "solarized.css",
+    "name": "Solarized",
+    "description": "Classic low-eyestrain developer theme with distinct warm/cool tones",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#3294DC",
+        "#002B36",
+        "#2AA198",
+        "#FDF6E3",
+        "#EEE8D5",
+        "#EEE8D5",
+        "#073642",
+        "#546A71",
+        "#93A1A1"
+      ],
+      "dark": [
+        "#2AA198",
+        "#002B36",
+        "#3294DC",
+        "#002B36",
+        "#073642",
+        "#073642",
+        "#93A1A1",
+        "#93A1A1",
+        "#586E75"
+      ]
+    }
+  },
+  {
+    "file": "dracula.css",
+    "name": "Dracula",
+    "description": "Dark, vampiric theme with vibrant neon purple & pink accents",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#BD93F9",
+        "#282A36",
+        "#FF79C6",
+        "#FCF4F8",
+        "#E2E2DC",
+        "#FFFFFF",
+        "#282A36",
+        "#516191",
+        "#BD93F9"
+      ],
+      "dark": [
+        "#FF79C6",
+        "#282A36",
+        "#BD93F9",
+        "#1E1F29",
+        "#44475A",
+        "#44475A",
+        "#F8F8F2",
+        "#A5B7ED",
+        "#6272A4"
+      ]
+    }
+  },
+  {
+    "file": "synthwave.css",
+    "name": "Synthwave",
+    "description": "High energy retrowave aesthetics with neon lines",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#FF007F",
+        "#1A052E",
+        "#7000FF",
+        "#FDF0FF",
+        "#FFE4F0",
+        "#FFFCFF",
+        "#4A004A",
+        "#8A4A8A",
+        "#FFB3D9"
+      ],
+      "dark": [
+        "#00F0FF",
+        "#0D0221",
+        "#FF007F",
+        "#1A052E",
+        "#17101F",
+        "#22172F",
+        "#E0D8F0",
+        "#9E8FB8",
+        "#4F3B6D"
+      ]
+    }
+  },
+  {
+    "file": "e-ink.css",
+    "name": "E-Ink",
+    "description": "Super flat, low-contrast, monochromatic theme mimicking e-paper",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#333333",
+        "#F4F4F0",
+        "#666666",
+        "#F4F4F4",
+        "#EBEBE6",
+        "#FFFFFF",
+        "#222222",
+        "#676767",
+        "#CCCCCC"
+      ],
+      "dark": [
+        "#E5E5E5",
+        "#222222",
+        "#B3B3B3",
+        "#121212",
+        "#2A2A2A",
+        "#333333",
+        "#F4F4F0",
+        "#9C9C9C",
+        "#555555"
+      ]
+    }
+  },
+  {
+    "file": "matcha.css",
+    "name": "Matcha",
+    "description": "Calm, organic greens and creams with rounded corners",
+    "category": "green",
+    "colors": {
+      "light": [
+        "#657153",
+        "#FFFFFF",
+        "#8F9C7A",
+        "#F2FCF5",
+        "#F2F1EC",
+        "#FFFFFF",
+        "#3A4532",
+        "#657059",
+        "#DBE0D5"
+      ],
+      "dark": [
+        "#A8B496",
+        "#1F2619",
+        "#D1DAC5",
+        "#0E2614",
+        "#323C2B",
+        "#3A4532",
+        "#FDFCFB",
+        "#A7B49B",
+        "#4D5C43"
+      ]
+    }
+  },
+  {
+    "file": "terminal.css",
+    "name": "Phosphor Terminal",
+    "description": "Amber vintage paper by day, phosphor-green CRT by night",
+    "category": "green",
+    "colors": {
+      "light": [
+        "#B45309",
+        "#FFFFFF",
+        "#451A03",
+        "#FBF7EE",
+        "#F2EAD7",
+        "#EEE2C8",
+        "#3F2A1D",
+        "#785942",
+        "#CABA9C"
+      ],
+      "dark": [
+        "#22C55E",
+        "#001A05",
+        "#10B981",
+        "#030A04",
+        "#071409",
+        "#0A1C0D",
+        "#22C55E",
+        "#319450",
+        "#165B27"
+      ]
+    }
+  },
+  {
+    "file": "galaxy.css",
+    "name": "Galaxy",
+    "description": "Cosmic and stellar, with glassy deep space aesthetics",
+    "category": "blue",
+    "colors": {
+      "light": [
+        "#4B60B3",
+        "#FFFFFF",
+        "#7C4BB3",
+        "#F5F3FF",
+        "#E1E8F0",
+        "#FCFBFF",
+        "#1F2240",
+        "#5A6199",
+        "#D3D6F0"
+      ],
+      "dark": [
+        "#8C9EFF",
+        "#060514",
+        "#B38CFF",
+        "#08041A",
+        "#131230",
+        "#0F0C28",
+        "#E0E5FF",
+        "#8C93CC",
+        "#222348"
+      ]
+    }
+  },
+  {
+    "file": "royal.css",
+    "name": "Royal Gold",
+    "description": "Elegant, luxurious theme with gold accents",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#C59B27",
+        "#16082B",
+        "#8A661C",
+        "#FCFAFF",
+        "#F5F0E6",
+        "#FFFFFF",
+        "#3E2C2C",
+        "#7C6767",
+        "#E6D5B8"
+      ],
+      "dark": [
+        "#FFD700",
+        "#1A1110",
+        "#D4AF37",
+        "#16082B",
+        "#1D1818",
+        "#251E1E",
+        "#F5F0E6",
+        "#A39191",
+        "#423636"
+      ]
+    }
+  },
+  {
+    "file": "compact.css",
+    "name": "Compact",
+    "description": "Space-efficient theme with reduced density for data-dense interfaces",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#2563EB",
+        "#FFFFFF",
+        "#64748B",
+        "#FCFCFC",
+        "#F4F4F5",
+        "#FFFFFF",
+        "#18181B",
+        "#6D6D76",
+        "#E4E4E7"
+      ],
+      "dark": [
+        "#3B82F6",
+        "#0B1220",
+        "#94A3B8",
+        "#0E1116",
+        "#111519",
+        "#171B22",
+        "#E4E4E7",
+        "#A1A1AA",
+        "#27272A"
+      ]
+    }
+  },
+  {
+    "file": "touch.css",
+    "name": "Touch",
+    "description": "Spacious theme with larger controls and spacing for touch interfaces",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#3B82F6",
+        "#0F1520",
+        "#8F61FB",
+        "#FBFCFD",
+        "#F8FAFC",
+        "#FFFFFF",
+        "#0F172A",
+        "#637389",
+        "#E2E8F0"
+      ],
+      "dark": [
+        "#60A5FA",
+        "#0B1220",
+        "#A78BFA",
+        "#0F1520",
+        "#1E293B",
+        "#1E293B",
+        "#F1F5F9",
+        "#94A3B8",
+        "#334155"
+      ]
+    }
+  },
+  {
+    "file": "highcontrast.css",
+    "name": "High Contrast",
+    "description": "Black-and-white WCAG AAA (7:1) theme with bold outlines",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#0054B7",
+        "#FFFFFF",
+        "#003F8A",
+        "#FFFFFF",
+        "#F0F0F0",
+        "#FAFAFA",
+        "#000000",
+        "#333333",
+        "#000000"
+      ],
+      "dark": [
+        "#FFFF00",
+        "#000000",
+        "#00E5FF",
+        "#000000",
+        "#1A1A1A",
+        "#0D0D0D",
+        "#FFFFFF",
+        "#CCCCCC",
+        "#FFFFFF"
+      ]
+    }
+  },
+  {
+    "file": "mono.css",
+    "name": "Mono",
+    "description": "Pure black-and-white theme; statuses are told apart by lightness",
+    "category": "classic",
+    "colors": {
+      "light": [
+        "#000000",
+        "#FFFFFF",
+        "#4D4D4D",
+        "#FCFCFC",
+        "#F0F0F0",
+        "#FAFAFA",
+        "#000000",
+        "#666666",
+        "#000000"
+      ],
+      "dark": [
+        "#FFFFFF",
+        "#000000",
+        "#B3B3B3",
+        "#121212",
+        "#1A1A1A",
+        "#0D0D0D",
+        "#FFFFFF",
+        "#999999",
+        "#FFFFFF"
+      ]
+    }
+  },
+  {
+    "file": "abyss.css",
+    "name": "Ocean Deep / Abyss",
+    "description": "Deep aquatic blues and bioluminescent cyans",
+    "category": "blue",
+    "colors": {
+      "light": [
+        "#0F818C",
+        "#FFFFFF",
+        "#006064",
+        "#F0F4F8",
+        "#B2EBF2",
+        "#FFFFFF",
+        "#00363A",
+        "#005662",
+        "#80DEEA"
+      ],
+      "dark": [
+        "#00E5FF",
+        "#001F24",
+        "#18FFFF",
+        "#000814",
+        "#071A26",
+        "#0A2436",
+        "#E0F7FA",
+        "#84C9D4",
+        "#103B54"
+      ]
+    }
+  },
+  {
+    "file": "lavender.css",
+    "name": "Lavender / Amethyst",
+    "description": "Soft purples and lilacs for a calm, soothing interface",
+    "category": "purple",
+    "colors": {
+      "light": [
+        "#9E60E8",
+        "#1A0F2E",
+        "#B583F1",
+        "#FBF7FF",
+        "#F0E6FC",
+        "#FFFFFF",
+        "#3B1E5A",
+        "#7A46AA",
+        "#DAC3F8"
+      ],
+      "dark": [
+        "#C497F5",
+        "#140A24",
+        "#D3B3F8",
+        "#1A0F2E",
+        "#1C0F33",
+        "#231242",
+        "#F9F6FD",
+        "#A682DB",
+        "#45266E"
+      ]
+    }
+  },
+  {
+    "file": "halloween.css",
+    "name": "Halloween / Pumpkin",
+    "description": "Deep purples, dark greys, and vibrant pumpkin orange",
+    "category": "orange",
+    "colors": {
+      "light": [
+        "#F77F00",
+        "#140700",
+        "#6A0DAD",
+        "#FFF3ED",
+        "#EAEAEA",
+        "#FFFFFF",
+        "#212529",
+        "#495057",
+        "#343A40"
+      ],
+      "dark": [
+        "#FF9E3B",
+        "#121212",
+        "#9C4DCC",
+        "#140700",
+        "#1E1E1E",
+        "#2C2C2C",
+        "#F8F9FA",
+        "#CED4DA",
+        "#555555"
+      ]
+    }
+  },
+  {
+    "file": "citrus.css",
+    "name": "Citrus / Fruity",
+    "description": "Bright energetic mix of lemon, lime, and tangerine",
+    "category": "yellow",
+    "colors": {
+      "light": [
+        "#FF9F1C",
+        "#2A1600",
+        "#CDDC39",
+        "#FFFBEB",
+        "#FCF3E3",
+        "#FFFFFF",
+        "#5A3A0E",
+        "#9B6005",
+        "#FFE5B4"
+      ],
+      "dark": [
+        "#FFBF69",
+        "#1F1810",
+        "#DCE775",
+        "#2A1600",
+        "#2E2418",
+        "#3D3020",
+        "#FEFDFA",
+        "#CCA059",
+        "#6E4719"
+      ]
+    }
+  },
+  {
+    "file": "macos.css",
+    "name": "macOS / Aqua",
+    "description": "Clean desktop aesthetic inspired by macOS",
+    "category": "blue",
+    "colors": {
+      "light": [
+        "#0971E9",
+        "#FFFFFF",
+        "#8E8E93",
+        "#F5F5F7",
+        "#EBEBF0",
+        "#FFFFFF",
+        "#1D1D1F",
+        "#67676C",
+        "#C6C6C8"
+      ],
+      "dark": [
+        "#0374E3",
+        "#FFFFFF",
+        "#98989D",
+        "#000000",
+        "#1C1C1E",
+        "#1C1C1E",
+        "#F5F5F7",
+        "#A1A1A6",
+        "#38383A"
+      ]
+    }
+  },
+  {
+    "file": "windows.css",
+    "name": "Windows / Fluent",
+    "description": "Fluent design aesthetic with mica-like surfaces",
+    "category": "blue",
+    "colors": {
+      "light": [
+        "#005FB8",
+        "#FFFFFF",
+        "#5C5C5C",
+        "#F3F3F3",
+        "#FAFAFA",
+        "#FFFFFF",
+        "#1A1A1A",
+        "#5C5C5C",
+        "#E5E5E5"
+      ],
+      "dark": [
+        "#60CDFF",
+        "#000000",
+        "#A6A6A6",
+        "#202020",
+        "#282828",
+        "#2C2C2C",
+        "#FFFFFF",
+        "#A6A6A6",
+        "#404040"
+      ]
+    }
+  },
+  {
+    "file": "ios.css",
+    "name": "iOS / Mobile",
+    "description": "Mobile-first aesthetic with distinct rounded elements",
+    "category": "blue",
+    "colors": {
+      "light": [
+        "#0971E9",
+        "#FFFFFF",
+        "#8E8E93",
+        "#F2F2F7",
+        "#EBEBF0",
+        "#FFFFFF",
+        "#000000",
+        "#68686C",
+        "#C6C6C8"
+      ],
+      "dark": [
+        "#0374E3",
+        "#FFFFFF",
+        "#98989D",
+        "#000000",
+        "#1C1C1E",
+        "#1C1C1E",
+        "#FFFFFF",
+        "#98989D",
+        "#38383A"
+      ]
+    }
+  },
+  {
+    "file": "android.css",
+    "name": "Android / Material",
+    "description": "Material design inspired with vibrant colors and elevated shadows",
+    "category": "purple",
+    "colors": {
+      "light": [
+        "#6750A4",
+        "#FFFFFF",
+        "#625B71",
+        "#FFFBFE",
+        "#F4EFF4",
+        "#FFFFFF",
+        "#1C1B1F",
+        "#49454F",
+        "#79747E"
+      ],
+      "dark": [
+        "#D0BCFF",
+        "#381E72",
+        "#CCC2DC",
+        "#1C1B1F",
+        "#2A2831",
+        "#2A2831",
+        "#E6E1E5",
+        "#CAC4D0",
+        "#938F99"
+      ]
+    }
+  }
+]

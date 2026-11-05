@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Pro Laptop",
+    "description": "High-performance laptop for developers",
+    "price": 1299.99,
+    "category": "Laptops",
+    "stock": 15,
+    "image": "https://via.placeholder.com/300x200/3b82f6/ffffff?text=Laptop",
+    "rating": 4.5,
+    "reviews": 127,
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "name": "Smart Phone X",
+    "description": "Latest 5G smartphone with advanced camera",
+    "price": 799.99,
+    "category": "Phones",
+    "stock": 42,
+    "image": "https://via.placeholder.com/300x200/8b5cf6/ffffff?text=Phone",
+    "rating": 4.7,
+    "reviews": 342,
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "name": "Tablet Pro",
+    "description": "Premium tablet for work and entertainment",
+    "price": 599.99,
+    "category": "Tablets",
+    "stock": 28,
+    "image": "https://via.placeholder.com/300x200/ec4899/ffffff?text=Tablet",
+    "rating": 4.3,
+    "reviews": 89,
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "name": "Wireless Headphones",
+    "description": "Noise-canceling wireless headphones",
+    "price": 249.99,
+    "category": "Audio",
+    "stock": 0,
+    "image": "https://via.placeholder.com/300x200/10b981/ffffff?text=Headphones",
+    "rating": 4.6,
+    "reviews": 215,
+    "inStock": false
+  },
+  {
+    "id": 5,
+    "name": "4K Monitor",
+    "description": "27-inch 4K display for professionals",
+    "price": 449.99,
+    "category": "Monitors",
+    "stock": 19,
+    "image": "https://via.placeholder.com/300x200/f59e0b/ffffff?text=Monitor",
+    "rating": 4.4,
+    "reviews": 156,
+    "inStock": true
+  },
+  {
+    "id": 6,
+    "name": "Mechanical Keyboard",
+    "description": "RGB mechanical keyboard for gaming",
+    "price": 129.99,
+    "category": "Accessories",
+    "stock": 67,
+    "image": "https://via.placeholder.com/300x200/ef4444/ffffff?text=Keyboard",
+    "rating": 4.8,
+    "reviews": 423,
+    "inStock": true
+  },
+  {
+    "id": 7,
+    "name": "Smartwatch Pro",
+    "description": "Fitness and health tracking smartwatch",
+    "price": 349.99,
+    "category": "Wearables",
+    "stock": 34,
+    "image": "https://via.placeholder.com/300x200/6366f1/ffffff?text=Watch",
+    "rating": 4.2,
+    "reviews": 178,
+    "inStock": true
+  },
+  {
+    "id": 8,
+    "name": "Portable SSD",
+    "description": "1TB portable solid state drive",
+    "price": 159.99,
+    "category": "Storage",
+    "stock": 88,
+    "image": "https://via.placeholder.com/300x200/14b8a6/ffffff?text=SSD",
+    "rating": 4.9,
+    "reviews": 567,
+    "inStock": true
+  },
+  {
+    "id": 9,
+    "name": "Webcam HD",
+    "description": "1080p webcam for video calls",
+    "price": 79.99,
+    "category": "Accessories",
+    "stock": 0,
+    "image": "https://via.placeholder.com/300x200/f97316/ffffff?text=Webcam",
+    "rating": 4.1,
+    "reviews": 93,
+    "inStock": false
+  },
+  {
+    "id": 10,
+    "name": "Gaming Mouse",
+    "description": "High-precision gaming mouse with RGB",
+    "price": 69.99,
+    "category": "Accessories",
+    "stock": 112,
+    "image": "https://via.placeholder.com/300x200/a855f7/ffffff?text=Mouse",
+    "rating": 4.7,
+    "reviews": 389,
+    "inStock": true
+  }
+]

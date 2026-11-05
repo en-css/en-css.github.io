@@ -1,0 +1,309 @@
+@layer en-components {
+  .en-prose {
+    max-inline-size: var(--en-prose-measure, 65ch);
+    color: var(--en-text);
+    font-size: var(--en-text-base);
+    line-height: var(--en-leading-relaxed);
+    overflow-wrap: break-word;
+  }
+
+  .en-prose--wide {
+    --en-prose-measure: none;
+  }
+
+  .en-prose--sm {
+    font-size: var(--en-text-sm);
+  }
+
+  .en-prose--lg {
+    font-size: var(--en-text-lg);
+  }
+
+  @scope (.en-prose) to (.en-not-prose, .en-code, .en-card, .en-alert, .en-callout, .en-tabs, .en-quote, .en-empty) {
+    :scope > * + * {
+      margin-block-start: 1.25em;
+    }
+
+    :where(blockquote, details, figure, li) > * + * {
+      margin-block-start: 1.25em;
+    }
+
+    :scope > :first-child {
+      margin-block-start: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--en-text);
+      font-weight: var(--en-font-bold);
+      line-height: var(--en-leading-tight);
+      text-wrap: balance;
+    }
+
+    h1 {
+      font-size: var(--en-text-4xl);
+      letter-spacing: var(--en-tracking-tight);
+    }
+
+    h2 {
+      font-size: var(--en-text-2xl);
+      border-block-end: var(--en-border-width, 1px) solid var(--en-border-subtle);
+      margin-block-start: 2em;
+      padding-block-end: .3em;
+    }
+
+    h3 {
+      font-size: var(--en-text-xl);
+      margin-block-start: 1.75em;
+    }
+
+    h4 {
+      font-size: var(--en-text-lg);
+      margin-block-start: 1.5em;
+    }
+
+    h5, h6 {
+      font-size: var(--en-text-base);
+      margin-block-start: 1.5em;
+    }
+
+    h6 {
+      color: var(--en-text-muted);
+      text-transform: uppercase;
+      letter-spacing: var(--en-tracking-wide);
+      font-size: var(--en-text-sm);
+    }
+
+    :is(h1, h2, h3, h4, h5, h6) + * {
+      margin-block-start: .75em;
+    }
+
+    :is(h1, h2, h3, h4, h5, h6)[id] {
+      scroll-margin-block-start: var(--en-prose-scroll-offset, var(--en-space-8));
+    }
+
+    p, li, dd, figcaption {
+      text-wrap: pretty;
+    }
+
+    .en-prose__lead {
+      color: var(--en-text-muted);
+      font-size: 1.2em;
+    }
+
+    a {
+      color: var(--en-text-brand);
+      text-underline-offset: .2em;
+      text-decoration: underline .08em;
+    }
+
+    a:hover {
+      color: var(--en-text-brand-hover);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--en-focus-ring);
+      outline-offset: 2px;
+      border-radius: var(--en-radius-sm);
+    }
+
+    strong, b {
+      font-weight: var(--en-font-semibold);
+    }
+
+    small {
+      font-size: var(--en-text-sm);
+      color: var(--en-text-muted);
+    }
+
+    sub, sup {
+      font-size: .75em;
+    }
+
+    mark {
+      background: var(--en-warning-subtle);
+      color: inherit;
+      border-radius: var(--en-radius-sm);
+      padding-inline: .2em;
+    }
+
+    abbr[title] {
+      cursor: help;
+      text-decoration: underline dotted;
+    }
+
+    hr {
+      border: 0;
+      border-block-start: var(--en-border-width, 1px) solid var(--en-border);
+      margin-block: 2.5em;
+    }
+
+    ul, ol {
+      padding-inline-start: 1.5em;
+    }
+
+    ul {
+      list-style: outside;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    li {
+      padding-inline-start: .25em;
+    }
+
+    li + li {
+      margin-block-start: .4em;
+    }
+
+    li::marker {
+      color: var(--en-text-muted);
+    }
+
+    li > :is(ul, ol) {
+      margin-block-start: .4em;
+    }
+
+    dl {
+      display: block;
+    }
+
+    dt {
+      font-weight: var(--en-font-semibold);
+    }
+
+    dt:not(:first-child) {
+      margin-block-start: 1em;
+    }
+
+    dd {
+      color: var(--en-text-muted);
+      margin-inline-start: 1.5em;
+    }
+
+    blockquote {
+      border-inline-start: .25em solid var(--en-border);
+      color: var(--en-text-muted);
+      margin-inline: 0;
+      padding-inline-start: 1em;
+      font-style: italic;
+    }
+
+    img, video, svg, canvas {
+      border-radius: var(--en-radius-md);
+      block-size: auto;
+      max-inline-size: 100%;
+    }
+
+    figure {
+      margin-inline: 0;
+    }
+
+    figcaption {
+      font-size: var(--en-text-sm);
+      color: var(--en-text-muted);
+      text-align: center;
+      margin-block-start: .5em;
+    }
+
+    :not(pre) > code {
+      font-family: var(--en-font-mono);
+      background: var(--en-bg-subtle);
+      border: var(--en-border-width, 1px) solid var(--en-border-subtle);
+      border-radius: var(--en-radius-sm);
+      overflow-wrap: anywhere;
+      padding: .15em .4em;
+      font-size: .875em;
+    }
+
+    pre {
+      font-family: var(--en-font-mono);
+      font-size: .875em;
+      line-height: var(--en-leading-normal);
+      padding: var(--en-space-4);
+      background: var(--en-bg-subtle);
+      border: var(--en-border-width, 1px) solid var(--en-border);
+      border-radius: var(--en-radius-md);
+      tab-size: 2;
+      overflow-x: auto;
+    }
+
+    pre code {
+      font: inherit;
+      background: none;
+      border: 0;
+      padding: 0;
+    }
+
+    kbd {
+      font-family: var(--en-font-mono);
+      background: var(--en-bg-surface);
+      border: var(--en-border-width, 1px) solid var(--en-border);
+      border-radius: var(--en-radius-sm);
+      border-block-end-width: 2px;
+      padding: .1em .45em;
+      font-size: .85em;
+    }
+
+    table {
+      border-collapse: collapse;
+      inline-size: max-content;
+      max-inline-size: 100%;
+      font-size: .925em;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th, td {
+      text-align: start;
+      border: var(--en-border-width, 1px) solid var(--en-border);
+      padding: .6em .9em;
+    }
+
+    thead th {
+      background: var(--en-bg-subtle);
+      font-weight: var(--en-font-semibold);
+    }
+
+    tbody tr:nth-child(2n) {
+      background: color-mix(in oklab, var(--en-bg-subtle) 50%, transparent);
+    }
+
+    details {
+      border: var(--en-border-width, 1px) solid var(--en-border);
+      border-radius: var(--en-radius-md);
+      padding: .75em 1em;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: var(--en-font-semibold);
+    }
+
+    summary:focus-visible {
+      outline: 2px solid var(--en-focus-ring);
+      outline-offset: 2px;
+      border-radius: var(--en-radius-sm);
+    }
+
+    details[open] > summary {
+      margin-block-end: .75em;
+    }
+  }
+}
+
+@layer en-utilities {
+  @media (forced-colors: active) {
+    @scope (.en-prose) to (.en-not-prose, .en-code, .en-card, .en-alert, .en-callout, .en-tabs, .en-quote, .en-empty) {
+      mark {
+        background: canvas;
+        outline: 1px solid canvastext;
+      }
+
+      tbody tr:nth-child(2n) {
+        background: none;
+      }
+    }
+  }
+}
