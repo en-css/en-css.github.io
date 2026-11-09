@@ -254,6 +254,26 @@
     --en-fg-info-inverse: light-dark(var(--en-color-info-950-dark), var(--en-color-info-200));
     --en-dark: var(--en-color-neutral-950);
     --en-light: var(--en-color-neutral-0);
+  }
+
+  @supports (color: contrast-color(red)) {
+    :root {
+      --en-fg-primary: contrast-color(var(--en-primary));
+      --en-fg-secondary: contrast-color(var(--en-secondary));
+      --en-fg-success: contrast-color(var(--en-success));
+      --en-fg-warning: contrast-color(var(--en-warning));
+      --en-fg-danger: contrast-color(var(--en-danger));
+      --en-fg-info: contrast-color(var(--en-info));
+      --en-fg-primary-inverse: contrast-color(var(--en-primary-inverse));
+      --en-fg-secondary-inverse: contrast-color(var(--en-secondary-inverse));
+      --en-fg-success-inverse: contrast-color(var(--en-success-inverse));
+      --en-fg-warning-inverse: contrast-color(var(--en-warning-inverse));
+      --en-fg-danger-inverse: contrast-color(var(--en-danger-inverse));
+      --en-fg-info-inverse: contrast-color(var(--en-info-inverse));
+    }
+  }
+
+  :root {
     --en-space-gutter: var(--en-space-2);
     --en-space-section: var(--en-space-6);
     --en-space-inset: var(--en-space-4);
@@ -417,7 +437,7 @@
   }
 
   html {
-    font-size: calc(var(--en-text-base) / var(--en-type-scale, 1));
+    font-size: var(--en-root-font-size, var(--en-text-base));
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -2346,6 +2366,22 @@
 
   .en-scrollbar:hover::-webkit-scrollbar-thumb:hover {
     background-color: var(--en-text-muted);
+  }
+
+  :not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) > .en-scrollbar-start {
+    direction: rtl;
+  }
+
+  :not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) > .en-scrollbar-start > * {
+    direction: ltr;
+  }
+
+  :is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) > .en-scrollbar-start {
+    direction: ltr;
+  }
+
+  :is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) > .en-scrollbar-start > * {
+    direction: rtl;
   }
 
   .en-force-ltr {

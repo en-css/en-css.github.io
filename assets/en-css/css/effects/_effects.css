@@ -1,14 +1,75 @@
 /*!
+ * EN-CSS Effects: Surface
+ * `.en-fx-glass`, `.en-fx-frosted`, `.en-fx-noise`, `.en-fx-grid`, `.en-fx-dots`,
+ * `.en-fx-spotlight`, `.en-fx-gloss`
+ *
+ * Which property each effect owns (avoid combining effects that share one):
+ *   noise -> ::before | spotlight -> ::after (also used by ripple, ping, shimmer, arrow-slide)
+ *   grid, dots, gloss -> background-image (also used by stripes, border-spin ring is ::before)
+ * Set `background-color`, not the `background` shorthand, on pattern elements.
+ */
+/*!
+ * EN-CSS Effects: Interaction (`.en-fx-ripple`, `.en-fx-lift`, `.en-fx-ping`)
+ * Pure CSS. Every modifier works on its own and respects prefers-reduced-motion.
+ *
+ * Pseudo-elements: ripple, ping and arrow-slide use ::after — do not combine them
+ * with each other or with other ::after effects (e.g. shimmer) on the same element.
+ * Optional JS hooks (tilt, magnet) are plain custom properties; each effect still
+ * has a sensible no-JS hover state.
+ */
+/*!
  * EN-CSS Effects: Text — Fill (`effects-text-fill.css`)
  * Static colour fills that clip the gradient or pattern to the glyphs (`background-clip: text`). Check contrast: the text colour is transparent.
  * Part of the text effects, which are split by group so you only load what you use.
  * `effects-text.css` imports every group. Class names are unchanged.
  */
 /*!
+ * EN-CSS Effects: Image & Media
+ * `.en-fx-zoom-hover`, `.en-fx-grayscale-hover`, `.en-fx-duotone-img`,
+ * `.en-fx-reveal-clip`, `.en-fx-parallax`
+ *
+ * Wrapper effects (zoom-hover, duotone-img, parallax) go on a container such as
+ * <figure> / <div> and style the <img>, <video>, <picture> or <svg> inside it.
+ * Modifiers work on their own. Scroll-driven effects show their final state
+ * where animation-timeline is unsupported.
+ */
+/*!
+ * EN-CSS Effects: Border & Glow
+ * `.en-fx-glow`, `.en-fx-border-gradient`, `.en-fx-border-spin`,
+ * `.en-fx-border-draw`, `.en-fx-aurora`
+ * Ring effects (border-gradient, border-spin, border-draw) use ::before, so do not
+ * combine them with each other, with `.en-fx-noise`, or with components that draw
+ * their own ::before. `.en-fx-aurora` uses background-image (as do grid, dots,
+ * gloss and stripes). Modifiers work on their own.
+ */
+/*!
  * EN-CSS Effects: Text — Depth & glow (`effects-text-depth.css`)
  * Shadows, strokes and relief: 3D, neon, outline, emboss and similar treatments built from `text-shadow` and `-webkit-text-stroke`.
  * Part of the text effects, which are split by group so you only load what you use.
  * `effects-text.css` imports every group. Class names are unchanged.
+ */
+/*!
+ * EN-CSS Effects: Scroll (`.en-fx-reveal`)
+ * `.en-fx-reveal`, `.en-fx-scroll-progress`, `.en-fx-stagger`
+ * Scroll-driven parts need animation-timeline; browsers without it just show the
+ * content (no hidden state) and an empty progress bar.
+ * Reveal modifiers: --left, --right, --scale, --fade. Token: --en-fx-reveal-distance
+ */
+/*!
+ * EN-CSS Effects: Loading & Attention
+ * `.en-fx-pulse`, `.en-fx-heartbeat`, `.en-fx-breathe`, `.en-fx-float`,
+ * `.en-fx-wiggle`, `.en-fx-shake`, `.en-fx-stripes`
+ *
+ * Works on any element (not only text). Modifiers work on their own.
+ * Animated properties, to avoid clashes when combining effects:
+ *   pulse -> opacity | heartbeat, breathe -> scale | float, shake -> translate | wiggle -> rotate
+ * (do not combine heartbeat + breathe, or float + shake, on one element).
+ * Progress bars: the .en-progress component already has striped/animated variants;
+ * `.en-fx-stripes` is the generic version for buttons, badges, banners, etc.
+ */
+/*!
+ * EN-CSS Effects: Shimmer (`.en-fx-shimmer`) — Strict BEM & Pure CSS Click Fix
+ * Moved from utilities/utilities-shimmer-effect.css; class names are unchanged.
  */
 /*!
  * EN-CSS Effects: Text — Decoration (`effects-text-decor.css`)
@@ -39,67 +100,6 @@
  * Typewriter animation that types one character at a time. Set `--en-length` to the number of characters.
  * Part of the text effects, which are split by group so you only load what you use.
  * `effects-text.css` imports every group. Class names are unchanged.
- */
-/*!
- * EN-CSS Effects: Shimmer (`.en-fx-shimmer`) — Strict BEM & Pure CSS Click Fix
- * Moved from utilities/utilities-shimmer-effect.css; class names are unchanged.
- */
-/*!
- * EN-CSS Effects: Surface
- * `.en-fx-glass`, `.en-fx-frosted`, `.en-fx-noise`, `.en-fx-grid`, `.en-fx-dots`,
- * `.en-fx-spotlight`, `.en-fx-gloss`
- *
- * Which property each effect owns (avoid combining effects that share one):
- *   noise -> ::before | spotlight -> ::after (also used by ripple, ping, shimmer, arrow-slide)
- *   grid, dots, gloss -> background-image (also used by stripes, border-spin ring is ::before)
- * Set `background-color`, not the `background` shorthand, on pattern elements.
- */
-/*!
- * EN-CSS Effects: Image & Media
- * `.en-fx-zoom-hover`, `.en-fx-grayscale-hover`, `.en-fx-duotone-img`,
- * `.en-fx-reveal-clip`, `.en-fx-parallax`
- *
- * Wrapper effects (zoom-hover, duotone-img, parallax) go on a container such as
- * <figure> / <div> and style the <img>, <video>, <picture> or <svg> inside it.
- * Modifiers work on their own. Scroll-driven effects show their final state
- * where animation-timeline is unsupported.
- */
-/*!
- * EN-CSS Effects: Interaction (`.en-fx-ripple`, `.en-fx-lift`, `.en-fx-ping`)
- * Pure CSS. Every modifier works on its own and respects prefers-reduced-motion.
- *
- * Pseudo-elements: ripple, ping and arrow-slide use ::after — do not combine them
- * with each other or with other ::after effects (e.g. shimmer) on the same element.
- * Optional JS hooks (tilt, magnet) are plain custom properties; each effect still
- * has a sensible no-JS hover state.
- */
-/*!
- * EN-CSS Effects: Border & Glow
- * `.en-fx-glow`, `.en-fx-border-gradient`, `.en-fx-border-spin`,
- * `.en-fx-border-draw`, `.en-fx-aurora`
- * Ring effects (border-gradient, border-spin, border-draw) use ::before, so do not
- * combine them with each other, with `.en-fx-noise`, or with components that draw
- * their own ::before. `.en-fx-aurora` uses background-image (as do grid, dots,
- * gloss and stripes). Modifiers work on their own.
- */
-/*!
- * EN-CSS Effects: Loading & Attention
- * `.en-fx-pulse`, `.en-fx-heartbeat`, `.en-fx-breathe`, `.en-fx-float`,
- * `.en-fx-wiggle`, `.en-fx-shake`, `.en-fx-stripes`
- *
- * Works on any element (not only text). Modifiers work on their own.
- * Animated properties, to avoid clashes when combining effects:
- *   pulse -> opacity | heartbeat, breathe -> scale | float, shake -> translate | wiggle -> rotate
- * (do not combine heartbeat + breathe, or float + shake, on one element).
- * Progress bars: the .en-progress component already has striped/animated variants;
- * `.en-fx-stripes` is the generic version for buttons, badges, banners, etc.
- */
-/*!
- * EN-CSS Effects: Scroll (`.en-fx-reveal`)
- * `.en-fx-reveal`, `.en-fx-scroll-progress`, `.en-fx-stagger`
- * Scroll-driven parts need animation-timeline; browsers without it just show the
- * content (no hidden state) and an empty progress bar.
- * Reveal modifiers: --left, --right, --scale, --fade. Token: --en-fx-reveal-distance
  */
 @layer en-utilities {
   .en-fx-text-gradient {

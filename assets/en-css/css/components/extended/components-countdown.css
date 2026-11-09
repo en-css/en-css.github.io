@@ -1,0 +1,151 @@
+@property --en-cd-days {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --en-cd-hours {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --en-cd-minutes {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --en-cd-seconds {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@layer en-components {
+  .en-countdown {
+    --_color: var(--en-text);
+    --_size: var(--en-text-4xl);
+    align-items: flex-start;
+    gap: var(--en-countdown-gap, var(--en-space-4));
+    color: var(--en-text);
+    flex-wrap: wrap;
+    display: inline-flex;
+  }
+
+  .en-countdown--sm {
+    --_size: var(--en-text-2xl);
+  }
+
+  .en-countdown--lg {
+    --_size: var(--en-text-6xl);
+  }
+
+  .en-countdown--primary {
+    --_color: var(--en-primary);
+  }
+
+  .en-countdown--success {
+    --_color: var(--en-success);
+  }
+
+  .en-countdown--warning {
+    --_color: var(--en-warning);
+  }
+
+  .en-countdown--danger {
+    --_color: var(--en-danger);
+  }
+
+  .en-countdown--info {
+    --_color: var(--en-info);
+  }
+
+  .en-countdown__unit {
+    justify-items: center;
+    gap: var(--en-space-1);
+    text-align: center;
+    min-inline-size: 2ch;
+    display: grid;
+  }
+
+  .en-countdown__unit[data-unit="days"] {
+    --_n: var(--en-cd-days);
+  }
+
+  .en-countdown__unit[data-unit="hours"] {
+    --_n: var(--en-cd-hours);
+  }
+
+  .en-countdown__unit[data-unit="minutes"] {
+    --_n: var(--en-cd-minutes);
+  }
+
+  .en-countdown__unit[data-unit="seconds"] {
+    --_n: var(--en-cd-seconds);
+  }
+
+  .en-countdown__unit:empty {
+    counter-reset: en-cd var(--_n, 0);
+  }
+
+  .en-countdown__unit:empty:before, .en-countdown__value {
+    color: var(--_color);
+    font-size: var(--_size);
+    font-weight: var(--en-font-bold);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+
+  .en-countdown__unit:empty:before {
+    content: counter(en-cd, decimal-leading-zero);
+  }
+
+  .en-countdown__unit:empty:after, .en-countdown__label {
+    color: var(--en-text-muted);
+    font-size: var(--en-text-xs);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .en-countdown__unit:empty:after {
+    content: attr(data-unit);
+  }
+
+  .en-countdown__sep {
+    color: var(--en-text-muted);
+    font-size: var(--_size);
+    font-weight: var(--en-font-bold);
+    line-height: 1;
+  }
+
+  .en-countdown--card > .en-countdown__unit {
+    min-inline-size: calc(var(--_size) * 2);
+    padding-block: var(--en-space-3);
+    padding-inline: var(--en-space-3);
+    background: var(--en-bg-surface);
+    border: var(--en-border-width) var(--en-border-style) var(--en-border);
+    border-radius: var(--en-radius-md);
+  }
+
+  .en-countdown--inline {
+    align-items: baseline;
+    gap: var(--en-space-3);
+  }
+
+  .en-countdown--inline > .en-countdown__unit {
+    align-items: baseline;
+    gap: var(--en-space-1);
+    display: inline-flex;
+  }
+
+  @media (forced-colors: active) {
+    .en-countdown--card > .en-countdown__unit {
+      border-color: canvastext;
+    }
+
+    .en-countdown__unit:empty:before, .en-countdown__value {
+      color: canvastext;
+    }
+  }
+}

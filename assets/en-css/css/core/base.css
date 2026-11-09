@@ -9,7 +9,7 @@
   }
 
   html {
-    font-size: calc(var(--en-text-base) / var(--en-type-scale, 1));
+    font-size: var(--en-root-font-size, var(--en-text-base));
   }
 
   h1, h2, h3, h4, h5, h6 {

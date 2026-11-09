@@ -1,0 +1,152 @@
+/*!
+ * EN-CSS Theme: <Theme Name>
+ * <One-line description>
+ * Perfect for: <use cases>
+ * Vibe: <adjectives>
+ *
+ * Contract (checked by `scripts/audit-themes.ts`):
+ * - Rules are scoped to [data-en-theme="<name>"] / .en-theme-<name>. Never use :root.
+ * - Override SEMANTIC tokens only (--en-primary, --en-fg-*, ...). Never override
+ *   primitives (--en-color-*) and never override derived scale tokens
+ *   (--en-space-*, --en-input-padding-*, --en-control-height*); use --en-density
+ *   and --en-type-scale instead.
+ * - Every token below is required.
+ * - Contrast (light AND dark mode): text on every solid state (base/hover/active,
+ *   and the -inverse fills) >= 4.5:1; --en-text, --en-text-muted and
+ *   --en-text-brand on --en-bg and --en-bg-surface >= 4.5:1; --en-border-control
+ *   and --en-focus-ring >= 3:1 against --en-bg.
+ * - Hover/active move AWAY from the foreground: darker when the fg is light,
+ *   lighter when the fg is dark.
+ * - Supports automatic light/dark mode via light-dark().
+ *
+ * Replace every <...> placeholder; the neutral values below only keep the file valid.
+ */
+
+@layer en-tokens {
+  [data-en-theme="<name>"],
+  .en-theme-<name> {
+    /* ===== Accent / Brand Main Colors ===== */
+    --en-primary: light-dark(#1d4ed8, #93c5fd);
+    --en-secondary: light-dark(#475569, #cbd5e1);
+    --en-success: light-dark(#15803d, #86efac);
+    --en-warning: light-dark(#92400e, #fcd34d);
+    --en-danger: light-dark(#b91c1c, #fca5a5);
+    --en-info: light-dark(#0e7490, #67e8f9);
+
+    /* ===== Accent Hover & Active ===== */
+    --en-primary-hover: light-dark(#1e40af, #bfdbfe);
+    --en-secondary-hover: light-dark(#334155, #e2e8f0);
+    --en-success-hover: light-dark(#166534, #bbf7d0);
+    --en-warning-hover: light-dark(#78350f, #fde68a);
+    --en-danger-hover: light-dark(#991b1b, #fecaca);
+    --en-info-hover: light-dark(#155e75, #a5f3fc);
+
+    --en-primary-active: light-dark(#1e3a8a, #dbeafe);
+    --en-secondary-active: light-dark(#1e293b, #f1f5f9);
+    --en-success-active: light-dark(#14532d, #dcfce7);
+    --en-warning-active: light-dark(#451a03, #fef3c7);
+    --en-danger-active: light-dark(#7f1d1d, #fee2e2);
+    --en-info-active: light-dark(#164e63, #cffafe);
+
+    /* ===== Soft Accent Surfaces (Alerts, Badges, Chips) ===== */
+    --en-primary-subtle: light-dark(#dbeafe, #1e3a8a);
+    --en-secondary-subtle: light-dark(#f1f5f9, #1e293b);
+    --en-success-subtle: light-dark(#dcfce7, #14532d);
+    --en-warning-subtle: light-dark(#fef3c7, #451a03);
+    --en-danger-subtle: light-dark(#fee2e2, #7f1d1d);
+    --en-info-subtle: light-dark(#cffafe, #164e63);
+
+    /* ===== Contextual Foregrounds (Text on Solid Accent) ===== */
+    --en-fg-primary: light-dark(#ffffff, #0b1220);
+    --en-fg-secondary: light-dark(#ffffff, #0b1220);
+    --en-fg-success: light-dark(#ffffff, #0b1220);
+    --en-fg-warning: light-dark(#ffffff, #0b1220);
+    --en-fg-danger: light-dark(#ffffff, #0b1220);
+    --en-fg-info: light-dark(#ffffff, #0b1220);
+
+    /* ===== Contextual Text (Accented Text on Neutral Surface) ===== */
+    --en-text-brand: light-dark(#1d4ed8, #93c5fd);
+    --en-text-brand-hover: light-dark(#1e40af, #bfdbfe);
+
+    /* ===== General Neutral Layout ===== */
+    --en-bg: light-dark(#ffffff, #0b1220);
+    --en-bg-subtle: light-dark(#f8fafc, #111827);
+    --en-bg-surface: light-dark(#ffffff, #172033);
+
+    /* Neutral Interactivity */
+    --en-bg-hover: light-dark(#f1f5f9, #1e293b);
+    --en-bg-active: light-dark(#e2e8f0, #334155);
+
+    --en-text: light-dark(#0f172a, #e2e8f0);
+    --en-text-muted: light-dark(#475569, #94a3b8);
+
+    --en-border: light-dark(#cbd5e1, #334155);
+    --en-border-control: light-dark(#64748b, #7a8aa3); /* form control boundary, >= 3:1 on bg */
+    --en-border-subtle: light-dark(#e2e8f0, #1e293b);
+
+    /* ===== Interactive States ===== */
+    --en-focus-ring: light-dark(#1d4ed8, #93c5fd);
+    --en-disabled-bg: light-dark(#f1f5f9, #172033);
+    --en-disabled-text: light-dark(#94a3b8, #64748b);
+    --en-overlay: light-dark(rgba(15, 23, 42, 0.4), rgba(0, 0, 0, 0.6));
+
+    /* ===== Inverted Neutral Layout ===== */
+    --en-bg-inverse: light-dark(#0b1220, #ffffff);
+    --en-bg-subtle-inverse: light-dark(#111827, #f8fafc);
+    --en-bg-surface-inverse: light-dark(#172033, #ffffff);
+
+    --en-text-inverse: light-dark(#e2e8f0, #0f172a);
+    --en-text-muted-inverse: light-dark(#94a3b8, #475569);
+
+    --en-border-inverse: light-dark(#334155, #cbd5e1);
+
+    /* Contextual Inverse Variants (light/dark values of the base fills swapped) */
+    --en-primary-inverse: light-dark(#93c5fd, #1d4ed8);
+    --en-secondary-inverse: light-dark(#cbd5e1, #475569);
+    --en-success-inverse: light-dark(#86efac, #15803d);
+    --en-warning-inverse: light-dark(#fcd34d, #92400e);
+    --en-danger-inverse: light-dark(#fca5a5, #b91c1c);
+    --en-info-inverse: light-dark(#67e8f9, #0e7490);
+
+    --en-fg-primary-inverse: light-dark(#0b1220, #ffffff);
+    --en-fg-secondary-inverse: light-dark(#0b1220, #ffffff);
+    --en-fg-success-inverse: light-dark(#0b1220, #ffffff);
+    --en-fg-warning-inverse: light-dark(#0b1220, #ffffff);
+    --en-fg-danger-inverse: light-dark(#0b1220, #ffffff);
+    --en-fg-info-inverse: light-dark(#0b1220, #ffffff);
+
+    /* ===== Optional: Typography / shape (semantic tokens only) ===== */
+    /* --en-font-sans: "<Font>", system-ui, sans-serif; */
+    /* --en-radius-md: 0.5rem; */
+
+    /* ===== Optional: Texture (keep when the theme has one) ===== */
+    /* --en-bg-size: 60px 60px; */
+    /* --en-bg-position: 0 0; */
+    /* --en-bg-texture: radial-gradient(...); */
+  }
+}
+
+/* ===== Optional: apply the texture (the framework does not do it for you) ===== */
+/*
+@layer en-base {
+  [data-en-theme="<name>"] body,
+  .en-theme-<name> body {
+    background-position: var(--en-bg-position);
+    background-size: var(--en-bg-size);
+    background-image: var(--en-bg-texture);
+  }
+}
+*/
+
+/* ===== Optional: layout axes (use these instead of overriding --en-space-*) =====
+ * Derived tokens are resolved on :root, so the theme attribute must sit on <html>.
+ * The axes only exist where tokens-scale.css is loaded (en-extra.css).
+ *
+ * [data-en-theme="<name>"] { --en-density: 0.875; --en-type-scale: 1; }
+ */
+
+/* ===== Optional: decorative layers must carry their own guards =====
+ *
+ * @media (forced-colors: active) { [data-en-theme="<name>"] body::before { display: none; } }
+ * @media (prefers-reduced-motion: reduce) { ... }
+ */

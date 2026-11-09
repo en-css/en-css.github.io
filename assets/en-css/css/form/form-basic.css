@@ -283,33 +283,45 @@
   }
 
   .en-check, .en-radio {
-    align-items: center;
+    align-items: flex-start;
     gap: var(--en-space-2);
     cursor: pointer;
     display: inline-flex;
   }
 
   .en-check input[type="checkbox"] {
+    aspect-ratio: 1;
+    box-sizing: border-box;
     border: 2px solid var(--en-border-control);
     background-color: var(--en-bg-surface);
     cursor: pointer;
     vertical-align: middle;
     width: 1.15em;
+    min-width: 1.15em;
     height: 1.15em;
+    min-height: 1.15em;
     transition: all var(--en-transition);
     font-size: var(--en-text-base);
+    flex: none;
+    margin-block: max(0px, .5lh - .575em);
     position: relative;
   }
 
   .en-radio input[type="radio"] {
+    aspect-ratio: 1;
+    box-sizing: border-box;
     border: 2px solid var(--en-border-control);
     background-color: var(--en-bg-surface);
     cursor: pointer;
     vertical-align: middle;
     width: 1.15em;
+    min-width: 1.15em;
     height: 1.15em;
+    min-height: 1.15em;
     transition: all var(--en-transition);
     font-size: var(--en-text-base);
+    flex: none;
+    margin-block: max(0px, .5lh - .575em);
     position: relative;
   }
 

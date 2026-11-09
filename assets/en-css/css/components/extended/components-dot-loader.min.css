@@ -16,13 +16,6 @@
  * `components-dot-loader.css` imports every part.
  */
 /*!
- * EN-CSS Dot Loader: Line (`components-dot-loader-line.css`)
- * Dots stay in a row and animate in place (bounce, pulse, fade, wave, typing, stretch, flip).
- * Needs `components-dot-loader-base.css` (structure, colors, sizes and the shared
- * `en-loader-fade` keyframes). `components-dot-loader.css` imports every part.
- * Under `prefers-reduced-motion: reduce` these variants fall back to a gentle fade.
- */
-/*!
  * EN-CSS Dot Loader: Orbit (`components-dot-loader-orbit.css`)
  * Dots arranged on a circle that rotate or merge (orbit, triangle, spiral). Each sets a 3.125rem square box.
  * Needs `components-dot-loader-base.css` (structure, colors, sizes and the shared
@@ -32,6 +25,13 @@
 /*!
  * EN-CSS Dot Loader: Travel (`components-dot-loader-travel.css`)
  * Dots that move across positions: collision, shuffle and helix. Each sets its own width.
+ * Needs `components-dot-loader-base.css` (structure, colors, sizes and the shared
+ * `en-loader-fade` keyframes). `components-dot-loader.css` imports every part.
+ * Under `prefers-reduced-motion: reduce` these variants fall back to a gentle fade.
+ */
+/*!
+ * EN-CSS Dot Loader: Line (`components-dot-loader-line.css`)
+ * Dots stay in a row and animate in place (bounce, pulse, fade, wave, typing, stretch, flip).
  * Needs `components-dot-loader-base.css` (structure, colors, sizes and the shared
  * `en-loader-fade` keyframes). `components-dot-loader.css` imports every part.
  * Under `prefers-reduced-motion: reduce` these variants fall back to a gentle fade.

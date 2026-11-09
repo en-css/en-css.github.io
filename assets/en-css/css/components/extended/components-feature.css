@@ -1,0 +1,117 @@
+@layer en-components {
+  .en-feature {
+    --_accent: var(--en-primary-subtle);
+    --_on-accent: var(--en-text);
+    --_size: var(--en-feature-icon-size, 2.75rem);
+    --_gap: var(--en-feature-gap, var(--en-space-3));
+    align-items: flex-start;
+    gap: var(--_gap);
+    min-inline-size: 0;
+    color: var(--en-text);
+    flex-direction: column;
+    display: flex;
+  }
+
+  .en-feature--primary {
+    --_accent: var(--en-primary-subtle);
+  }
+
+  .en-feature--success {
+    --_accent: var(--en-success-subtle);
+  }
+
+  .en-feature--warning {
+    --_accent: var(--en-warning-subtle);
+  }
+
+  .en-feature--danger {
+    --_accent: var(--en-danger-subtle);
+  }
+
+  .en-feature--info {
+    --_accent: var(--en-info-subtle);
+  }
+
+  .en-feature--neutral {
+    --_accent: var(--en-bg-subtle);
+  }
+
+  .en-feature__icon {
+    inline-size: var(--_size);
+    block-size: var(--_size);
+    border-radius: var(--en-radius-md);
+    background: var(--_accent);
+    color: var(--_on-accent);
+    font-size: calc(var(--_size) * .5);
+    flex: none;
+    place-items: center;
+    line-height: 1;
+    display: grid;
+  }
+
+  .en-feature__icon > svg {
+    block-size: 55%;
+    inline-size: 55%;
+  }
+
+  .en-feature__title {
+    font-size: var(--en-text-lg);
+    font-weight: var(--en-font-semibold);
+    line-height: var(--en-leading-snug);
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  .en-feature__desc {
+    color: var(--en-text-muted);
+    text-wrap: pretty;
+    margin: 0;
+  }
+
+  .en-feature--row {
+    column-gap: var(--_gap);
+    row-gap: var(--en-space-1);
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    display: grid;
+  }
+
+  .en-feature--row > .en-feature__icon {
+    grid-row: span 2;
+  }
+
+  .en-feature--row > .en-feature__title {
+    align-self: end;
+  }
+
+  .en-feature--centered {
+    text-align: center;
+    align-items: center;
+  }
+
+  .en-feature--centered.en-feature--row {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+  }
+
+  .en-feature--centered.en-feature--row > .en-feature__icon {
+    grid-row: auto;
+  }
+
+  .en-feature--card {
+    padding: var(--en-space-5);
+    background: var(--en-bg-surface);
+    border: var(--en-border-width) var(--en-border-style) var(--en-border);
+    border-radius: var(--en-radius-lg);
+  }
+
+  @media (forced-colors: active) {
+    .en-feature__icon {
+      border: 1px solid canvastext;
+    }
+
+    .en-feature--card {
+      border-color: canvastext;
+    }
+  }
+}

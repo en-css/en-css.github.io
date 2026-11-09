@@ -158,6 +158,28 @@
     z-index: var(--en-z-tooltip);
   }
 
+  .en-popover--card {
+    --_pad-y: var(--en-space-4);
+    --_pad-x: var(--en-space-4);
+    inline-size: var(--en-popover-card-width, 22rem);
+    max-inline-size: min(var(--en-popover-card-width, 22rem), calc(100vw - var(--en-space-4) * 2));
+    padding-block: var(--_pad-y);
+    padding-inline: var(--_pad-x);
+    border-radius: var(--en-radius-lg);
+    font-size: var(--en-text-sm);
+  }
+
+  .en-popover--card > .en-popover__media {
+    inline-size: calc(100% + var(--_pad-x) * 2);
+    max-inline-size: none;
+    margin-block: calc(var(--_pad-y) * -1) var(--_pad-y);
+    margin-inline: calc(var(--_pad-x) * -1);
+    object-fit: cover;
+    border-start-start-radius: inherit;
+    border-start-end-radius: inherit;
+    display: block;
+  }
+
   .en-popover--tooltip > .en-popover__arrow {
     background: var(--en-tooltip-bg);
     border-color: #0000;

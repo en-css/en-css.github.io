@@ -20,6 +20,12 @@
             "size": "1.8 KB"
           },
           {
+            "id": "form-extended-components-choice-card-min-css",
+            "label": "components-choice-card.min.css",
+            "path": "form/extended/components-choice-card.min.css",
+            "size": "4.9 KB"
+          },
+          {
             "id": "form-extended-components-otp-min-css",
             "label": "components-otp.min.css",
             "path": "form/extended/components-otp.min.css",
@@ -42,6 +48,12 @@
             "label": "components-rating.min.css",
             "path": "form/extended/components-rating.min.css",
             "size": "1.4 KB"
+          },
+          {
+            "id": "form-extended-components-swatch-min-css",
+            "label": "components-swatch.min.css",
+            "path": "form/extended/components-swatch.min.css",
+            "size": "2.8 KB"
           },
           {
             "id": "form-extended-components-chip-input-min-css",
@@ -77,7 +89,7 @@
             "id": "form-extended-form-extended-min-css",
             "label": "_form-extended.min.css",
             "path": "form/extended/_form-extended.min.css",
-            "size": "39.2 KB"
+            "size": "46.9 KB"
           }
         ]
       },
@@ -85,13 +97,13 @@
         "id": "form-form-basic-min-css",
         "label": "form-basic.min.css",
         "path": "form/form-basic.min.css",
-        "size": "32.6 KB"
+        "size": "32.9 KB"
       },
       {
         "id": "form-form-min-css",
         "label": "_form.min.css",
         "path": "form/_form.min.css",
-        "size": "71.9 KB"
+        "size": "79.7 KB"
       }
     ]
   },
@@ -208,61 +220,61 @@
         "id": "presets-en-preset-standard-min-css",
         "label": "en-preset-standard.min.css",
         "path": "presets/en-preset-standard.min.css",
-        "size": "222.1 KB"
+        "size": "233.2 KB"
       },
       {
         "id": "presets-en-preset-extended-min-css",
         "label": "en-preset-extended.min.css",
         "path": "presets/en-preset-extended.min.css",
-        "size": "220.7 KB"
+        "size": "248.9 KB"
       },
       {
         "id": "presets-en-preset-lite-min-css",
         "label": "en-preset-lite.min.css",
         "path": "presets/en-preset-lite.min.css",
-        "size": "182.1 KB"
+        "size": "185.5 KB"
       },
       {
         "id": "presets-en-preset-app-min-css",
         "label": "en-preset-app.min.css",
         "path": "presets/en-preset-app.min.css",
-        "size": "298.7 KB"
+        "size": "319.5 KB"
       },
       {
         "id": "presets-en-preset-docs-min-css",
         "label": "en-preset-docs.min.css",
         "path": "presets/en-preset-docs.min.css",
-        "size": "93.3 KB"
+        "size": "97.3 KB"
       },
       {
         "id": "presets-en-preset-bare-min-css",
         "label": "en-preset-bare.min.css",
         "path": "presets/en-preset-bare.min.css",
-        "size": "48.4 KB"
+        "size": "50.1 KB"
       },
       {
         "id": "presets-en-preset-marketing-min-css",
         "label": "en-preset-marketing.min.css",
         "path": "presets/en-preset-marketing.min.css",
-        "size": "237.4 KB"
+        "size": "250.5 KB"
       },
       {
         "id": "presets-en-preset-mobile-min-css",
         "label": "en-preset-mobile.min.css",
         "path": "presets/en-preset-mobile.min.css",
-        "size": "213.5 KB"
+        "size": "217.0 KB"
       },
       {
         "id": "presets-en-preset-core-min-css",
         "label": "en-preset-core.min.css",
         "path": "presets/en-preset-core.min.css",
-        "size": "20.9 KB"
+        "size": "21.6 KB"
       },
       {
         "id": "presets-en-preset-forms-min-css",
         "label": "en-preset-forms.min.css",
         "path": "presets/en-preset-forms.min.css",
-        "size": "103.9 KB"
+        "size": "112.4 KB"
       },
       {
         "id": "presets-en-preset-print-min-css",
@@ -274,13 +286,13 @@
         "id": "presets-en-preset-nano-min-css",
         "label": "en-preset-nano.min.css",
         "path": "presets/en-preset-nano.min.css",
-        "size": "36.8 KB"
+        "size": "37.5 KB"
       },
       {
         "id": "presets-en-preset-data-min-css",
         "label": "en-preset-data.min.css",
         "path": "presets/en-preset-data.min.css",
-        "size": "292.4 KB"
+        "size": "310.2 KB"
       },
       {
         "id": "presets-en-preset-a11y-min-css",
@@ -305,6 +317,12 @@
         "isFolder": true,
         "children": [
           {
+            "id": "components-extended-components-split-button-min-css",
+            "label": "components-split-button.min.css",
+            "path": "components/extended/components-split-button.min.css",
+            "size": "1.7 KB"
+          },
+          {
             "id": "components-extended-components-footer-min-css",
             "label": "components-footer.min.css",
             "path": "components/extended/components-footer.min.css",
@@ -321,6 +339,12 @@
             "label": "components-sidebar-menu.min.css",
             "path": "components/extended/components-sidebar-menu.min.css",
             "size": "7.7 KB"
+          },
+          {
+            "id": "components-extended-components-tour-min-css",
+            "label": "components-tour.min.css",
+            "path": "components/extended/components-tour.min.css",
+            "size": "3.0 KB"
           },
           {
             "id": "components-extended-components-toc-min-css",
@@ -341,10 +365,22 @@
             "size": "8.0 KB"
           },
           {
+            "id": "components-extended-components-heatmap-min-css",
+            "label": "components-heatmap.min.css",
+            "path": "components/extended/components-heatmap.min.css",
+            "size": "2.1 KB"
+          },
+          {
             "id": "components-extended-components-tree-min-css",
             "label": "components-tree.min.css",
             "path": "components/extended/components-tree.min.css",
             "size": "6.7 KB"
+          },
+          {
+            "id": "components-extended-components-testimonial-min-css",
+            "label": "components-testimonial.min.css",
+            "path": "components/extended/components-testimonial.min.css",
+            "size": "1.9 KB"
           },
           {
             "id": "components-extended-components-meter-min-css",
@@ -353,10 +389,22 @@
             "size": "3.0 KB"
           },
           {
+            "id": "components-extended-components-steps-min-css",
+            "label": "components-steps.min.css",
+            "path": "components/extended/components-steps.min.css",
+            "size": "2.3 KB"
+          },
+          {
             "id": "components-extended-components-code-min-css",
             "label": "components-code.min.css",
             "path": "components/extended/components-code.min.css",
             "size": "3.6 KB"
+          },
+          {
+            "id": "components-extended-components-logo-cloud-min-css",
+            "label": "components-logo-cloud.min.css",
+            "path": "components/extended/components-logo-cloud.min.css",
+            "size": "1.9 KB"
           },
           {
             "id": "components-extended-components-pricing-min-css",
@@ -401,6 +449,12 @@
             "size": "1.8 KB"
           },
           {
+            "id": "components-extended-components-result-min-css",
+            "label": "components-result.min.css",
+            "path": "components/extended/components-result.min.css",
+            "size": "2.5 KB"
+          },
+          {
             "id": "components-extended-components-calendar-min-css",
             "label": "components-calendar.min.css",
             "path": "components/extended/components-calendar.min.css",
@@ -428,13 +482,19 @@
             "id": "components-extended-components-popover-min-css",
             "label": "components-popover.min.css",
             "path": "components/extended/components-popover.min.css",
-            "size": "4.3 KB"
+            "size": "4.9 KB"
           },
           {
             "id": "components-extended-components-skip-link-min-css",
             "label": "components-skip-link.min.css",
             "path": "components/extended/components-skip-link.min.css",
             "size": "784 B"
+          },
+          {
+            "id": "components-extended-components-feature-min-css",
+            "label": "components-feature.min.css",
+            "path": "components/extended/components-feature.min.css",
+            "size": "1.9 KB"
           },
           {
             "id": "components-extended-components-dot-loader-base-min-css",
@@ -461,10 +521,22 @@
             "size": "8.5 KB"
           },
           {
+            "id": "components-extended-components-countdown-min-css",
+            "label": "components-countdown.min.css",
+            "path": "components/extended/components-countdown.min.css",
+            "size": "2.4 KB"
+          },
+          {
             "id": "components-extended-components-carousel-min-css",
             "label": "components-carousel.min.css",
             "path": "components/extended/components-carousel.min.css",
             "size": "2.2 KB"
+          },
+          {
+            "id": "components-extended-components-progress-ring-min-css",
+            "label": "components-progress-ring.min.css",
+            "path": "components/extended/components-progress-ring.min.css",
+            "size": "1.8 KB"
           },
           {
             "id": "components-extended-components-dot-loader-min-css",
@@ -473,16 +545,28 @@
             "size": "12.2 KB"
           },
           {
+            "id": "components-extended-components-org-chart-min-css",
+            "label": "components-org-chart.min.css",
+            "path": "components/extended/components-org-chart.min.css",
+            "size": "2.8 KB"
+          },
+          {
             "id": "components-extended-components-shell-min-css",
             "label": "components-shell.min.css",
             "path": "components/extended/components-shell.min.css",
             "size": "6.2 KB"
           },
           {
+            "id": "components-extended-components-cta-min-css",
+            "label": "components-cta.min.css",
+            "path": "components/extended/components-cta.min.css",
+            "size": "1.7 KB"
+          },
+          {
             "id": "components-extended-components-extended-min-css",
             "label": "_components-extended.min.css",
             "path": "components/extended/_components-extended.min.css",
-            "size": "215.8 KB"
+            "size": "244.0 KB"
           },
           {
             "id": "components-extended-components-dot-loader-orbit-min-css",
@@ -603,6 +687,12 @@
             "label": "components-dot-loader-line.min.css",
             "path": "components/extended/components-dot-loader-line.min.css",
             "size": "3.5 KB"
+          },
+          {
+            "id": "components-extended-components-comment-min-css",
+            "label": "components-comment.min.css",
+            "path": "components/extended/components-comment.min.css",
+            "size": "1.9 KB"
           },
           {
             "id": "components-extended-components-dot-loader-travel-min-css",
@@ -743,7 +833,7 @@
             "id": "components-basic-components-basic-min-css",
             "label": "_components-basic.min.css",
             "path": "components/basic/_components-basic.min.css",
-            "size": "93.3 KB"
+            "size": "94.9 KB"
           },
           {
             "id": "components-basic-components-tabs-min-css",
@@ -761,7 +851,7 @@
             "id": "components-basic-components-segmented-control-min-css",
             "label": "components-segmented-control.min.css",
             "path": "components/basic/components-segmented-control.min.css",
-            "size": "11.0 KB"
+            "size": "12.5 KB"
           },
           {
             "id": "components-basic-components-ratio-min-css",
@@ -817,7 +907,7 @@
         "id": "components-components-min-css",
         "label": "_components.min.css",
         "path": "components/_components.min.css",
-        "size": "309.0 KB"
+        "size": "338.8 KB"
       }
     ]
   },
@@ -839,7 +929,7 @@
             "id": "core-utilities-utilities-min-css",
             "label": "_utilities.min.css",
             "path": "core/utilities/_utilities.min.css",
-            "size": "18.0 KB"
+            "size": "18.9 KB"
           },
           {
             "id": "core-utilities-utilities-text-min-css",
@@ -869,7 +959,7 @@
             "id": "core-utilities-utilities-scroll-min-css",
             "label": "utilities-scroll.min.css",
             "path": "core/utilities/utilities-scroll.min.css",
-            "size": "1.0 KB"
+            "size": "1.9 KB"
           },
           {
             "id": "core-utilities-utilities-align-min-css",
@@ -970,25 +1060,25 @@
         "id": "core-tokens-min-css",
         "label": "tokens.min.css",
         "path": "core/tokens.min.css",
-        "size": "13.6 KB"
+        "size": "14.3 KB"
       },
       {
         "id": "core-utilities-min-css",
         "label": "utilities.min.css",
         "path": "core/utilities.min.css",
-        "size": "18.0 KB"
+        "size": "18.9 KB"
       },
       {
         "id": "core-base-min-css",
         "label": "base.min.css",
         "path": "core/base.min.css",
-        "size": "2.3 KB"
+        "size": "2.2 KB"
       },
       {
         "id": "core-core-min-css",
         "label": "_core.min.css",
         "path": "core/_core.min.css",
-        "size": "44.3 KB"
+        "size": "45.9 KB"
       }
     ]
   },
@@ -1101,12 +1191,12 @@
     "id": "en-extra-min-css",
     "label": "en-extra.min.css",
     "path": "en-extra.min.css",
-    "size": "521.3 KB"
+    "size": "560.7 KB"
   },
   {
     "id": "en-min-css",
     "label": "en.min.css",
     "path": "en.min.css",
-    "size": "174.6 KB"
+    "size": "178.0 KB"
   }
 ]

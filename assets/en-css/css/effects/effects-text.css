@@ -5,26 +5,14 @@
  * `effects-text.css` imports every group. Class names are unchanged.
  */
 /*!
- * EN-CSS Effects: Text — Type & layout (`effects-text-style.css`)
- * Typeface and layout styles: terminal, pixel, vertical writing and ransom-note lettering.
- * Part of the text effects, which are split by group so you only load what you use.
- * `effects-text.css` imports every group. Class names are unchanged.
- */
-/*!
- * EN-CSS Effects: Text — Depth & glow (`effects-text-depth.css`)
- * Shadows, strokes and relief: 3D, neon, outline, emboss and similar treatments built from `text-shadow` and `-webkit-text-stroke`.
- * Part of the text effects, which are split by group so you only load what you use.
- * `effects-text.css` imports every group. Class names are unchanged.
- */
-/*!
  * EN-CSS Effects: Text — Motion (`effects-text-motion.css`)
  * Continuously animated text. Stops under `prefers-reduced-motion: reduce`.
  * Part of the text effects, which are split by group so you only load what you use.
  * `effects-text.css` imports every group. Class names are unchanged.
  */
 /*!
- * EN-CSS Effects: Text — Decoration (`effects-text-decor.css`)
- * Lines, boxes and labels around the text: underlines, highlights, frames, stamps and callouts.
+ * EN-CSS Effects: Text — Type & layout (`effects-text-style.css`)
+ * Typeface and layout styles: terminal, pixel, vertical writing and ransom-note lettering.
  * Part of the text effects, which are split by group so you only load what you use.
  * `effects-text.css` imports every group. Class names are unchanged.
  */
@@ -35,8 +23,20 @@
  * `effects-text.css` imports every group. Class names are unchanged.
  */
 /*!
+ * EN-CSS Effects: Text — Depth & glow (`effects-text-depth.css`)
+ * Shadows, strokes and relief: 3D, neon, outline, emboss and similar treatments built from `text-shadow` and `-webkit-text-stroke`.
+ * Part of the text effects, which are split by group so you only load what you use.
+ * `effects-text.css` imports every group. Class names are unchanged.
+ */
+/*!
  * EN-CSS Effects: Text — Typing (`effects-text-typing.css`)
  * Typewriter animation that types one character at a time. Set `--en-length` to the number of characters.
+ * Part of the text effects, which are split by group so you only load what you use.
+ * `effects-text.css` imports every group. Class names are unchanged.
+ */
+/*!
+ * EN-CSS Effects: Text — Decoration (`effects-text-decor.css`)
+ * Lines, boxes and labels around the text: underlines, highlights, frames, stamps and callouts.
  * Part of the text effects, which are split by group so you only load what you use.
  * `effects-text.css` imports every group. Class names are unchanged.
  */

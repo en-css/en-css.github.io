@@ -36,6 +36,7 @@
     --en-text-xs: calc(.75rem * var(--en-scale) * var(--en-type-scale));
     --en-text-sm: calc(.875rem * var(--en-scale) * var(--en-type-scale));
     --en-text-base: calc(1rem * var(--en-scale) * var(--en-type-scale));
+    --en-root-font-size: calc(1rem * var(--en-scale));
     --en-text-lg: calc(1.125rem * var(--en-scale) * var(--en-type-scale));
     --en-text-xl: calc(1.25rem * var(--en-scale) * var(--en-type-scale));
     --en-text-2xl: calc(1.5rem * var(--en-scale) * var(--en-type-scale));

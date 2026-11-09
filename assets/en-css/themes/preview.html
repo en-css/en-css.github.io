@@ -1,0 +1,276 @@
+<!doctype html>
+<!--
+  EN-CSS theme preview and in-browser contrast check.
+
+  Serve the repository over HTTP (file:// blocks fetch), e.g. from the repository root:
+
+      bunx serve .
+
+  then open /themes/preview.html. The EN-CSS bundle is loaded from ../src/en-extra.css; pass
+  another one with ?css=<url>, for example ?css=/dist/en-extra.min.css.
+
+  "Check all themes" loads every theme in light and dark mode and verifies the contrast
+  contract against the REAL cascade (framework + theme), using the same pairs as
+  scripts/audit-themes.ts.
+-->
+<html lang="en" data-en-theme="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EN-CSS themes preview</title>
+  <link id="base-css" rel="stylesheet" />
+  <link id="theme-css" rel="stylesheet" />
+  <style>
+    .pv-bar { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; gap: .5rem; align-items: center;
+      padding: .5rem 1rem; background: var(--en-bg-surface, Canvas); border-bottom: 1px solid var(--en-border, GrayText); }
+    .pv-bar label { display: inline-flex; gap: .35rem; align-items: center; font-size: .85rem; }
+    .pv-main { max-width: 72rem; margin-inline: auto; padding: 1rem; display: grid; gap: 1rem; }
+    .pv-row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+    .pv-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+    .pv-result { font-variant-numeric: tabular-nums; }
+    .pv-fail { color: var(--en-danger, red); font-weight: 600; }
+    .pv-pass { color: var(--en-success, green); font-weight: 600; }
+    #pv-report table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+    #pv-report th, #pv-report td { border: 1px solid var(--en-border, GrayText); padding: .25rem .5rem; text-align: start; }
+    #pv-report pre { white-space: pre-wrap; margin: 0; font-size: .75rem; }
+  </style>
+</head>
+<body>
+  <div class="pv-bar">
+    <button id="prev" class="en-btn en-btn--ghost" title="Previous theme (←)">←</button>
+    <label>Theme <select id="theme" class="en-select"></select></label>
+    <button id="next" class="en-btn en-btn--ghost" title="Next theme (→)">→</button>
+    <label>Scheme
+      <select id="scheme" class="en-select"><option value="">auto</option><option>light</option><option>dark</option></select></label>
+    <label>Density
+      <select id="density" class="en-select"><option value="">theme default</option><option>compact</option><option>comfortable</option><option>spacious</option></select></label>
+    <label>Radius
+      <select id="radius" class="en-select"><option value="">theme default</option><option>sharp</option><option>soft</option><option>pill</option></select></label>
+    <label>Direction
+      <select id="dir" class="en-select"><option>ltr</option><option>rtl</option></select></label>
+    <label>Motion
+      <select id="motion" class="en-select"><option value="">full</option><option>reduced</option><option>none</option></select></label>
+    <button id="check-one" class="en-btn en-btn--secondary">Check this theme</button>
+    <button id="check-all" class="en-btn en-btn--primary">Check all themes</button>
+    <span id="status" class="pv-result" aria-live="polite"></span>
+  </div>
+
+  <main class="pv-main">
+    <section id="pv-report" hidden>
+      <h2>Contrast report</h2>
+      <div id="pv-report-body"></div>
+    </section>
+
+    <section class="en-card"><div class="en-card__body">
+      <h2>Solid buttons, badges and alerts</h2>
+      <div class="pv-row" id="btns"></div>
+      <div class="pv-row" id="badges" style="margin-block-start:.75rem"></div>
+      <div class="pv-grid" id="alerts" style="margin-block-start:.75rem"></div>
+    </div></section>
+
+    <div class="pv-grid">
+      <section class="en-card"><div class="en-card__body">
+        <h2>Form controls</h2>
+        <div class="pv-row"><input class="en-input" placeholder="Text input" aria-label="Text input" /></div>
+        <div class="pv-row" style="margin-block-start:.5rem">
+          <select class="en-select" aria-label="Select"><option>Select</option><option>Option 2</option></select>
+          <label><input type="checkbox" checked /> Checkbox</label>
+          <label><input type="radio" name="r" checked /> Radio</label>
+          <label class="en-switch"><input type="checkbox" checked /><span class="en-switch__track"></span></label>
+          <label class="en-switch"><input type="checkbox" /><span class="en-switch__track"></span></label>
+        </div>
+        <p>Body text. <span style="color: var(--en-text-muted)">Muted text.</span>
+          <a href="#" style="color: var(--en-text-brand)">Brand link</a>. Press Tab to see the focus ring.</p>
+        <button class="en-btn en-btn--primary">Focus me</button>
+      </div></section>
+
+      <section class="en-card"><div class="en-card__body">
+        <h2>Table</h2>
+        <table class="en-table">
+          <thead><tr><th>Name</th><th>Status</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Alpha</td><td><span class="en-badge en-badge--subtle-success">ok</span></td><td>12</td></tr>
+            <tr><td>Beta</td><td><span class="en-badge en-badge--subtle-warning">slow</span></td><td>7</td></tr>
+            <tr><td>Gamma</td><td><span class="en-badge en-badge--subtle-danger">down</span></td><td>0</td></tr>
+          </tbody>
+        </table>
+      </div></section>
+    </div>
+  </main>
+
+  <script>
+    /* ---- pure helpers (also exercised outside the browser) ---- */
+    // <pure>
+    const ACCENTS = ['primary', 'secondary', 'success', 'warning', 'danger', 'info'];
+    const AAA = new Set(['highcontrast']);
+
+    /** Parses a computed color: rgb()/rgba() or color(srgb r g b / a). Returns [r,g,b,a] or null. */
+    function parseColor(value) {
+      const s = String(value).trim();
+      let m = s.match(/^rgba?\(\s*([\d.]+)[\s,]+([\d.]+)[\s,]+([\d.]+)(?:\s*[,/]\s*([\d.]+%?))?\s*\)$/i);
+      if (m) return [+m[1], +m[2], +m[3], m[4] === undefined ? 1 : (m[4].endsWith('%') ? parseFloat(m[4]) / 100 : +m[4])];
+      m = s.match(/^color\(\s*srgb\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)(?:\s*\/\s*([\d.]+%?))?\s*\)$/i);
+      if (m) return [+m[1] * 255, +m[2] * 255, +m[3] * 255, m[4] === undefined ? 1 : (m[4].endsWith('%') ? parseFloat(m[4]) / 100 : +m[4])];
+      return null;
+    }
+    function over(fg, bg) {
+      const a = fg[3];
+      return [0, 1, 2].map((i) => fg[i] * a + bg[i] * (1 - a)).concat(1);
+    }
+    function luminance(c) {
+      const f = (v) => { const s = v / 255; return s <= 0.03928 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4; };
+      return 0.2126 * f(c[0]) + 0.7152 * f(c[1]) + 0.0722 * f(c[2]);
+    }
+    function contrast(a, b) {
+      const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x);
+      return (hi + 0.05) / (lo + 0.05);
+    }
+    /** Same pairs as scripts/audit-themes.ts. */
+    function buildPairs(theme) {
+      const text = AAA.has(theme) ? 7 : 4.5;
+      const pairs = [];
+      for (const a of ACCENTS) {
+        for (const [state, suffix] of [['base', ''], ['hover', '-hover'], ['active', '-active']]) {
+          pairs.push({ label: `${a}-${state}`, fg: `--en-fg-${a}`, bg: `--en-${a}${suffix}`, min: text });
+        }
+        pairs.push({ label: `${a}-inverse`, fg: `--en-fg-${a}-inverse`, bg: `--en-${a}-inverse`, min: text });
+        pairs.push({ label: `text on ${a}-subtle`, fg: '--en-text', bg: `--en-${a}-subtle`, min: text });
+      }
+      pairs.push(
+        { label: 'text on bg', fg: '--en-text', bg: '--en-bg', min: text },
+        { label: 'text on surface', fg: '--en-text', bg: '--en-bg-surface', min: text },
+        { label: 'text-muted on bg', fg: '--en-text-muted', bg: '--en-bg', min: text },
+        { label: 'text-muted on surface', fg: '--en-text-muted', bg: '--en-bg-surface', min: text },
+        { label: 'text-brand on bg', fg: '--en-text-brand', bg: '--en-bg', min: text },
+        { label: 'text-brand on surface', fg: '--en-text-brand', bg: '--en-bg-surface', min: text },
+        { label: 'border-control on bg', fg: '--en-border-control', bg: '--en-bg', min: 3 },
+        { label: 'border-control on surface', fg: '--en-border-control', bg: '--en-bg-surface', min: 3 },
+        { label: 'focus-ring on bg', fg: '--en-focus-ring', bg: '--en-bg', min: 3 },
+      );
+      return pairs;
+    }
+    // </pure>
+
+    /* ---- browser glue ---- */
+    const $ = (id) => document.getElementById(id);
+    const root = document.documentElement;
+    const params = new URLSearchParams(location.search);
+    $('base-css').href = params.get('css') || '../src/en-extra.css';
+    let themes = [];
+
+    function probe(token) {
+      const el = document.createElement('div');
+      el.style.cssText = `position:absolute;visibility:hidden;color:var(${token})`;
+      document.body.appendChild(el);
+      const value = getComputedStyle(el).color;
+      el.remove();
+      return parseColor(value);
+    }
+
+    function checkCurrent(theme) {
+      const page = probe('--en-bg');
+      const fails = [];
+      let unresolved = 0;
+      for (const p of buildPairs(theme)) {
+        let fg = probe(p.fg), bg = probe(p.bg);
+        if (!fg || !bg || !page) { unresolved++; continue; }
+        if (p.bg !== '--en-bg') bg = over(bg, page);
+        fg = over(fg, bg);
+        const ratio = contrast(fg, bg);
+        if (ratio < p.min - 1e-9) fails.push(`${p.label} ${ratio.toFixed(2)} < ${p.min}`);
+      }
+      return { fails, unresolved };
+    }
+
+    function waitCss(link, href) {
+      return new Promise((resolve, reject) => {
+        link.onload = () => resolve();
+        link.onerror = () => reject(new Error(`cannot load ${href}`));
+        link.href = href;
+      });
+    }
+    async function setTheme(name) {
+      root.dataset.enTheme = name;
+      await waitCss($('theme-css'), `./${name}.css`);
+      $('theme').value = name;
+    }
+    const nextFrame = () => new Promise((r) => requestAnimationFrame(() => r()));
+
+    async function runChecks(list) {
+      const original = { theme: $('theme').value, scheme: root.dataset.theme };
+      const rows = [];
+      for (const t of list) {
+        await setTheme(t);
+        const row = { theme: t };
+        for (const mode of ['light', 'dark']) {
+          root.dataset.theme = mode;
+          await nextFrame();
+          row[mode] = checkCurrent(t);
+        }
+        rows.push(row);
+        $('status').textContent = `Checking… ${rows.length}/${list.length}`;
+      }
+      if (original.scheme) root.dataset.theme = original.scheme; else delete root.dataset.theme;
+      await setTheme(original.theme);
+      renderReport(rows);
+    }
+
+    function renderReport(rows) {
+      const bad = rows.filter((r) => r.light.fails.length || r.dark.fails.length);
+      $('status').innerHTML = bad.length
+        ? `<span class="pv-fail">${bad.length} of ${rows.length} themes fail</span>`
+        : `<span class="pv-pass">All ${rows.length} themes pass (light and dark)</span>`;
+      const tr = rows.map((r) => {
+        const cell = (x) => x.fails.length ? `<span class="pv-fail">${x.fails.length} fail</span><pre>${x.fails.join('\n')}</pre>`
+          : `<span class="pv-pass">pass</span>${x.unresolved ? ` (${x.unresolved} unresolved)` : ''}`;
+        return `<tr><td>${r.theme}</td><td>${cell(r.light)}</td><td>${cell(r.dark)}</td></tr>`;
+      }).join('');
+      $('pv-report-body').innerHTML = `<table><thead><tr><th>Theme</th><th>Light</th><th>Dark</th></tr></thead><tbody>${tr}</tbody></table>`;
+      $('pv-report').hidden = false;
+    }
+
+    function buildSamples() {
+      $('btns').innerHTML = ACCENTS.map((a) => `<button class="en-btn en-btn--${a}">${a}</button>`).join('') +
+        '<button class="en-btn en-btn--ghost">ghost</button><button class="en-btn en-btn--primary" disabled>disabled</button>';
+      $('badges').innerHTML = ACCENTS.map((a) => `<span class="en-badge en-badge--${a}">${a}</span>`).join('') +
+        ACCENTS.filter((a) => a !== 'secondary').map((a) => `<span class="en-badge en-badge--subtle-${a}">subtle ${a}</span>`).join('');
+      $('alerts').innerHTML = ['primary', 'secondary', 'success', 'warning', 'danger']
+        .map((a) => `<div class="en-alert en-alert--${a}">${a} alert: text on a soft surface.</div>`).join('');
+    }
+
+    function bindAttr(id, attr) {
+      $(id).addEventListener('change', (e) => { e.target.value ? root.setAttribute(attr, e.target.value) : root.removeAttribute(attr); });
+    }
+
+    async function init() {
+      buildSamples();
+      try {
+        themes = (await (await fetch('./themes.json')).json()).map((t) => t.file.replace(/\.css$/, ''));
+      } catch {
+        $('status').textContent = 'Serve this folder over HTTP (for example: bunx serve .) so themes.json can be loaded.';
+        return;
+      }
+      $('theme').innerHTML = themes.map((t) => `<option>${t}</option>`).join('');
+      const start = themes.includes(params.get('theme')) ? params.get('theme') : themes[0];
+      await setTheme(start);
+      $('theme').addEventListener('change', (e) => setTheme(e.target.value));
+      const step = (d) => setTheme(themes[(themes.indexOf($('theme').value) + d + themes.length) % themes.length]);
+      $('prev').onclick = () => step(-1);
+      $('next').onclick = () => step(1);
+      document.addEventListener('keydown', (e) => {
+        if (e.target.closest('select, input, textarea')) return;
+        if (e.key === 'ArrowLeft') step(-1);
+        if (e.key === 'ArrowRight') step(1);
+      });
+      bindAttr('scheme', 'data-theme');
+      bindAttr('density', 'data-density');
+      bindAttr('radius', 'data-radius');
+      bindAttr('motion', 'data-motion');
+      $('dir').addEventListener('change', (e) => { root.dir = e.target.value; });
+      $('check-one').onclick = () => runChecks([$('theme').value]);
+      $('check-all').onclick = () => runChecks(themes);
+    }
+    init();
+  </script>
+</body>
+</html>

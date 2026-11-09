@@ -50,10 +50,22 @@
             "size": "6.6 KB"
           },
           {
+            "id": "form-extended-components-choice-card-css",
+            "label": "components-choice-card.css",
+            "path": "form/extended/components-choice-card.css",
+            "size": "6.1 KB"
+          },
+          {
             "id": "form-extended-components-file-upload-draft-css",
             "label": "components-file-upload.draft.css",
             "path": "form/extended/components-file-upload.draft.css",
             "size": "8.0 KB"
+          },
+          {
+            "id": "form-extended-components-swatch-css",
+            "label": "components-swatch.css",
+            "path": "form/extended/components-swatch.css",
+            "size": "3.6 KB"
           },
           {
             "id": "form-extended-components-file-upload-css",
@@ -65,7 +77,7 @@
             "id": "form-extended-form-extended-css",
             "label": "_form-extended.css",
             "path": "form/extended/_form-extended.css",
-            "size": "48.4 KB"
+            "size": "58.0 KB"
           },
           {
             "id": "form-extended-components-rating-css",
@@ -85,13 +97,13 @@
         "id": "form-form-css",
         "label": "_form.css",
         "path": "form/_form.css",
-        "size": "88.0 KB"
+        "size": "97.9 KB"
       },
       {
         "id": "form-form-basic-css",
         "label": "form-basic.css",
         "path": "form/form-basic.css",
-        "size": "39.6 KB"
+        "size": "39.9 KB"
       }
     ]
   },
@@ -208,13 +220,13 @@
         "id": "presets-en-preset-data-css",
         "label": "en-preset-data.css",
         "path": "presets/en-preset-data.css",
-        "size": "366.4 KB"
+        "size": "388.5 KB"
       },
       {
         "id": "presets-en-preset-docs-css",
         "label": "en-preset-docs.css",
         "path": "presets/en-preset-docs.css",
-        "size": "118.4 KB"
+        "size": "123.2 KB"
       },
       {
         "id": "presets-en-preset-print-css",
@@ -226,19 +238,19 @@
         "id": "presets-en-preset-nano-css",
         "label": "en-preset-nano.css",
         "path": "presets/en-preset-nano.css",
-        "size": "46.1 KB"
+        "size": "47.0 KB"
       },
       {
         "id": "presets-en-preset-app-css",
         "label": "en-preset-app.css",
         "path": "presets/en-preset-app.css",
-        "size": "373.2 KB"
+        "size": "399.0 KB"
       },
       {
         "id": "presets-en-preset-extended-css",
         "label": "en-preset-extended.css",
         "path": "presets/en-preset-extended.css",
-        "size": "279.0 KB"
+        "size": "314.7 KB"
       },
       {
         "id": "presets-en-preset-a11y-css",
@@ -250,43 +262,43 @@
         "id": "presets-en-preset-mobile-css",
         "label": "en-preset-mobile.css",
         "path": "presets/en-preset-mobile.css",
-        "size": "269.1 KB"
+        "size": "273.2 KB"
       },
       {
         "id": "presets-en-preset-standard-css",
         "label": "en-preset-standard.css",
         "path": "presets/en-preset-standard.css",
-        "size": "277.4 KB"
+        "size": "291.1 KB"
       },
       {
         "id": "presets-en-preset-bare-css",
         "label": "en-preset-bare.css",
         "path": "presets/en-preset-bare.css",
-        "size": "61.8 KB"
+        "size": "63.7 KB"
       },
       {
         "id": "presets-en-preset-marketing-css",
         "label": "en-preset-marketing.css",
         "path": "presets/en-preset-marketing.css",
-        "size": "299.2 KB"
+        "size": "315.6 KB"
       },
       {
         "id": "presets-en-preset-core-css",
         "label": "en-preset-core.css",
         "path": "presets/en-preset-core.css",
-        "size": "25.0 KB"
+        "size": "25.8 KB"
       },
       {
         "id": "presets-en-preset-forms-css",
         "label": "en-preset-forms.css",
         "path": "presets/en-preset-forms.css",
-        "size": "126.8 KB"
+        "size": "137.5 KB"
       },
       {
         "id": "presets-en-preset-lite-css",
         "label": "en-preset-lite.css",
         "path": "presets/en-preset-lite.css",
-        "size": "229.8 KB"
+        "size": "233.9 KB"
       }
     ]
   },
@@ -329,10 +341,22 @@
             "size": "1.7 KB"
           },
           {
+            "id": "components-extended-components-comment-css",
+            "label": "components-comment.css",
+            "path": "components/extended/components-comment.css",
+            "size": "2.4 KB"
+          },
+          {
             "id": "components-extended-components-carousel-css",
             "label": "components-carousel.css",
             "path": "components/extended/components-carousel.css",
             "size": "2.8 KB"
+          },
+          {
+            "id": "components-extended-components-progress-ring-css",
+            "label": "components-progress-ring.css",
+            "path": "components/extended/components-progress-ring.css",
+            "size": "2.3 KB"
           },
           {
             "id": "components-extended-components-quote-css",
@@ -383,6 +407,12 @@
             "size": "8.6 KB"
           },
           {
+            "id": "components-extended-components-split-button-css",
+            "label": "components-split-button.css",
+            "path": "components/extended/components-split-button.css",
+            "size": "2.1 KB"
+          },
+          {
             "id": "components-extended-components-stepper-css",
             "label": "components-stepper.css",
             "path": "components/extended/components-stepper.css",
@@ -407,6 +437,12 @@
             "size": "990 B"
           },
           {
+            "id": "components-extended-components-feature-css",
+            "label": "components-feature.css",
+            "path": "components/extended/components-feature.css",
+            "size": "2.4 KB"
+          },
+          {
             "id": "components-extended-components-hero-css",
             "label": "components-hero.css",
             "path": "components/extended/components-hero.css",
@@ -422,7 +458,7 @@
             "id": "components-extended-components-code-css",
             "label": "components-code.css",
             "path": "components/extended/components-code.css",
-            "size": "4.4 KB"
+            "size": "4.5 KB"
           },
           {
             "id": "components-extended-components-footer-css",
@@ -461,6 +497,12 @@
             "size": "3.5 KB"
           },
           {
+            "id": "components-extended-components-logo-cloud-css",
+            "label": "components-logo-cloud.css",
+            "path": "components/extended/components-logo-cloud.css",
+            "size": "2.4 KB"
+          },
+          {
             "id": "components-extended-components-auth-css",
             "label": "components-auth.css",
             "path": "components/extended/components-auth.css",
@@ -473,6 +515,18 @@
             "size": "10.2 KB"
           },
           {
+            "id": "components-extended-components-countdown-css",
+            "label": "components-countdown.css",
+            "path": "components/extended/components-countdown.css",
+            "size": "3.0 KB"
+          },
+          {
+            "id": "components-extended-components-steps-css",
+            "label": "components-steps.css",
+            "path": "components/extended/components-steps.css",
+            "size": "2.9 KB"
+          },
+          {
             "id": "components-extended-components-pricing-css",
             "label": "components-pricing.css",
             "path": "components/extended/components-pricing.css",
@@ -482,7 +536,7 @@
             "id": "components-extended-components-popover-css",
             "label": "components-popover.css",
             "path": "components/extended/components-popover.css",
-            "size": "5.1 KB"
+            "size": "5.9 KB"
           },
           {
             "id": "components-extended-components-dot-loader-line-css",
@@ -494,7 +548,7 @@
             "id": "components-extended-components-extended-css",
             "label": "_components-extended.css",
             "path": "components/extended/_components-extended.css",
-            "size": "273.0 KB"
+            "size": "308.7 KB"
           },
           {
             "id": "components-extended-components-tree-css",
@@ -507,6 +561,12 @@
             "label": "components-feed.css",
             "path": "components/extended/components-feed.css",
             "size": "3.1 KB"
+          },
+          {
+            "id": "components-extended-components-cta-css",
+            "label": "components-cta.css",
+            "path": "components/extended/components-cta.css",
+            "size": "2.2 KB"
           },
           {
             "id": "components-extended-components-bottom-nav-css",
@@ -587,6 +647,30 @@
             "size": "2.1 KB"
           },
           {
+            "id": "components-extended-components-heatmap-css",
+            "label": "components-heatmap.css",
+            "path": "components/extended/components-heatmap.css",
+            "size": "2.6 KB"
+          },
+          {
+            "id": "components-extended-components-tour-css",
+            "label": "components-tour.css",
+            "path": "components/extended/components-tour.css",
+            "size": "3.8 KB"
+          },
+          {
+            "id": "components-extended-components-testimonial-css",
+            "label": "components-testimonial.css",
+            "path": "components/extended/components-testimonial.css",
+            "size": "2.4 KB"
+          },
+          {
+            "id": "components-extended-components-result-css",
+            "label": "components-result.css",
+            "path": "components/extended/components-result.css",
+            "size": "3.2 KB"
+          },
+          {
             "id": "components-extended-components-calendar-css",
             "label": "components-calendar.css",
             "path": "components/extended/components-calendar.css",
@@ -597,6 +681,12 @@
             "label": "components-btn-loading.css",
             "path": "components/extended/components-btn-loading.css",
             "size": "2.1 KB"
+          },
+          {
+            "id": "components-extended-components-org-chart-css",
+            "label": "components-org-chart.css",
+            "path": "components/extended/components-org-chart.css",
+            "size": "3.5 KB"
           },
           {
             "id": "components-extended-components-lightbox-css",
@@ -713,7 +803,7 @@
             "id": "components-basic-components-segmented-control-css",
             "label": "components-segmented-control.css",
             "path": "components/basic/components-segmented-control.css",
-            "size": "13.3 KB"
+            "size": "15.2 KB"
           },
           {
             "id": "components-basic-components-list-group-css",
@@ -755,7 +845,7 @@
             "id": "components-basic-components-basic-css",
             "label": "_components-basic.css",
             "path": "components/basic/_components-basic.css",
-            "size": "116.9 KB"
+            "size": "118.7 KB"
           },
           {
             "id": "components-basic-components-alert-css",
@@ -817,7 +907,7 @@
         "id": "components-components-css",
         "label": "_components.css",
         "path": "components/_components.css",
-        "size": "389.8 KB"
+        "size": "427.3 KB"
       }
     ]
   },
@@ -887,13 +977,13 @@
             "id": "core-utilities-utilities-css",
             "label": "_utilities.css",
             "path": "core/utilities/_utilities.css",
-            "size": "23.2 KB"
+            "size": "24.3 KB"
           },
           {
             "id": "core-utilities-utilities-scroll-css",
             "label": "utilities-scroll.css",
             "path": "core/utilities/utilities-scroll.css",
-            "size": "1.3 KB"
+            "size": "2.3 KB"
           },
           {
             "id": "core-utilities-utilities-align-css",
@@ -946,13 +1036,13 @@
         "id": "core-utilities-css",
         "label": "utilities.css",
         "path": "core/utilities.css",
-        "size": "23.2 KB"
+        "size": "24.3 KB"
       },
       {
         "id": "core-core-css",
         "label": "_core.css",
         "path": "core/_core.css",
-        "size": "56.4 KB"
+        "size": "58.3 KB"
       },
       {
         "id": "core-base-css",
@@ -988,7 +1078,7 @@
         "id": "core-tokens-css",
         "label": "tokens.css",
         "path": "core/tokens.css",
-        "size": "15.5 KB"
+        "size": "16.4 KB"
       }
     ]
   },
@@ -1101,12 +1191,12 @@
     "id": "en-extra-css",
     "label": "en-extra.css",
     "path": "en-extra.css",
-    "size": "657.1 KB"
+    "size": "706.5 KB"
   },
   {
     "id": "en-css",
     "label": "en.css",
     "path": "en.css",
-    "size": "218.4 KB"
+    "size": "222.5 KB"
   }
 ]
